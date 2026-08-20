@@ -1,0 +1,300 @@
+{
+  "materials": {
+    "sashCloth": {
+      "color": [
+        0.385,
+        0.214,
+        0.358
+      ],
+      "roughness": 0.84,
+      "metalness": 0.0,
+      "sheen": [
+        0.46,
+        0.34,
+        0.45
+      ]
+    }
+  },
+  "sash": {
+    "$comment": [
+      "The hip wrap, the khaki canvas apron and the pocket sewn on it.",
+      "",
+      "ROUND 2 -- three numbers changed, all read off the TEXTURED panels at 4x",
+      "with tools/grid.py --metres, because the mauve, the khaki and the striped",
+      "trousers are three different colours and the clay panels are not.",
+      "",
+      "1. THE MAUVE IS ON HER RIGHT ONLY, so `splitX` cuts the wrap at the",
+      "   midline. body_2 (front): unstriped mauve fills image-left from the belt",
+      "   down over her right hip, while her left hip is striped trousers.",
+      "   body_5 (back): unstriped mauve over her right buttock, khaki over her",
+      "   left. There is no mauve anywhere on her left in either panel. A closed",
+      "   barrel puts 14 mm of cloth round a half of the figure that has none.",
+      "",
+      "2. THE FLAP HANGS TO y = 0.815, not 0.912. On body_2 at 4x the flap's",
+      "   cream-piped hem is a rounded corner ON the silhouette at y = 0.815,",
+      "   climbing inboard and up to the belt at about x = -0.06, y = 1.03.",
+      "   Round 1 read 0.912 off the same panel: at y = 0.94..0.84 the front",
+      "   silhouette carries a SECOND run at x = -0.17..-0.23 which is her right",
+      "   forearm hanging free, and the gap between it and the body was mistaken",
+      "   for the hem. On body_5 the same hem crosses her right rear at",
+      "   y = 0.945, so the low corner is FORWARD of her side -- bearing ~ -1.1,",
+      "   where it is nearly on the front silhouette but hidden behind the hip",
+      "   from behind. `flapHem` is that curve; the wrap's own `hem` stays",
+      "   20-100 mm above it so both edges show and the cloth reads as folded.",
+      "   Low at the front on her right and climbing to the rear IS the spiral;",
+      "   a single tilted plane cannot make it.",
+      "",
+      "3. THE APRON RUNS ROUND TO HER LEFT REAR. body_5 shows khaki from her",
+      "   left flank across to the spine, hem at y ~ 0.985, so `wedge` now spans",
+      "   -0.68 .. 2.90 rad. That is wider than pi, which one pair of half-planes",
+      "   cannot express, so the build unions two overlapping wedges.",
+      "",
+      "",
+      "4. FLAP STAND-OFF, tuned against the scoreboard, not guessed. `flapOut` is",
+      "   how far the free end stands off the wrap under it. Swept 0 / 2 / 4 / 7 mm",
+      "   with everything else fixed, seven bakes back to back so no other author's",
+      "   edit could drift between them (round 1 and round 2 repeated as sentinels,",
+      "   and they reproduced to 0.00): score 41.37 / 41.40 / 40.89 / 41.03 against",
+      "   round 1's 41.33. It is knife-edged at 4 mm because compare.py's shoulder",
+      "   landmark flips there -- 82 mm of figure height, from a hip apron -- so 2 mm",
+      "   is chosen as the wide, flat optimum rather than the peak of a spike.",
+      "",
+      "   The same seven-bake harness ablated the three changes above: the midline",
+      "   cut is worth +0.12, the long flap moves width +0.004 and IoU +0.0005, and",
+      "   the apron's reach to her left rear costs 0.13 -- ALL of it the same yaw-45",
+      "   shoulder flip, with IoU and the colour term both preferring the longer",
+      "   band. It is kept because body_5 shows the khaki there. Shorten",
+      "   canvas.wedge[1] from 2.90 to 1.85 to buy that 0.13 back if the landmark",
+      "   term is ever weighted higher.",
+      "",
+      "Heights, panel by panel (metre grid keyed to each alpha bbox):",
+      "  body_3  wrap top edge, her right hip                       y = 1.091",
+      "  body_2  flap low corner, her right front (4x, piped hem)   y = 0.815",
+      "  body_5  flap hem, her right rear                           y = 0.945",
+      "  body_5  wrap hem near the spine                            y ~ 1.02",
+      "  body_2  apron lower edge, front centre                     y = 0.991",
+      "  body_2  apron lower edge, her left front (deepest)         y = 0.930",
+      "  body_5  apron lower edge, her left rear                    y = 0.985",
+      "",
+      "The apron: body_1 at 4.5x shows its top edge tucked UNDER the studded hip",
+      "belt and its lower edge a smooth curve. Lower edge in the front view,",
+      "body_2: (x -0.086, y 0.991), (+0.077, 0.939), (+0.113, 0.948).",
+      "`topY`/`topTiltX` are the reference's own near-level top edge, and the",
+      "build takes the LOWER of that and the hip belt's underside (belts.json:",
+      "hipY - beltWidth/2 + hipTilt*x) plus `tuck`, so the raw edge stays behind",
+      "the belt without following its 0.29 tilt up her left hip. `round` fillets",
+      "the band's two ends, which is what stops them reading as tears.",
+      "`backing` is negative: the wrap follows the apron down and past it by 6 mm,",
+      "so the apron's free edge is an 8 mm step onto cloth, not a 23 mm cliff onto",
+      "the trousers.",
+      "",
+      "sashCloth: the reference's flap is a lighter, UNSTRIPED mauve. Sampled",
+      "medians are 0.373 0.216 0.337 (body_2) and 0.341 0.212 0.333 (body_4);",
+      "adjacent surfaces on body_3 give flap 0.337 0.188 0.298 against pants seat",
+      "0.278 0.176 0.231, i.e. the flap is +21/+7/+29 % on the same lighting, and",
+      "applying that lift to the palette's own pants colour gives 0.400 0.209",
+      "0.381. The value here splits those two derivations. Striped pants read",
+      "0.310 0.180 0.275 through the stripes, so the wrap must carry no stripes --",
+      "that colour break is what makes the one-sided flap read at all.",
+      "",
+      "ROUND 3 -- VERIFIED, NOT CHANGED. The round-3 brief asked whether this part",
+      "was holding the legs apart in the front outline. It is not, and the number",
+      "behind that finding does not survive a look:",
+      "",
+      "  a. The lowest cloth this part puts anywhere is the flap hem's corner at",
+      "     y = 0.815, which is the measurement above off body_2. Everything else",
+      "     bottoms out at 0.931 (wrap, following the apron down by `backing`) or",
+      "     0.937 (apron). Nothing this part builds reaches the legs at all.",
+      "",
+      "  b. The full-figure front render does carry extra silhouette runs between",
+      "     t = 0.388 and 0.512, but tools/pants_probe.py puts them at +7.1..+12.2",
+      "     %H of figure height from the centroid -- her LEFT hand and the Zapper on",
+      "     that hip, on the far side of the figure from this wrap. clay_2 carries",
+      "     the same detachment on the other side (a run at -13.4..-10.2 %H at",
+      "     t = 0.512, her right hand). Between t = 0.237 and 0.362 -- the trouser",
+      "     legs -- the render is one run, exactly as clay_2 is.",
+      "",
+      "  c. Where the reference's outline genuinely IS open and ours is not is the",
+      "     BACK view, from y = 0.49 to 0.75, and that gap is closed by body.json's",
+      "     blendLeg 0.028 smooth-unioning the two legs, not by any garment.",
+      "",
+      "  Narrowing the seat was tried anyway, since this part rides on the trousers'",
+      "  own blouse: scaling `pants.flare` above y = 0.78 by 0.75 and 0.55 in two",
+      "  back-to-back whole-figure bakes cost 0.16 and 1.55 of score and 0.0015 and",
+      "  0.0041 of mean IoU. The hip is the width the reference has; reverted."
+    ],
+    "topY": 1.078,
+    "topTiltX": -0.1,
+    "topFrontDrop": 0.02,
+    "clearance": 0.005,
+    "thickness": 0.009,
+    "splitX": 0.022,
+    "hem": [
+      [
+        -3.1416,
+        1.02
+      ],
+      [
+        -2.8,
+        0.998
+      ],
+      [
+        -2.3,
+        0.96
+      ],
+      [
+        -1.8,
+        0.945
+      ],
+      [
+        -1.3,
+        0.95
+      ],
+      [
+        -0.85,
+        0.968
+      ],
+      [
+        -0.45,
+        1.0
+      ],
+      [
+        0.0,
+        1.022
+      ],
+      [
+        1.6,
+        1.03
+      ],
+      [
+        3.1416,
+        1.02
+      ]
+    ],
+    "flapOut": 0.002,
+    "flapFloor": 0.8,
+    "flapHem": [
+      [
+        -3.1416,
+        1.09
+      ],
+      [
+        -2.6,
+        1.01
+      ],
+      [
+        -2.15,
+        0.945
+      ],
+      [
+        -1.6,
+        0.862
+      ],
+      [
+        -1.1,
+        0.815
+      ],
+      [
+        -0.6,
+        0.905
+      ],
+      [
+        -0.2,
+        1.02
+      ],
+      [
+        0.4,
+        1.09
+      ],
+      [
+        3.1416,
+        1.09
+      ]
+    ],
+    "canvas": {
+      "out": 0.001,
+      "thickness": 0.006,
+      "tuck": 0.012,
+      "topY": 1.048,
+      "topTiltX": -0.03,
+      "round": 0.018,
+      "backing": -0.006,
+      "wedge": [
+        -0.68,
+        2.9
+      ],
+      "hem": [
+        [
+          -3.1416,
+          1.03
+        ],
+        [
+          -1.05,
+          1.056
+        ],
+        [
+          -0.75,
+          1.008
+        ],
+        [
+          -0.45,
+          0.982
+        ],
+        [
+          -0.1,
+          0.966
+        ],
+        [
+          0.3,
+          0.948
+        ],
+        [
+          0.55,
+          0.937
+        ],
+        [
+          0.75,
+          0.946
+        ],
+        [
+          1.15,
+          1.0
+        ],
+        [
+          1.6,
+          0.995
+        ],
+        [
+          2.1,
+          0.985
+        ],
+        [
+          2.6,
+          0.985
+        ],
+        [
+          2.95,
+          1.01
+        ],
+        [
+          3.1416,
+          1.03
+        ]
+      ]
+    },
+    "pouch": {
+      "centre": [
+        0.62,
+        0.972
+      ],
+      "half": [
+        0.009,
+        0.028,
+        0.038
+      ],
+      "round": 0.01,
+      "sink": 0.45
+    },
+    "voxelScale": 1.25
+  }
+}

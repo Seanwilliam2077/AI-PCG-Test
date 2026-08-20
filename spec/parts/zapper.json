@@ -1,0 +1,70 @@
+{
+  "zapper": {
+    "$comment": [
+      "The Zapper, holstered barrel-down on her LEFT thigh (+X). Round 1 had it",
+      "on -X, her right; docs/HANDEDNESS.md is the record -- the gun is visible in",
+      "body_0 (her left side) and absent from body_4 (her right side).",
+      "Authored in a gun-local frame: +Y up the gun from muzzle to grip, +Z the",
+      "gun's front (the barrel-rail side), +X outboard across the flat.",
+      "`anchor` is where the tank's centre lands in world metres; `pitch` tips the",
+      "grip forward (+Z) and a NEGATIVE `roll` tips it outboard (+X).",
+      "Measured off ref/views/body_2.png, hue-segmented, x from the leg centreline:",
+      "y=0.68 assembly [0.125,0.173]; y=0.70 [0.132,0.178]; y=0.74 [0.144,0.190];",
+      "y=0.78 [0.152,0.205]; y=0.82 [0.162,0.232]; nothing at y=0.66, where the",
+      "leg alone reaches 0.124. So the axis leans outboard at dx/dy = 0.31 and the",
+      "assembly is ~0.050 m across. body_0 gives the forward lean, dz/dy = 0.28,",
+      "and puts the gun's centre 0.045 m in front of the thigh axis."
+    ],
+    "anchor": [
+      0.174,
+      0.752,
+      0.062
+    ],
+    "pitch": 0.26,
+    "yaw": 0.0,
+    "roll": -0.31,
+    "tankR": 0.028,
+    "flat": 0.75,
+    "tankBottom": -0.078,
+    "tankTop": 0.016,
+    "muzzleY": -0.1,
+    "muzzleR": 0.0325,
+    "muzzleRingH": 0.024,
+    "bandY": -0.022,
+    "bandR": 0.0315,
+    "collarY": 0.016,
+    "collarR": 0.032,
+    "collarH": 0.04,
+    "receiverY": 0.086,
+    "receiverZ": -0.004,
+    "receiverHalf": [
+      0.021,
+      0.034,
+      0.038
+    ],
+    "gripY": 0.064,
+    "gripZ": 0.014,
+    "gripLength": 0.05,
+    "gripR": 0.016,
+    "guardY": 0.058,
+    "guardZ": 0.004,
+    "guardR": 0.02,
+    "barrelZ": 0.034,
+    "barrelR": 0.008,
+    "barrelLength": 0.15,
+    "holsterR": 0.035,
+    "holsterX": -0.007,
+    "holsterBottom": -0.09,
+    "holsterTop": 0.104,
+    "holsterOpenX": 0.004,
+    "holsterWrapY": 0.048,
+    "backingX": -0.056,
+    "backingY": [
+      -0.07,
+      0.095
+    ],
+    "backingZ": 0.018,
+    "strapR": 0.007,
+    "voxelScale": 0.7
+  }
+}

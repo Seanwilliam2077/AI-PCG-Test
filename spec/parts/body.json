@@ -1,0 +1,62 @@
+{
+  "body": {
+    "$comment": [
+      "Numbers body.ts needs that spec.widths does not carry, all read off",
+      "ref/views/clay_2.png (front) and clay_0.png (her left side) with a metre",
+      "grid keyed to each panel's alpha bbox (bbox top = 1.72 m, bottom = 0).",
+      "",
+      "yoke[] is [y, halfX, halfZ, centreZ] and takes over from torsoHalfWidth()",
+      "above yokeY0.  It exists because the spec's own width table ends with a",
+      "single key at neckBase whose radius is neckR*1.9 = 0.068, so any loft",
+      "through it caps off with a 137 mm ball at the throat -- which is what both",
+      "top.ts and choker.ts had to build their own neck columns to work around.",
+      "Above y = 1.42 this column is head.json's neck extended down, exactly as",
+      "top.json's neckCol* and choker.json's neck* already assume: r 0.0435 at",
+      "1.420 tapering to 0.040 at 1.525, squashZ 1.1, centre z 0.0076 -> -0.012.",
+      "",
+      "Measured, front silhouette on her left (screen-right, the side the hair",
+      "does not cover), half-width from the midline: 0.041 at y = 1.490 (the",
+      "neck, agreeing with the 0.040 in MEASUREMENTS.md), 0.076 at 1.440,",
+      "0.088 at 1.429, 0.104 at 1.420, 0.128 at 1.402, 0.159 at 1.375, 0.163 at",
+      "1.360.  The column carries the inner half of that and trap[] the ramp.",
+      "",
+      "Side view, front edge referred to the chest front at y = 1.360: the throat",
+      "at 1.429 sits 51 mm behind it and the clavicle at 1.402 sits 31 mm behind",
+      "it.  The previous build had 17 mm and 6 mm, i.e. no throat at all."
+    ],
+    "yokeY0": 1.342,
+    "yoke": [
+      [1.400, 0.0940, 0.0700, 0.00825],
+      [1.428, 0.0433, 0.0480, 0.00722],
+      [1.450, 0.0427, 0.0472, 0.00385],
+      [1.470, 0.0421, 0.0463, 0.00050],
+      [1.496, 0.0413, 0.0453, -0.00385]
+    ],
+    "trap": {
+      "$comment": "The trapezius shelf. Tops out at y = 1.443 and is 75 mm wide 3 mm below it, which is why it is an ellipsoid and not a neck-to-shoulder capsule.",
+      "cx": 0.048, "cy": 1.400, "cz": -0.004,
+      "rx": 0.058, "ry": 0.043, "rz": 0.048
+    },
+    "deltoid": {
+      "$comment": "Apex 22 mm below the shoulder landmark; the reference is widest at 1.360..1.375 and has lost 30 mm by 1.402.",
+      "xScale": 0.94, "drop": -0.022, "dz": -0.007, "armStart": 0.10,
+      "rx": 1.225, "ry": 1.30, "rz": 1.05
+    },
+    "glute": {
+      "$comment": "clay_0: the seat stands ~30 mm behind the back of the waist column at y = 0.94..1.00.",
+      "rise": 0.055, "back": 0.40, "rx": 1.06, "ry": 0.072, "rz": 0.74
+    },
+    "bust": {
+      "$comment": "clay_2: small, high, well separated -- not a shelf across the whole chest.",
+      "x": 0.50, "drop": 0.010, "rx": 0.044, "ry": 0.043, "rz": 0.036, "z": 0.70
+    },
+    "crotchTaperTop": 0.020,
+    "crotchTaper": 0.058,
+    "blendBust": 0.036,
+    "navelDepth": 0.006,
+    "blendTrap": 0.026,
+    "blendLeg": 0.028,
+    "blendArm": 0.016,
+    "voxelScale": 1.5
+  }
+}

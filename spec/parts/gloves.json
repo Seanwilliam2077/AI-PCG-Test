@@ -1,0 +1,34 @@
+{
+  "gloves": {
+    "$comment": [
+      "Fingerless black gloves. Measured on ref/views/body_2.png with a metre grid",
+      "Sides follow docs/HANDEDNESS.md: +X is her left and is the side of the",
+      "Zapper, the arm bands and the long sleeve; the tattooed arm is -X.",
+      "keyed to the alpha bbox; panel x is mirrored with respect to this frame.",
+      "The two arms differ on the sheet: on the tattooed arm (image-left, -X) the",
+      "sleeve is cut at y=1.115 and on the Zapper-side arm (image-right, +X) it runs",
+      "up over the elbow to y=1.208, right under the lower black band. topY is",
+      "the short one, longTopY the long one, and belts.rigSide decides which",
+      "arm gets which so the pair follows if the bands are mirrored.",
+      "The base spec's topY of 1.052 is a third of the way up the forearm, not",
+      "'most of' it: the wrist joint is at y=0.988 and the elbow at 1.181.",
+      "The rolled wrist cuff reads between y=0.945 and y=0.990 on the sheet, so",
+      "cuffY 0.966 with cuffWidth 0.044.",
+      "knuckleT is in units of the wrist->hand vector: body.ts runs the finger",
+      "stub out to 1.42, and the cut at 1.14 leaves the last third bare, which",
+      "matches the bare fingers below y=0.885 on the sheet."
+    ],
+    "topY": 1.112,
+    "longTopY": 1.208,
+    "thickness": 0.005,
+    "knuckleT": 1.14,
+    "cuffY": 0.966,
+    "cuffWidth": 0.044,
+    "cuffProud": 0.008,
+    "hemProud": 0.004,
+    "plateW": 0.03,
+    "plateH": 0.016,
+    "plateT": 0.006,
+    "voxelScale": 1.05
+  }
+}

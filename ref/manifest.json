@@ -1,0 +1,41 @@
+{
+  "project": "https://thibaut_granet.artstation.com/projects/X1aWVw",
+  "title": "Thibaut Granet - ARCANE - Jinx - Modeling & Texturing",
+  "fetched": [
+    {
+      "file": "sheet_01.jpg",
+      "asset": "045/154/107",
+      "tier": "4k",
+      "bytes": 415257,
+      "url": "https://cdnb.artstation.com/p/assets/images/images/045/154/107/4k/thibaut-granet-jinx-turn-clay-gun.jpg?1642036386"
+    },
+    {
+      "file": "sheet_02.jpg",
+      "asset": "045/154/109",
+      "tier": "4k",
+      "bytes": 602613,
+      "url": "https://cdnb.artstation.com/p/assets/images/images/045/154/109/4k/thibaut-granet-jinx-turn-gun.jpg?1642036394"
+    },
+    {
+      "file": "sheet_03.jpg",
+      "asset": "045/154/112",
+      "tier": "4k",
+      "bytes": 528312,
+      "url": "https://cdna.artstation.com/p/assets/images/images/045/154/112/4k/thibaut-granet-jinx-turn-hex.jpg?1642036401"
+    },
+    {
+      "file": "sheet_04.jpg",
+      "asset": "045/154/115",
+      "tier": "4k",
+      "bytes": 681662,
+      "url": "https://cdnb.artstation.com/p/assets/images/images/045/154/115/4k/thibaut-granet-jinx-turn2.jpg?1642036406"
+    },
+    {
+      "file": "sheet_05.jpg",
+      "asset": "045/154/605",
+      "tier": "4k",
+      "bytes": 420313,
+      "url": "https://cdnb.artstation.com/p/assets/images/images/045/154/605/4k/thibaut-granet-jinx-turn-clay.jpg?1642037719"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "tattoo": {
+    "$comment": [
+      "Cloud tattoo region, painted onto the body shell by body.ts -- no geometry.",
+      "HER RIGHT SIDE, -X: the bare arm, not the banded one. Round 1 had it on +X.",
+      "Sleeve on the back and outer faces of her -X arm from the deltoid (y 1.40)",
+      "to the glove (y 1.06), plus the -X scapula, flank, oblique and small of the",
+      "back, y 1.06 to 1.40. Chest, sternum, left side and legs are bare.",
+      "Measured by segmenting the ink's pale blue-grey out of the skin on",
+      "body_2/body_4/body_5 (out/zapper_tattoo_extent.py): body_4, her right side,",
+      "is 5.2% ink; body_0, her left side, is essentially none.",
+      "Layout tables live in src/parts/tattoo.ts; these are the knobs that set how",
+      "big and how sunk the motifs are."
+    ],
+    "seed": 20250819,
+    "armCloudR": 0.029,
+    "torsoCloudR": 0.032,
+    "sink": 0.42,
+    "lobeMin": 0.34,
+    "lobeVar": 0.28,
+    "skinPad": 0.006
+  }
+}

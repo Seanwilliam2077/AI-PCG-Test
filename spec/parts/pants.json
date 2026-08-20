@@ -1,0 +1,180 @@
+{
+  "pants": {
+    "$comment": [
+      "Purple pinstripe capris. Numbers read off ref/views/body_2.png and body_5.png",
+      "with the metre grid; see the pants section of the part report.",
+      "waistY: top of the waistband, read at 1.086 on the +X hip in body_2.",
+      "hemY + hemSideOffset[side] is the LOWEST point of that leg's rag, at the BACK of",
+      "the leg; tatterFrontRise then lifts it toward the front by that much again.",
+      "flare: [height, metres of cloth standoff from the body's own leg radius].",
+      "ROUND 2: the flare over the leg was 15-19 mm, which read as jodhpurs and cost",
+      "+22% on the back view's core run and +34/39% on the two side views' leg depth.",
+      "body_2's matte keeps the inseam open (clay_2's bridges it), and her right leg --",
+      "the wider of the two, and therefore the one the widest-run width term reads --",
+      "is trousered to 0.0530/0.0546/0.0563/0.0580/0.0572/0.0622 at y = 0.50/0.58/0.62/",
+      "0.66/0.70/0.74 against body radii of 0.0464/0.0490/0.0506/0.0523/0.0539/0.0556.",
+      "That difference is a flat +6 mm, so that is what the table now carries below y=0.72;",
+      "from 0.78 up the reference's own outline there is the sash low corner, not the",
+      "trouser, so the blouse over the seat is left close to where round 1 measured it.",
+      "",
+      "ROUND 3. The round-2 brief read the side views at hip height and concluded the",
+      "leg was too SHALLOW. It is the other way round below the knee, and the number it",
+      "read was braids. Measured off the CLAY panels with tools/pants_probe.py, which",
+      "normalises exactly as compare.py does, and off the pants-only render in world",
+      "metres with tools/pants_abs.py:",
+      "",
+      "  LEG DEPTH, the single leg run in the two side panels (clay_4 front-most run,",
+      "  clay_0 leg run; the other run in clay_4 is a braid hanging free behind her,",
+      "  not a second leg -- clay_0 shows the legs at the same z, so there is no stride):",
+      "     y      clay_4   clay_0   render",
+      "    0.55    0.101      -      0.133",
+      "    0.60    0.099    0.114    0.133",
+      "    0.65    0.116    0.123    0.133",
+      "    0.70    0.138      -      0.139",
+      "  so the trouser is 26-32 mm too deep at the calf and correct at the thigh: the",
+      "  taper in z was missing entirely. `flareZ` splits the standoff off `flare` and",
+      "  takes it to 1 mm below the knee, where the body's own shin (squashZ 1.18) is",
+      "  already deeper than the reference's whole leg run.",
+      "",
+      "  LEG SPAN ACROSS, outer edge to outer edge of the pair:",
+      "     y      clay_2   clay_5   render",
+      "    0.50    0.232    0.237    0.209",
+      "    0.55    0.229    0.234    0.209",
+      "    0.60    0.234    0.240    0.218",
+      "  and clay_5, whose matte keeps the inseam open, splits it into her right leg",
+      "  0.106/0.106/0.108 and her left 0.087/0.082/0.091 with a 42-45 mm gap between",
+      "  them. Our gap is 43 mm, so the gap is right and each leg is ~13 mm short on",
+      "  its OUTER edge. `legOut` hangs the tube that far outboard of the bone and",
+      "  widens it by the same, which moves only the outer edge: predicted right leg",
+      "  0.103, left 0.088, span 0.235 against the reference's 0.106/0.082/0.234.",
+      "",
+      "  HEM HEIGHT. The build's own hem convention is",
+      "     base(theta) = hemY + hemSideOffset[side] + tatterDepth + rise*(0.5+0.5cos)",
+      "  with the teeth cutting up to tatterDepth off that, so the FRONT of a leg runs",
+      "  from hemY+offset+rise (deepest tooth) to that plus tatterDepth. At hemY 0.466",
+      "  that put her right leg's front hem at 0.474..0.546 and her left's at 0.514..",
+      "  0.586, against the panel measurements 0.442..0.520 and 0.486..0.556 already",
+      "  recorded in the header of pants.ts -- the whole rag was ~28 mm too high and had",
+      "  been since round 1, because the comment above the table describes hemY+offset as",
+      "  the lowest point at the BACK while the two numbers it was fitted to are FRONT",
+      "  readings. hemY 0.466 -> 0.438 lands the front hems on 0.446..0.518 (her right)",
+      "  and 0.486..0.558 (her left), i.e. within 4 mm of both measurements."
+    ],
+    "waistY": 1.086,
+    "waistFrontDrop": 0.024,
+    "hemY": 0.438,
+    "hemSideOffset": [
+      -0.024,
+      0.016
+    ],
+    "crotchY": 0.9,
+    "inseamApexY": 0.865,
+    "inseamR": 0.022,
+    "inseamMidY": 0.7,
+    "inseamBaseY": 0.42,
+    "thickness": 0.011,
+    "flare": [
+      [
+        0.44,
+        0.006
+      ],
+      [
+        0.62,
+        0.006
+      ],
+      [
+        0.72,
+        0.007
+      ],
+      [
+        0.78,
+        0.011
+      ],
+      [
+        0.84,
+        0.017
+      ],
+      [
+        0.9,
+        0.022
+      ],
+      [
+        0.97,
+        0.024
+      ],
+      [
+        1.09,
+        0.02
+      ]
+    ],
+    "flareZ": [
+      [
+        0.44,
+        0.001
+      ],
+      [
+        0.6,
+        0.001
+      ],
+      [
+        0.66,
+        0.005
+      ],
+      [
+        0.72,
+        0.007
+      ],
+      [
+        0.78,
+        0.011
+      ],
+      [
+        0.84,
+        0.017
+      ],
+      [
+        0.9,
+        0.022
+      ],
+      [
+        0.97,
+        0.024
+      ],
+      [
+        1.09,
+        0.02
+      ]
+    ],
+    "legOut": [
+      [
+        0.42,
+        0.0065
+      ],
+      [
+        0.72,
+        0.0065
+      ],
+      [
+        0.82,
+        0.005
+      ],
+      [
+        0.9,
+        0.002
+      ],
+      [
+        0.96,
+        0.0
+      ]
+    ],
+    "seatBulge": 0.01,
+    "stripePitch": 0.0215,
+    "stripeDuty": 0.44,
+    "tatterDepth": 0.072,
+    "tatterCount": 8,
+    "tatterFrontRise": 0.032,
+    "voxelScale": 1.35,
+    "stripeLegR": 0.082,
+    "stripeHipR": 0.15
+  }
+}

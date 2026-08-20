@@ -1,0 +1,21 @@
+node_modules/
+dist/
+out/
+
+# The reference turnaround is © Riot Games, modelled and textured by Thibaut
+# Granet. It is a measurement target, not ours to redistribute -- so the sheets
+# and the per-view panels cut from them stay out of the repository.
+# `node tools/fetch_ref.mjs https://thibaut_granet.artstation.com/projects/X1aWVw`
+# pulls them from the original ArtStation project, and
+# `python tools/slice_ref.py` cuts the panels.
+ref/*.jpg
+ref/*.jpeg
+ref/*.png
+ref/views/
+
+*.log
+.DS_Store
+Thumbs.db
+
+__pycache__/
+*.pyc

@@ -1,0 +1,466 @@
+{
+  "$comment": [
+    "Every number the character is built from lives here so the review loop can tune it.",
+    "Units are metres. Frame: Y up, origin on the floor midway between the feet, the",
+    "character facing +Z. +X is her LEFT, which is screen-right in the front view --",
+    "her tattooed arm and the pouch are on +X.",
+    "Heights are absolute above the floor and were read off ref/views/clay_2.png and",
+    "clay_0.png with tools/grid.py; see docs/MEASUREMENTS.md."
+  ],
+  "meta": {
+    "name": "Jinx",
+    "source": "Thibaut Granet - ARCANE - Jinx - Modeling & Texturing",
+    "height": 1.72
+  },
+  "landmarks": {
+    "hairTop": 1.715,
+    "crown": 1.674,
+    "brow": 1.6,
+    "eye": 1.584,
+    "noseBase": 1.546,
+    "mouth": 1.528,
+    "chin": 1.505,
+    "jaw": 1.492,
+    "neckBase": 1.429,
+    "shoulder": 1.402,
+    "bust": 1.342,
+    "underBust": 1.237,
+    "waist": 1.209,
+    "navel": 1.183,
+    "iliac": 1.078,
+    "hip": 1.016,
+    "crotch": 0.94,
+    "knee": 0.58,
+    "pantHem": 0.492,
+    "calf": 0.402,
+    "bootCuff": 0.291,
+    "ankle": 0.158,
+    "ankleJoint": 0.108,
+    "footBed": 0.042,
+    "sole": 0.0
+  },
+  "widths": {
+    "$comment": "Half-widths (x) and half-depths (z) at the named height.",
+    "headHalfW": 0.058,
+    "headHalfD": 0.064,
+    "skullHalfW": 0.068,
+    "jawHalfW": 0.042,
+    "neckR": 0.036,
+    "shoulderHalfW": 0.108,
+    "chestHalfW": 0.102,
+    "chestHalfD": 0.102,
+    "bustHalfW": 0.104,
+    "bustHalfD": 0.112,
+    "waistHalfW": 0.085,
+    "waistHalfD": 0.0814,
+    "iliacHalfW": 0.1,
+    "hipHalfW": 0.118,
+    "hipHalfD": 0.11,
+    "thighR": 0.066,
+    "kneeR": 0.049,
+    "calfR": 0.047,
+    "ankleR": 0.031,
+    "upperArmR": 0.034,
+    "elbowR": 0.029,
+    "forearmR": 0.028,
+    "wristR": 0.021,
+    "handLength": 0.092,
+    "footLength": 0.128,
+    "deltoidR": 0.04
+  },
+  "pose": {
+    "$comment": "Measured off clay_2: her LEFT foot's lowest pixel sits 0.047 m above her RIGHT foot's, so she stands with the weight on her right leg and the left one raised and a little forward. stanceHalfW 0.052 was chosen by A/B on the composite score (41.6 against 40.9 at 0.058), NOT by the earlier claim that the reference's legs touch down to y = 0.22 -- that claim was wrong. The front silhouette reads as one run there because a BRAID bridges the gap, not because the calves meet; zoom clay_2 between y 0.62 and 0.22 and the backdrop is visible between them.",
+    "armAbduct": 0.12,
+    "armForward": 0.055,
+    "elbowBend": 0.075,
+    "stanceHalfW": 0.052,
+    "footToeOut": 0.145,
+    "shoulderDrop": 0.012,
+    "headTilt": 0.0,
+    "spineLean": 0.01,
+    "footLift": 0.047,
+    "footForward": 0.028,
+    "hipShift": -0.016,
+    "pelvisTilt": 0.045,
+    "shoulderTilt": -0.03
+  },
+  "head": {
+    "$comment": "Every dimension head.ts reads. Cranium large and round, jaw tapering hard to a small pointed chin, high cheekbones over hollow cheeks, wide-set sockets -- those four carry the likeness.",
+    "centreZ": 0.004,
+    "eyeSpacing": 0.031,
+    "eyeSetback": 0.062,
+    "craniumRise": 0.008,
+    "craniumBack": 0.012,
+    "craniumTall": 1.15,
+    "midfaceRise": 0.016,
+    "midfaceZ": 0.01,
+    "midfaceWide": 0.95,
+    "midfaceTall": 0.042,
+    "jawRise": 0.02,
+    "jawZ": 0.016,
+    "jawWide": 1.1,
+    "jawTall": 0.036,
+    "jawDeep": 0.78,
+    "chinRise": 0.008,
+    "chinWidth": 0.017,
+    "chinTall": 0.017,
+    "chinDepth": 0.019,
+    "chinZ": 0.062,
+    "cheekX": 0.046,
+    "cheekRise": 0.02,
+    "cheekZ": 0.03,
+    "cheekBone": 0.026,
+    "skullBlend": 0.02,
+    "hollowX": 0.048,
+    "hollowRise": 0.012,
+    "hollowZ": 0.052,
+    "hollowR": 0.02,
+    "hollowBlend": 0.016,
+    "browZ": 0.058,
+    "browTall": 0.01,
+    "browDepth": 0.02,
+    "browWidth": 0.048,
+    "browPitch": 0.25,
+    "socketRise": 0.002,
+    "socketZ": 0.01,
+    "socketW": 0.021,
+    "socketH": 0.016,
+    "socketDepth2": 0.016,
+    "socketBlend": 0.008,
+    "noseBridgeZ": 0.064,
+    "noseTipZ": 0.086,
+    "noseBridgeR": 0.007,
+    "noseTipR": 0.011,
+    "noseWidth": 0.014,
+    "lipGap": 0.006,
+    "lipZ": 0.07,
+    "lipWidth": 0.019,
+    "lipThickness": 0.007,
+    "lipDepth": 0.012,
+    "earX": 0.062,
+    "earRise": 0.014,
+    "earZ": -0.014,
+    "earLength": 0.036,
+    "eyeR": 0.0125,
+    "irisR": 0.0068,
+    "pupilR": 0.0032,
+    "lidUpperY": 0.0075,
+    "lidLowerY": 0.007,
+    "lidZ": 0.0015,
+    "lidThick": 0.0032,
+    "browArchX": 0.031,
+    "browArchY": 0.004,
+    "browArchZ": 0.07,
+    "browArchW": 0.023,
+    "browArchH": 0.0045,
+    "browArchD": 0.01,
+    "browTilt": 0.1,
+    "neckCut": 0.03
+  },
+  "hair": {
+    "$comment": "Two ankle-length braids, a swept fringe, and the upswept crest.",
+    "capThickness": 0.016,
+    "crestHeight": 0.115,
+    "crestSweep": -0.055,
+    "fringeDrop": 0.085,
+    "sideLockDrop": 0.15,
+    "braidRoot": [
+      0.085,
+      1.612,
+      -0.052
+    ],
+    "braidTipY": 0.075,
+    "braidR0": 0.03,
+    "braidR1": 0.014,
+    "braidTurns": 26,
+    "braidBulge": 0.0035,
+    "braidOutswing": 0.055,
+    "braidBackswing": 0.13,
+    "tieCount": 3
+  },
+  "top": {
+    "$comment": "Black halter crop top with the gold X lacing over the chest.",
+    "thickness": 0.006,
+    "hemY": 1.237,
+    "neckY": 1.404,
+    "backCutY": 1.3,
+    "strapWidth": 0.02,
+    "laceR": 0.0075,
+    "laceSpan": 0.062,
+    "laceY": 1.318,
+    "underBandWidth": 0.024,
+    "underBandY": 1.243
+  },
+  "choker": {
+    "y": 1.452,
+    "r": 0.049,
+    "bandWidth": 0.016,
+    "thickness": 0.005,
+    "strapDrop": 0.055
+  },
+  "pants": {
+    "$comment": "Purple pinstripe capris, baggy at the hip, tattered below the knee.",
+    "waistY": 1.078,
+    "hemY": 0.492,
+    "thickness": 0.01,
+    "hipFlare": 0.03,
+    "kneeFlare": 0.016,
+    "stripeCount": 26,
+    "stripeDepth": 0.0012,
+    "tatterAmp": 0.022,
+    "tatterCount": 9
+  },
+  "sash": {
+    "$comment": "The wrap and pouch slung across the hips, low on her right.",
+    "topY": 1.086,
+    "dropY": 0.845,
+    "wrapR": 0.155,
+    "thickness": 0.012,
+    "pouchSize": [
+      0.062,
+      0.078,
+      0.034
+    ]
+  },
+  "belts": {
+    "hipY": 1.062,
+    "hipR": 0.148,
+    "beltWidth": 0.026,
+    "beltThickness": 0.007,
+    "thighStrapY": 0.855,
+    "armBandUpperY": 1.268,
+    "armBandLowerY": 1.196,
+    "bandWidth": 0.03
+  },
+  "gloves": {
+    "$comment": "Fingerless black gloves reaching most of the forearm.",
+    "topY": 1.052,
+    "thickness": 0.005,
+    "knuckleY": 0.968
+  },
+  "boots": {
+    "soleThickness": 0.036,
+    "soleOverhang": 0.014,
+    "cuffY": 0.291,
+    "cuffFlare": 0.03,
+    "toeLength": 0.132,
+    "toeCapLength": 0.048,
+    "laceRows": 6,
+    "laceR": 0.005
+  },
+  "zapper": {
+    "$comment": "The pistol holstered against her right thigh (-X side).",
+    "anchor": [
+      -0.118,
+      0.885,
+      0.055
+    ],
+    "yaw": 0.08,
+    "pitch": -1.35,
+    "barrelLength": 0.15,
+    "barrelR": 0.019,
+    "gripLength": 0.078
+  },
+  "materials": {
+    "$comment": "Colours are sRGB display values in 0..1 -- authored to match medians sampled off ref/views/body_2.png, so a renderer must convert them to linear before lighting. They are sampled from the artist's RENDER, not from an albedo, so they carry a little of its lighting; that is a deliberate approximation and it is why the viewer's exposure is calibrated against the same sheet.",
+    "skin": {
+      "color": [
+        0.831,
+        0.741,
+        0.706
+      ],
+      "roughness": 0.62,
+      "metalness": 0.0
+    },
+    "skinShade": {
+      "color": [
+        0.735,
+        0.635,
+        0.596
+      ],
+      "roughness": 0.64,
+      "metalness": 0.0
+    },
+    "hair": {
+      "color": [
+        0.1536,
+        0.3039,
+        0.4111
+      ],
+      "roughness": 0.42,
+      "metalness": 0.0,
+      "sheen": [
+        0.3,
+        0.52,
+        0.66
+      ]
+    },
+    "hairDark": {
+      "color": [
+        0.088,
+        0.192,
+        0.276
+      ],
+      "roughness": 0.46,
+      "metalness": 0.0
+    },
+    "cloth": {
+      "color": [
+        0.205,
+        0.212,
+        0.288
+      ],
+      "roughness": 0.86,
+      "metalness": 0.0,
+      "sheen": [
+        0.34,
+        0.35,
+        0.42
+      ]
+    },
+    "clothWorn": {
+      "color": [
+        0.255,
+        0.243,
+        0.259
+      ],
+      "roughness": 0.88,
+      "metalness": 0.0,
+      "sheen": [
+        0.32,
+        0.32,
+        0.36
+      ]
+    },
+    "pants": {
+      "color": [
+        0.33,
+        0.195,
+        0.295
+      ],
+      "roughness": 0.8,
+      "metalness": 0.0,
+      "sheen": [
+        0.42,
+        0.3,
+        0.4
+      ]
+    },
+    "pantsDark": {
+      "color": [
+        0.25,
+        0.14,
+        0.225
+      ],
+      "roughness": 0.82,
+      "metalness": 0.0
+    },
+    "leather": {
+      "color": [
+        0.192,
+        0.161,
+        0.157
+      ],
+      "roughness": 0.66,
+      "metalness": 0.0,
+      "sheen": [
+        0.26,
+        0.23,
+        0.2
+      ]
+    },
+    "canvas": {
+      "color": [
+        0.478,
+        0.451,
+        0.325
+      ],
+      "roughness": 0.9,
+      "metalness": 0.0
+    },
+    "brass": {
+      "color": [
+        0.706,
+        0.545,
+        0.286
+      ],
+      "roughness": 0.38,
+      "metalness": 0.85
+    },
+    "steel": {
+      "color": [
+        0.475,
+        0.49,
+        0.51
+      ],
+      "roughness": 0.35,
+      "metalness": 0.9
+    },
+    "tattoo": {
+      "color": [
+        0.745,
+        0.78,
+        0.795
+      ],
+      "roughness": 0.62,
+      "metalness": 0.0
+    },
+    "eye": {
+      "color": [
+        0.353,
+        0.51,
+        0.588
+      ],
+      "roughness": 0.2,
+      "metalness": 0.0
+    },
+    "lip": {
+      "color": [
+        0.663,
+        0.404,
+        0.4
+      ],
+      "roughness": 0.5,
+      "metalness": 0.0
+    },
+    "brow": {
+      "color": [
+        0.228,
+        0.17,
+        0.157
+      ],
+      "roughness": 0.7,
+      "metalness": 0.0
+    },
+    "sclera": {
+      "color": [
+        0.925,
+        0.91,
+        0.894
+      ],
+      "roughness": 0.22,
+      "metalness": 0.0
+    },
+    "pupil": {
+      "color": [
+        0.105,
+        0.098,
+        0.118
+      ],
+      "roughness": 0.18,
+      "metalness": 0.0
+    }
+  },
+  "lod": {
+    "$comment": "Voxel size in metres. Triangle count scales as 1/voxel^2: measured 249k tris at 6.0 mm, so 4.5 mm lands near 440k and keeps the three LODs together under the 16 MB an artifact can carry.",
+    "high": {
+      "voxel": 0.0045
+    },
+    "medium": {
+      "voxel": 0.006
+    },
+    "low": {
+      "voxel": 0.0105
+    }
+  }
+}

@@ -1,0 +1,194 @@
+{
+  "head": {
+    "$comment": [
+      "Head measured off ref/views/head_1.png (front) and head_2.png (profile).",
+      "head_1 scales at 2646 px/m from landmarks eye=1.584 and chin=1.505, with",
+      "the midline at column 425 and the eye line at row 338.",
+      "Read from it: pupil separation 0.0605, eye aperture 0.0299 x 0.0121 with",
+      "the outer canthus 0.0076 above the inner, iris 0.0140 across, nose wing",
+      "width 0.0227, mouth 0.0356 across, lips 1.518..1.531 with the lip line at",
+      "1.525, brow band 1.598..1.609 spanning x 0.0095..0.052, ear 1.560..1.596,",
+      "face half-width 0.0593 at eye level, 0.0574 at 1.561, 0.0522 at 1.542,",
+      "0.0435 at 1.523, 0.0352 at 1.511, chin bottom 1.505.",
+      "From head_2 the nose tip is 12.6 mm forward of the chin front and the lips",
+      "sit 6.5 mm behind the tip, 6 mm ahead of the chin.",
+      "",
+      "sections[] is the skull loft and frontLoft[] the shallower stack that",
+      "flattens the plane of the face; both are [y, halfX, zFront, zBack, ry]",
+      "ellipsoid slices. An ellipse alone puts the surface 5 mm behind where the",
+      "eyeball has to sit, which is what makes eyes read as stuck on -- hence the",
+      "second stack. Both are kept MONOTONIC in zFront and their ry at least",
+      "twice the slice spacing: a slice thinner than that scallops, and the",
+      "scallop lands on the forehead as corduroy. The brow overhang and the eye",
+      "socket are therefore cut with orbit[] rather than lofted.",
+      "",
+      "ROUND 3. Every band on this face is 3-11 mm wide and materials are picked",
+      "per VERTEX, so a band narrower than a voxel comes out as a row of blocks.",
+      "Two answers, both applied here:",
+      "  (a) the eyeballs left the head shell and became their own, at",
+      "      eyeVoxelScale 0.16 -- 1.7 mm at the low LOD, so a 14 mm iris is 8",
+      "      samples across instead of 3, and the lash line can be PAINTED on the",
+      "      globe (lashT/lashSkew) instead of floating as a slab;",
+      "  (b) every remaining band was given real relief, so the boundary has a",
+      "      crease for the vertices to land on: browRidge is now a proud ridge",
+      "      (ridgeRInner/ridgeBack, pushed in along `inward` rather than in -z so",
+      "      it follows the skull), the lips are two separate masses split by a",
+      "      3 mm groove, and mento[] is the mentolabial crease the profile was",
+      "      missing.",
+      "The aperture is a LENS -- two big circles intersected -- not an ellipsoid,",
+      "because an ellipsoid has no corner and the reference's outer canthus is a",
+      "sharp flick. apHalfW/apHalfH are the lens half-axes and the circle radius",
+      "falls out as (a*a + b*b) / (2b)."
+    ],
+    "cutY": 1.478,
+    "loftBlend": 0.007,
+    "coreBlend": 0.01,
+    "crownCap": { "c": [0, 1.622, -0.013], "r": [0.0625, 0.0525, 0.0595] },
+    "sections": [
+      [1.633, 0.0605, 0.042, -0.0715, 0.03],
+      [1.621, 0.0625, 0.0455, -0.0725, 0.03],
+      [1.609, 0.0625, 0.047, -0.072, 0.03],
+      [1.5975, 0.0605, 0.047, -0.0705, 0.03],
+      [1.586, 0.0585, 0.045, -0.07, 0.03],
+      [1.5745, 0.057, 0.043, -0.069, 0.03],
+      [1.563, 0.0545, 0.04, -0.067, 0.03],
+      [1.5515, 0.0515, 0.036, -0.0635, 0.03],
+      [1.54, 0.0475, 0.032, -0.059, 0.03],
+      [1.529, 0.0415, 0.029, -0.0545, 0.03]
+    ],
+    "frontLoft": [
+      [1.648, 0.033, 0.023, -0.012, 0.028],
+      [1.635, 0.041, 0.032, -0.012, 0.028],
+      [1.6215, 0.047, 0.039, -0.012, 0.028],
+      [1.6085, 0.051, 0.0435, -0.012, 0.028],
+      [1.5975, 0.053, 0.046, -0.012, 0.028],
+      [1.586, 0.0535, 0.0455, -0.012, 0.028],
+      [1.5745, 0.052, 0.045, -0.012, 0.028],
+      [1.562, 0.049, 0.0435, -0.012, 0.028],
+      [1.55, 0.045, 0.0415, -0.012, 0.028],
+      [1.538, 0.038, 0.0425, -0.012, 0.028],
+      [1.526, 0.029, 0.042, -0.012, 0.028]
+    ],
+    "neck": {
+      "y0": 1.47, "y1": 1.518, "z0": 0.001, "z1": -0.014,
+      "r0": 0.0395, "r1": 0.035, "squashZ": 1.12
+    },
+    "zygo": { "back": [0.0455, 1.572, -0.006], "front": [0.0225, 1.567, 0.0405], "rBack": 0.012, "rFront": 0.0105 },
+    "ramus": { "low": [0.0335, 1.531, -0.017], "high": [0.04, 1.568, -0.0225], "rLow": 0.0105, "rHigh": 0.0095 },
+    "jaw": {
+      "curve": [
+        [0.032, 1.533, -0.015],
+        [0.0285, 1.524, 0.008],
+        [0.0215, 1.5185, 0.025],
+        [0.01, 1.5165, 0.033],
+        [0, 1.5163, 0.0358]
+      ],
+      "rEnd": 0.014, "rMid": 0.0105, "segments": 30
+    },
+    "chinBall": { "c": [0, 1.5165, 0.035], "r": [0.0108, 0.0104, 0.0125] },
+    "maxilla": { "c": [0, 1.5385, 0.026], "r": [0.0275, 0.0175, 0.0205] },
+    "hollow": { "c": [0.062, 1.536, 0.073], "r": 0.047, "blend": 0.02 },
+    "orbit": { "c": [0.0318, 1.5885, 0.0525], "r": [0.0305, 0.014, 0.0138], "blend": 0.014 },
+    "eye": {
+      "x": 0.0303, "y": 1.5835, "z": 0.028, "r": 0.018,
+      "lidT": 0.0034, "lidSquashY": 0.8, "blend": 0.008,
+      "apZ": 0.021, "apHalfW": 0.018, "apHalfH": 0.0068, "apDepth": 0.03, "tilt": 0.235,
+      "irisR": 0.0082, "irisZ": 0.013, "pupilR": 0.0033, "pupilZ": 0.016,
+      "lashT": 0.0034, "lashSkew": 0.0032,
+      "lowLashT": 0.0016, "lowLashSkew": 0.0016,
+      "socketClear": 0.0012, "backCut": 0.005
+    },
+    "browRidge": {
+      "$comment": [
+        "A ridge, not a decal. The tube is pushed ridgeBack along the direction",
+        "from the curve point toward `inward` -- i.e. roughly along the inward",
+        "surface normal of the skull, which -z alone is not once x passes 30 mm.",
+        "What shows is a band 2*sqrt(r^2 - ridgeBack^2) wide standing",
+        "(r - ridgeBack) proud: 11.0 mm wide and 2.0 mm proud at the inner end,",
+        "5.8 mm and 0.6 mm at the tail. That matches the reference band",
+        "1.598..1.609 and gives the paint a crease to stop against."
+      ],
+      "curve": [
+        [0.015, 1.6043, 0.0467],
+        [0.025, 1.6066, 0.0442],
+        [0.035, 1.6056, 0.0401],
+        [0.0435, 1.6023, 0.0352],
+        [0.048, 1.6005, 0.0316]
+      ],
+      "inward": [0, 1.6, -0.012],
+      "ridgeBack": 0.0053, "ridgeRInner": 0.0075, "ridgeROuter": 0.007,
+      "ridgeBlend": 0.0012, "segments": 22, "paintGrow": 0.0002
+    },
+    "nose": {
+      "bridgeTop": [0, 1.592, 0.041], "rTop": 0.004,
+      "bridgeLow": [0, 1.562, 0.044], "rLow": 0.0068,
+      "tipC": [0, 1.5555, 0.049], "tipR": [0.0092, 0.0085, 0.0105],
+      "alaC": [0.006, 1.55, 0.043], "alaR": [0.0055, 0.005, 0.008],
+      "nostrilC": [0.0058, 1.5468, 0.0432], "nostrilR": [0.0028, 0.0021, 0.0038],
+      "nostrilBlend": 0.004, "nostrilPaint": 0.0008,
+      "blend": 0.005, "faceBlend": 0.005
+    },
+    "lips": {
+      "$comment": [
+        "Two masses, not one. The round-2 lips had both tubes at y ~ 1.524, so",
+        "there was no upper/lower and the paint was a slab. Upper spans",
+        "1.5248..1.5312, lower 1.5167..1.5247, and the seam between them is a",
+        "3.2 mm groove -- wide enough to survive the low LOD's voxel, which the",
+        "old 2.4 mm one was not."
+      ],
+      "upper": [
+        [0.0158, 1.525, 0.0403],
+        [0.0105, 1.5272, 0.0442],
+        [0.005, 1.5292, 0.0466],
+        [0, 1.5282, 0.0475]
+      ],
+      "lower": [
+        [0.0155, 1.5246, 0.04],
+        [0.0095, 1.5228, 0.044],
+        [0, 1.5212, 0.0473]
+      ],
+      "line": [
+        [0.0162, 1.5248, 0.0418],
+        [0.01, 1.5254, 0.0464],
+        [0, 1.525, 0.0508]
+      ],
+      "rUpperEnd": 0.0016, "rUpperMid": 0.0029, "rLowerEnd": 0.0016, "rLowerMid": 0.0033,
+      "rLine": 0.002, "lineBlend": 0.0015, "blend": 0.002,
+      "paintGrow": 0.0001, "segments": 26
+    },
+    "mento": {
+      "$comment": "Mentolabial crease -- without it the chin has no edge in profile and the whole lower face reads as one lump.",
+      "curve": [
+        [0.0155, 1.5155, 0.0395],
+        [0.0085, 1.514, 0.0448],
+        [0, 1.5136, 0.0482]
+      ],
+      "r": 0.0065, "lift": 0.005, "blend": 0.003, "segments": 18
+    },
+    "ear": {
+      "$comment": "Round 2's ear was a plate with a bowl bitten out and at the low LOD the bowl read as a hole; round 3's first try added a helix, antihelix and tragus but at 2.4-3.3 mm they were under one voxel and shredded. These are the same features at 3.6-4.2 mm with a 4 mm blend -- coarse enough to survive, which is the only kind of ear detail worth having here.",
+      "plateC": [0.0608, 1.578, -0.021], "plateR": [0.0058, 0.0182, 0.0115],
+      "helix": [
+        [0.0603, 1.5865, -0.0098],
+        [0.0618, 1.593, -0.0165],
+        [0.0623, 1.592, -0.025],
+        [0.0618, 1.583, -0.0305],
+        [0.0608, 1.572, -0.0302],
+        [0.0595, 1.5645, -0.0245]
+      ],
+      "helixR": 0.0042,
+      "antihelix": [
+        [0.0638, 1.588, -0.0168],
+        [0.0652, 1.58, -0.0242],
+        [0.0645, 1.5702, -0.0248]
+      ],
+      "antihelixR": 0.0036,
+      "tragusC": [0.0635, 1.5732, -0.0112], "tragusR": [0.0038, 0.0044, 0.003],
+      "bowlC": [0.069, 1.5775, -0.0208], "bowlR": [0.0042, 0.0072, 0.0056],
+      "lobeC": [0.0595, 1.5608, -0.0178], "lobeR": 0.0055,
+      "blend": 0.005, "innerBlend": 0.004, "segments": 22
+    },
+    "voxelScale": 0.42,
+    "eyeVoxelScale": 0.2
+  }
+}

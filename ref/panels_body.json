@@ -1,0 +1,100 @@
+{
+  "sheet": "ref/body_6view.jpg",
+  "tag": "body",
+  "sheet_size": [
+    3000,
+    1396
+  ],
+  "panels": [
+    {
+      "index": 0,
+      "file": "ref/views/body_0.png",
+      "box": [
+        248,
+        85,
+        545,
+        1318
+      ],
+      "size": [
+        297,
+        1233
+      ],
+      "fg_px": 176110
+    },
+    {
+      "index": 1,
+      "file": "ref/views/body_1.png",
+      "box": [
+        636,
+        75,
+        1016,
+        1351
+      ],
+      "size": [
+        380,
+        1276
+      ],
+      "fg_px": 264482
+    },
+    {
+      "index": 2,
+      "file": "ref/views/body_2.png",
+      "box": [
+        1122,
+        72,
+        1499,
+        1371
+      ],
+      "size": [
+        377,
+        1299
+      ],
+      "fg_px": 242767
+    },
+    {
+      "index": 3,
+      "file": "ref/views/body_3.png",
+      "box": [
+        1596,
+        81,
+        1934,
+        1378
+      ],
+      "size": [
+        338,
+        1297
+      ],
+      "fg_px": 209229
+    },
+    {
+      "index": 4,
+      "file": "ref/views/body_4.png",
+      "box": [
+        1972,
+        88,
+        2342,
+        1298
+      ],
+      "size": [
+        370,
+        1210
+      ],
+      "fg_px": 217796
+    },
+    {
+      "index": 5,
+      "file": "ref/views/body_5.png",
+      "box": [
+        2412,
+        89,
+        2788,
+        1308
+      ],
+      "size": [
+        376,
+        1219
+      ],
+      "fg_px": 232505
+    }
+  ]
+}

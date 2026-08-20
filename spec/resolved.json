@@ -1,0 +1,2346 @@
+{
+  "$comment": [
+    "Every number the character is built from lives here so the review loop can tune it.",
+    "Units are metres. Frame: Y up, origin on the floor midway between the feet, the",
+    "character facing +Z. +X is her LEFT, which is screen-right in the front view --",
+    "her tattooed arm and the pouch are on +X.",
+    "Heights are absolute above the floor and were read off ref/views/clay_2.png and",
+    "clay_0.png with tools/grid.py; see docs/MEASUREMENTS.md."
+  ],
+  "meta": {
+    "name": "Jinx",
+    "source": "Thibaut Granet - ARCANE - Jinx - Modeling & Texturing",
+    "height": 1.72
+  },
+  "landmarks": {
+    "hairTop": 1.715,
+    "crown": 1.674,
+    "brow": 1.6,
+    "eye": 1.584,
+    "noseBase": 1.546,
+    "mouth": 1.528,
+    "chin": 1.505,
+    "jaw": 1.492,
+    "neckBase": 1.429,
+    "shoulder": 1.402,
+    "bust": 1.342,
+    "underBust": 1.237,
+    "waist": 1.209,
+    "navel": 1.183,
+    "iliac": 1.078,
+    "hip": 1.016,
+    "crotch": 0.94,
+    "knee": 0.58,
+    "pantHem": 0.492,
+    "calf": 0.402,
+    "bootCuff": 0.291,
+    "ankle": 0.158,
+    "ankleJoint": 0.108,
+    "footBed": 0.042,
+    "sole": 0
+  },
+  "widths": {
+    "$comment": "Half-widths (x) and half-depths (z) at the named height.",
+    "headHalfW": 0.058,
+    "headHalfD": 0.064,
+    "skullHalfW": 0.068,
+    "jawHalfW": 0.042,
+    "neckR": 0.036,
+    "shoulderHalfW": 0.108,
+    "chestHalfW": 0.102,
+    "chestHalfD": 0.102,
+    "bustHalfW": 0.104,
+    "bustHalfD": 0.112,
+    "waistHalfW": 0.085,
+    "waistHalfD": 0.0814,
+    "iliacHalfW": 0.1,
+    "hipHalfW": 0.118,
+    "hipHalfD": 0.11,
+    "thighR": 0.066,
+    "kneeR": 0.049,
+    "calfR": 0.047,
+    "ankleR": 0.031,
+    "upperArmR": 0.034,
+    "elbowR": 0.029,
+    "forearmR": 0.028,
+    "wristR": 0.021,
+    "handLength": 0.092,
+    "footLength": 0.128,
+    "deltoidR": 0.04
+  },
+  "pose": {
+    "$comment": "Measured off clay_2: her LEFT foot's lowest pixel sits 0.047 m above her RIGHT foot's, so she stands with the weight on her right leg and the left one raised and a little forward. stanceHalfW 0.052 was chosen by A/B on the composite score (41.6 against 40.9 at 0.058), NOT by the earlier claim that the reference's legs touch down to y = 0.22 -- that claim was wrong. The front silhouette reads as one run there because a BRAID bridges the gap, not because the calves meet; zoom clay_2 between y 0.62 and 0.22 and the backdrop is visible between them.",
+    "armAbduct": 0.12,
+    "armForward": 0.055,
+    "elbowBend": 0.075,
+    "stanceHalfW": 0.052,
+    "footToeOut": 0.145,
+    "shoulderDrop": 0.012,
+    "headTilt": 0,
+    "spineLean": 0.01,
+    "footLift": 0.047,
+    "footForward": 0.028,
+    "hipShift": -0.016,
+    "pelvisTilt": 0.045,
+    "shoulderTilt": -0.03
+  },
+  "head": {
+    "$comment": [
+      "Head measured off ref/views/head_1.png (front) and head_2.png (profile).",
+      "head_1 scales at 2646 px/m from landmarks eye=1.584 and chin=1.505, with",
+      "the midline at column 425 and the eye line at row 338.",
+      "Read from it: pupil separation 0.0605, eye aperture 0.0299 x 0.0121 with",
+      "the outer canthus 0.0076 above the inner, iris 0.0140 across, nose wing",
+      "width 0.0227, mouth 0.0356 across, lips 1.518..1.531 with the lip line at",
+      "1.525, brow band 1.598..1.609 spanning x 0.0095..0.052, ear 1.560..1.596,",
+      "face half-width 0.0593 at eye level, 0.0574 at 1.561, 0.0522 at 1.542,",
+      "0.0435 at 1.523, 0.0352 at 1.511, chin bottom 1.505.",
+      "From head_2 the nose tip is 12.6 mm forward of the chin front and the lips",
+      "sit 6.5 mm behind the tip, 6 mm ahead of the chin.",
+      "",
+      "sections[] is the skull loft and frontLoft[] the shallower stack that",
+      "flattens the plane of the face; both are [y, halfX, zFront, zBack, ry]",
+      "ellipsoid slices. An ellipse alone puts the surface 5 mm behind where the",
+      "eyeball has to sit, which is what makes eyes read as stuck on -- hence the",
+      "second stack. Both are kept MONOTONIC in zFront and their ry at least",
+      "twice the slice spacing: a slice thinner than that scallops, and the",
+      "scallop lands on the forehead as corduroy. The brow overhang and the eye",
+      "socket are therefore cut with orbit[] rather than lofted.",
+      "",
+      "ROUND 3. Every band on this face is 3-11 mm wide and materials are picked",
+      "per VERTEX, so a band narrower than a voxel comes out as a row of blocks.",
+      "Two answers, both applied here:",
+      "  (a) the eyeballs left the head shell and became their own, at",
+      "      eyeVoxelScale 0.16 -- 1.7 mm at the low LOD, so a 14 mm iris is 8",
+      "      samples across instead of 3, and the lash line can be PAINTED on the",
+      "      globe (lashT/lashSkew) instead of floating as a slab;",
+      "  (b) every remaining band was given real relief, so the boundary has a",
+      "      crease for the vertices to land on: browRidge is now a proud ridge",
+      "      (ridgeRInner/ridgeBack, pushed in along `inward` rather than in -z so",
+      "      it follows the skull), the lips are two separate masses split by a",
+      "      3 mm groove, and mento[] is the mentolabial crease the profile was",
+      "      missing.",
+      "The aperture is a LENS -- two big circles intersected -- not an ellipsoid,",
+      "because an ellipsoid has no corner and the reference's outer canthus is a",
+      "sharp flick. apHalfW/apHalfH are the lens half-axes and the circle radius",
+      "falls out as (a*a + b*b) / (2b)."
+    ],
+    "centreZ": 0.004,
+    "eyeSpacing": 0.031,
+    "eyeSetback": 0.062,
+    "craniumRise": 0.008,
+    "craniumBack": 0.012,
+    "craniumTall": 1.15,
+    "midfaceRise": 0.016,
+    "midfaceZ": 0.01,
+    "midfaceWide": 0.95,
+    "midfaceTall": 0.042,
+    "jawRise": 0.02,
+    "jawZ": 0.016,
+    "jawWide": 1.1,
+    "jawTall": 0.036,
+    "jawDeep": 0.78,
+    "chinRise": 0.008,
+    "chinWidth": 0.017,
+    "chinTall": 0.017,
+    "chinDepth": 0.019,
+    "chinZ": 0.062,
+    "cheekX": 0.046,
+    "cheekRise": 0.02,
+    "cheekZ": 0.03,
+    "cheekBone": 0.026,
+    "skullBlend": 0.02,
+    "hollowX": 0.048,
+    "hollowRise": 0.012,
+    "hollowZ": 0.052,
+    "hollowR": 0.02,
+    "hollowBlend": 0.016,
+    "browZ": 0.058,
+    "browTall": 0.01,
+    "browDepth": 0.02,
+    "browWidth": 0.048,
+    "browPitch": 0.25,
+    "socketRise": 0.002,
+    "socketZ": 0.01,
+    "socketW": 0.021,
+    "socketH": 0.016,
+    "socketDepth2": 0.016,
+    "socketBlend": 0.008,
+    "noseBridgeZ": 0.064,
+    "noseTipZ": 0.086,
+    "noseBridgeR": 0.007,
+    "noseTipR": 0.011,
+    "noseWidth": 0.014,
+    "lipGap": 0.006,
+    "lipZ": 0.07,
+    "lipWidth": 0.019,
+    "lipThickness": 0.007,
+    "lipDepth": 0.012,
+    "earX": 0.062,
+    "earRise": 0.014,
+    "earZ": -0.014,
+    "earLength": 0.036,
+    "eyeR": 0.0125,
+    "irisR": 0.0068,
+    "pupilR": 0.0032,
+    "lidUpperY": 0.0075,
+    "lidLowerY": 0.007,
+    "lidZ": 0.0015,
+    "lidThick": 0.0032,
+    "browArchX": 0.031,
+    "browArchY": 0.004,
+    "browArchZ": 0.07,
+    "browArchW": 0.023,
+    "browArchH": 0.0045,
+    "browArchD": 0.01,
+    "browTilt": 0.1,
+    "neckCut": 0.03,
+    "cutY": 1.478,
+    "loftBlend": 0.007,
+    "coreBlend": 0.01,
+    "crownCap": {
+      "c": [
+        0,
+        1.622,
+        -0.013
+      ],
+      "r": [
+        0.0625,
+        0.0525,
+        0.0595
+      ]
+    },
+    "sections": [
+      [
+        1.633,
+        0.0605,
+        0.042,
+        -0.0715,
+        0.03
+      ],
+      [
+        1.621,
+        0.0625,
+        0.0455,
+        -0.0725,
+        0.03
+      ],
+      [
+        1.609,
+        0.0625,
+        0.047,
+        -0.072,
+        0.03
+      ],
+      [
+        1.5975,
+        0.0605,
+        0.047,
+        -0.0705,
+        0.03
+      ],
+      [
+        1.586,
+        0.0585,
+        0.045,
+        -0.07,
+        0.03
+      ],
+      [
+        1.5745,
+        0.057,
+        0.043,
+        -0.069,
+        0.03
+      ],
+      [
+        1.563,
+        0.0545,
+        0.04,
+        -0.067,
+        0.03
+      ],
+      [
+        1.5515,
+        0.0515,
+        0.036,
+        -0.0635,
+        0.03
+      ],
+      [
+        1.54,
+        0.0475,
+        0.032,
+        -0.059,
+        0.03
+      ],
+      [
+        1.529,
+        0.0415,
+        0.029,
+        -0.0545,
+        0.03
+      ]
+    ],
+    "frontLoft": [
+      [
+        1.648,
+        0.033,
+        0.023,
+        -0.012,
+        0.028
+      ],
+      [
+        1.635,
+        0.041,
+        0.032,
+        -0.012,
+        0.028
+      ],
+      [
+        1.6215,
+        0.047,
+        0.039,
+        -0.012,
+        0.028
+      ],
+      [
+        1.6085,
+        0.051,
+        0.0435,
+        -0.012,
+        0.028
+      ],
+      [
+        1.5975,
+        0.053,
+        0.046,
+        -0.012,
+        0.028
+      ],
+      [
+        1.586,
+        0.0535,
+        0.0455,
+        -0.012,
+        0.028
+      ],
+      [
+        1.5745,
+        0.052,
+        0.045,
+        -0.012,
+        0.028
+      ],
+      [
+        1.562,
+        0.049,
+        0.0435,
+        -0.012,
+        0.028
+      ],
+      [
+        1.55,
+        0.045,
+        0.0415,
+        -0.012,
+        0.028
+      ],
+      [
+        1.538,
+        0.038,
+        0.0425,
+        -0.012,
+        0.028
+      ],
+      [
+        1.526,
+        0.029,
+        0.042,
+        -0.012,
+        0.028
+      ]
+    ],
+    "neck": {
+      "y0": 1.47,
+      "y1": 1.518,
+      "z0": 0.001,
+      "z1": -0.014,
+      "r0": 0.0395,
+      "r1": 0.035,
+      "squashZ": 1.12
+    },
+    "zygo": {
+      "back": [
+        0.0455,
+        1.572,
+        -0.006
+      ],
+      "front": [
+        0.0225,
+        1.567,
+        0.0405
+      ],
+      "rBack": 0.012,
+      "rFront": 0.0105
+    },
+    "ramus": {
+      "low": [
+        0.0335,
+        1.531,
+        -0.017
+      ],
+      "high": [
+        0.04,
+        1.568,
+        -0.0225
+      ],
+      "rLow": 0.0105,
+      "rHigh": 0.0095
+    },
+    "jaw": {
+      "curve": [
+        [
+          0.032,
+          1.533,
+          -0.015
+        ],
+        [
+          0.0285,
+          1.524,
+          0.008
+        ],
+        [
+          0.0215,
+          1.5185,
+          0.025
+        ],
+        [
+          0.01,
+          1.5165,
+          0.033
+        ],
+        [
+          0,
+          1.5163,
+          0.0358
+        ]
+      ],
+      "rEnd": 0.014,
+      "rMid": 0.0105,
+      "segments": 30
+    },
+    "chinBall": {
+      "c": [
+        0,
+        1.5165,
+        0.035
+      ],
+      "r": [
+        0.0108,
+        0.0104,
+        0.0125
+      ]
+    },
+    "maxilla": {
+      "c": [
+        0,
+        1.5385,
+        0.026
+      ],
+      "r": [
+        0.0275,
+        0.0175,
+        0.0205
+      ]
+    },
+    "hollow": {
+      "c": [
+        0.062,
+        1.536,
+        0.073
+      ],
+      "r": 0.047,
+      "blend": 0.02
+    },
+    "orbit": {
+      "c": [
+        0.0318,
+        1.5885,
+        0.0525
+      ],
+      "r": [
+        0.0305,
+        0.014,
+        0.0138
+      ],
+      "blend": 0.014
+    },
+    "eye": {
+      "x": 0.0303,
+      "y": 1.5835,
+      "z": 0.028,
+      "r": 0.018,
+      "lidT": 0.0034,
+      "lidSquashY": 0.8,
+      "blend": 0.008,
+      "apZ": 0.021,
+      "apHalfW": 0.018,
+      "apHalfH": 0.0068,
+      "apDepth": 0.03,
+      "tilt": 0.235,
+      "irisR": 0.0082,
+      "irisZ": 0.013,
+      "pupilR": 0.0033,
+      "pupilZ": 0.016,
+      "lashT": 0.0034,
+      "lashSkew": 0.0032,
+      "lowLashT": 0.0016,
+      "lowLashSkew": 0.0016,
+      "socketClear": 0.0012,
+      "backCut": 0.005
+    },
+    "browRidge": {
+      "$comment": [
+        "A ridge, not a decal. The tube is pushed ridgeBack along the direction",
+        "from the curve point toward `inward` -- i.e. roughly along the inward",
+        "surface normal of the skull, which -z alone is not once x passes 30 mm.",
+        "What shows is a band 2*sqrt(r^2 - ridgeBack^2) wide standing",
+        "(r - ridgeBack) proud: 11.0 mm wide and 2.0 mm proud at the inner end,",
+        "5.8 mm and 0.6 mm at the tail. That matches the reference band",
+        "1.598..1.609 and gives the paint a crease to stop against."
+      ],
+      "curve": [
+        [
+          0.015,
+          1.6043,
+          0.0467
+        ],
+        [
+          0.025,
+          1.6066,
+          0.0442
+        ],
+        [
+          0.035,
+          1.6056,
+          0.0401
+        ],
+        [
+          0.0435,
+          1.6023,
+          0.0352
+        ],
+        [
+          0.048,
+          1.6005,
+          0.0316
+        ]
+      ],
+      "inward": [
+        0,
+        1.6,
+        -0.012
+      ],
+      "ridgeBack": 0.0053,
+      "ridgeRInner": 0.0075,
+      "ridgeROuter": 0.007,
+      "ridgeBlend": 0.0012,
+      "segments": 22,
+      "paintGrow": 0.0002
+    },
+    "nose": {
+      "bridgeTop": [
+        0,
+        1.592,
+        0.041
+      ],
+      "rTop": 0.004,
+      "bridgeLow": [
+        0,
+        1.562,
+        0.044
+      ],
+      "rLow": 0.0068,
+      "tipC": [
+        0,
+        1.5555,
+        0.049
+      ],
+      "tipR": [
+        0.0092,
+        0.0085,
+        0.0105
+      ],
+      "alaC": [
+        0.006,
+        1.55,
+        0.043
+      ],
+      "alaR": [
+        0.0055,
+        0.005,
+        0.008
+      ],
+      "nostrilC": [
+        0.0058,
+        1.5468,
+        0.0432
+      ],
+      "nostrilR": [
+        0.0028,
+        0.0021,
+        0.0038
+      ],
+      "nostrilBlend": 0.004,
+      "nostrilPaint": 0.0008,
+      "blend": 0.005,
+      "faceBlend": 0.005
+    },
+    "lips": {
+      "$comment": [
+        "Two masses, not one. The round-2 lips had both tubes at y ~ 1.524, so",
+        "there was no upper/lower and the paint was a slab. Upper spans",
+        "1.5248..1.5312, lower 1.5167..1.5247, and the seam between them is a",
+        "3.2 mm groove -- wide enough to survive the low LOD's voxel, which the",
+        "old 2.4 mm one was not."
+      ],
+      "upper": [
+        [
+          0.0158,
+          1.525,
+          0.0403
+        ],
+        [
+          0.0105,
+          1.5272,
+          0.0442
+        ],
+        [
+          0.005,
+          1.5292,
+          0.0466
+        ],
+        [
+          0,
+          1.5282,
+          0.0475
+        ]
+      ],
+      "lower": [
+        [
+          0.0155,
+          1.5246,
+          0.04
+        ],
+        [
+          0.0095,
+          1.5228,
+          0.044
+        ],
+        [
+          0,
+          1.5212,
+          0.0473
+        ]
+      ],
+      "line": [
+        [
+          0.0162,
+          1.5248,
+          0.0418
+        ],
+        [
+          0.01,
+          1.5254,
+          0.0464
+        ],
+        [
+          0,
+          1.525,
+          0.0508
+        ]
+      ],
+      "rUpperEnd": 0.0016,
+      "rUpperMid": 0.0029,
+      "rLowerEnd": 0.0016,
+      "rLowerMid": 0.0033,
+      "rLine": 0.002,
+      "lineBlend": 0.0015,
+      "blend": 0.002,
+      "paintGrow": 0.0001,
+      "segments": 26
+    },
+    "mento": {
+      "$comment": "Mentolabial crease -- without it the chin has no edge in profile and the whole lower face reads as one lump.",
+      "curve": [
+        [
+          0.0155,
+          1.5155,
+          0.0395
+        ],
+        [
+          0.0085,
+          1.514,
+          0.0448
+        ],
+        [
+          0,
+          1.5136,
+          0.0482
+        ]
+      ],
+      "r": 0.0065,
+      "lift": 0.005,
+      "blend": 0.003,
+      "segments": 18
+    },
+    "ear": {
+      "$comment": "Round 2's ear was a plate with a bowl bitten out and at the low LOD the bowl read as a hole; round 3's first try added a helix, antihelix and tragus but at 2.4-3.3 mm they were under one voxel and shredded. These are the same features at 3.6-4.2 mm with a 4 mm blend -- coarse enough to survive, which is the only kind of ear detail worth having here.",
+      "plateC": [
+        0.0608,
+        1.578,
+        -0.021
+      ],
+      "plateR": [
+        0.0058,
+        0.0182,
+        0.0115
+      ],
+      "helix": [
+        [
+          0.0603,
+          1.5865,
+          -0.0098
+        ],
+        [
+          0.0618,
+          1.593,
+          -0.0165
+        ],
+        [
+          0.0623,
+          1.592,
+          -0.025
+        ],
+        [
+          0.0618,
+          1.583,
+          -0.0305
+        ],
+        [
+          0.0608,
+          1.572,
+          -0.0302
+        ],
+        [
+          0.0595,
+          1.5645,
+          -0.0245
+        ]
+      ],
+      "helixR": 0.0042,
+      "antihelix": [
+        [
+          0.0638,
+          1.588,
+          -0.0168
+        ],
+        [
+          0.0652,
+          1.58,
+          -0.0242
+        ],
+        [
+          0.0645,
+          1.5702,
+          -0.0248
+        ]
+      ],
+      "antihelixR": 0.0036,
+      "tragusC": [
+        0.0635,
+        1.5732,
+        -0.0112
+      ],
+      "tragusR": [
+        0.0038,
+        0.0044,
+        0.003
+      ],
+      "bowlC": [
+        0.069,
+        1.5775,
+        -0.0208
+      ],
+      "bowlR": [
+        0.0042,
+        0.0072,
+        0.0056
+      ],
+      "lobeC": [
+        0.0595,
+        1.5608,
+        -0.0178
+      ],
+      "lobeR": 0.0055,
+      "blend": 0.005,
+      "innerBlend": 0.004,
+      "segments": 22
+    },
+    "voxelScale": 0.42,
+    "eyeVoxelScale": 0.2
+  },
+  "hair": {
+    "$comment": [
+      "Measured off the turnaround; the tables live in src/parts/hair.ts and the",
+      "derivation is in its header.  Only tuning scalars are carried here.",
+      "The panel x measurements are taken about the MIRROR-FIT body midline, not",
+      "the alpha-bbox centre: the braids pull the bbox centre 14.8 mm off the",
+      "midline in clay_2 and 14.3 mm the other way in clay_5, and reading widths",
+      "off the bbox frame is what made the previous pass symmetric.",
+      "braidTurns 16: the lobe pitch on clay_5 is ~0.032 m over a 1.53 m braid,",
+      "and a 3-strand plait shows 3 lobes per turn, so 3*turns = 48.",
+      "ROUND 2.  braid_area_frac at yaw 90/270 was 0.115 against a reference",
+      "0.044/0.034.  Measured run by run at yaw 90, that was NOT thickness: the",
+      "braid run was 0.034-0.060 against the reference's 0.034-0.049.  It was",
+      "standoff -- the plait hung 7 to 37 mm clear of the back from y 0.3 to 1.5,",
+      "so it read as its own thin silhouette run and `debraid` discarded all of",
+      "it, while clay_0 is ONE run from y 0.70 to the crown.  The fix is in the",
+      "z column of BRAID_ROWS (probed off the assembled body with",
+      "out/hair_backz.ts), not in braidR0.",
+      "ROUND 3.  crestWideX and crestBlend are gone: the crest is no longer a pair",
+      "of squashed cone chains but a loft of ellipses solved from the four widths",
+      "the six panels actually measure (CROWN_ROWS in hair.ts).  crownBlend and",
+      "massBlend keep the values this fragment already carried -- every round-3",
+      "measurement was taken with them -- and the code defaults now agree.",
+      "fringeClip is how far the forward fringe may stand outside the solved crown",
+      "ellipse; it is what stops five hand-placed locks from being measured as",
+      "crown at yaw 315.  furrowR is the radius of the layer grooves cut along the",
+      "blade: at 0.0055, sunk to 0.8 of the half thickness, they serrated the top."
+    ],
+    "capThickness": 0.016,
+    "crestHeight": 0.115,
+    "crestSweep": -0.055,
+    "fringeDrop": 0.085,
+    "sideLockDrop": 0.15,
+    "braidRoot": [
+      0.085,
+      1.612,
+      -0.052
+    ],
+    "braidTipY": 0.082,
+    "braidR0": 0.0195,
+    "braidR1": 0.0158,
+    "braidTurns": 16,
+    "braidBulge": 0.11,
+    "braidOutswing": 0.055,
+    "braidBackswing": 0.13,
+    "tieCount": 3,
+    "hairlineY": 1.668,
+    "hairlineZ": 0.052,
+    "hairlineSlope": 0.62,
+    "fringeClip": 0.003,
+    "furrowR": 0.0045,
+    "crownBlend": 0.02,
+    "massBlend": 0.018,
+    "gatherZ": -0.104,
+    "strandAmp": 0.0024,
+    "strandFreq": 12,
+    "strandWave": 0.012,
+    "massVoxelScale": 1,
+    "braidRScale": 1,
+    "braidChunks": 16,
+    "braidSegPerChunk": 16,
+    "braidStrandScale": 0.56,
+    "braidVoxelScale": 1.3,
+    "tieYs": [
+      1.44,
+      1.18,
+      0.92,
+      0.62,
+      0.34,
+      0.225
+    ],
+    "tieWidth": 0.011,
+    "tuftBlades": 6,
+    "tuftSpread": 0.05,
+    "tuftMinR": 0.009
+  },
+  "top": {
+    "$comment": [
+      "Black halter crop top.  Round 2.  Heights and widths re-read off",
+      "ref/views/body_2.png with the metre grid keyed to the panel's alpha bbox",
+      "(sole = 0, hairTip = 1.715 -> 743.44 px/m) and the body centreline at",
+      "x = 195 px.  The centreline is confirmed by the choker, which is symmetric",
+      "about it: at y = 1.450 the dark wrap runs -0.048..+0.046 and at y = 1.440",
+      "-0.058..+0.062.  (The boots are NOT on that centreline -- their midpoint",
+      "sits ~32 mm to her right at 171 px -- so do not derive it from the feet.)",
+      "",
+      "ROUND 1 DEFECTS FIXED HERE",
+      "",
+      "1. The cut edge was a single plane, i.e. a straight oblique chord, and it",
+      "   was 8..15 mm too wide over the whole ribcage.  Classifying the front",
+      "   panel into skin / black cloth gives the cloth's outer edge, her right",
+      "   (the side her arm does not overlap):",
+      "     y   1.26  1.28  1.30  1.32  1.34  1.36  1.38  1.40  1.41",
+      "     |x| .098  .100  .098  .093  .085  .074  .059  .044  .042",
+      "   and her left, where the arm crowds it: .090 .090 .086 .079 .074 .067",
+      "   .063 .065 .066.  Read the other way -- the highest cloth in each column",
+      "   -- her right gives (x, y) = (-0.100, 1.293) (-0.090, 1.328)",
+      "   (-0.080, 1.351) (-0.070, 1.367) (-0.060, 1.379) (-0.050, 1.393),",
+      "   which agrees with the row scan to a pixel.  So the edge is a CURVE: its",
+      "   slope is ~0 up to y = 1.30 and rises to 0.75 by y = 1.38.  `edge` is",
+      "   that curve, a monotone-cubic table of half-width against height, and it",
+      "   replaces armEdgeX/Y/Z/Slope.  The numbers in it are the plane constant,",
+      "   not the silhouette: the z-tilt (armEdgeDepth) adds up to 38 mm at the",
+      "   front, so the table is fitted against the baked shell, iterating on the",
+      "   probe in out/top_probe.ts.",
+      "",
+      "2. The neck strap was a slab of constant half-width 0.060 butted onto the",
+      "   bib, so the neckline had a right-angle notch at (0.060, 1.375) -- very",
+      "   visible at yaw 45.  `collar` is now a curve too, and it continues the",
+      "   bib's silhouette (0.061 at 1.380 -> 0.052 at the top) instead of",
+      "   stepping off it.  It is also offset by collarX, because the reference's",
+      "   cloth span at the throat is not centred on the spine: -0.051..+0.062 at",
+      "   y = 1.390 and -0.042..+0.066 at 1.410, centred on +0.006..+0.012.  With",
+      "   the slab centred on x = 0 and the opening off centre at +0.016, her left",
+      "   strap came out 5 mm wide -- a spike, not a strap.  Built, the straps are",
+      "   0.053/0.066 at y = 1.390 and 0.045/0.063 at 1.410 against the",
+      "   reference's 0.051/0.062 and 0.042/0.066.",
+      "",
+      "3. The strap's top was a flat horizontal cut at y = 1.4315 that read as a",
+      "   ledge.  It is now rounded (collarRound) AND lifted to 1.4365, inside",
+      "   the choker's lowest wrap (1.4333..1.4437), with the cloth offset thinned",
+      "   from 9 mm to 5.8 mm between y = 1.400 and y = 1.430 (neckThin*) so the",
+      "   strap's outer radius there, 0.0430 + 0.0058 = 0.0488, clears under the",
+      "   wrap's outer radius of 0.0499.  That is what the reference shows: the",
+      "   straps run under the choker rather than stopping against it.",
+      "",
+      "4. The brass keeper loop on the hem band was never modelled.  It is at",
+      "   x = -0.048..-0.039, y = 1.231..1.251 on the sheet -- a 9 mm brass bar",
+      "   wrapping the band, mirroring the steel buckle frame at +0.018..+0.046.",
+      "   Built 12 mm wide because 9 mm is under one low-LOD voxel.",
+      "",
+      "NECKLINE.  The opening is a rounded V that widens as it climbs, not a",
+      "constant-width slot, and it is off centre toward her left:",
+      "   y 1.390  skin +0.004..+0.035   (half 0.0155, centre +0.020)",
+      "   y 1.400  skin -0.004..+0.040   (half 0.022,  centre +0.018)",
+      "   y 1.410  skin -0.011..+0.044   (half 0.0275, centre +0.0165)",
+      "so neckOpenX 0.016, half-width 0.0125 at the bottom flaring at 0.60 and",
+      "clamped at 0.031 (above y = 1.4333 the choker covers everything anyway).",
+      "The cloth is one run at y = 1.380 (-0.059..+0.063) and two at 1.390, so",
+      "the scoop bottoms out at y = 1.3865.",
+      "",
+      "HEM AND BAND.  The cloth's bottom edge is at y = 1.2246 at the centreline",
+      "and 1.2219..1.2259 out to |x| = 0.065, i.e. flat, not the 1.218 round 1",
+      "used.  The band's seam is at y = 1.250, so the band is 1.2240..1.2495.",
+      "The reference's band edge is at |x| = 0.101, the same as the bib's, so",
+      "underBandProud comes down from 8 mm to 3 mm.",
+      "",
+      "LACING.  Re-checked, unchanged.  Brass eyelet centres off the brass mask:",
+      "(-0.034, 1.358) (+0.029, 1.351) (-0.040, 1.316) (+0.033, 1.308); the whole",
+      "cluster spans x -0.052..+0.049 and y 1.300..1.372.  The built cross spans",
+      "-0.0492..+0.0492 and 1.2968..1.3698 -- within 5 mm on every side.",
+      "laceThick/ringThick are NOT the reference's thicknesses, they are the depth",
+      "needed to survive the mesher: at 5 mm the diagonals fall under one low-LOD",
+      "voxel and the X bakes as an H.",
+      "",
+      "BACK.  clay_5 / body_5 show a bare upper back, skin from the shoulders down",
+      "to the band.  backZ0/backSlope bite that opening out of the bib only; the",
+      "collar is exempt, because the halter's strap really does ring the neck --",
+      "body_5 has a dark band at the nape at y = 1.44.",
+      "",
+      "PROXY.  The garment hangs on a copy of body.ts's trunk and it has to stay a",
+      "copy: in round 1 the copy had drifted -- it still expected body.trap to be",
+      "a capsule (x0/y0/z0..) when body.ts had made it an ellipsoid (cx/cy/cz,",
+      "rx/ry/rz), so the proxy silently dropped the trapezius altogether -- the",
+      "shoulder mass that reaches x = 0.099 at y = 1.420 where the yoke column on",
+      "its own is only 0.053, a 46 mm hole in the surface the collar hangs on --",
+      "and it",
+      "used a hand-written bust and a smootherstep loft where body.ts uses",
+      "body.bust and a Fritsch-Carlson one.  Fixed here.  If body.yoke, body.trap,",
+      "body.bust or body.blend* move, this moves with them.",
+      "",
+      "BUDGET.  voxelScale was 0.68 in round 1: a 3.1 mm voxel at --lod high and",
+      "62.7 k triangles, 12% of the whole character's budget for one garment.",
+      "0.80 is 3.6 mm / 44.7 k, and the X lacing still reads at the low LOD's",
+      "8.4 mm voxel because paint() carries its colour even where the mesher",
+      "rounds the ridge off."
+    ],
+    "thickness": 0.006,
+    "hemY": 1.224,
+    "neckY": 1.404,
+    "backCutY": 1.3,
+    "strapWidth": 0.02,
+    "laceR": 0.0075,
+    "laceSpan": 0.062,
+    "laceY": 1.3333,
+    "underBandWidth": 0.0255,
+    "underBandY": 1.23675,
+    "gap": 0.003,
+    "bibTopY": 1.401,
+    "collarTopY": 1.4365,
+    "edge": [
+      [
+        1.224,
+        0.0965
+      ],
+      [
+        1.26,
+        0.0845
+      ],
+      [
+        1.28,
+        0.0793
+      ],
+      [
+        1.3,
+        0.0631
+      ],
+      [
+        1.32,
+        0.0489
+      ],
+      [
+        1.34,
+        0.0387
+      ],
+      [
+        1.36,
+        0.0305
+      ],
+      [
+        1.38,
+        0.0258
+      ],
+      [
+        1.401,
+        0.018
+      ]
+    ],
+    "armEdgeZc": 0.01,
+    "armEdgeDepth": 0.3415,
+    "collarY0": 1.386,
+    "collarX": 0.009,
+    "collar": [
+      [
+        1.38,
+        0.061
+      ],
+      [
+        1.395,
+        0.0555
+      ],
+      [
+        1.41,
+        0.054
+      ],
+      [
+        1.4365,
+        0.052
+      ]
+    ],
+    "collarRound": 0.009,
+    "neckThinY0": 1.4,
+    "neckThinY1": 1.43,
+    "neckThinBy": 0.0032,
+    "neckOpenX": 0.016,
+    "neckOpenY": 1.3865,
+    "neckOpenTopY": 1.52,
+    "neckOpenW0": 0.0125,
+    "neckOpenFlare": 0.6,
+    "neckOpenWMax": 0.031,
+    "neckOpenZ0": -0.012,
+    "neckOpenRound": 0.008,
+    "backLowY": 1.247,
+    "backY0": 1.27,
+    "backZ0": -0.045,
+    "backSlope": 0.55,
+    "spineTopY": 1.4,
+    "spineBotY": 1.246,
+    "spineWidth": 0.034,
+    "spineThick": 0.01,
+    "spineProud": 0.001,
+    "underBandProud": 0.003,
+    "buckleX": 0.032,
+    "buckleHalfW": 0.014,
+    "buckleHalfH": 0.0125,
+    "buckleThick": 0.005,
+    "buckleFrame": 0.0045,
+    "keeperX": -0.0437,
+    "keeperHalfW": 0.006,
+    "keeperHalfH": 0.0145,
+    "keeperThick": 0.0045,
+    "laceHalfW": 0.034,
+    "laceHalfH": 0.0213,
+    "laceWidth": 0.014,
+    "laceThick": 0.012,
+    "laceProud": 0.009,
+    "laceOver": 0.0015,
+    "laceEndInset": 0.1,
+    "ringOuter": 0.0152,
+    "ringInner": 0.008,
+    "ringThick": 0.011,
+    "ringProud": 0.0035,
+    "voxelScale": 0.8
+  },
+  "choker": {
+    "y": 1.452,
+    "r": 0.049,
+    "bandWidth": 0.016,
+    "thickness": 0.005,
+    "strapDrop": 0.055,
+    "$comment": [
+      "Three leather wraps round the throat with a shallow X crossing the front,",
+      "read off ref/views/body_2.png and ref/views/head_1.png.",
+      "",
+      "ROUND 2.  Re-measured on the front panel with the metre grid (743.44 px/m,",
+      "centreline 195 px).  The wraps' centres are y = 1.4385, 1.4545 and 1.4685",
+      "and each is ~9 mm tall, so the stack runs 1.4335..1.4735 -- 40 mm, not the",
+      "45 mm round 1 built.  Its half-width there is 0.047 (the dark run at",
+      "y = 1.450 is -0.048..+0.046) against a bare neck of 0.044 just above it, so",
+      "the leather is only ~3 mm proud and `thickness` must stay small.",
+      "",
+      "At round 1's voxelScale 0.5 -- a 5.3 mm voxel -- the three wraps and the X",
+      "fused into one dark blob: the gaps between wraps are 4..6 mm, i.e. under",
+      "one voxel.  0.38 (a 4.0 mm voxel) is what lets the gaps read, and it is the",
+      "cheapest place on the character to spend triangles because the choker is",
+      "small.  The choker was also invisible in round 1 -- it baked inside a 137 mm",
+      "ball body.ts had at the throat -- which body.json's measured `yoke` has",
+      "since fixed; it is now the outermost surface at the neck.",
+      "",
+      "neck* mirrors head.json's neck column extended down to y = 1.420, which is",
+      "the same column body.json's yoke now carries (r 0.0435 at 1.420 tapering to",
+      "0.040 at 1.525).  neckInset sinks every piece 6 mm into it so the shell is",
+      "13 mm thick and survives the voxel; only the outer 5-9 mm shows.",
+      "",
+      "The top's neck straps pass UNDER this stack: top.json thins their standoff",
+      "to 5.8 mm above y = 1.430 so their outer radius, 0.0488, clears the lowest",
+      "wrap's 0.0499.  If `gap` or `thickness` here drop, top.neckThinBy has to",
+      "grow to match or the strap's cut end pokes through the leather."
+    ],
+    "gap": 0.002,
+    "bandY0": 1.4385,
+    "bandY1": 1.4545,
+    "bandY2": 1.4685,
+    "bandHalf": 0.005,
+    "wrapProud": 0.002,
+    "wrapHalf": 0.004,
+    "wrapTilt": 0.32,
+    "wrapBackZ": -0.025,
+    "dropProud": 0.0035,
+    "dropWidth": 0.009,
+    "dropThick": 0.005,
+    "dropTheta0": 0.5,
+    "dropY0": 1.4685,
+    "dropTheta1": -0.28,
+    "dropY1": 1.4265,
+    "neckY0": 1.42,
+    "neckY1": 1.525,
+    "neckZ0": 0.0076,
+    "neckZ1": -0.012,
+    "neckR0": 0.0435,
+    "neckR1": 0.04,
+    "neckSquashZ": 1.1,
+    "neckInset": 0.006,
+    "voxelScale": 0.44
+  },
+  "pants": {
+    "$comment": [
+      "Purple pinstripe capris. Numbers read off ref/views/body_2.png and body_5.png",
+      "with the metre grid; see the pants section of the part report.",
+      "waistY: top of the waistband, read at 1.086 on the +X hip in body_2.",
+      "hemY + hemSideOffset[side] is the LOWEST point of that leg's rag, at the BACK of",
+      "the leg; tatterFrontRise then lifts it toward the front by that much again.",
+      "flare: [height, metres of cloth standoff from the body's own leg radius].",
+      "ROUND 2: the flare over the leg was 15-19 mm, which read as jodhpurs and cost",
+      "+22% on the back view's core run and +34/39% on the two side views' leg depth.",
+      "body_2's matte keeps the inseam open (clay_2's bridges it), and her right leg --",
+      "the wider of the two, and therefore the one the widest-run width term reads --",
+      "is trousered to 0.0530/0.0546/0.0563/0.0580/0.0572/0.0622 at y = 0.50/0.58/0.62/",
+      "0.66/0.70/0.74 against body radii of 0.0464/0.0490/0.0506/0.0523/0.0539/0.0556.",
+      "That difference is a flat +6 mm, so that is what the table now carries below y=0.72;",
+      "from 0.78 up the reference's own outline there is the sash low corner, not the",
+      "trouser, so the blouse over the seat is left close to where round 1 measured it.",
+      "",
+      "ROUND 3. The round-2 brief read the side views at hip height and concluded the",
+      "leg was too SHALLOW. It is the other way round below the knee, and the number it",
+      "read was braids. Measured off the CLAY panels with tools/pants_probe.py, which",
+      "normalises exactly as compare.py does, and off the pants-only render in world",
+      "metres with tools/pants_abs.py:",
+      "",
+      "  LEG DEPTH, the single leg run in the two side panels (clay_4 front-most run,",
+      "  clay_0 leg run; the other run in clay_4 is a braid hanging free behind her,",
+      "  not a second leg -- clay_0 shows the legs at the same z, so there is no stride):",
+      "     y      clay_4   clay_0   render",
+      "    0.55    0.101      -      0.133",
+      "    0.60    0.099    0.114    0.133",
+      "    0.65    0.116    0.123    0.133",
+      "    0.70    0.138      -      0.139",
+      "  so the trouser is 26-32 mm too deep at the calf and correct at the thigh: the",
+      "  taper in z was missing entirely. `flareZ` splits the standoff off `flare` and",
+      "  takes it to 1 mm below the knee, where the body's own shin (squashZ 1.18) is",
+      "  already deeper than the reference's whole leg run.",
+      "",
+      "  LEG SPAN ACROSS, outer edge to outer edge of the pair:",
+      "     y      clay_2   clay_5   render",
+      "    0.50    0.232    0.237    0.209",
+      "    0.55    0.229    0.234    0.209",
+      "    0.60    0.234    0.240    0.218",
+      "  and clay_5, whose matte keeps the inseam open, splits it into her right leg",
+      "  0.106/0.106/0.108 and her left 0.087/0.082/0.091 with a 42-45 mm gap between",
+      "  them. Our gap is 43 mm, so the gap is right and each leg is ~13 mm short on",
+      "  its OUTER edge. `legOut` hangs the tube that far outboard of the bone and",
+      "  widens it by the same, which moves only the outer edge: predicted right leg",
+      "  0.103, left 0.088, span 0.235 against the reference's 0.106/0.082/0.234.",
+      "",
+      "  HEM HEIGHT. The build's own hem convention is",
+      "     base(theta) = hemY + hemSideOffset[side] + tatterDepth + rise*(0.5+0.5cos)",
+      "  with the teeth cutting up to tatterDepth off that, so the FRONT of a leg runs",
+      "  from hemY+offset+rise (deepest tooth) to that plus tatterDepth. At hemY 0.466",
+      "  that put her right leg's front hem at 0.474..0.546 and her left's at 0.514..",
+      "  0.586, against the panel measurements 0.442..0.520 and 0.486..0.556 already",
+      "  recorded in the header of pants.ts -- the whole rag was ~28 mm too high and had",
+      "  been since round 1, because the comment above the table describes hemY+offset as",
+      "  the lowest point at the BACK while the two numbers it was fitted to are FRONT",
+      "  readings. hemY 0.466 -> 0.438 lands the front hems on 0.446..0.518 (her right)",
+      "  and 0.486..0.558 (her left), i.e. within 4 mm of both measurements."
+    ],
+    "waistY": 1.086,
+    "hemY": 0.438,
+    "thickness": 0.011,
+    "hipFlare": 0.03,
+    "kneeFlare": 0.016,
+    "stripeCount": 26,
+    "stripeDepth": 0.0012,
+    "tatterAmp": 0.022,
+    "tatterCount": 8,
+    "waistFrontDrop": 0.024,
+    "hemSideOffset": [
+      -0.024,
+      0.016
+    ],
+    "crotchY": 0.9,
+    "inseamApexY": 0.865,
+    "inseamR": 0.022,
+    "inseamMidY": 0.7,
+    "inseamBaseY": 0.42,
+    "flare": [
+      [
+        0.44,
+        0.006
+      ],
+      [
+        0.62,
+        0.006
+      ],
+      [
+        0.72,
+        0.007
+      ],
+      [
+        0.78,
+        0.011
+      ],
+      [
+        0.84,
+        0.017
+      ],
+      [
+        0.9,
+        0.022
+      ],
+      [
+        0.97,
+        0.024
+      ],
+      [
+        1.09,
+        0.02
+      ]
+    ],
+    "flareZ": [
+      [
+        0.44,
+        0.001
+      ],
+      [
+        0.6,
+        0.001
+      ],
+      [
+        0.66,
+        0.005
+      ],
+      [
+        0.72,
+        0.007
+      ],
+      [
+        0.78,
+        0.011
+      ],
+      [
+        0.84,
+        0.017
+      ],
+      [
+        0.9,
+        0.022
+      ],
+      [
+        0.97,
+        0.024
+      ],
+      [
+        1.09,
+        0.02
+      ]
+    ],
+    "legOut": [
+      [
+        0.42,
+        0.0065
+      ],
+      [
+        0.72,
+        0.0065
+      ],
+      [
+        0.82,
+        0.005
+      ],
+      [
+        0.9,
+        0.002
+      ],
+      [
+        0.96,
+        0
+      ]
+    ],
+    "seatBulge": 0.01,
+    "stripePitch": 0.0215,
+    "stripeDuty": 0.44,
+    "tatterDepth": 0.072,
+    "tatterFrontRise": 0.032,
+    "voxelScale": 1.35,
+    "stripeLegR": 0.082,
+    "stripeHipR": 0.15
+  },
+  "sash": {
+    "$comment": [
+      "The hip wrap, the khaki canvas apron and the pocket sewn on it.",
+      "",
+      "ROUND 2 -- three numbers changed, all read off the TEXTURED panels at 4x",
+      "with tools/grid.py --metres, because the mauve, the khaki and the striped",
+      "trousers are three different colours and the clay panels are not.",
+      "",
+      "1. THE MAUVE IS ON HER RIGHT ONLY, so `splitX` cuts the wrap at the",
+      "   midline. body_2 (front): unstriped mauve fills image-left from the belt",
+      "   down over her right hip, while her left hip is striped trousers.",
+      "   body_5 (back): unstriped mauve over her right buttock, khaki over her",
+      "   left. There is no mauve anywhere on her left in either panel. A closed",
+      "   barrel puts 14 mm of cloth round a half of the figure that has none.",
+      "",
+      "2. THE FLAP HANGS TO y = 0.815, not 0.912. On body_2 at 4x the flap's",
+      "   cream-piped hem is a rounded corner ON the silhouette at y = 0.815,",
+      "   climbing inboard and up to the belt at about x = -0.06, y = 1.03.",
+      "   Round 1 read 0.912 off the same panel: at y = 0.94..0.84 the front",
+      "   silhouette carries a SECOND run at x = -0.17..-0.23 which is her right",
+      "   forearm hanging free, and the gap between it and the body was mistaken",
+      "   for the hem. On body_5 the same hem crosses her right rear at",
+      "   y = 0.945, so the low corner is FORWARD of her side -- bearing ~ -1.1,",
+      "   where it is nearly on the front silhouette but hidden behind the hip",
+      "   from behind. `flapHem` is that curve; the wrap's own `hem` stays",
+      "   20-100 mm above it so both edges show and the cloth reads as folded.",
+      "   Low at the front on her right and climbing to the rear IS the spiral;",
+      "   a single tilted plane cannot make it.",
+      "",
+      "3. THE APRON RUNS ROUND TO HER LEFT REAR. body_5 shows khaki from her",
+      "   left flank across to the spine, hem at y ~ 0.985, so `wedge` now spans",
+      "   -0.68 .. 2.90 rad. That is wider than pi, which one pair of half-planes",
+      "   cannot express, so the build unions two overlapping wedges.",
+      "",
+      "",
+      "4. FLAP STAND-OFF, tuned against the scoreboard, not guessed. `flapOut` is",
+      "   how far the free end stands off the wrap under it. Swept 0 / 2 / 4 / 7 mm",
+      "   with everything else fixed, seven bakes back to back so no other author's",
+      "   edit could drift between them (round 1 and round 2 repeated as sentinels,",
+      "   and they reproduced to 0.00): score 41.37 / 41.40 / 40.89 / 41.03 against",
+      "   round 1's 41.33. It is knife-edged at 4 mm because compare.py's shoulder",
+      "   landmark flips there -- 82 mm of figure height, from a hip apron -- so 2 mm",
+      "   is chosen as the wide, flat optimum rather than the peak of a spike.",
+      "",
+      "   The same seven-bake harness ablated the three changes above: the midline",
+      "   cut is worth +0.12, the long flap moves width +0.004 and IoU +0.0005, and",
+      "   the apron's reach to her left rear costs 0.13 -- ALL of it the same yaw-45",
+      "   shoulder flip, with IoU and the colour term both preferring the longer",
+      "   band. It is kept because body_5 shows the khaki there. Shorten",
+      "   canvas.wedge[1] from 2.90 to 1.85 to buy that 0.13 back if the landmark",
+      "   term is ever weighted higher.",
+      "",
+      "Heights, panel by panel (metre grid keyed to each alpha bbox):",
+      "  body_3  wrap top edge, her right hip                       y = 1.091",
+      "  body_2  flap low corner, her right front (4x, piped hem)   y = 0.815",
+      "  body_5  flap hem, her right rear                           y = 0.945",
+      "  body_5  wrap hem near the spine                            y ~ 1.02",
+      "  body_2  apron lower edge, front centre                     y = 0.991",
+      "  body_2  apron lower edge, her left front (deepest)         y = 0.930",
+      "  body_5  apron lower edge, her left rear                    y = 0.985",
+      "",
+      "The apron: body_1 at 4.5x shows its top edge tucked UNDER the studded hip",
+      "belt and its lower edge a smooth curve. Lower edge in the front view,",
+      "body_2: (x -0.086, y 0.991), (+0.077, 0.939), (+0.113, 0.948).",
+      "`topY`/`topTiltX` are the reference's own near-level top edge, and the",
+      "build takes the LOWER of that and the hip belt's underside (belts.json:",
+      "hipY - beltWidth/2 + hipTilt*x) plus `tuck`, so the raw edge stays behind",
+      "the belt without following its 0.29 tilt up her left hip. `round` fillets",
+      "the band's two ends, which is what stops them reading as tears.",
+      "`backing` is negative: the wrap follows the apron down and past it by 6 mm,",
+      "so the apron's free edge is an 8 mm step onto cloth, not a 23 mm cliff onto",
+      "the trousers.",
+      "",
+      "sashCloth: the reference's flap is a lighter, UNSTRIPED mauve. Sampled",
+      "medians are 0.373 0.216 0.337 (body_2) and 0.341 0.212 0.333 (body_4);",
+      "adjacent surfaces on body_3 give flap 0.337 0.188 0.298 against pants seat",
+      "0.278 0.176 0.231, i.e. the flap is +21/+7/+29 % on the same lighting, and",
+      "applying that lift to the palette's own pants colour gives 0.400 0.209",
+      "0.381. The value here splits those two derivations. Striped pants read",
+      "0.310 0.180 0.275 through the stripes, so the wrap must carry no stripes --",
+      "that colour break is what makes the one-sided flap read at all.",
+      "",
+      "ROUND 3 -- VERIFIED, NOT CHANGED. The round-3 brief asked whether this part",
+      "was holding the legs apart in the front outline. It is not, and the number",
+      "behind that finding does not survive a look:",
+      "",
+      "  a. The lowest cloth this part puts anywhere is the flap hem's corner at",
+      "     y = 0.815, which is the measurement above off body_2. Everything else",
+      "     bottoms out at 0.931 (wrap, following the apron down by `backing`) or",
+      "     0.937 (apron). Nothing this part builds reaches the legs at all.",
+      "",
+      "  b. The full-figure front render does carry extra silhouette runs between",
+      "     t = 0.388 and 0.512, but tools/pants_probe.py puts them at +7.1..+12.2",
+      "     %H of figure height from the centroid -- her LEFT hand and the Zapper on",
+      "     that hip, on the far side of the figure from this wrap. clay_2 carries",
+      "     the same detachment on the other side (a run at -13.4..-10.2 %H at",
+      "     t = 0.512, her right hand). Between t = 0.237 and 0.362 -- the trouser",
+      "     legs -- the render is one run, exactly as clay_2 is.",
+      "",
+      "  c. Where the reference's outline genuinely IS open and ours is not is the",
+      "     BACK view, from y = 0.49 to 0.75, and that gap is closed by body.json's",
+      "     blendLeg 0.028 smooth-unioning the two legs, not by any garment.",
+      "",
+      "  Narrowing the seat was tried anyway, since this part rides on the trousers'",
+      "  own blouse: scaling `pants.flare` above y = 0.78 by 0.75 and 0.55 in two",
+      "  back-to-back whole-figure bakes cost 0.16 and 1.55 of score and 0.0015 and",
+      "  0.0041 of mean IoU. The hip is the width the reference has; reverted."
+    ],
+    "topY": 1.078,
+    "dropY": 0.845,
+    "wrapR": 0.155,
+    "thickness": 0.009,
+    "pouchSize": [
+      0.062,
+      0.078,
+      0.034
+    ],
+    "topTiltX": -0.1,
+    "topFrontDrop": 0.02,
+    "clearance": 0.005,
+    "splitX": 0.022,
+    "hem": [
+      [
+        -3.1416,
+        1.02
+      ],
+      [
+        -2.8,
+        0.998
+      ],
+      [
+        -2.3,
+        0.96
+      ],
+      [
+        -1.8,
+        0.945
+      ],
+      [
+        -1.3,
+        0.95
+      ],
+      [
+        -0.85,
+        0.968
+      ],
+      [
+        -0.45,
+        1
+      ],
+      [
+        0,
+        1.022
+      ],
+      [
+        1.6,
+        1.03
+      ],
+      [
+        3.1416,
+        1.02
+      ]
+    ],
+    "flapOut": 0.002,
+    "flapFloor": 0.8,
+    "flapHem": [
+      [
+        -3.1416,
+        1.09
+      ],
+      [
+        -2.6,
+        1.01
+      ],
+      [
+        -2.15,
+        0.945
+      ],
+      [
+        -1.6,
+        0.862
+      ],
+      [
+        -1.1,
+        0.815
+      ],
+      [
+        -0.6,
+        0.905
+      ],
+      [
+        -0.2,
+        1.02
+      ],
+      [
+        0.4,
+        1.09
+      ],
+      [
+        3.1416,
+        1.09
+      ]
+    ],
+    "canvas": {
+      "out": 0.001,
+      "thickness": 0.006,
+      "tuck": 0.012,
+      "topY": 1.048,
+      "topTiltX": -0.03,
+      "round": 0.018,
+      "backing": -0.006,
+      "wedge": [
+        -0.68,
+        2.9
+      ],
+      "hem": [
+        [
+          -3.1416,
+          1.03
+        ],
+        [
+          -1.05,
+          1.056
+        ],
+        [
+          -0.75,
+          1.008
+        ],
+        [
+          -0.45,
+          0.982
+        ],
+        [
+          -0.1,
+          0.966
+        ],
+        [
+          0.3,
+          0.948
+        ],
+        [
+          0.55,
+          0.937
+        ],
+        [
+          0.75,
+          0.946
+        ],
+        [
+          1.15,
+          1
+        ],
+        [
+          1.6,
+          0.995
+        ],
+        [
+          2.1,
+          0.985
+        ],
+        [
+          2.6,
+          0.985
+        ],
+        [
+          2.95,
+          1.01
+        ],
+        [
+          3.1416,
+          1.03
+        ]
+      ]
+    },
+    "pouch": {
+      "centre": [
+        0.62,
+        0.972
+      ],
+      "half": [
+        0.009,
+        0.028,
+        0.038
+      ],
+      "round": 0.01,
+      "sink": 0.45
+    },
+    "voxelScale": 1.25
+  },
+  "belts": {
+    "hipY": 1.062,
+    "hipR": 0.148,
+    "beltWidth": 0.033,
+    "beltThickness": 0.012,
+    "thighStrapY": 0.855,
+    "armBandUpperY": 1.266,
+    "armBandLowerY": 1.23,
+    "bandWidth": 0.032,
+    "$comment": [
+      "Read off ref/views/clay_2.png + body_2.png (front), body_0.png (her left",
+      "side, the one with the pistol) and clay_5.png (back), with a metre grid",
+      "keyed to the alpha bbox (figure 1.72 m tall).",
+      "",
+      "SIDES follow docs/HANDEDNESS.md, not the older text in PART_CONTRACT.md:",
+      "screen-right in a front view is +X, and the front panel puts the Zapper,",
+      "the two arm bands and the drop-leg rig on image-right, so all three are",
+      "+X, her LEFT. The tattooed arm is the bare one, -X. Cross-checked here:",
+      "body_0 (her left side) shows the pistol and an untattooed upper arm with",
+      "both bands and their brass buckles; body_4 (her right side) shows the",
+      "cloud sleeve and no bands. rigSide flips the thigh strap, the holster, the",
+      "arm bands and the long glove sleeve together if that is ever mirrored.",
+      "",
+      "Hip belt: the front run climbs from y=1.020 at image-left to y=1.100 at",
+      "image-right (the rig side), a plane tilt of 0.29 about z through y=1.062",
+      "at the centre; the band measures 33-35 mm tall on body_0, between y=1.070",
+      "and y=1.105.",
+      "Slung strap: clay_5 shows it crossing the back diagonally about 25 mm",
+      "under the belt on the rig hip and dropping to y=0.90 on the other side --",
+      "tilt 0.50 through y=1.004. Both drop straps hang off it.",
+      "Thigh strap at y=0.855 (body_0 shows the band between 0.845 and 0.875).",
+      "Arm bands, measured on clay_2/body_2 at 9x and confirmed on body_0: the",
+      "upper band spans 1.250-1.283 and the lower 1.213-1.247, so 32 mm wide at",
+      "centres 1.266 and 1.230. The base spec's lower band at 1.196 is 34 mm too",
+      "low -- that height is the top hem of the sleeve on that arm, not a band.",
+      "",
+      "hipR from the base spec is unused: the loop radius is torsoHalfWidth(y)",
+      "plus hipPadX/hipPadZ, then pushed out until it clears the trousers and the",
+      "hip wrap, capped by hipMaxPush. The thigh strap and the arm bands are",
+      "fitted to the dressed limb the same way rather than to a spec radius."
+    ],
+    "rigSide": 1,
+    "hipTilt": 0.29,
+    "hipPadX": 0.018,
+    "hipPadZ": 0.02,
+    "hipMaxPush": 0.055,
+    "buckleX": 0.022,
+    "buckleW": 0.05,
+    "buckleH": 0.04,
+    "buckleT": 0.013,
+    "rivetCount": 10,
+    "rivetR": 0.0045,
+    "slungY": 1.004,
+    "slungTilt": 0.5,
+    "slungPadX": 0.018,
+    "slungPadZ": 0.023,
+    "slungWidth": 0.024,
+    "slungThickness": 0.011,
+    "dropWidth": 0.026,
+    "dropThickness": 0.011,
+    "dropMaxPush": 0.04,
+    "thighPad": 0.004,
+    "thighWidth": 0.03,
+    "thighThickness": 0.011,
+    "holsterY": 0.884,
+    "holsterR": 0.034,
+    "bandThickness": 0.01,
+    "bandPad": 0.005,
+    "segsRing": 30,
+    "voxelScale": 1.2
+  },
+  "gloves": {
+    "$comment": [
+      "Fingerless black gloves. Measured on ref/views/body_2.png with a metre grid",
+      "Sides follow docs/HANDEDNESS.md: +X is her left and is the side of the",
+      "Zapper, the arm bands and the long sleeve; the tattooed arm is -X.",
+      "keyed to the alpha bbox; panel x is mirrored with respect to this frame.",
+      "The two arms differ on the sheet: on the tattooed arm (image-left, -X) the",
+      "sleeve is cut at y=1.115 and on the Zapper-side arm (image-right, +X) it runs",
+      "up over the elbow to y=1.208, right under the lower black band. topY is",
+      "the short one, longTopY the long one, and belts.rigSide decides which",
+      "arm gets which so the pair follows if the bands are mirrored.",
+      "The base spec's topY of 1.052 is a third of the way up the forearm, not",
+      "'most of' it: the wrist joint is at y=0.988 and the elbow at 1.181.",
+      "The rolled wrist cuff reads between y=0.945 and y=0.990 on the sheet, so",
+      "cuffY 0.966 with cuffWidth 0.044.",
+      "knuckleT is in units of the wrist->hand vector: body.ts runs the finger",
+      "stub out to 1.42, and the cut at 1.14 leaves the last third bare, which",
+      "matches the bare fingers below y=0.885 on the sheet."
+    ],
+    "topY": 1.112,
+    "thickness": 0.005,
+    "knuckleY": 0.968,
+    "longTopY": 1.208,
+    "knuckleT": 1.14,
+    "cuffY": 0.966,
+    "cuffWidth": 0.044,
+    "cuffProud": 0.008,
+    "hemProud": 0.004,
+    "plateW": 0.03,
+    "plateH": 0.016,
+    "plateT": 0.006,
+    "voxelScale": 1.05
+  },
+  "boots": {
+    "soleThickness": 0.042,
+    "soleOverhang": 0.011,
+    "cuffY": 0.305,
+    "cuffFlare": 0.052,
+    "toeLength": 0.132,
+    "toeCapLength": 0.09,
+    "laceRows": 9,
+    "laceR": 0.004,
+    "$comment": [
+      "Measured off clay_0/clay_4 (side: sole stack, cuff hang, throat wall),",
+      "clay_5 (back: cuff wings, and how close the two cuffs come to touching),",
+      "clay_2 + body_2 (front: lace run, toe cap, lateral overhang) and body_0",
+      "(textured side: which parts are brass and which are sole).  Panel heights",
+      "were converted with the alpha bbox and meta.height = 1.72.",
+      "",
+      "ROUND 3.  Everything below marked R3 was re-read with a per-row run",
+      "decomposition of the panel (out/boots_probe.py) rather than by eye off a",
+      "grid, and measured against the same decomposition of the render",
+      "(out/boots_raw.py, which reads a --frame 1.80 preview in its own metric",
+      "frame).  Two structural corrections came out of it.",
+      "",
+      "R3-A  THE POSE.  skel.ankleL is 47 mm above and 28 mm in front of",
+      "      skel.ankleR.  place() used to translate y by a literal 0, so both",
+      "      boots stood on the world floor and the stagger vanished.  On clay_2",
+      "      the bottom 47 mm of the figure is ONE run -- her right boot alone,",
+      "      0.103 m wide at y = 0.02 and 0.114 at 0.04 -- and the left boot only",
+      "      joins in at y = 0.047.  The render had two boots there, merging into",
+      "      one 0.31 m run at yaw 315 against the sheet's 0.11.",
+      "",
+      "R3-B  THE CUFF IS WIDEST AT THE FOLD, NOT AT THE HEM.  Following the",
+      "      planted boot's own axis on clay_2 (x = -0.060 at y = 0.20 drifting to",
+      "      -0.055 at 0.30):",
+      "          y = 0.20   run -0.123..+0.061   outer reach 0.063   the hem",
+      "          y = 0.30   run -0.146..+0.126   outer reach 0.091   the fold",
+      "      so laterally the collar GROWS on the way up.  Fore and aft clay_0",
+      "      says the opposite -- 0.230 deep at y = 0.195 against 0.178 at 0.295.",
+      "      Both earlier versions had the lateral relation inverted and flared",
+      "      the collar down and out into a bell, which is the pancake the review",
+      "      measured.  foldHalf* and rimHalf* are now two separate superellipse",
+      "      outlines instead of one plus an anisotropic interpolation weight.",
+      "",
+      "SIDE VIEW.  The panel is orthographic, so panel-x IS world z; the union of",
+      "the two boots covers z in [c*zMin - s*halfW, c*zMax + s*halfW] with",
+      "c = cos(footToeOut) = 0.9895, s = sin = 0.1445.  Run widths off clay_0,",
+      "against the same rows of the render (R3):",
+      "",
+      "  y      clay_0   render(r2)  what is on the silhouette",
+      "  0.02    0.222     0.232     sole slab, one boot (the left is 47 mm up)",
+      "  0.04    0.239     0.270     sole slab at its longest",
+      "  0.06    0.240     0.266     welt and the bottom of the leather",
+      "  0.08    0.235     0.262     toe box / heel counter",
+      "  0.10    0.219     0.250     top of the toe box",
+      "  0.14    0.187     0.202     throat and shaft",
+      "  0.20    0.229     0.248     cuff hem, lowest and deepest",
+      "  0.24    0.197     0.232     cuff, mid-hang",
+      "  0.28    0.177     0.216     just under the fold",
+      "",
+      "so the boot was 11-18 % too long fore-and-aft through the whole foot and",
+      "the same again through the cuff.  toeZ 0.150 -> 0.138 and heelZ -0.070 ->",
+      "-0.062 take 20 mm out of the footprint (0.220 -> 0.200 local length), which",
+      "is 19.8 mm off the projected side view.  R3.",
+      "",
+      "DEPTH AT THE ANKLE.  The one row the two side panels agree on: at y = 0.14",
+      "clay_0 reads 0.187 and clay_4 0.198, at 0.16 they read 0.171 and 0.170, and",
+      "the render was 0.230 / 0.204 -- 19 % deep in both.  shaftDepth 1.35 -> 1.22,",
+      "vampZ0/Z1 0.089/0.070 -> 0.080/0.062, tongueZ 0.064 -> 0.058 and laceSink",
+      "-0.0025 -> 0 (the cords were standing 2.5 mm PROUD of the throat, and at",
+      "yaw 90 it is the lacing, not the leather, that sets the front edge) take that",
+      "to +7..+10 %.  R3.",
+      "",
+      "FRONT AND BACK, ACROSS.  Per-boot run widths at the boot's OWN local",
+      "height (clay_2 y, and clay_5 y, each less that boot's own lift), meaned",
+      "over the four readings the two panels give -- the near boot is inflated by",
+      "perspective in both, by up to 40 %, so neither panel alone is a target:",
+      "",
+      "  local y   clay_2 planted / lifted   clay_5 planted / lifted   mean   render(r2)",
+      "  0.04       0.114   0.108             0.081   0.108           0.103   0.096",
+      "  0.06       0.118   0.109             0.124   0.135           0.121   0.097",
+      "  0.08       0.118   0.114             0.126   0.136           0.123   0.099",
+      "  0.10       0.104   0.099             0.121   0.123           0.112   0.096",
+      "  0.12       0.092   0.084             0.114   0.114           0.101   0.096",
+      "  0.16       0.081     -               0.101     -             0.091   0.091",
+      "",
+      "The shaft was already right and the FOOT was 20 % narrow: the reference's",
+      "boot is a compact block, widest across the ball at 0.122 and tapering to",
+      "0.091 at the ankle, where the render was a flat 0.096 all the way up.  With",
+      "the projected width = 2*halfW*c + L*s, 0.122 wants halfW = 0.050 at the",
+      "ball, measured back off the render rather than solved: soleHalfW 0.041 ->",
+      "0.042 (0.047 over the welt) and upperHalfW 0.039 -> 0.050, with the waist",
+      "and the heel behind the ball pulled in 6 mm so only the ball bulges.  R3.",
+      "",
+      "  sole top face            0.042  = landmarks.footBed, and it is a LOCAL",
+      "                                    height now: 0.042 above whichever floor",
+      "                                    this boot stands on, which for the left",
+      "                                    boot is 0.047 above the world's.",
+      "  sole visible below the   0.024  body_0: the leather's lower edge is at",
+      "    leather                       y = 0.026-0.030 and the treaded slab is",
+      "                                    below it.  Hence soleLap.",
+      "  leather proud of slab    0.016 toe, 0.013 heel (clay_0 y=0.015 vs 0.035,",
+      "                                    and y=0.02 vs 0.075 at the back).",
+      "  toe box, top of the      0.100  clay_0: the front edge holds z = 0.15 to",
+      "    vertical front face           y = 0.095 and is at 0.121 by y = 0.105.",
+      "  cuff fold                0.305  R3, raised from 0.291.  clay_2 reads the",
+      "                                    boot mass as one run 0.272 wide at",
+      "                                    y = 0.30 and 0.244 at 0.32, where the",
+      "                                    render stopped dead at 0.291 and gave",
+      "                                    0.206 then 0.166.  clay_0 already said",
+      "                                    the boot silhouette ends at 0.305-0.310.",
+      "                                    landmarks.bootCuff stays 0.291 -- it is",
+      "                                    shared and not mine -- but cuffY is.",
+      "  cuff hem, lowest         0.193  clay_0: the hem's rear point, where the",
+      "                                    braid crosses it.  cuffDrop 0.126 puts",
+      "                                    it back there from the raised fold.",
+      "  fold reach, outboard     0.091  clay_2 y=0.30, boot axis to wing tip.",
+      "  fold reach, fore/aft     0.085 / 0.101  clay_0 0.178 deep at y = 0.295.",
+      "  hem reach, outboard      0.063  clay_2 y=0.20.",
+      "  hem reach, fore/aft      0.107 / 0.123  clay_0 0.230 deep at y = 0.195.",
+      "  sole slab length         0.221  clay_0 0.222 and clay_4 0.220 at y = 0.02,",
+      "                                    which is the OTHER row the two side",
+      "                                    panels agree on: the slab is nearly as",
+      "                                    long as the leather, not 18 mm shorter.",
+      "                                    soleToe/HeelInset 0.008 -> 0.002 took the",
+      "                                    render from 0.184 to 0.196.  R3.",
+      "  boot centre drift        clay_2, each boot's own run centre against its",
+      "                                    own local height: the planted boot goes",
+      "                                    -0.1185 at 0.02 to -0.0655 at 0.16 and",
+      "                                    the lifted one +0.071 at 0.013 to",
+      "                                    +0.032 at 0.113, i.e. both close on the",
+      "                                    centre line at 0.38 m/m.  The render",
+      "                                    managed 0.18, of which 0.20*0.09 was",
+      "                                    splay and the rest the toe-out.  splay",
+      "                                    0.20 -> 0.28.  R3.",
+      "  lace rails, front view   x = 0.2582 and 0.2965 on body_2, i.e. 38.5 mm",
+      "                                    apart and straddling x = 0.277, the",
+      "                                    ankle; laceInset takes out the 16 mm a",
+      "                                    centreline panel picks up from the yaw.",
+      "  lace run                 0.147 to 0.300, nine crossings (body_2, eyelet",
+      "                                    centres); the top follows the fold up.",
+      "  lace cord                0.008 diameter on body_2, not 0.013.",
+      "  brass                    a plate over the whole toe box -- top and front,",
+      "                                    welt to crown, back to z = 0.09 -- with",
+      "                                    a counter plate on the heel (body_0,",
+      "                                    body_2).",
+      "",
+      "WHAT THE PANELS WILL NOT AGREE ON.  A boot 0.20 long and 0.09 wide cannot",
+      "project narrower than about 0.19 at 45 degrees off its own axis, yet clay_1",
+      "and clay_3 both read the boot at 0.10-0.11 in the bottom 0.08 m -- the same",
+      "width clay_2 reads dead ahead.  The two side panels disagree with each",
+      "other the same way: clay_0 shows the two boots almost coincident (0.239",
+      "total at y = 0.04) and clay_4 shows them 0.15 m apart fore-and-aft (0.361).",
+      "The turnaround is a perspective sheet whose intermediate panels are not at",
+      "45 degrees and whose camera pitch varies, so the three-quarter boot widths",
+      "are not a reachable target for an orthographic render at a pinned yaw.",
+      "What IS reachable there, and what round 3 goes after, is the run STRUCTURE:",
+      "one boot at the floor rather than two, and a boot mass that carries up to",
+      "y = 0.33 instead of stopping at 0.29.",
+      "",
+      "Local frame: authored around the ankle's ground projection with +z toward",
+      "the toe, then yawed by pose.footToeOut and dropped onto skel.ankle{L,R} at",
+      "that ankle's own height."
+    ],
+    "soleHalfW": 0.042,
+    "soleWeltProud": 0.005,
+    "archLift": 0.01,
+    "soleLap": 0.018,
+    "soleToeInset": 0.002,
+    "soleHeelInset": 0.002,
+    "toeZ": 0.138,
+    "heelZ": -0.062,
+    "upperHalfW": 0.05,
+    "upperToeProud": 0.002,
+    "toeBoxY": 0.098,
+    "shaftRAnkle": 0.045,
+    "shaftRTop": 0.046,
+    "shaftDepth": 1.22,
+    "cuffDrop": 0.126,
+    "cuffThickness": 0.028,
+    "cuffFacets": 22,
+    "cuffZ": -0.008,
+    "cuffRoll": 0.026,
+    "cuffTabDepth": 0.12,
+    "cuffTabPeriod": 4,
+    "foldHalfX": 0.083,
+    "foldHalfZ": 0.088,
+    "rimHalfX": 0.062,
+    "rimHalfZ": 0.108,
+    "cuffOutset": 0.008,
+    "cuffPower": 2.4,
+    "splay": 0.28,
+    "splayY": 0.11,
+    "toeCapProud": 0.0028,
+    "tongueR": 0.024,
+    "tongueZ0": 0.058,
+    "tongueZ1": 0.058,
+    "tongueSquashZ": 1.083,
+    "tongueSquashX": 1.583,
+    "laceBottomY": 0.147,
+    "laceTopY": 0.3,
+    "laceHalfSpan": 0.0195,
+    "laceInset": 0.006,
+    "laceBow": 0.0045,
+    "toeLean": 0.008,
+    "vampY0": 0.086,
+    "vampY1": 0.178,
+    "vampZ0": 0.08,
+    "vampZ1": 0.062,
+    "vampR": 0.022,
+    "vampSquashX": 1.727,
+    "throatY0": 0.17,
+    "laceSink": 0,
+    "vampSquashZ": 1.5
+  },
+  "zapper": {
+    "$comment": [
+      "The Zapper, holstered barrel-down on her LEFT thigh (+X). Round 1 had it",
+      "on -X, her right; docs/HANDEDNESS.md is the record -- the gun is visible in",
+      "body_0 (her left side) and absent from body_4 (her right side).",
+      "Authored in a gun-local frame: +Y up the gun from muzzle to grip, +Z the",
+      "gun's front (the barrel-rail side), +X outboard across the flat.",
+      "`anchor` is where the tank's centre lands in world metres; `pitch` tips the",
+      "grip forward (+Z) and a NEGATIVE `roll` tips it outboard (+X).",
+      "Measured off ref/views/body_2.png, hue-segmented, x from the leg centreline:",
+      "y=0.68 assembly [0.125,0.173]; y=0.70 [0.132,0.178]; y=0.74 [0.144,0.190];",
+      "y=0.78 [0.152,0.205]; y=0.82 [0.162,0.232]; nothing at y=0.66, where the",
+      "leg alone reaches 0.124. So the axis leans outboard at dx/dy = 0.31 and the",
+      "assembly is ~0.050 m across. body_0 gives the forward lean, dz/dy = 0.28,",
+      "and puts the gun's centre 0.045 m in front of the thigh axis."
+    ],
+    "anchor": [
+      0.174,
+      0.752,
+      0.062
+    ],
+    "yaw": 0,
+    "pitch": 0.26,
+    "barrelLength": 0.15,
+    "barrelR": 0.008,
+    "gripLength": 0.05,
+    "roll": -0.31,
+    "tankR": 0.028,
+    "flat": 0.75,
+    "tankBottom": -0.078,
+    "tankTop": 0.016,
+    "muzzleY": -0.1,
+    "muzzleR": 0.0325,
+    "muzzleRingH": 0.024,
+    "bandY": -0.022,
+    "bandR": 0.0315,
+    "collarY": 0.016,
+    "collarR": 0.032,
+    "collarH": 0.04,
+    "receiverY": 0.086,
+    "receiverZ": -0.004,
+    "receiverHalf": [
+      0.021,
+      0.034,
+      0.038
+    ],
+    "gripY": 0.064,
+    "gripZ": 0.014,
+    "gripR": 0.016,
+    "guardY": 0.058,
+    "guardZ": 0.004,
+    "guardR": 0.02,
+    "barrelZ": 0.034,
+    "holsterR": 0.035,
+    "holsterX": -0.007,
+    "holsterBottom": -0.09,
+    "holsterTop": 0.104,
+    "holsterOpenX": 0.004,
+    "holsterWrapY": 0.048,
+    "backingX": -0.056,
+    "backingY": [
+      -0.07,
+      0.095
+    ],
+    "backingZ": 0.018,
+    "strapR": 0.007,
+    "voxelScale": 0.7
+  },
+  "materials": {
+    "$comment": "Colours are sRGB display values in 0..1 -- authored to match medians sampled off ref/views/body_2.png, so a renderer must convert them to linear before lighting. They are sampled from the artist's RENDER, not from an albedo, so they carry a little of its lighting; that is a deliberate approximation and it is why the viewer's exposure is calibrated against the same sheet.",
+    "skin": {
+      "color": [
+        0.831,
+        0.741,
+        0.706
+      ],
+      "roughness": 0.62,
+      "metalness": 0
+    },
+    "skinShade": {
+      "color": [
+        0.735,
+        0.635,
+        0.596
+      ],
+      "roughness": 0.64,
+      "metalness": 0
+    },
+    "hair": {
+      "color": [
+        0.1536,
+        0.3039,
+        0.4111
+      ],
+      "roughness": 0.42,
+      "metalness": 0,
+      "sheen": [
+        0.3,
+        0.52,
+        0.66
+      ]
+    },
+    "hairDark": {
+      "color": [
+        0.088,
+        0.192,
+        0.276
+      ],
+      "roughness": 0.46,
+      "metalness": 0
+    },
+    "cloth": {
+      "color": [
+        0.205,
+        0.212,
+        0.288
+      ],
+      "roughness": 0.86,
+      "metalness": 0,
+      "sheen": [
+        0.34,
+        0.35,
+        0.42
+      ]
+    },
+    "clothWorn": {
+      "color": [
+        0.255,
+        0.243,
+        0.259
+      ],
+      "roughness": 0.88,
+      "metalness": 0,
+      "sheen": [
+        0.32,
+        0.32,
+        0.36
+      ]
+    },
+    "pants": {
+      "color": [
+        0.33,
+        0.195,
+        0.295
+      ],
+      "roughness": 0.8,
+      "metalness": 0,
+      "sheen": [
+        0.42,
+        0.3,
+        0.4
+      ]
+    },
+    "pantsDark": {
+      "color": [
+        0.25,
+        0.14,
+        0.225
+      ],
+      "roughness": 0.82,
+      "metalness": 0
+    },
+    "leather": {
+      "color": [
+        0.192,
+        0.161,
+        0.157
+      ],
+      "roughness": 0.66,
+      "metalness": 0,
+      "sheen": [
+        0.26,
+        0.23,
+        0.2
+      ]
+    },
+    "canvas": {
+      "color": [
+        0.478,
+        0.451,
+        0.325
+      ],
+      "roughness": 0.9,
+      "metalness": 0
+    },
+    "brass": {
+      "color": [
+        0.706,
+        0.545,
+        0.286
+      ],
+      "roughness": 0.38,
+      "metalness": 0.85
+    },
+    "steel": {
+      "color": [
+        0.475,
+        0.49,
+        0.51
+      ],
+      "roughness": 0.35,
+      "metalness": 0.9
+    },
+    "tattoo": {
+      "color": [
+        0.745,
+        0.78,
+        0.795
+      ],
+      "roughness": 0.62,
+      "metalness": 0
+    },
+    "eye": {
+      "color": [
+        0.353,
+        0.51,
+        0.588
+      ],
+      "roughness": 0.2,
+      "metalness": 0
+    },
+    "lip": {
+      "color": [
+        0.663,
+        0.404,
+        0.4
+      ],
+      "roughness": 0.5,
+      "metalness": 0
+    },
+    "brow": {
+      "color": [
+        0.228,
+        0.17,
+        0.157
+      ],
+      "roughness": 0.7,
+      "metalness": 0
+    },
+    "sclera": {
+      "color": [
+        0.925,
+        0.91,
+        0.894
+      ],
+      "roughness": 0.22,
+      "metalness": 0
+    },
+    "pupil": {
+      "color": [
+        0.105,
+        0.098,
+        0.118
+      ],
+      "roughness": 0.18,
+      "metalness": 0
+    },
+    "sashCloth": {
+      "color": [
+        0.385,
+        0.214,
+        0.358
+      ],
+      "roughness": 0.84,
+      "metalness": 0,
+      "sheen": [
+        0.46,
+        0.34,
+        0.45
+      ]
+    }
+  },
+  "lod": {
+    "$comment": "Voxel size in metres. Triangle count scales as 1/voxel^2: measured 249k tris at 6.0 mm, so 4.5 mm lands near 440k and keeps the three LODs together under the 16 MB an artifact can carry.",
+    "high": {
+      "voxel": 0.0045
+    },
+    "medium": {
+      "voxel": 0.006
+    },
+    "low": {
+      "voxel": 0.0105
+    }
+  },
+  "body": {
+    "$comment": [
+      "Numbers body.ts needs that spec.widths does not carry, all read off",
+      "ref/views/clay_2.png (front) and clay_0.png (her left side) with a metre",
+      "grid keyed to each panel's alpha bbox (bbox top = 1.72 m, bottom = 0).",
+      "",
+      "yoke[] is [y, halfX, halfZ, centreZ] and takes over from torsoHalfWidth()",
+      "above yokeY0.  It exists because the spec's own width table ends with a",
+      "single key at neckBase whose radius is neckR*1.9 = 0.068, so any loft",
+      "through it caps off with a 137 mm ball at the throat -- which is what both",
+      "top.ts and choker.ts had to build their own neck columns to work around.",
+      "Above y = 1.42 this column is head.json's neck extended down, exactly as",
+      "top.json's neckCol* and choker.json's neck* already assume: r 0.0435 at",
+      "1.420 tapering to 0.040 at 1.525, squashZ 1.1, centre z 0.0076 -> -0.012.",
+      "",
+      "Measured, front silhouette on her left (screen-right, the side the hair",
+      "does not cover), half-width from the midline: 0.041 at y = 1.490 (the",
+      "neck, agreeing with the 0.040 in MEASUREMENTS.md), 0.076 at 1.440,",
+      "0.088 at 1.429, 0.104 at 1.420, 0.128 at 1.402, 0.159 at 1.375, 0.163 at",
+      "1.360.  The column carries the inner half of that and trap[] the ramp.",
+      "",
+      "Side view, front edge referred to the chest front at y = 1.360: the throat",
+      "at 1.429 sits 51 mm behind it and the clavicle at 1.402 sits 31 mm behind",
+      "it.  The previous build had 17 mm and 6 mm, i.e. no throat at all."
+    ],
+    "yokeY0": 1.342,
+    "yoke": [
+      [
+        1.4,
+        0.094,
+        0.07,
+        0.00825
+      ],
+      [
+        1.428,
+        0.0433,
+        0.048,
+        0.00722
+      ],
+      [
+        1.45,
+        0.0427,
+        0.0472,
+        0.00385
+      ],
+      [
+        1.47,
+        0.0421,
+        0.0463,
+        0.0005
+      ],
+      [
+        1.496,
+        0.0413,
+        0.0453,
+        -0.00385
+      ]
+    ],
+    "trap": {
+      "$comment": "The trapezius shelf. Tops out at y = 1.443 and is 75 mm wide 3 mm below it, which is why it is an ellipsoid and not a neck-to-shoulder capsule.",
+      "cx": 0.048,
+      "cy": 1.4,
+      "cz": -0.004,
+      "rx": 0.058,
+      "ry": 0.043,
+      "rz": 0.048
+    },
+    "deltoid": {
+      "$comment": "Apex 22 mm below the shoulder landmark; the reference is widest at 1.360..1.375 and has lost 30 mm by 1.402.",
+      "xScale": 0.94,
+      "drop": -0.022,
+      "dz": -0.007,
+      "armStart": 0.1,
+      "rx": 1.225,
+      "ry": 1.3,
+      "rz": 1.05
+    },
+    "glute": {
+      "$comment": "clay_0: the seat stands ~30 mm behind the back of the waist column at y = 0.94..1.00.",
+      "rise": 0.055,
+      "back": 0.4,
+      "rx": 1.06,
+      "ry": 0.072,
+      "rz": 0.74
+    },
+    "bust": {
+      "$comment": "clay_2: small, high, well separated -- not a shelf across the whole chest.",
+      "x": 0.5,
+      "drop": 0.01,
+      "rx": 0.044,
+      "ry": 0.043,
+      "rz": 0.036,
+      "z": 0.7
+    },
+    "crotchTaperTop": 0.02,
+    "crotchTaper": 0.058,
+    "blendBust": 0.036,
+    "navelDepth": 0.006,
+    "blendTrap": 0.026,
+    "blendLeg": 0.028,
+    "blendArm": 0.016,
+    "voxelScale": 1.5
+  },
+  "tattoo": {
+    "$comment": [
+      "Cloud tattoo region, painted onto the body shell by body.ts -- no geometry.",
+      "HER RIGHT SIDE, -X: the bare arm, not the banded one. Round 1 had it on +X.",
+      "Sleeve on the back and outer faces of her -X arm from the deltoid (y 1.40)",
+      "to the glove (y 1.06), plus the -X scapula, flank, oblique and small of the",
+      "back, y 1.06 to 1.40. Chest, sternum, left side and legs are bare.",
+      "Measured by segmenting the ink's pale blue-grey out of the skin on",
+      "body_2/body_4/body_5 (out/zapper_tattoo_extent.py): body_4, her right side,",
+      "is 5.2% ink; body_0, her left side, is essentially none.",
+      "Layout tables live in src/parts/tattoo.ts; these are the knobs that set how",
+      "big and how sunk the motifs are."
+    ],
+    "seed": 20250819,
+    "armCloudR": 0.029,
+    "torsoCloudR": 0.032,
+    "sink": 0.42,
+    "lobeMin": 0.34,
+    "lobeVar": 0.28,
+    "skinPad": 0.006
+  }
+}

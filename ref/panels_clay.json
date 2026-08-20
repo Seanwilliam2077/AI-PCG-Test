@@ -1,0 +1,100 @@
+{
+  "sheet": "ref/clay_6view.jpg",
+  "tag": "clay",
+  "sheet_size": [
+    3000,
+    1396
+  ],
+  "panels": [
+    {
+      "index": 0,
+      "file": "ref/views/clay_0.png",
+      "box": [
+        247,
+        81,
+        545,
+        1317
+      ],
+      "size": [
+        298,
+        1236
+      ],
+      "fg_px": 191278
+    },
+    {
+      "index": 1,
+      "file": "ref/views/clay_1.png",
+      "box": [
+        634,
+        72,
+        1015,
+        1352
+      ],
+      "size": [
+        381,
+        1280
+      ],
+      "fg_px": 248874
+    },
+    {
+      "index": 2,
+      "file": "ref/views/clay_2.png",
+      "box": [
+        1123,
+        72,
+        1501,
+        1374
+      ],
+      "size": [
+        378,
+        1302
+      ],
+      "fg_px": 252065
+    },
+    {
+      "index": 3,
+      "file": "ref/views/clay_3.png",
+      "box": [
+        1599,
+        71,
+        1934,
+        1379
+      ],
+      "size": [
+        335,
+        1308
+      ],
+      "fg_px": 208427
+    },
+    {
+      "index": 4,
+      "file": "ref/views/clay_4.png",
+      "box": [
+        1971,
+        88,
+        2342,
+        1301
+      ],
+      "size": [
+        371,
+        1213
+      ],
+      "fg_px": 216584
+    },
+    {
+      "index": 5,
+      "file": "ref/views/clay_5.png",
+      "box": [
+        2412,
+        84,
+        2789,
+        1311
+      ],
+      "size": [
+        377,
+        1227
+      ],
+      "fg_px": 229188
+    }
+  ]
+}
