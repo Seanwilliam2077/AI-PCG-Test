@@ -1,0 +1,352 @@
+{
+ "sourceImage": "C:\\AI Pipeline Test\\jinx-i2t\\ref\\views\\body_2.png",
+ "zonesDir": "C:\\AI Pipeline Test\\jinx-i2t\\detail-inventory",
+ "detailInventory": {
+  "scanMethod": "grid-3x3 over body_2.png, plus identity details read from clay_5/head_1 and the zone crops",
+  "targetMinDetails": 6,
+  "details": [
+   {
+    "id": "zone-r0c0",
+    "kind": "material-region",
+    "description": "Her RIGHT shoulder, upper arm and ribs carry pale grey-blue cloud tattoos over bare skin. No band, no sleeve on this arm.",
+    "region": {
+     "x": 0.0,
+     "y": 0.0,
+     "width": 0.3333,
+     "height": 0.3333,
+     "units": "normalized"
+    },
+    "scale": "meso",
+    "affects": "silhouette-neutral, albedo",
+    "mapsTo": {
+     "type": "material",
+     "ref": "tattoo"
+    },
+    "evidenceRef": "C:\\AI Pipeline Test\\jinx-i2t\\detail-inventory\\zone-r0c0.png",
+    "confidence": 0.9
+   },
+   {
+    "id": "zone-r0c1",
+    "kind": "component",
+    "description": "Face, choker with three wrapped straps, black halter crop top, brass X lacing of two crossed straps through four ring eyelets, under-bust band with a centre buckle.",
+    "region": {
+     "x": 0.3333,
+     "y": 0.0,
+     "width": 0.3333,
+     "height": 0.3333,
+     "units": "normalized"
+    },
+    "scale": "macro",
+    "affects": "silhouette-defining",
+    "mapsTo": {
+     "type": "component",
+     "ref": "top"
+    },
+    "evidenceRef": "C:\\AI Pipeline Test\\jinx-i2t\\detail-inventory\\zone-r0c1.png",
+    "confidence": 0.9
+   },
+   {
+    "id": "zone-r0c2",
+    "kind": "component",
+    "description": "Her LEFT arm: bare deltoid, then TWO black bands on the upper arm, then a long black fingerless glove covering most of the forearm. No tattoo on this arm.",
+    "region": {
+     "x": 0.6667,
+     "y": 0.0,
+     "width": 0.3333,
+     "height": 0.3333,
+     "units": "normalized"
+    },
+    "scale": "meso",
+    "affects": "silhouette-defining",
+    "mapsTo": {
+     "type": "component",
+     "ref": "belts.armBands"
+    },
+    "evidenceRef": "C:\\AI Pipeline Test\\jinx-i2t\\detail-inventory\\zone-r0c2.png",
+    "confidence": 0.9
+   },
+   {
+    "id": "zone-r1c0",
+    "kind": "component",
+    "description": "Her RIGHT hip: purple pinstripe trousers, sash wrap with a diagonal lower edge, leather straps with square buckles, fingerless glove with TEAL fingernails.",
+    "region": {
+     "x": 0.0,
+     "y": 0.3333,
+     "width": 0.3333,
+     "height": 0.3333,
+     "units": "normalized"
+    },
+    "scale": "macro",
+    "affects": "silhouette-defining",
+    "mapsTo": {
+     "type": "component",
+     "ref": "sash"
+    },
+    "evidenceRef": "C:\\AI Pipeline Test\\jinx-i2t\\detail-inventory\\zone-r1c0.png",
+    "confidence": 0.9
+   },
+   {
+    "id": "zone-r1c1",
+    "kind": "component",
+    "description": "Front waist: navel, khaki canvas panel tucked under a leather hip belt with a centre buckle, trousers with fine vertical pinstripes at ~21.5 mm pitch, a diagonal strap crossing to her left.",
+    "region": {
+     "x": 0.3333,
+     "y": 0.3333,
+     "width": 0.3333,
+     "height": 0.3333,
+     "units": "normalized"
+    },
+    "scale": "macro",
+    "affects": "silhouette-defining",
+    "mapsTo": {
+     "type": "component",
+     "ref": "belts"
+    },
+    "evidenceRef": "C:\\AI Pipeline Test\\jinx-i2t\\detail-inventory\\zone-r1c1.png",
+    "confidence": 0.9
+   },
+   {
+    "id": "zone-r1c2",
+    "kind": "component",
+    "description": "Her LEFT thigh: the Zapper pistol in a holster, brass and steel banding, with a GLASS TUBE tank showing teal and pink contents. Held/steadied by the gloved left hand.",
+    "region": {
+     "x": 0.6667,
+     "y": 0.3333,
+     "width": 0.3333,
+     "height": 0.3333,
+     "units": "normalized"
+    },
+    "scale": "macro",
+    "affects": "silhouette-defining",
+    "mapsTo": {
+     "type": "component",
+     "ref": "zapper"
+    },
+    "evidenceRef": "C:\\AI Pipeline Test\\jinx-i2t\\detail-inventory\\zone-r1c2.png",
+    "confidence": 0.9
+   },
+   {
+    "id": "zone-r2c0",
+    "kind": "component",
+    "description": "Her RIGHT lower leg: ragged trouser hem, bare calf, boot with a brass toe cap and magenta cross-lacing.",
+    "region": {
+     "x": 0.0,
+     "y": 0.6667,
+     "width": 0.3333,
+     "height": 0.3333,
+     "units": "normalized"
+    },
+    "scale": "macro",
+    "affects": "silhouette-defining",
+    "mapsTo": {
+     "type": "component",
+     "ref": "boots"
+    },
+    "evidenceRef": "C:\\AI Pipeline Test\\jinx-i2t\\detail-inventory\\zone-r2c0.png",
+    "confidence": 0.9
+   },
+   {
+    "id": "zone-r2c1",
+    "kind": "component",
+    "description": "Both boots seen together: deep folded cuffs flaring outward, magenta cross-lacing, brass toe caps. A taped PATCH/plaster sits on her left shin above the boot.",
+    "region": {
+     "x": 0.3333,
+     "y": 0.6667,
+     "width": 0.3333,
+     "height": 0.3333,
+     "units": "normalized"
+    },
+    "scale": "macro",
+    "affects": "silhouette-defining",
+    "mapsTo": {
+     "type": "component",
+     "ref": "boots"
+    },
+    "evidenceRef": "C:\\AI Pipeline Test\\jinx-i2t\\detail-inventory\\zone-r2c1.png",
+    "confidence": 0.9
+   },
+   {
+    "id": "zone-r2c2",
+    "kind": "component",
+    "description": "Her LEFT boot in near-profile: the cuff flare reads as a deep floppy roll, not a cone.",
+    "region": {
+     "x": 0.6667,
+     "y": 0.6667,
+     "width": 0.3333,
+     "height": 0.3333,
+     "units": "normalized"
+    },
+    "scale": "meso",
+    "affects": "silhouette-defining",
+    "mapsTo": {
+     "type": "component",
+     "ref": "boots.cuff"
+    },
+    "evidenceRef": "C:\\AI Pipeline Test\\jinx-i2t\\detail-inventory\\zone-r2c2.png",
+    "confidence": 0.9
+   },
+   {
+    "id": "teal-nails",
+    "kind": "material-region",
+    "description": "Fingernails on both gloves are painted teal; they are the only saturated cool accent below the waist.",
+    "region": {
+     "x": 0.0,
+     "y": 0.0,
+     "width": 1.0,
+     "height": 1.0,
+     "units": "normalized"
+    },
+    "scale": "micro",
+    "affects": "albedo only",
+    "mapsTo": {
+     "type": "material",
+     "ref": "nailTeal"
+    },
+    "evidenceRef": "detail-inventory/zone-r1c0.png",
+    "confidence": 0.85
+   },
+   {
+    "id": "zapper-tank",
+    "kind": "component",
+    "description": "The pistol's tank is a transparent glass cylinder with visible teal and pink contents and brass end caps.",
+    "region": {
+     "x": 0.0,
+     "y": 0.0,
+     "width": 1.0,
+     "height": 1.0,
+     "units": "normalized"
+    },
+    "scale": "meso",
+    "affects": "silhouette + a rare translucent material",
+    "mapsTo": {
+     "type": "component",
+     "ref": "zapper.tank"
+    },
+    "evidenceRef": "detail-inventory/zone-r1c2.png",
+    "confidence": 0.8
+   },
+   {
+    "id": "shin-patch",
+    "kind": "component",
+    "description": "A taped rectangular patch/plaster on her LEFT shin, above the boot cuff.",
+    "region": {
+     "x": 0.0,
+     "y": 0.0,
+     "width": 1.0,
+     "height": 1.0,
+     "units": "normalized"
+    },
+    "scale": "micro",
+    "affects": "small silhouette bump",
+    "mapsTo": {
+     "type": "component",
+     "ref": "body.shinPatch"
+    },
+    "evidenceRef": "detail-inventory/zone-r2c1.png",
+    "confidence": 0.75
+   },
+   {
+    "id": "braid-ties",
+    "kind": "component",
+    "description": "Three metal/leather ties spaced along each braid, plus a frayed tassel at each tip.",
+    "region": {
+     "x": 0.0,
+     "y": 0.0,
+     "width": 1.0,
+     "height": 1.0,
+     "units": "normalized"
+    },
+    "scale": "meso",
+    "affects": "silhouette-defining",
+    "mapsTo": {
+     "type": "component",
+     "ref": "hair.braidTies"
+    },
+    "evidenceRef": "ref/views/clay_5.png",
+    "confidence": 0.9
+   },
+   {
+    "id": "crest",
+    "kind": "component",
+    "description": "One upswept breaking wave off the crown reaching the figure's highest point, overhanging the brow forward.",
+    "region": {
+     "x": 0.0,
+     "y": 0.0,
+     "width": 1.0,
+     "height": 1.0,
+     "units": "normalized"
+    },
+    "scale": "macro",
+    "affects": "silhouette-defining",
+    "mapsTo": {
+     "type": "component",
+     "ref": "hair.crest"
+    },
+    "evidenceRef": "ref/views/head_1.png",
+    "confidence": 0.85
+   },
+   {
+    "id": "pinstripe",
+    "kind": "repetition",
+    "description": "Vertical pinstripes on the trousers, ~21.5 mm pitch, duty ~0.44, darker than the ground.",
+    "region": {
+     "x": 0.0,
+     "y": 0.0,
+     "width": 1.0,
+     "height": 1.0,
+     "units": "normalized"
+    },
+    "scale": "micro",
+    "affects": "albedo only",
+    "mapsTo": {
+     "type": "material",
+     "ref": "pantsDark"
+    },
+    "evidenceRef": "detail-inventory/zone-r1c1.png",
+    "confidence": 0.9
+   },
+   {
+    "id": "boot-lacing",
+    "kind": "repetition",
+    "description": "Six rows of magenta cross-lacing up each boot throat.",
+    "region": {
+     "x": 0.0,
+     "y": 0.0,
+     "width": 1.0,
+     "height": 1.0,
+     "units": "normalized"
+    },
+    "scale": "micro",
+    "affects": "small silhouette",
+    "mapsTo": {
+     "type": "component",
+     "ref": "boots.lace"
+    },
+    "evidenceRef": "detail-inventory/zone-r2c1.png",
+    "confidence": 0.9
+   },
+   {
+    "id": "tattered-hem",
+    "kind": "component",
+    "description": "Ragged saw-tooth trouser hem, roughly 8 teeth per leg, teeth vary in width and lean as well as depth.",
+    "region": {
+     "x": 0.0,
+     "y": 0.0,
+     "width": 1.0,
+     "height": 1.0,
+     "units": "normalized"
+    },
+    "scale": "meso",
+    "affects": "silhouette-defining",
+    "mapsTo": {
+     "type": "component",
+     "ref": "pants.hem"
+    },
+    "evidenceRef": "detail-inventory/zone-r2c0.png",
+    "confidence": 0.9
+   }
+  ],
+  "notes": "Three details were only found by cropping and had been missed in the previous reconstruction entirely: teal fingernails, the pistol's transparent tank with visible contents, and the taped patch on her left shin."
+ },
+ "authoringInstruction": "Open each zone crop under zonesDir and replace every detail stub's kind, description, scale, affects, mapsTo, and confidence with what is actually observed. Add more detail entries per zone if a single zone contains multiple distinct marks; do not leave stubs unfilled or unlinked (mapsTo must reference a real component.localFeatures or material.localOverrides entry)."
+}

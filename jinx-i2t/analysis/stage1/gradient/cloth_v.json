@@ -1,0 +1,119 @@
+{
+  "axis": "v",
+  "requestedStops": 5,
+  "stops": [
+    {
+      "t": 0.1,
+      "rgb": [
+        44,
+        56,
+        83
+      ],
+      "hsv": [
+        221.5,
+        0.47,
+        0.325
+      ],
+      "hueName": "blue",
+      "hueRisk": "blue-collapse",
+      "suggestedRgb": [
+        83,
+        56,
+        44
+      ]
+    },
+    {
+      "t": 0.3,
+      "rgb": [
+        52,
+        46,
+        39
+      ],
+      "hsv": [
+        32.3,
+        0.25,
+        0.204
+      ],
+      "hueName": "orange"
+    },
+    {
+      "t": 0.5,
+      "rgb": [
+        170,
+        150,
+        143
+      ],
+      "hsv": [
+        15.6,
+        0.159,
+        0.667
+      ],
+      "hueName": "orange"
+    },
+    {
+      "t": 0.7,
+      "rgb": [
+        197,
+        168,
+        157
+      ],
+      "hsv": [
+        16.5,
+        0.203,
+        0.773
+      ],
+      "hueName": "orange"
+    },
+    {
+      "t": 0.9,
+      "rgb": [
+        39,
+        35,
+        32
+      ],
+      "hsv": [
+        25.7,
+        0.179,
+        0.153
+      ],
+      "hueName": "orange"
+    }
+  ],
+  "hueZones": [
+    {
+      "hueName": "blue",
+      "tStart": 0.1,
+      "tEnd": 0.1
+    },
+    {
+      "hueName": "orange",
+      "tStart": 0.3,
+      "tEnd": 0.9
+    }
+  ],
+  "riskFlags": [
+    {
+      "t": 0.1,
+      "rgb": [
+        44,
+        56,
+        83
+      ],
+      "hsv": [
+        221.5,
+        0.47,
+        0.325
+      ],
+      "hueName": "blue",
+      "hueRisk": "blue-collapse",
+      "suggestedRgb": [
+        83,
+        56,
+        44
+      ]
+    }
+  ],
+  "warnings": [],
+  "reference": "C:\\AI Pipeline Test\\jinx-i2t\\pbr\\crops\\cloth.png",
+  "note": "band-median stops grounded in the reference; feed to the texture painter instead of hand-guessed STOPS. hueRisk=blue-collapse stops need a magenta-lean correction."
+}

@@ -1,0 +1,764 @@
+[
+ {
+  "seq": 1,
+  "patch": "patch_texture_tiling",
+  "result": "rejected",
+  "scoreBefore": 35.4,
+  "scoreAfter": 35.5,
+  "delta": 0.1,
+  "triangles": 128833,
+  "before": {
+   "silhouetteIouMean": 0.6879,
+   "widthBandRmsAll": 0.03803,
+   "landmarkRmsPct": 2.812,
+   "hullIou": 0.6828
+  },
+  "after": {
+   "silhouetteIouMean": 0.6879,
+   "widthBandRmsAll": 0.03803,
+   "landmarkRmsPct": 2.812,
+   "hullIou": 0.6828
+  },
+  "note": null
+ },
+ {
+  "seq": 2,
+  "patch": "patch_texture_tiling",
+  "result": "reverted-on-visual-review",
+  "scoreBefore": 35.4,
+  "scoreAfter": 35.5,
+  "delta": 0.1,
+  "triangles": 128833,
+  "before": {
+   "silhouetteIouMean": 0.6879,
+   "widthBandRmsAll": 0.03803,
+   "landmarkRmsPct": 2.812,
+   "hullIou": 0.6828
+  },
+  "after": {
+   "silhouetteIouMean": 0.6879,
+   "widthBandRmsAll": 0.03803,
+   "landmarkRmsPct": 2.812,
+   "hullIou": 0.6828
+  },
+  "note": "Accepted by the numeric gate on a +0.10 scoreboard move, then reverted on looking at the render: at repeat 8-16 the blurred 96 px crops read as a regular woven grid across the whole figure. The colour term carries weight 0.10 and cannot see a moire. The gate needs an eye on the sheet, which is what caught this."
+ },
+ {
+  "seq": 3,
+  "patch": "patch_albedo_purity",
+  "result": "rejected",
+  "scoreBefore": 35.4,
+  "scoreAfter": 35.3,
+  "delta": -0.1,
+  "triangles": 128833,
+  "before": {
+   "silhouetteIouMean": 0.6879,
+   "widthBandRmsAll": 0.03803,
+   "landmarkRmsPct": 2.812,
+   "hullIou": 0.6828
+  },
+  "after": {
+   "silhouetteIouMean": 0.6879,
+   "widthBandRmsAll": 0.03803,
+   "landmarkRmsPct": 2.812,
+   "hullIou": 0.6828
+  },
+  "note": null
+ },
+ {
+  "seq": 4,
+  "patch": "patch_albedo_purity",
+  "result": "validation-failed",
+  "scoreBefore": null,
+  "scoreAfter": null,
+  "delta": null,
+  "triangles": null,
+  "before": null,
+  "after": null,
+  "note": null
+ },
+ {
+  "seq": 5,
+  "patch": "patch_albedo_purity",
+  "result": "rejected",
+  "scoreBefore": 35.4,
+  "scoreAfter": 35.2,
+  "delta": -0.2,
+  "triangles": 128833,
+  "before": {
+   "silhouetteIouMean": 0.6879,
+   "widthBandRmsAll": 0.03803,
+   "landmarkRmsPct": 2.812,
+   "hullIou": 0.6828
+  },
+  "after": {
+   "silhouetteIouMean": 0.6879,
+   "widthBandRmsAll": 0.03803,
+   "landmarkRmsPct": 2.812,
+   "hullIou": 0.6828
+  },
+  "note": null
+ },
+ {
+  "seq": 6,
+  "patch": "patch_albedo_purity",
+  "result": "rejected",
+  "scoreBefore": 35.4,
+  "scoreAfter": 35.3,
+  "delta": -0.1,
+  "triangles": 128833,
+  "before": {
+   "silhouetteIouMean": 0.6879,
+   "widthBandRmsAll": 0.03803,
+   "landmarkRmsPct": 2.812,
+   "hullIou": 0.6828
+  },
+  "after": {
+   "silhouetteIouMean": 0.6879,
+   "widthBandRmsAll": 0.03803,
+   "landmarkRmsPct": 2.812,
+   "hullIou": 0.6828
+  },
+  "note": null
+ },
+ {
+  "seq": 7,
+  "patch": "patch_albedo_purity",
+  "result": "accepted",
+  "scoreBefore": 35.4,
+  "scoreAfter": 35.3,
+  "delta": -0.1,
+  "triangles": 128833,
+  "before": {
+   "silhouetteIouMean": 0.6879,
+   "widthBandRmsAll": 0.03803,
+   "landmarkRmsPct": 2.812,
+   "hullIou": 0.6828
+  },
+  "after": {
+   "silhouetteIouMean": 0.6879,
+   "widthBandRmsAll": 0.03803,
+   "landmarkRmsPct": 2.812,
+   "hullIou": 0.6828
+  },
+  "note": "Accepted with --keep against a -0.10 scoreboard, on evidence the scoreboard cannot carry. The old crops were pictures: extract_pbr2.py grew each located rect to the extractor 96 px minimum, so pbr/crops/skin.png was a whole eye, cloth was the chest buckles, leather was a boot. Those got stretched over every component of that material, which is most of the collage look the user objected to. Region evidence for the change: hair_mass dE 25.9 -> 17.2, braids 22.4 -> 21.3. The regressions are all skin BANDS -- midriff, arms, chest_top -- and the band is not skin: the reference midriff band reads L 39.3 while its bare skin medians L 69.6, because the band is mostly garment. My garment covers too little area, so honest skin makes the band too bright. That is a coverage defect the torso patch owns, not a colour defect, and keeping smeared crops would only hide it -- every geometry measurement after this would be taken through mush. Two genuine bugs were fixed on the way: skin was targeted from head_1 where the face is a lit close-up, and skinShade was banded over the black top and came back 130 dLab from its target."
+ },
+ {
+  "seq": 8,
+  "patch": "patch_props",
+  "result": "accepted",
+  "scoreBefore": 35.3,
+  "scoreAfter": 35.4,
+  "delta": 0.1,
+  "triangles": 133740,
+  "before": {
+   "silhouetteIouMean": 0.6879,
+   "widthBandRmsAll": 0.03803,
+   "landmarkRmsPct": 2.812,
+   "hullIou": 0.6828
+  },
+  "after": {
+   "silhouetteIouMean": 0.6915,
+   "widthBandRmsAll": 0.03715,
+   "landmarkRmsPct": 2.91,
+   "hullIou": 0.6878
+  },
+  "note": null
+ },
+ {
+  "seq": 9,
+  "patch": "patch_extremities",
+  "result": "accepted",
+  "scoreBefore": 35.4,
+  "scoreAfter": 35.6,
+  "delta": 0.2,
+  "triangles": 181868,
+  "before": {
+   "silhouetteIouMean": 0.6915,
+   "widthBandRmsAll": 0.03715,
+   "landmarkRmsPct": 2.91,
+   "hullIou": 0.6878
+  },
+  "after": {
+   "silhouetteIouMean": 0.6904,
+   "widthBandRmsAll": 0.03649,
+   "landmarkRmsPct": 2.38,
+   "hullIou": 0.6437
+  },
+  "note": null
+ },
+ {
+  "seq": 10,
+  "patch": "patch_hair_braids",
+  "result": "accepted",
+  "scoreBefore": 35.6,
+  "scoreAfter": 37.2,
+  "delta": 1.6,
+  "triangles": 183123,
+  "before": {
+   "silhouetteIouMean": 0.6904,
+   "widthBandRmsAll": 0.03649,
+   "landmarkRmsPct": 2.38,
+   "hullIou": 0.6437
+  },
+  "after": {
+   "silhouetteIouMean": 0.7054,
+   "widthBandRmsAll": 0.03211,
+   "landmarkRmsPct": 3.37,
+   "hullIou": 0.7078
+  },
+  "note": null
+ },
+ {
+  "seq": 11,
+  "patch": "patch_head_face",
+  "result": "accepted",
+  "scoreBefore": 37.2,
+  "scoreAfter": 37.3,
+  "delta": 0.1,
+  "triangles": 215539,
+  "before": {
+   "silhouetteIouMean": 0.7054,
+   "widthBandRmsAll": 0.03211,
+   "landmarkRmsPct": 3.37,
+   "hullIou": 0.7078
+  },
+  "after": {
+   "silhouetteIouMean": 0.7057,
+   "widthBandRmsAll": 0.03211,
+   "landmarkRmsPct": 3.37,
+   "hullIou": 0.7095
+  },
+  "note": null
+ },
+ {
+  "seq": 12,
+  "patch": "patch_torso",
+  "result": "accepted",
+  "scoreBefore": 37.3,
+  "scoreAfter": 37.3,
+  "delta": 0.0,
+  "triangles": 203994,
+  "before": {
+   "silhouetteIouMean": 0.7057,
+   "widthBandRmsAll": 0.03211,
+   "landmarkRmsPct": 3.37,
+   "hullIou": 0.7095
+  },
+  "after": {
+   "silhouetteIouMean": 0.7094,
+   "widthBandRmsAll": 0.03101,
+   "landmarkRmsPct": 3.12,
+   "hullIou": 0.7112
+  },
+  "note": null
+ },
+ {
+  "seq": 13,
+  "patch": "patch_landmarks",
+  "result": "patch-error",
+  "scoreBefore": null,
+  "scoreAfter": null,
+  "delta": null,
+  "triangles": null,
+  "before": null,
+  "after": null,
+  "note": null
+ },
+ {
+  "seq": 14,
+  "patch": "patch_width",
+  "result": "rejected",
+  "scoreBefore": 37.3,
+  "scoreAfter": 37.3,
+  "delta": 0.0,
+  "triangles": 203994,
+  "before": {
+   "silhouetteIouMean": 0.7094,
+   "widthBandRmsAll": 0.03101,
+   "landmarkRmsPct": 3.12,
+   "hullIou": 0.7112
+  },
+  "after": {
+   "silhouetteIouMean": 0.7055,
+   "widthBandRmsAll": 0.03138,
+   "landmarkRmsPct": 3.042,
+   "hullIou": 0.6933
+  },
+  "note": null
+ },
+ {
+  "seq": 15,
+  "patch": "patch_width_fresh",
+  "result": "accepted",
+  "scoreBefore": 37.3,
+  "scoreAfter": 37.4,
+  "delta": 0.1,
+  "triangles": 203994,
+  "before": {
+   "silhouetteIouMean": 0.7094,
+   "widthBandRmsAll": 0.03101,
+   "landmarkRmsPct": 3.12,
+   "hullIou": 0.7112
+  },
+  "after": {
+   "silhouetteIouMean": 0.7102,
+   "widthBandRmsAll": 0.03089,
+   "landmarkRmsPct": 3.147,
+   "hullIou": 0.7092
+  },
+  "note": null
+ },
+ {
+  "seq": 16,
+  "patch": "patch_width_fresh",
+  "result": "rejected",
+  "scoreBefore": 37.4,
+  "scoreAfter": 37.3,
+  "delta": -0.1,
+  "triangles": 203994,
+  "before": {
+   "silhouetteIouMean": 0.7102,
+   "widthBandRmsAll": 0.03089,
+   "landmarkRmsPct": 3.147,
+   "hullIou": 0.7092
+  },
+  "after": {
+   "silhouetteIouMean": 0.7077,
+   "widthBandRmsAll": 0.03111,
+   "landmarkRmsPct": 3.09,
+   "hullIou": 0.7112
+  },
+  "note": null
+ },
+ {
+  "seq": 17,
+  "patch": "patch_width_fresh",
+  "result": "rejected",
+  "scoreBefore": 37.4,
+  "scoreAfter": 37.3,
+  "delta": -0.1,
+  "triangles": 203994,
+  "before": {
+   "silhouetteIouMean": 0.7102,
+   "widthBandRmsAll": 0.03089,
+   "landmarkRmsPct": 3.147,
+   "hullIou": 0.7092
+  },
+  "after": {
+   "silhouetteIouMean": 0.7077,
+   "widthBandRmsAll": 0.03111,
+   "landmarkRmsPct": 3.09,
+   "hullIou": 0.7112
+  },
+  "note": null
+ },
+ {
+  "seq": 18,
+  "patch": "patch_width_fresh",
+  "result": "rejected",
+  "scoreBefore": 37.4,
+  "scoreAfter": 37.3,
+  "delta": -0.1,
+  "triangles": 203994,
+  "before": {
+   "silhouetteIouMean": 0.7102,
+   "widthBandRmsAll": 0.03089,
+   "landmarkRmsPct": 3.147,
+   "hullIou": 0.7092
+  },
+  "after": {
+   "silhouetteIouMean": 0.7077,
+   "widthBandRmsAll": 0.03111,
+   "landmarkRmsPct": 3.09,
+   "hullIou": 0.7112
+  },
+  "note": null
+ },
+ {
+  "seq": 19,
+  "patch": "patch_landmarks_fresh",
+  "result": "rejected",
+  "scoreBefore": 37.4,
+  "scoreAfter": 36.2,
+  "delta": -1.2,
+  "triangles": 203994,
+  "before": {
+   "silhouetteIouMean": 0.7102,
+   "widthBandRmsAll": 0.03089,
+   "landmarkRmsPct": 3.147,
+   "hullIou": 0.7092
+  },
+  "after": {
+   "silhouetteIouMean": 0.6962,
+   "widthBandRmsAll": 0.03163,
+   "landmarkRmsPct": 3.552,
+   "hullIou": 0.6685
+  },
+  "note": null
+ },
+ {
+  "seq": 20,
+  "patch": "patch_landmarks_v2",
+  "result": "rejected",
+  "scoreBefore": 37.4,
+  "scoreAfter": 37.4,
+  "delta": 0.0,
+  "triangles": 203994,
+  "before": {
+   "silhouetteIouMean": 0.7102,
+   "widthBandRmsAll": 0.03089,
+   "landmarkRmsPct": 3.147,
+   "hullIou": 0.7092
+  },
+  "after": {
+   "silhouetteIouMean": 0.7099,
+   "widthBandRmsAll": 0.03146,
+   "landmarkRmsPct": 3.122,
+   "hullIou": 0.6861
+  },
+  "note": null
+ },
+ {
+  "seq": 21,
+  "patch": "patch_landmarks_v2",
+  "result": "rejected",
+  "scoreBefore": 37.4,
+  "scoreAfter": 37.4,
+  "delta": 0.0,
+  "triangles": 203994,
+  "before": {
+   "silhouetteIouMean": 0.7102,
+   "widthBandRmsAll": 0.03089,
+   "landmarkRmsPct": 3.147,
+   "hullIou": 0.7092
+  },
+  "after": {
+   "silhouetteIouMean": 0.7097,
+   "widthBandRmsAll": 0.0315,
+   "landmarkRmsPct": 3.122,
+   "hullIou": 0.6861
+  },
+  "note": null
+ },
+ {
+  "seq": 22,
+  "patch": "patch_landmarks_v2",
+  "result": "accepted",
+  "scoreBefore": 37.4,
+  "scoreAfter": 37.6,
+  "delta": 0.2,
+  "triangles": 203994,
+  "before": {
+   "silhouetteIouMean": 0.7102,
+   "widthBandRmsAll": 0.03089,
+   "landmarkRmsPct": 3.147,
+   "hullIou": 0.7092
+  },
+  "after": {
+   "silhouetteIouMean": 0.7106,
+   "widthBandRmsAll": 0.03079,
+   "landmarkRmsPct": 3.045,
+   "hullIou": 0.7042
+  },
+  "note": null
+ },
+ {
+  "seq": 23,
+  "patch": "patch_landmarks_v2",
+  "result": "rejected",
+  "scoreBefore": 37.6,
+  "scoreAfter": 37.4,
+  "delta": -0.2,
+  "triangles": 203994,
+  "before": {
+   "silhouetteIouMean": 0.7106,
+   "widthBandRmsAll": 0.03079,
+   "landmarkRmsPct": 3.045,
+   "hullIou": 0.7042
+  },
+  "after": {
+   "silhouetteIouMean": 0.7101,
+   "widthBandRmsAll": 0.03147,
+   "landmarkRmsPct": 2.817,
+   "hullIou": 0.7059
+  },
+  "note": null
+ },
+ {
+  "seq": 24,
+  "patch": "patch_landmarks_v2",
+  "result": "rejected",
+  "scoreBefore": 37.6,
+  "scoreAfter": 37.4,
+  "delta": -0.2,
+  "triangles": 203994,
+  "before": {
+   "silhouetteIouMean": 0.7106,
+   "widthBandRmsAll": 0.03079,
+   "landmarkRmsPct": 3.045,
+   "hullIou": 0.7042
+  },
+  "after": {
+   "silhouetteIouMean": 0.7101,
+   "widthBandRmsAll": 0.03147,
+   "landmarkRmsPct": 2.817,
+   "hullIou": 0.7059
+  },
+  "note": null
+ },
+ {
+  "seq": 25,
+  "patch": "patch_landmarks_v2",
+  "result": "rejected",
+  "scoreBefore": 37.6,
+  "scoreAfter": 37.4,
+  "delta": -0.2,
+  "triangles": 203994,
+  "before": {
+   "silhouetteIouMean": 0.7106,
+   "widthBandRmsAll": 0.03079,
+   "landmarkRmsPct": 3.045,
+   "hullIou": 0.7042
+  },
+  "after": {
+   "silhouetteIouMean": 0.7101,
+   "widthBandRmsAll": 0.03147,
+   "landmarkRmsPct": 2.817,
+   "hullIou": 0.7059
+  },
+  "note": null
+ },
+ {
+  "seq": 26,
+  "patch": "patch_map_drift",
+  "result": "accepted",
+  "scoreBefore": 37.6,
+  "scoreAfter": 37.7,
+  "delta": 0.1,
+  "triangles": 203994,
+  "before": {
+   "silhouetteIouMean": 0.7106,
+   "widthBandRmsAll": 0.03079,
+   "landmarkRmsPct": 3.045,
+   "hullIou": 0.7042
+  },
+  "after": {
+   "silhouetteIouMean": 0.7106,
+   "widthBandRmsAll": 0.03079,
+   "landmarkRmsPct": 3.045,
+   "hullIou": 0.7042
+  },
+  "note": null
+ },
+ {
+  "seq": 27,
+  "patch": "patch_braids",
+  "result": "rejected",
+  "scoreBefore": null,
+  "scoreAfter": 38.4,
+  "delta": null,
+  "triangles": 208154,
+  "before": {
+   "silhouetteIouMean": 0.7106,
+   "widthBandRmsAll": 0.03079,
+   "landmarkRmsPct": 3.045,
+   "hullIou": 0.7042
+  },
+  "after": {
+   "silhouetteIouMean": 0.6985,
+   "widthBandRmsAll": 0.03132,
+   "landmarkRmsPct": 2.891,
+   "hullIou": 0.6484
+  },
+  "note": null
+ },
+ {
+  "seq": 28,
+  "patch": "patch_braids",
+  "result": "accepted",
+  "scoreBefore": 37.7,
+  "scoreAfter": 38.4,
+  "delta": 0.7,
+  "triangles": 208154,
+  "before": {
+   "silhouetteIouMean": 0.7106,
+   "widthBandRmsAll": 0.03079,
+   "landmarkRmsPct": 3.045,
+   "hullIou": 0.7042
+  },
+  "after": {
+   "silhouetteIouMean": 0.6985,
+   "widthBandRmsAll": 0.03132,
+   "landmarkRmsPct": 2.891,
+   "hullIou": 0.6484
+  },
+  "note": null
+ },
+ {
+  "seq": 29,
+  "patch": "patch_limbs",
+  "result": "rejected",
+  "scoreBefore": 38.4,
+  "scoreAfter": 38.2,
+  "delta": -0.2,
+  "triangles": 208154,
+  "before": {
+   "silhouetteIouMean": 0.6985,
+   "widthBandRmsAll": 0.03132,
+   "landmarkRmsPct": 2.891,
+   "hullIou": 0.6484
+  },
+  "after": {
+   "silhouetteIouMean": 0.6999,
+   "widthBandRmsAll": 0.03132,
+   "landmarkRmsPct": 2.693,
+   "hullIou": 0.6592
+  },
+  "note": null
+ },
+ {
+  "seq": 30,
+  "patch": "patch_width_v2",
+  "result": "accepted",
+  "scoreBefore": 38.4,
+  "scoreAfter": 38.7,
+  "delta": 0.3,
+  "triangles": 206550,
+  "before": {
+   "silhouetteIouMean": 0.6985,
+   "widthBandRmsAll": 0.03132,
+   "landmarkRmsPct": 2.891,
+   "hullIou": 0.6484
+  },
+  "after": {
+   "silhouetteIouMean": 0.701,
+   "widthBandRmsAll": 0.03102,
+   "landmarkRmsPct": 2.992,
+   "hullIou": 0.6259
+  },
+  "note": null
+ },
+ {
+  "seq": 31,
+  "patch": "patch_garment",
+  "result": "rejected",
+  "scoreBefore": 38.7,
+  "scoreAfter": 38.5,
+  "delta": -0.2,
+  "triangles": 203012,
+  "before": {
+   "silhouetteIouMean": 0.701,
+   "widthBandRmsAll": 0.03102,
+   "landmarkRmsPct": 2.992,
+   "hullIou": 0.6259
+  },
+  "after": {
+   "silhouetteIouMean": 0.7003,
+   "widthBandRmsAll": 0.03112,
+   "landmarkRmsPct": 3.035,
+   "hullIou": 0.6259
+  },
+  "note": null
+ },
+ {
+  "seq": 32,
+  "patch": "patch_lightness",
+  "result": "rejected",
+  "scoreBefore": 38.7,
+  "scoreAfter": 38.7,
+  "delta": 0.0,
+  "triangles": 206550,
+  "before": {
+   "silhouetteIouMean": 0.701,
+   "widthBandRmsAll": 0.03102,
+   "landmarkRmsPct": 2.992,
+   "hullIou": 0.6259
+  },
+  "after": {
+   "silhouetteIouMean": 0.7015,
+   "widthBandRmsAll": 0.03152,
+   "landmarkRmsPct": 2.908,
+   "hullIou": 0.6259
+  },
+  "note": null
+ },
+ {
+  "seq": 33,
+  "patch": "patch_face_scale",
+  "result": "rejected",
+  "scoreBefore": 38.7,
+  "scoreAfter": 38.7,
+  "delta": 0.0,
+  "triangles": 206634,
+  "before": {
+   "silhouetteIouMean": 0.701,
+   "widthBandRmsAll": 0.03102,
+   "landmarkRmsPct": 2.992,
+   "hullIou": 0.6259
+  },
+  "after": {
+   "silhouetteIouMean": 0.7008,
+   "widthBandRmsAll": 0.03099,
+   "landmarkRmsPct": 2.992,
+   "hullIou": 0.6259
+  },
+  "note": null
+ },
+ {
+  "seq": 34,
+  "patch": "patch_rig_prune",
+  "result": "rejected",
+  "scoreBefore": 38.7,
+  "scoreAfter": 38.7,
+  "delta": 0.0,
+  "triangles": 206550,
+  "before": {
+   "silhouetteIouMean": 0.701,
+   "widthBandRmsAll": 0.03102,
+   "landmarkRmsPct": 2.992,
+   "hullIou": 0.6259
+  },
+  "after": {
+   "silhouetteIouMean": 0.701,
+   "widthBandRmsAll": 0.03102,
+   "landmarkRmsPct": 2.992,
+   "hullIou": 0.6259
+  },
+  "note": null
+ },
+ {
+  "seq": 35,
+  "patch": "patch_rig_prune",
+  "result": "accepted",
+  "scoreBefore": 38.7,
+  "scoreAfter": 38.7,
+  "delta": 0.0,
+  "triangles": 206550,
+  "before": {
+   "silhouetteIouMean": 0.701,
+   "widthBandRmsAll": 0.03102,
+   "landmarkRmsPct": 2.992,
+   "hullIou": 0.6259
+  },
+  "after": {
+   "silhouetteIouMean": 0.701,
+   "widthBandRmsAll": 0.03102,
+   "landmarkRmsPct": 2.992,
+   "hullIou": 0.6259
+  },
+  "note": "Accepted with --keep against a flat gate, and the flatness is the evidence: all four local terms and the scoreboard came back bit-identical, which is exactly what the patch predicted, because pivots and sockets are Object3D nodes carrying no geometry. What it fixes is not pixels but honesty. The extremity patch collapsed 30 finger phalanges -- defensibly, a phalanx covers about a pixel at this framing -- and their bones stayed in rig.bones, so the spec asserted 49 bones while the model could skin 19. Probing the built scene found 38 sockets where the interaction pass had exposed 98. A downstream animator reading that spec would bind to joints that move nothing."
+ },
+ {
+  "seq": 36,
+  "patch": "patch_hand_scale",
+  "result": "patch-error",
+  "scoreBefore": null,
+  "scoreAfter": null,
+  "delta": null,
+  "triangles": null,
+  "before": null,
+  "after": null,
+  "note": null
+ }
+]

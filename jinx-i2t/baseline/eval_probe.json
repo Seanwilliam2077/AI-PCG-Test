@@ -1,0 +1,128 @@
+{
+ "renders": "out\\patch_albedo_purity",
+ "silhouetteIou": {
+  "0": 0.7983,
+  "45": 0.6203,
+  "90": 0.7033,
+  "180": 0.7599,
+  "270": 0.587,
+  "315": 0.6588
+ },
+ "silhouetteIouMean": 0.6879,
+ "widthRatio": {
+  "0": {
+   "max": 0.9699,
+   "bandMean": 0.9797,
+   "bandRms": 0.02881
+  },
+  "45": {
+   "max": 0.8319,
+   "bandMean": 0.832,
+   "bandRms": 0.04207
+  },
+  "90": {
+   "max": 0.9701,
+   "bandMean": 1.0155,
+   "bandRms": 0.02594
+  },
+  "180": {
+   "max": 0.944,
+   "bandMean": 0.9334,
+   "bandRms": 0.03291
+  },
+  "270": {
+   "max": 0.7435,
+   "bandMean": 0.8044,
+   "bandRms": 0.05819
+  },
+  "315": {
+   "max": 0.9018,
+   "bandMean": 1.2359,
+   "bandRms": 0.04029
+  }
+ },
+ "widthBandMeanAll": 0.9668,
+ "widthBandRmsAll": 0.03803,
+ "landmarkDelta": {
+  "0": {
+   "crown": 0.0,
+   "chin": 0.5,
+   "hip": 0.0,
+   "crotch": -0.5,
+   "midthigh": 3.0,
+   "knee": 0.0,
+   "ankle": -7.5,
+   "sole": 0.0
+  },
+  "45": {
+   "crown": 0.0,
+   "chin": 0.0,
+   "bust": 1.5,
+   "navel": 4.5,
+   "hip": -4.0,
+   "crotch": 7.0,
+   "midthigh": 4.0,
+   "sole": 0.0
+  },
+  "90": {
+   "crown": 0.0,
+   "chin": 0.5,
+   "navel": 5.0,
+   "hip": 0.0,
+   "crotch": 1.0,
+   "midthigh": -5.0,
+   "hem": 5.0,
+   "calf": 0.0,
+   "sole": 0.0
+  },
+  "180": {
+   "crown": 0.0,
+   "chin": 0.5,
+   "bust": 2.0,
+   "crotch": 0.0,
+   "midthigh": 2.5,
+   "hem": 4.0,
+   "ankle": 1.5,
+   "sole": 0.0
+  },
+  "270": {
+   "crown": 0.0,
+   "bust": 4.5,
+   "underbust": 3.0,
+   "waist": 3.0,
+   "navel": 4.5,
+   "hip": -4.0,
+   "crotch": 4.0,
+   "knee": 3.5,
+   "hem": 1.0,
+   "ankle": 1.0,
+   "sole": 0.0
+  },
+  "315": {
+   "crown": 0.0,
+   "chin": -0.5,
+   "navel": -3.5,
+   "crotch": -1.0,
+   "midthigh": 2.5,
+   "knee": 0.5,
+   "hem": 2.0,
+   "ankle": -4.0,
+   "sole": 0.0
+  }
+ },
+ "landmarkRmsPct": 2.812,
+ "landmarksScored": 53,
+ "lightness": {
+  "mean": 37.832,
+  "p10": 13.987,
+  "p90": 73.399,
+  "spread": 4.367
+ },
+ "hull": {
+  "iou": 0.6828,
+  "outsideReference": 0.1488,
+  "referenceUnfilled": 0.2247,
+  "volumeRatio": 0.9108
+ },
+ "tag": "accepted"
+}

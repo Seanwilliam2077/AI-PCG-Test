@@ -1,0 +1,32 @@
+[
+{
+"id": "joint-pivots",
+"score": 0.92,
+"note": "49 pivots moved from the component centre to the bone joint; all 49 joint sockets read back within 0.0 mm of their bone jointPos in world space"
+},
+{
+"id": "named-joints",
+"score": 0.9,
+"note": "head, neck, shoulder, elbow, hip and knee all exposed by anatomical name; bone ids alone carried none of them"
+},
+{
+"id": "socket-count",
+"score": 0.88,
+"note": "98 sockets emitted into root.userData.sculptRuntime.sockets, two per bone"
+},
+{
+"id": "leg-chain-integrity",
+"score": 0.8,
+"note": "shin-r localEnd re-derived from foot-r's own offset: it had stopped 30 mm below the knee while shin-l ran 441 mm"
+},
+{
+"id": "prop-attachment",
+"score": 0.3,
+"note": "the four zapper parts still declare no attachment.anchor and the pistol interpenetrates Thigh L, Trouser leg L, Thigh strap and Glove L"
+},
+{
+"id": "skinning",
+"score": 0.25,
+"note": "no skin weights bound; the model is a rigid hierarchy of pivots, animatable by joint rotation but not deformable"
+}
+]

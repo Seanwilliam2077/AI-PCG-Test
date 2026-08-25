@@ -1,0 +1,338 @@
+[
+ {
+  "passId": "blockout",
+  "aiVisionScore": 0.74,
+  "action": "continue",
+  "summary": "Blockout meets its own goal -- head-unit proportions and pose silhouette read correctly without materials.",
+  "layerScores": {
+   "silhouetteProportion": 0.78,
+   "componentStructure": 0.8,
+   "formDetail": 0.15,
+   "materialSurface": 0.05,
+   "lightingCamera": 0.7
+  },
+  "features": [
+   {
+    "id": "contrapposto",
+    "score": 0.95
+   },
+   {
+    "id": "anatomy-proportion",
+    "score": 0.85
+   },
+   {
+    "id": "pose-silhouette",
+    "score": 0.8
+   },
+   {
+    "id": "braid-contact",
+    "score": 0.75
+   },
+   {
+    "id": "handedness",
+    "score": 0.78
+   },
+   {
+    "id": "crest-shape",
+    "score": 0.35
+   },
+   {
+    "id": "face-landmark-placement",
+    "score": 0.1
+   }
+  ]
+ },
+ {
+  "passId": "structural-pass",
+  "aiVisionScore": 0.8,
+  "action": "continue",
+  "summary": "Structural pass: hierarchy, attachment and pivots verified numerically. 56 macro+meso components, zero floaters, every component parented, braid attached along the back.",
+  "layerScores": {
+   "silhouetteProportion": 0.78,
+   "componentStructure": 0.88,
+   "formDetail": 0.18,
+   "materialSurface": 0.05,
+   "lightingCamera": 0.7
+  },
+  "features": [
+   {
+    "id": "braid-contact",
+    "score": 0.82
+   },
+   {
+    "id": "contrapposto",
+    "score": 0.95
+   },
+   {
+    "id": "anatomy-proportion",
+    "score": 0.85
+   },
+   {
+    "id": "pose-silhouette",
+    "score": 0.8
+   },
+   {
+    "id": "handedness",
+    "score": 0.78
+   },
+   {
+    "id": "crest-shape",
+    "score": 0.35
+   },
+   {
+    "id": "face-landmark-placement",
+    "score": 0.1
+   }
+  ]
+ },
+ {
+  "passId": "proportion-lock",
+  "aiVisionScore": 0.81,
+  "action": "continue",
+  "summary": "Proportion lock: scored with an INDEPENDENT scoreboard (the one built for the previous reconstruction) at mean silhouette IoU 0.6774 over six pinned views.",
+  "layerScores": {
+   "silhouetteProportion": 0.82,
+   "componentStructure": 0.88,
+   "formDetail": 0.2,
+   "materialSurface": 0.05,
+   "lightingCamera": 0.72
+  },
+  "features": [
+   {
+    "id": "anatomy-proportion",
+    "score": 0.88
+   },
+   {
+    "id": "contrapposto",
+    "score": 0.92
+   },
+   {
+    "id": "pose-silhouette",
+    "score": 0.82
+   },
+   {
+    "id": "braid-contact",
+    "score": 0.82
+   },
+   {
+    "id": "handedness",
+    "score": 0.78
+   },
+   {
+    "id": "crest-shape",
+    "score": 0.38
+   },
+   {
+    "id": "face-landmark-placement",
+    "score": 0.12
+   }
+  ]
+ },
+ {
+  "passId": "feature-placement",
+  "aiVisionScore": 0.78,
+  "action": "continue",
+  "summary": "Feature placement: the emitted mesh is byte-identical in triangle count and silhouette to proportion-lock. Recording that plainly rather than claiming progress.",
+  "layerScores": {
+   "silhouetteProportion": 0.82,
+   "componentStructure": 0.88,
+   "formDetail": 0.22,
+   "materialSurface": 0.05,
+   "lightingCamera": 0.72
+  },
+  "features": [
+   {
+    "id": "anatomy-proportion",
+    "score": 0.88
+   },
+   {
+    "id": "contrapposto",
+    "score": 0.92
+   },
+   {
+    "id": "pose-silhouette",
+    "score": 0.82
+   },
+   {
+    "id": "braid-contact",
+    "score": 0.82
+   },
+   {
+    "id": "handedness",
+    "score": 0.78
+   },
+   {
+    "id": "crest-shape",
+    "score": 0.38
+   },
+   {
+    "id": "face-landmark-placement",
+    "score": 0.12
+   }
+  ]
+ },
+ {
+  "passId": "material-pass",
+  "aiVisionScore": 0.73,
+  "action": "continue",
+  "summary": "material-pass: 20 measured materials resolve with reference-derived PBR maps; tone calibrated to L mean 38.7 vs reference 36.7. Two real bugs fixed: the light Group was being discarded by a for...of, and the PBR maps were not served.",
+  "layerScores": {
+   "silhouetteProportion": 0.82,
+   "componentStructure": 0.88,
+   "formDetail": 0.3,
+   "materialSurface": 0.68,
+   "lightingCamera": 0.86
+  },
+  "features": [
+   {
+    "id": "palette-match",
+    "score": 0.86
+   },
+   {
+    "id": "material-assignment",
+    "score": 0.8
+   },
+   {
+    "id": "uv-projection",
+    "score": 0.34
+   },
+   {
+    "id": "metalness-roughness",
+    "score": 0.72
+   },
+   {
+    "id": "tone-mapping",
+    "score": 0.9
+   },
+   {
+    "id": "tattoo-readability",
+    "score": 0.2
+   }
+  ]
+ },
+ {
+  "passId": "lighting-pass",
+  "aiVisionScore": 0.79,
+  "action": "continue",
+  "summary": "lighting-pass: six-view L spread 2.375 against the reference's 2.61, mean 38.04, p10 13.73, p90 71.05. Three of four acceptance criteria met; p90 sits 0.95 under band.",
+  "layerScores": {
+   "silhouetteProportion": 0.88,
+   "componentStructure": 0.88,
+   "formDetail": 0.42,
+   "materialSurface": 0.76,
+   "lightingCamera": 0.9
+  },
+  "features": [
+   {
+    "id": "six-view-evenness",
+    "score": 0.94
+   },
+   {
+    "id": "exposure-envelope",
+    "score": 0.86
+   },
+   {
+    "id": "side-depth",
+    "score": 0.88
+   },
+   {
+    "id": "front-width",
+    "score": 0.72
+   },
+   {
+    "id": "material-coverage",
+    "score": 0.84
+   },
+   {
+    "id": "shadow-behaviour",
+    "score": 0.9
+   },
+   {
+    "id": "face-landmark-placement",
+    "score": 0.15
+   },
+   {
+    "id": "uv-projection",
+    "score": 0.36
+   }
+  ]
+ },
+ {
+  "passId": "interaction-pass",
+  "aiVisionScore": 0.78,
+  "action": "continue",
+  "summary": "interaction-pass: 49 joint pivots and 98 sockets exposed and verified against the skeleton to 0.0 mm; shin-r's severed chain repaired.",
+  "layerScores": {
+   "silhouetteProportion": 0.88,
+   "componentStructure": 0.9,
+   "formDetail": 0.42,
+   "materialSurface": 0.76,
+   "lightingCamera": 0.9
+  },
+  "features": [
+   {
+    "id": "joint-pivots",
+    "score": 0.92
+   },
+   {
+    "id": "named-joints",
+    "score": 0.9
+   },
+   {
+    "id": "socket-count",
+    "score": 0.88
+   },
+   {
+    "id": "leg-chain-integrity",
+    "score": 0.8
+   },
+   {
+    "id": "prop-attachment",
+    "score": 0.3
+   },
+   {
+    "id": "skinning",
+    "score": 0.25
+   }
+  ]
+ },
+ {
+  "passId": "optimization-pass",
+  "aiVisionScore": 0.8,
+  "action": "continue",
+  "summary": "optimization-pass: 128,833 triangles (51.5% of budget) and 104 draw calls (65.0%); three LOD tiers built and measured; silhouette unchanged at IoU 0.9864.",
+  "layerScores": {
+   "silhouetteProportion": 0.88,
+   "componentStructure": 0.9,
+   "formDetail": 0.44,
+   "materialSurface": 0.76,
+   "lightingCamera": 0.92
+  },
+  "features": [
+   {
+    "id": "triangle-budget",
+    "score": 0.92
+   },
+   {
+    "id": "draw-call-budget",
+    "score": 0.86
+   },
+   {
+    "id": "lod-plan",
+    "score": 0.88
+   },
+   {
+    "id": "decimation-safety",
+    "score": 0.94
+   },
+   {
+    "id": "measurement-honesty",
+    "score": 0.9
+   },
+   {
+    "id": "texture-budget",
+    "score": 0.6
+   }
+  ]
+ }
+]

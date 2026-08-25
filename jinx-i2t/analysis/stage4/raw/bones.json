@@ -1,0 +1,838 @@
+[
+ {
+  "id": "pelvis",
+  "parent": null,
+  "jointPos": [
+   0,
+   1.016,
+   0
+  ],
+  "tipPos": [
+   0,
+   1.209,
+   0.005
+  ],
+  "component": "pelvis",
+  "role": "skinned",
+  "chain": "spine"
+ },
+ {
+  "id": "abdomen",
+  "parent": "pelvis",
+  "jointPos": [
+   0,
+   1.209,
+   0.005
+  ],
+  "tipPos": [
+   0,
+   1.342,
+   0.01
+  ],
+  "component": "abdomen",
+  "role": "skinned",
+  "chain": "spine"
+ },
+ {
+  "id": "chest",
+  "parent": "abdomen",
+  "jointPos": [
+   0,
+   1.342,
+   0.01
+  ],
+  "tipPos": [
+   0,
+   1.429,
+   0.008
+  ],
+  "component": "chest",
+  "role": "skinned",
+  "chain": "spine"
+ },
+ {
+  "id": "clavicle-l",
+  "parent": "chest",
+  "jointPos": [
+   0.05,
+   1.395,
+   0.03
+  ],
+  "tipPos": [
+   0.108,
+   1.3868,
+   0.055
+  ],
+  "component": "clavicle-l",
+  "role": "skinned",
+  "chain": "arm"
+ },
+ {
+  "id": "clavicle-r",
+  "parent": "chest",
+  "jointPos": [
+   -0.05,
+   1.395,
+   0.03
+  ],
+  "tipPos": [
+   -0.108,
+   1.3932,
+   0.055
+  ],
+  "component": "clavicle-r",
+  "role": "skinned",
+  "chain": "arm"
+ },
+ {
+  "id": "foot-l",
+  "parent": "shin-l",
+  "jointPos": [
+   0.0488,
+   0.155,
+   0.016
+  ],
+  "tipPos": [
+   0.0705,
+   0.103,
+   0.1278
+  ],
+  "component": "foot-l",
+  "role": "skinned",
+  "chain": "leg"
+ },
+ {
+  "id": "foot-r",
+  "parent": "shin-r",
+  "jointPos": [
+   -0.0552,
+   0.108,
+   -0.012
+  ],
+  "tipPos": [
+   -0.0705,
+   0.056,
+   0.0998
+  ],
+  "component": "foot-r",
+  "role": "skinned",
+  "chain": "leg"
+ },
+ {
+  "id": "forearm-l",
+  "parent": "upper-arm-l",
+  "jointPos": [
+   0.1349,
+   1.1634,
+   0.0775
+  ],
+  "tipPos": [
+   0.1759,
+   0.9559,
+   0.0817
+  ],
+  "component": "forearm-l",
+  "role": "skinned",
+  "chain": "arm"
+ },
+ {
+  "id": "forearm-r",
+  "parent": "upper-arm-r",
+  "jointPos": [
+   -0.1349,
+   1.1699,
+   0.0775
+  ],
+  "tipPos": [
+   -0.1759,
+   0.9624,
+   0.0817
+  ],
+  "component": "forearm-r",
+  "role": "skinned",
+  "chain": "arm"
+ },
+ {
+  "id": "hand-l",
+  "parent": "forearm-l",
+  "jointPos": [
+   0.1759,
+   0.9559,
+   0.0817
+  ],
+  "tipPos": [
+   0.2085,
+   0.8768,
+   0.0857
+  ],
+  "component": "hand-l",
+  "role": "skinned",
+  "chain": "arm",
+  "tipFixNote": "tip was still in template units beside a metric joint; re-derived"
+ },
+ {
+  "id": "hand-r",
+  "parent": "forearm-r",
+  "jointPos": [
+   -0.1759,
+   0.9624,
+   0.0817
+  ],
+  "tipPos": [
+   -0.2085,
+   0.8832,
+   0.0857
+  ],
+  "component": "hand-r",
+  "role": "skinned",
+  "chain": "arm",
+  "tipFixNote": "tip was still in template units beside a metric joint; re-derived"
+ },
+ {
+  "id": "head",
+  "parent": "neck",
+  "jointPos": [
+   0,
+   1.5895,
+   0.004
+  ],
+  "tipPos": [
+   0,
+   1.674,
+   0.004
+  ],
+  "component": "head",
+  "role": "skinned",
+  "chain": "head"
+ },
+ {
+  "id": "index-l-1",
+  "parent": "hand-l",
+  "jointPos": [
+   0.2195,
+   0.8768,
+   0.0857
+  ],
+  "tipPos": [
+   0.228,
+   0.8526,
+   0.0897
+  ],
+  "component": "index-l-1",
+  "role": "skinned",
+  "chain": "digit"
+ },
+ {
+  "id": "index-l-2",
+  "parent": "index-l-1",
+  "jointPos": [
+   0.228,
+   0.8526,
+   0.0897
+  ],
+  "tipPos": [
+   0.2364,
+   0.8283,
+   0.0937
+  ],
+  "component": "index-l-2",
+  "role": "skinned",
+  "chain": "digit"
+ },
+ {
+  "id": "index-l-3",
+  "parent": "index-l-2",
+  "jointPos": [
+   0.2364,
+   0.8283,
+   0.0937
+  ],
+  "tipPos": [
+   0.2364,
+   0.8123,
+   0.0977
+  ],
+  "component": "index-l-3",
+  "role": "skinned",
+  "chain": "digit"
+ },
+ {
+  "id": "index-r-1",
+  "parent": "hand-r",
+  "jointPos": [
+   -0.2195,
+   0.8832,
+   0.0857
+  ],
+  "tipPos": [
+   -0.228,
+   0.859,
+   0.0897
+  ],
+  "component": "index-r-1",
+  "role": "skinned",
+  "chain": "digit"
+ },
+ {
+  "id": "index-r-2",
+  "parent": "index-r-1",
+  "jointPos": [
+   -0.228,
+   0.859,
+   0.0897
+  ],
+  "tipPos": [
+   -0.2364,
+   0.8348,
+   0.0937
+  ],
+  "component": "index-r-2",
+  "role": "skinned",
+  "chain": "digit"
+ },
+ {
+  "id": "index-r-3",
+  "parent": "index-r-2",
+  "jointPos": [
+   -0.2364,
+   0.8348,
+   0.0937
+  ],
+  "tipPos": [
+   -0.2364,
+   0.8188,
+   0.0977
+  ],
+  "component": "index-r-3",
+  "role": "skinned",
+  "chain": "digit"
+ },
+ {
+  "id": "little-l-1",
+  "parent": "hand-l",
+  "jointPos": [
+   0.1865,
+   0.8768,
+   0.0857
+  ],
+  "tipPos": [
+   0.1936,
+   0.8564,
+   0.0897
+  ],
+  "component": "little-l-1",
+  "role": "skinned",
+  "chain": "digit"
+ },
+ {
+  "id": "little-l-2",
+  "parent": "little-l-1",
+  "jointPos": [
+   0.1936,
+   0.8564,
+   0.0897
+  ],
+  "tipPos": [
+   0.2007,
+   0.8361,
+   0.0937
+  ],
+  "component": "little-l-2",
+  "role": "skinned",
+  "chain": "digit"
+ },
+ {
+  "id": "little-l-3",
+  "parent": "little-l-2",
+  "jointPos": [
+   0.2007,
+   0.8361,
+   0.0937
+  ],
+  "tipPos": [
+   0.2007,
+   0.8201,
+   0.0977
+  ],
+  "component": "little-l-3",
+  "role": "skinned",
+  "chain": "digit"
+ },
+ {
+  "id": "little-r-1",
+  "parent": "hand-r",
+  "jointPos": [
+   -0.1865,
+   0.8832,
+   0.0857
+  ],
+  "tipPos": [
+   -0.1936,
+   0.8629,
+   0.0897
+  ],
+  "component": "little-r-1",
+  "role": "skinned",
+  "chain": "digit"
+ },
+ {
+  "id": "little-r-2",
+  "parent": "little-r-1",
+  "jointPos": [
+   -0.1936,
+   0.8629,
+   0.0897
+  ],
+  "tipPos": [
+   -0.2007,
+   0.8426,
+   0.0937
+  ],
+  "component": "little-r-2",
+  "role": "skinned",
+  "chain": "digit"
+ },
+ {
+  "id": "little-r-3",
+  "parent": "little-r-2",
+  "jointPos": [
+   -0.2007,
+   0.8426,
+   0.0937
+  ],
+  "tipPos": [
+   -0.2007,
+   0.8266,
+   0.0977
+  ],
+  "component": "little-r-3",
+  "role": "skinned",
+  "chain": "digit"
+ },
+ {
+  "id": "middle-l-1",
+  "parent": "hand-l",
+  "jointPos": [
+   0.2085,
+   0.8768,
+   0.0857
+  ],
+  "tipPos": [
+   0.2175,
+   0.8511,
+   0.0897
+  ],
+  "component": "middle-l-1",
+  "role": "skinned",
+  "chain": "digit"
+ },
+ {
+  "id": "middle-l-2",
+  "parent": "middle-l-1",
+  "jointPos": [
+   0.2175,
+   0.8511,
+   0.0897
+  ],
+  "tipPos": [
+   0.2264,
+   0.8254,
+   0.0937
+  ],
+  "component": "middle-l-2",
+  "role": "skinned",
+  "chain": "digit"
+ },
+ {
+  "id": "middle-l-3",
+  "parent": "middle-l-2",
+  "jointPos": [
+   0.2264,
+   0.8254,
+   0.0937
+  ],
+  "tipPos": [
+   0.2264,
+   0.8094,
+   0.0977
+  ],
+  "component": "middle-l-3",
+  "role": "skinned",
+  "chain": "digit"
+ },
+ {
+  "id": "middle-r-1",
+  "parent": "hand-r",
+  "jointPos": [
+   -0.2085,
+   0.8832,
+   0.0857
+  ],
+  "tipPos": [
+   -0.2175,
+   0.8576,
+   0.0897
+  ],
+  "component": "middle-r-1",
+  "role": "skinned",
+  "chain": "digit"
+ },
+ {
+  "id": "middle-r-2",
+  "parent": "middle-r-1",
+  "jointPos": [
+   -0.2175,
+   0.8576,
+   0.0897
+  ],
+  "tipPos": [
+   -0.2264,
+   0.8319,
+   0.0937
+  ],
+  "component": "middle-r-2",
+  "role": "skinned",
+  "chain": "digit"
+ },
+ {
+  "id": "middle-r-3",
+  "parent": "middle-r-2",
+  "jointPos": [
+   -0.2264,
+   0.8319,
+   0.0937
+  ],
+  "tipPos": [
+   -0.2264,
+   0.8159,
+   0.0977
+  ],
+  "component": "middle-r-3",
+  "role": "skinned",
+  "chain": "digit"
+ },
+ {
+  "id": "neck",
+  "parent": "chest",
+  "jointPos": [
+   0,
+   1.429,
+   0.008
+  ],
+  "tipPos": [
+   0,
+   1.5895,
+   0.004
+  ],
+  "component": "neck",
+  "role": "skinned",
+  "chain": "head"
+ },
+ {
+  "id": "ring-l-1",
+  "parent": "hand-l",
+  "jointPos": [
+   0.1975,
+   0.8768,
+   0.0857
+  ],
+  "tipPos": [
+   0.2058,
+   0.853,
+   0.0897
+  ],
+  "component": "ring-l-1",
+  "role": "skinned",
+  "chain": "digit"
+ },
+ {
+  "id": "ring-l-2",
+  "parent": "ring-l-1",
+  "jointPos": [
+   0.2058,
+   0.853,
+   0.0897
+  ],
+  "tipPos": [
+   0.2141,
+   0.8293,
+   0.0937
+  ],
+  "component": "ring-l-2",
+  "role": "skinned",
+  "chain": "digit"
+ },
+ {
+  "id": "ring-l-3",
+  "parent": "ring-l-2",
+  "jointPos": [
+   0.2141,
+   0.8293,
+   0.0937
+  ],
+  "tipPos": [
+   0.2141,
+   0.8133,
+   0.0977
+  ],
+  "component": "ring-l-3",
+  "role": "skinned",
+  "chain": "digit"
+ },
+ {
+  "id": "ring-r-1",
+  "parent": "hand-r",
+  "jointPos": [
+   -0.1975,
+   0.8832,
+   0.0857
+  ],
+  "tipPos": [
+   -0.2058,
+   0.8595,
+   0.0897
+  ],
+  "component": "ring-r-1",
+  "role": "skinned",
+  "chain": "digit"
+ },
+ {
+  "id": "ring-r-2",
+  "parent": "ring-r-1",
+  "jointPos": [
+   -0.2058,
+   0.8595,
+   0.0897
+  ],
+  "tipPos": [
+   -0.2141,
+   0.8358,
+   0.0937
+  ],
+  "component": "ring-r-2",
+  "role": "skinned",
+  "chain": "digit"
+ },
+ {
+  "id": "ring-r-3",
+  "parent": "ring-r-2",
+  "jointPos": [
+   -0.2141,
+   0.8358,
+   0.0937
+  ],
+  "tipPos": [
+   -0.2141,
+   0.8198,
+   0.0977
+  ],
+  "component": "ring-r-3",
+  "role": "skinned",
+  "chain": "digit"
+ },
+ {
+  "id": "shin-l",
+  "parent": "thigh-l",
+  "jointPos": [
+   0.044,
+   0.5964,
+   0.0158
+  ],
+  "tipPos": [
+   0.0488,
+   0.155,
+   0.016
+  ],
+  "component": "shin-l",
+  "role": "skinned",
+  "chain": "leg"
+ },
+ {
+  "id": "shin-r",
+  "parent": "thigh-r",
+  "jointPos": [
+   -0.06,
+   0.58,
+   0.006
+  ],
+  "tipPos": [
+   -0.06,
+   0.55,
+   0.006
+  ],
+  "component": "shin-r",
+  "role": "skinned",
+  "chain": "leg",
+  "tipFixNote": "tip was still in template units beside a metric joint; re-derived"
+ },
+ {
+  "id": "thigh-l",
+  "parent": "pelvis",
+  "jointPos": [
+   0.0454,
+   0.977,
+   0
+  ],
+  "tipPos": [
+   0.044,
+   0.5964,
+   0.0158
+  ],
+  "component": "thigh-l",
+  "role": "skinned",
+  "chain": "leg"
+ },
+ {
+  "id": "thigh-r",
+  "parent": "pelvis",
+  "jointPos": [
+   -0.0774,
+   0.9714,
+   0
+  ],
+  "tipPos": [
+   -0.06,
+   0.58,
+   0.006
+  ],
+  "component": "thigh-r",
+  "role": "skinned",
+  "chain": "leg"
+ },
+ {
+  "id": "thumb-l-1",
+  "parent": "hand-l",
+  "jointPos": [
+   0.1579,
+   0.9209,
+   0.1067
+  ],
+  "tipPos": [
+   0.1519,
+   0.9039,
+   0.1117
+  ],
+  "component": "thumb-l-1",
+  "role": "skinned",
+  "chain": "digit"
+ },
+ {
+  "id": "thumb-l-2",
+  "parent": "thumb-l-1",
+  "jointPos": [
+   0.1519,
+   0.9039,
+   0.1117
+  ],
+  "tipPos": [
+   0.1459,
+   0.8869,
+   0.1167
+  ],
+  "component": "thumb-l-2",
+  "role": "skinned",
+  "chain": "digit"
+ },
+ {
+  "id": "thumb-l-3",
+  "parent": "thumb-l-2",
+  "jointPos": [
+   0.1459,
+   0.8869,
+   0.1167
+  ],
+  "tipPos": [
+   0.1459,
+   0.8709,
+   0.1207
+  ],
+  "component": "thumb-l-3",
+  "role": "skinned",
+  "chain": "digit"
+ },
+ {
+  "id": "thumb-r-1",
+  "parent": "hand-r",
+  "jointPos": [
+   -0.1579,
+   0.9274,
+   0.1067
+  ],
+  "tipPos": [
+   -0.1519,
+   0.9104,
+   0.1117
+  ],
+  "component": "thumb-r-1",
+  "role": "skinned",
+  "chain": "digit"
+ },
+ {
+  "id": "thumb-r-2",
+  "parent": "thumb-r-1",
+  "jointPos": [
+   -0.1519,
+   0.9104,
+   0.1117
+  ],
+  "tipPos": [
+   -0.1459,
+   0.8934,
+   0.1167
+  ],
+  "component": "thumb-r-2",
+  "role": "skinned",
+  "chain": "digit"
+ },
+ {
+  "id": "thumb-r-3",
+  "parent": "thumb-r-2",
+  "jointPos": [
+   -0.1459,
+   0.8934,
+   0.1167
+  ],
+  "tipPos": [
+   -0.1459,
+   0.8774,
+   0.1207
+  ],
+  "component": "thumb-r-3",
+  "role": "skinned",
+  "chain": "digit"
+ },
+ {
+  "id": "upper-arm-l",
+  "parent": "clavicle-l",
+  "jointPos": [
+   0.108,
+   1.3868,
+   0.055
+  ],
+  "tipPos": [
+   0.1349,
+   1.1634,
+   0.0775
+  ],
+  "component": "upper-arm-l",
+  "role": "skinned",
+  "chain": "arm"
+ },
+ {
+  "id": "upper-arm-r",
+  "parent": "clavicle-r",
+  "jointPos": [
+   -0.108,
+   1.3932,
+   0.055
+  ],
+  "tipPos": [
+   -0.1349,
+   1.1699,
+   0.0775
+  ],
+  "component": "upper-arm-r",
+  "role": "skinned",
+  "chain": "arm"
+ }
+]

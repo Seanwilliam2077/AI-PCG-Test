@@ -1,0 +1,16 @@
+{
+  "componentId": "pants-l",
+  "dominantAlbedo": "rgba(54, 34, 50, 1.0)",
+  "secondaryAlbedo": "rgba(86, 52, 82, 1.0)",
+  "materialClass": "stone",
+  "materialClassConfidence": 0.45,
+  "roughnessEstimate": 0.175,
+  "metalnessEstimate": 0.0,
+  "highlightEvidence": "sharp, tight specular hotspot ¡ª supports low roughness/high specularity",
+  "sourceCropPath": "C:\\AI Pipeline Test\\jinx-i2t\\pbr\\crops\\pants.png",
+  "labClusterMeta": {
+    "clusterCount": 3,
+    "dominantClusterSharePct": 0.493
+  },
+  "cacheHit": false
+}

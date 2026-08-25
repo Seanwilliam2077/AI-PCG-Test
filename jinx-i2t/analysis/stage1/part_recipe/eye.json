@@ -1,0 +1,16 @@
+{
+  "componentId": "eye-l",
+  "dominantAlbedo": "rgba(48, 32, 29, 1.0)",
+  "secondaryAlbedo": "rgba(133, 99, 92, 1.0)",
+  "materialClass": "stone",
+  "materialClassConfidence": 0.45,
+  "roughnessEstimate": 0.302,
+  "metalnessEstimate": 0.0,
+  "highlightEvidence": "sharp, tight specular hotspot ¡ª supports low roughness/high specularity",
+  "sourceCropPath": "C:\\AI Pipeline Test\\jinx-i2t\\pbr\\crops\\eye.png",
+  "labClusterMeta": {
+    "clusterCount": 3,
+    "dominantClusterSharePct": 0.385
+  },
+  "cacheHit": false
+}

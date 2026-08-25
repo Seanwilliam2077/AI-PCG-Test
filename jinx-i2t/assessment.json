@@ -1,0 +1,399 @@
+{
+ "targetName": "Jinx (Arcane) full-body character",
+ "sourceImage": "ref/views/body_2.png",
+ "preSpecAssessment": {
+  "objectClass": {
+   "primaryType": "full-body humanoid game character (stylised realism)",
+   "primaryDomain": "character",
+   "formLanguage": [
+    "organic-trunk-and-limbs",
+    "hard-surface-kit",
+    "swept-curve-hair"
+   ],
+   "structureKind": [
+    "bilateral-symmetric-construction",
+    "asymmetric-pose",
+    "asymmetric-kit"
+   ],
+   "motionPotential": [
+    "biped-locomotion",
+    "arm-articulation",
+    "braid-secondary-motion"
+   ],
+   "materialFamilies": [
+    "skin",
+    "hair",
+    "woven-cloth",
+    "leather",
+    "canvas",
+    "brass",
+    "steel"
+   ],
+   "notes": "Arcane-series Jinx, not the League base-game design. Route = character-conditional -> maximum likeness (projection-first). Ten reference views available: 6 textured, 6 clay, 4 head close-ups."
+  },
+  "complexity": {
+   "tier": "ultra-complex",
+   "scores": {
+    "silhouetteComplexity": 9,
+    "componentCount": 9,
+    "hierarchyDepth": 8,
+    "repetitionDensity": 7,
+    "materialLayerCount": 8,
+    "localDetailDensity": 8,
+    "occlusionRisk": 4,
+    "actionReadinessNeed": 7
+   },
+   "estimatedCounts": {
+    "macroComponents": 10,
+    "mesoComponents": 28,
+    "microFeatureGroups": 11,
+    "materialLayers": 9,
+    "repetitionSystems": 4
+   },
+   "reasoning": [
+    "Ten macro parts: body, head, hair, top, trousers, sash, belts, gloves, boots, pistol.",
+    "Repetition systems: trouser pinstripes (~21.5 mm pitch), boot cross-lacing, belt rivets/buckles, braid plait lobes.",
+    "Occlusion risk is LOW for a character (4/10) only because the reference is a full turnaround; from a single view it would be 9.",
+    "Action readiness matters: the braids are the character's signature and are secondary-motion candidates, so the rig must carry braid joints, not just a body skeleton."
+   ]
+  },
+  "specDepthDecision": {
+   "requiredDepth": "ultra-complex",
+   "minimumComponentLevels": [
+    "macro",
+    "meso",
+    "micro"
+   ],
+   "needsRepetitionSystems": true,
+   "needsMaterialLocalOverrides": true,
+   "needsMultipleReviewViews": true,
+   "needsActionReadyHierarchy": true,
+   "rationale": "Choose simple/moderate/complex/ultra-complex from observed structure, not from a hardcoded domain."
+  },
+  "unknownsToResolveBeforeImplementation": [
+   {
+    "id": "absolute-scale",
+    "question": "No dimension appears anywhere on the sheet.",
+    "resolution": "Declare 1.72 m total height; every other length is a measured ratio against it.",
+    "confidence": 0.5
+   },
+   {
+    "id": "braid-drape-conflict",
+    "question": "clay_0 and clay_4 disagree about braid standoff by 0.12 m at y=0.70.",
+    "resolution": "Follow clay_0; record clay_4 as an unreachable projection and mark that region low confidence.",
+    "confidence": 0.6
+   },
+   {
+    "id": "sampled-colour-is-not-albedo",
+    "question": "All sampled colours are medians off a RENDER and carry its lighting.",
+    "resolution": "De-light before use (forge/stage1_intake/delight_albedo.py). Measured cost of skipping it: hair came out +15 L too light.",
+    "confidence": 0.9
+   },
+   {
+    "id": "hidden-interiors",
+    "question": "Inside the boots, under the sash, behind the trouser fold are hidden in all ten views.",
+    "resolution": "Mark low confidence; do not invent.",
+    "confidence": 0.9
+   },
+   {
+    "id": "hair-microstructure",
+    "question": "Front figure is 377 px wide at native scale; strands and pores are below resolution.",
+    "resolution": "Stylised clumps per the character track. Do not oversell hair likeness.",
+    "confidence": 0.95
+   },
+   {
+    "id": "three-quarter-yaw",
+    "question": "Are the intermediate panels 45 degrees?",
+    "resolution": "Fitted from torso width at two bare-midriff heights to 35 and 315 deg +/-10. Silhouette IoU cannot resolve it.",
+    "confidence": 0.7
+   }
+  ],
+  "detailInventory": {
+   "scanMethod": "component-zones",
+   "targetMinDetails": 16,
+   "note": "Enumerate every identity-defining small detail before authoring the spec. Each detail must map to a component.localFeatures entry or material.localOverrides entry, never prose only. Use forge/stage1_intake/build_detail_inventory.py to scan zones.",
+   "details": []
+  },
+  "anatomy": {
+   "applies": false,
+   "styleHeads": 0.0,
+   "proportions": {
+    "headUnit": 0.0,
+    "torso": 0.0,
+    "legs": 0.0,
+    "shoulderWidth": 0.0,
+    "hipWidth": 0.0
+   },
+   "pose": {
+    "type": "unassessed",
+    "jointAngles": {}
+   },
+   "faceLandmarks": {
+    "eyeLine": 0.0,
+    "eyeSpacing": 0.0,
+    "noseBase": 0.0,
+    "mouthLine": 0.0,
+    "hairline": 0.0
+   },
+   "features": [],
+   "confidence": 0.0,
+   "note": "Only meaningful when objectClass.primaryDomain is character or hybrid. Set applies=true and fill from forge/stage1_intake/extract_landmarks.py. See grimoire/character/reconstruction.md and grimoire/character/likeness_maximization.md."
+  },
+  "sourceImage": "ref/views/body_2.png",
+  "pipelineRouting": {
+   "version": 1,
+   "track": "character-v1.5",
+   "source": "explicit",
+   "status": "resolved",
+   "classification": {
+    "kind": "character",
+    "confidence": 1.0,
+    "evidenceRefs": [
+     "pipeline-routing:explicit:character-v1.5"
+    ],
+    "provider": "pipeline-routing-cli",
+    "version": "1"
+   },
+   "conflicts": []
+  },
+  "referenceCamera": {
+   "projection": "orthographic",
+   "panelYaw": {
+    "clay_0": 90,
+    "clay_1": 45,
+    "clay_2": 0,
+    "clay_3": 315,
+    "clay_4": 270,
+    "clay_5": 180
+   },
+   "note": "Panel-to-yaw is knowledge from feature evidence (which view shows the pistol / the tattoos), not a silhouette fit."
+  }
+ },
+ "qualityContract": {
+  "qualityBar": "ultra-complex",
+  "definitionOfDone": [
+   "The rendered model matches the reference silhouette, primary proportions, visible component hierarchy, material response, and most recognizable local features for the selected fidelity tier."
+  ],
+  "minimumSpecDepth": {
+   "macroComponents": 5,
+   "mesoComponents": 16,
+   "microFeatureGroups": 8,
+   "materialLayers": 4,
+   "repetitionSystems": 2,
+   "reviewViewpoints": 5
+  },
+  "featureGroups": [
+   {
+    "id": "overall-silhouette",
+    "name": "Overall silhouette and proportions",
+    "required": true,
+    "qualityCriteria": [
+     "Bounding shape, dominant curves, negative spaces, and scale relationships are explicitly described."
+    ],
+    "evidenceRefs": [
+     "full-object"
+    ],
+    "failureModes": [
+     "model reads as a generic placeholder instead of the reference object",
+     "major proportions are guessed without evidence"
+    ]
+   },
+   {
+    "id": "primary-structure",
+    "name": "Primary structure and hierarchy",
+    "required": true,
+    "qualityCriteria": [
+     "Major parts, joints, seams, contact points, and parent-child relationships are named before code generation."
+    ],
+    "evidenceRefs": [
+     "full-object"
+    ],
+    "failureModes": [
+     "large visible parts are merged into one mesh",
+     "component hierarchy is too shallow for the observed complexity"
+    ]
+   },
+   {
+    "id": "attachment-joint-correctness",
+    "name": "Attachment and joint correctness",
+    "required": true,
+    "qualityCriteria": [
+     "Every visible child appendage, branch, limb, handle, connector, tube, cable, horn, wing, leg, or hinged part has an attachment contract with parent socket, localStart/localEnd, contact type, embed/overlap, and gap tolerance."
+    ],
+    "evidenceRefs": [
+     "full-object"
+    ],
+    "failureModes": [
+     "child part root floats away from the parent",
+     "branch/limb/tube is centered in space instead of pivoting from its root",
+     "parent-child transform mixes world and local coordinates"
+    ]
+   },
+   {
+    "id": "surface-material-response",
+    "name": "Surface material response",
+    "required": true,
+    "qualityCriteria": [
+     "Albedo zones, roughness, normal/bump/displacement intent, cavity dirt, edge wear, and local overrides are specified where visible.",
+     "Important materials define independent albedo, roughness, height/normal, and AO responses instead of reusing one texture for unrelated PBR channels.",
+     "Surface response is decomposed into macro, meso, and micro frequency bands with scale and amplitude tied to object scale."
+    ],
+    "evidenceRefs": [
+     "full-object"
+    ],
+    "failureModes": [
+     "surface looks like flat plastic",
+     "local material variation is missing or not tied to image evidence"
+    ]
+   },
+   {
+    "id": "reference-lookdev",
+    "name": "Reference color, material, and lighting response",
+    "required": true,
+    "qualityCriteria": [
+     "Material-pass names the reference-derived albedo palette, roughness variation, tactile normal/bump/displacement response, and local masks.",
+     "When a source image is available, run reference PBR extraction and require confidence >= 0.7 before treating maps as implementation-ready.",
+     "Lighting-pass names key/fill/rim or environment light, exposure, tone mapping, background, and contact shadow behavior.",
+     "Neutral, grazing-angle, and reference-matched renders prove that surface relief survives relighting and is not painted into albedo."
+    ],
+    "evidenceRefs": [
+     "full-object"
+    ],
+    "failureModes": [
+     "model has acceptable shape but reads as flat shaded or plastic",
+     "colors are a generic average instead of reference-observed local color zones",
+     "lighting is evenly ambient and cannot reproduce the source value range"
+    ]
+   }
+  ],
+  "visualDeltaChecks": [
+   "silhouette and negative-space delta",
+   "component hierarchy depth delta",
+   "repetition density and distribution delta",
+   "material albedo/roughness/normal response delta",
+   "local feature placement and scale delta"
+  ],
+  "antiShallowSpecRules": [
+   "Do not proceed to code if qualityContract.qualityBar is unassessed.",
+   "Do not proceed to code if the spec only contains a root component for a moderate or complex object.",
+   "Do not proceed to code if required featureGroups are not represented by componentTree, materials, or repetitionSystems.",
+   "Do not proceed to code if visible local features are described only in prose and not attached to components/materials/evidenceRefs.",
+   "Do not proceed past structural-pass if attached child parts lack attachment.parentSocket, localStart, localEnd, embedDepth/overlap, and gapTolerance.",
+   "Do not pass material look-dev when albedo is reused as roughness, height, normal, or AO.",
+   "Do not pass material look-dev without macro, meso, and micro surface frequency bands for close-up materials.",
+   "Do not pass reference-fidelity material look-dev from a source image without usable referencePbr maps or an explicit documented limitation.",
+   "Do not patch a spec with extracted PBR maps when extraction confidence is below the target threshold unless the user explicitly accepts lower fidelity.",
+   "Do not place adjacent separate-geometry parts below 0.02 world-unit seam overlap (source: grimoire/build/geometry_patterns.md).",
+   "Do not satisfy raised or recessed relief, fasteners, or grip structure with a map alone when the feature affects form; use geometry or displacement (source: grimoire/build/geometry_patterns.md)."
+  ]
+ },
+ "authoringInstruction": "Fill observed object class, complexity reasoning, featureGroups, visualDeltaChecks, and unknowns before generating or implementing ObjectSculptSpec.",
+ "pipelineRouting": {
+  "version": 1,
+  "track": "character-v1.5",
+  "source": "explicit",
+  "status": "resolved",
+  "classification": {
+   "kind": "character",
+   "confidence": 1.0,
+   "evidenceRefs": [
+    "pipeline-routing:explicit:character-v1.5"
+   ],
+   "provider": "pipeline-routing-cli",
+   "version": "1"
+  },
+  "conflicts": []
+ },
+ "localSpecSearch": {
+  "collection": "core_3d",
+  "query": "Jinx (Arcane) full-body character humanoid head unit proportions stylized stylized hair clumps braid cloth fold panel drape skin material rim light roughness visual hull silhouette carving",
+  "index": {
+   "status": "rebuilt",
+   "reason": "missing",
+   "fingerprint": "ac4f0bc9028e34083dbb5d5531ae3df7699c8e7641d5f8e6d42e7492ea1be1d0"
+  },
+  "matches": [
+   {
+    "record_id": "core.pbr-subsurface-scattering-sss",
+    "file_path": "docs/raw/img2threejs-skill-dataset.json",
+    "heading": null,
+    "key_path": "categories.material_pbr[5]",
+    "score": 9.507328523421,
+    "snippets": [
+     "Light transport property for opaque dielectrics where light penetrates and scatters internally before exiting (skin, wax, marble, some polymers). \u0110\u1eb7c t\u00ednh truy\u1ec1n \u00e1nh s\u00e1ng c\u1ee7a v\u1eadt li\u1ec7u \u0111i\u1ec7n m\u00f4i m\u1edd \u0111\u1ee5c, \u00e1nh s\u00e1ng xuy\u00ean v\u00e0o v\u00e0 t\u00e1n x\u1ea1 b\u00ean trong tr\u01b0\u1edbc ..."
+    ],
+    "source_refs": [
+     {
+      "path": "docs/raw/img2threejs-skill-dataset.json",
+      "heading": null,
+      "key_path": "categories.material_pbr[5]"
+     }
+    ],
+    "evidence_refs": [
+     {
+      "kind": "source",
+      "ref": "docs/raw/img2threejs-skill-dataset.json",
+      "note": "img2threejs NotebookLM research distillation"
+     }
+    ]
+   },
+   {
+    "record_id": "core.pbr-hand-painted-vs-pbr-texture",
+    "file_path": "docs/raw/img2threejs-skill-dataset.json",
+    "heading": null,
+    "key_path": "categories.material_pbr[12]",
+    "score": 6.645006886031,
+    "snippets": [
+     "Distinguishes textures with lighting baked directly into color (static, stylized) from textures that respond dynamically to scene lighting via separate PBR channels. Ph\u00e2n bi\u1ec7t k\u1ebft c\u1ea5u c\u00f3 \u00e1nh s\u00e1ng \u0111\u01b0\u1ee3c n\u01b0\u1edbng tr\u1ef1c ti\u1ebfp v\u00e0o m\u00e0u (t\u0129nh, c\u00e1ch \u0111i\u1ec7u) ..."
+    ],
+    "source_refs": [
+     {
+      "path": "docs/raw/img2threejs-skill-dataset.json",
+      "heading": null,
+      "key_path": "categories.material_pbr[12]"
+     }
+    ],
+    "evidence_refs": [
+     {
+      "kind": "source",
+      "ref": "docs/raw/img2threejs-skill-dataset.json",
+      "note": "img2threejs NotebookLM research distillation"
+     }
+    ]
+   },
+   {
+    "record_id": "core.measurement-source-text",
+    "file_path": "grimoire/intake/image_analysis.md",
+    "heading": "Layer 2 \u2014 Overall form & silhouette",
+    "key_path": null,
+    "score": 5.268490296339,
+    "snippets": [
+     "Record proportions relative to a named reference dimension and keep observations separate from inference."
+    ],
+    "source_refs": [
+     {
+      "path": "grimoire/intake/image_analysis.md",
+      "heading": "Layer 2 \u2014 Overall form & silhouette",
+      "key_path": null
+     },
+     {
+      "path": "grimoire/intake/image_analysis.md",
+      "heading": "The Rule",
+      "key_path": null
+     }
+    ],
+    "evidence_refs": [
+     {
+      "kind": "source",
+      "ref": "grimoire/intake/image_analysis.md"
+     },
+     {
+      "kind": "notebooklm-research",
+      "ref": "notebooklm:4b03c2f9-8393-411f-b5b4-039ab9532843",
+      "note": "Validated generic schema vocabulary; numeric claims remain backed by local source_refs."
+     }
+    ]
+   }
+  ]
+ }
+}

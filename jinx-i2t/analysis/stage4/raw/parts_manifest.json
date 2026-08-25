@@ -1,0 +1,7259 @@
+{
+ "model": "jinx-arcane",
+ "parts": [
+  {
+   "name": "Character (root)",
+   "parent": "Character (root)__pivot",
+   "kind": "part",
+   "module": "root",
+   "componentId": "root",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource",
+    "renderable",
+    "notes"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 259,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     -0.0005000000237487257,
+     -0.0005000000237487257,
+     -0.0005000000237487257
+    ],
+    [
+     -0.0005000000237487257,
+     0.0005000000237487257,
+     0.0005000000237487257
+    ]
+   ],
+   "centre": [
+    -0.0005000000237487257,
+    0,
+    0
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Hair",
+   "parent": "Hair__pivot",
+   "kind": "part",
+   "module": "hair",
+   "componentId": "hair",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "hair",
+   "specMaterialRef": null,
+   "triangles": 4992,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": true,
+   "bounds": [
+    [
+     -0.09887000173330307,
+     1.4899999940395356,
+     -0.16449000489711763
+    ],
+    [
+     0.09887000173330307,
+     1.7900000059604646,
+     0.1404900048971176
+    ]
+   ],
+   "centre": [
+    0,
+    1.6400000000000001,
+    -0.01200000000000001
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Scalp cap",
+   "parent": "Scalp cap__pivot",
+   "kind": "part",
+   "module": "hair-cap",
+   "componentId": "hair-cap",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "materialRef",
+    "notes",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "hair",
+   "specMaterialRef": "hair",
+   "triangles": 4992,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": true,
+   "bounds": [
+    [
+     -0.08426500111818314,
+     1.559999999701977,
+     -0.12470999908447265
+    ],
+    [
+     0.08426500111818314,
+     1.7000000002980233,
+     0.10070999908447266
+    ]
+   ],
+   "centre": [
+    0,
+    1.6300000000000001,
+    -0.011999999999999997
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Upswept crest",
+   "parent": "Upswept crest__pivot",
+   "kind": "part",
+   "module": "hair-crest",
+   "componentId": "hair-crest",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "materialRef",
+    "notes",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "hair",
+   "specMaterialRef": "hair",
+   "triangles": 4992,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": true,
+   "bounds": [
+    [
+     -0.07940999966859817,
+     1.6450000002980234,
+     -0.1559700059890747
+    ],
+    [
+     0.05540999966859818,
+     1.754999999701977,
+     0.09597000598907471
+    ]
+   ],
+   "centre": [
+    -0.011999999999999997,
+    1.7000000000000002,
+    -0.03
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Centre-parted fringe",
+   "parent": "Centre-parted fringe__pivot",
+   "kind": "part",
+   "module": "hair-fringe",
+   "componentId": "hair-fringe",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "materialRef",
+    "notes",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "hair",
+   "specMaterialRef": "hair",
+   "triangles": 4992,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": true,
+   "bounds": [
+    [
+     -0.0730300024151802,
+     1.5920000008940698,
+     0.012220001637935643
+    ],
+    [
+     0.0730300024151802,
+     1.6719999991059304,
+     0.09177999836206437
+    ]
+   ],
+   "centre": [
+    0,
+    1.6320000000000001,
+    0.052000000000000005
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Side lock (her left)",
+   "parent": "Side lock (her left)__pivot",
+   "kind": "part",
+   "module": "hair-sidelock-l",
+   "componentId": "hair-sidelock-l",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "materialRef",
+    "notes",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "hair",
+   "specMaterialRef": "hair",
+   "triangles": 416,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     0.03426000083982945,
+     1.3299999991059304,
+     0.006260000839829447
+    ],
+    [
+     0.08173999916017055,
+     1.5000000008940697,
+     0.053739999160170554
+    ]
+   ],
+   "centre": [
+    0.057999999999999996,
+    1.415,
+    0.03
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Side lock (her right)",
+   "parent": "Side lock (her right)__pivot",
+   "kind": "part",
+   "module": "hair-sidelock-r",
+   "componentId": "hair-sidelock-r",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "materialRef",
+    "notes",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "hair",
+   "specMaterialRef": "hair",
+   "triangles": 416,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     -0.08173999916017055,
+     1.3299999991059304,
+     0.006260000839829447
+    ],
+    [
+     -0.03426000083982945,
+     1.5000000008940697,
+     0.053739999160170554
+    ]
+   ],
+   "centre": [
+    -0.057999999999999996,
+    1.415,
+    0.03
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Braid (her left)",
+   "parent": "Braid (her left)__pivot",
+   "kind": "part",
+   "module": "braid-l",
+   "componentId": "braid-l",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "materialRef",
+    "notes",
+    "repetitionRef",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "hairDark",
+   "specMaterialRef": "hair",
+   "triangles": 832,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": true,
+   "bounds": [
+    [
+     -0.015812878179217824,
+     0.08096206377885884,
+     -0.1508026522309996
+    ],
+    [
+     0.08781287817921783,
+     1.5610379362211413,
+     -0.024197347769000413
+    ]
+   ],
+   "centre": [
+    0.036000000000000004,
+    0.8210000000000001,
+    -0.0875
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Braid (her right)",
+   "parent": "Braid (her right)__pivot",
+   "kind": "part",
+   "module": "braid-r",
+   "componentId": "braid-r",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "materialRef",
+    "notes",
+    "repetitionRef",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "hairDark",
+   "specMaterialRef": "hair",
+   "triangles": 832,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": true,
+   "bounds": [
+    [
+     -0.08781287817921783,
+     0.08096206377885884,
+     -0.1508026522309996
+    ],
+    [
+     0.015812878179217824,
+     1.5610379362211413,
+     -0.024197347769000413
+    ]
+   ],
+   "centre": [
+    -0.036000000000000004,
+    0.8210000000000001,
+    -0.0875
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Braid ties",
+   "parent": "Braid ties__pivot",
+   "kind": "part",
+   "module": "braid-ties",
+   "componentId": "braid-ties",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "materialRef",
+    "notes",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "leather",
+   "specMaterialRef": "leather",
+   "triangles": 832,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": true,
+   "bounds": [
+    [
+     -0.023739999160170555,
+     0.11979534800499031,
+     -0.12373911711322717
+    ],
+    [
+     0.023739999160170555,
+     0.70020465199501,
+     -0.07126088288677283
+    ]
+   ],
+   "centre": [
+    0,
+    0.41000000000000014,
+    -0.0975
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Frayed tips",
+   "parent": "Frayed tips__pivot",
+   "kind": "part",
+   "module": "braid-tassel",
+   "componentId": "braid-tassel",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "materialRef",
+    "notes",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "hairDark",
+   "specMaterialRef": "hair",
+   "triangles": 1397,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     -0.03370499983429909,
+     0.07000000067055234,
+     -0.12928373008966446
+    ],
+    [
+     0.0334455668926239,
+     0.12999999932944784,
+     -0.05071626991033554
+    ]
+   ],
+   "centre": [
+    -0.00012971647083759308,
+    0.10000000000000009,
+    -0.09
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Eyebrow L",
+   "parent": "Eyebrow L__pivot",
+   "kind": "part",
+   "module": "brow-l",
+   "componentId": "brow-l",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "brow",
+   "specMaterialRef": null,
+   "triangles": 483,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     0.005160000681877136,
+     1.5995000001937152,
+     0.06073999961465598
+    ],
+    [
+     0.056839999318122864,
+     1.608499999806285,
+     0.08726000038534404
+    ]
+   ],
+   "centre": [
+    0.031,
+    1.604,
+    0.07400000000000001
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Eyebrow R",
+   "parent": "Eyebrow R__pivot",
+   "kind": "part",
+   "module": "brow-r",
+   "componentId": "brow-r",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "brow",
+   "specMaterialRef": null,
+   "triangles": 483,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     -0.056839999318122864,
+     1.5995000001937152,
+     0.06073999961465598
+    ],
+    [
+     -0.005160000681877136,
+     1.608499999806285,
+     0.08726000038534404
+    ]
+   ],
+   "centre": [
+    -0.031,
+    1.604,
+    0.07400000000000001
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Ear L",
+   "parent": "Ear L__pivot",
+   "kind": "part",
+   "module": "ear-l",
+   "componentId": "ear-l",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 747,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     0.05413500041514635,
+     1.5420000007748604,
+     -0.02571151614189148
+    ],
+    [
+     0.06978567139059305,
+     1.5779722551256419,
+     0.005711516141891479
+    ]
+   ],
+   "centre": [
+    0.0619603359028697,
+    1.5599861279502512,
+    -0.010000000000000002
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Ear R",
+   "parent": "Ear R__pivot",
+   "kind": "part",
+   "module": "ear-r",
+   "componentId": "ear-r",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 747,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     -0.06986499958485365,
+     1.5420000007748604,
+     -0.02571151614189148
+    ],
+    [
+     -0.05421432860940695,
+     1.5779722551256419,
+     0.005711516141891479
+    ]
+   ],
+   "centre": [
+    -0.0620396640971303,
+    1.5599861279502512,
+    -0.010000000000000002
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Nose",
+   "parent": "Nose__pivot",
+   "kind": "part",
+   "module": "nose",
+   "componentId": "nose",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 747,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     -0.0157299991697073,
+     1.5417346851007967,
+     0.059996184483310136
+    ],
+    [
+     0.015571342781186104,
+     1.5882592892707732,
+     0.11196887962373751
+    ]
+   ],
+   "centre": [
+    -0.00007932819426059723,
+    1.564996987185785,
+    0.08598253205352382
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Mouth",
+   "parent": "Mouth__pivot",
+   "kind": "part",
+   "module": "mouth",
+   "componentId": "mouth",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "lip",
+   "specMaterialRef": null,
+   "triangles": 747,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     -0.021345000714063644,
+     1.5199999996200204,
+     0.05828848385810853
+    ],
+    [
+     0.021129708737134933,
+     1.5359876687377692,
+     0.08971151614189149
+    ]
+   ],
+   "centre": [
+    -0.00010764598846435547,
+    1.5279938341788948,
+    0.07400000000000001
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Eye L",
+   "parent": "Eye L__pivot",
+   "kind": "part",
+   "module": "eye-l",
+   "componentId": "eye-l",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "eye",
+   "specMaterialRef": null,
+   "triangles": 4992,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": true,
+   "bounds": [
+    [
+     0.016954999923706054,
+     1.5714999998137356,
+     0.049425000682473186
+    ],
+    [
+     0.045045000076293945,
+     1.5965000001862646,
+     0.08257499931752682
+    ]
+   ],
+   "centre": [
+    0.031,
+    1.584,
+    0.066
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Eye cavity L",
+   "parent": "Eye cavity L__pivot",
+   "kind": "part",
+   "module": "eye-cavity-l",
+   "componentId": "eye-cavity-l",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skinShade",
+   "specMaterialRef": null,
+   "triangles": 260,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     0.02983696308825165,
+     1.5831506666410715,
+     0.06087383705936372
+    ],
+    [
+     0.032252501271665096,
+     1.5848493333589286,
+     0.06264352166373283
+    ]
+   ],
+   "centre": [
+    0.031044732179958373,
+    1.584,
+    0.061758679361548274
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Eye R",
+   "parent": "Eye R__pivot",
+   "kind": "part",
+   "module": "eye-r",
+   "componentId": "eye-r",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "eye",
+   "specMaterialRef": null,
+   "triangles": 4992,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": true,
+   "bounds": [
+    [
+     -0.045045000076293945,
+     1.5714999998137356,
+     0.049425000682473186
+    ],
+    [
+     -0.016954999923706054,
+     1.5965000001862646,
+     0.08257499931752682
+    ]
+   ],
+   "centre": [
+    -0.031,
+    1.584,
+    0.066
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Eye cavity R",
+   "parent": "Eye cavity R__pivot",
+   "kind": "part",
+   "module": "eye-cavity-r",
+   "componentId": "eye-cavity-r",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skinShade",
+   "specMaterialRef": null,
+   "triangles": 260,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     -0.03216303691174835,
+     1.5831506666410715,
+     0.06087383705936372
+    ],
+    [
+     -0.029747498728334903,
+     1.5848493333589286,
+     0.06264352166373283
+    ]
+   ],
+   "centre": [
+    -0.030955267820041626,
+    1.584,
+    0.061758679361548274
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Choker",
+   "parent": "Choker__pivot",
+   "kind": "part",
+   "module": "choker",
+   "componentId": "choker",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "materialRef",
+    "notes",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "cloth",
+   "specMaterialRef": "cloth",
+   "triangles": 2495,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     -0.056175000965595245,
+     1.4359999992400407,
+     -0.06451222366094589
+    ],
+    [
+     0.055818334221839905,
+     1.4680000007599592,
+     0.0725122236609459
+    ]
+   ],
+   "centre": [
+    -0.0001783333718776703,
+    1.452,
+    0.0040000000000000036
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Choker wraps",
+   "parent": "Choker wraps__pivot",
+   "kind": "part",
+   "module": "choker-straps",
+   "componentId": "choker-straps",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "materialRef",
+    "notes",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "leather",
+   "specMaterialRef": "leather",
+   "triangles": 864,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     -0.05056000128388405,
+     1.4100000006705522,
+     0.00022000163793563232
+    ],
+    [
+     0.05056000128388405,
+     1.4699999993294477,
+     0.07977999836206436
+    ]
+   ],
+   "centre": [
+    0,
+    1.44,
+    0.039999999999999994
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Glove (her left)",
+   "parent": "Glove (her left)__pivot",
+   "kind": "part",
+   "module": "glove-l",
+   "componentId": "glove-l",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "materialRef",
+    "notes",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "cloth",
+   "specMaterialRef": "cloth",
+   "triangles": 832,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": true,
+   "bounds": [
+    [
+     0.11845000073313716,
+     0.7799999979138375,
+     0.03845000073313713
+    ],
+    [
+     0.2015499992668629,
+     1.0100000020861626,
+     0.12154999926686287
+    ]
+   ],
+   "centre": [
+    0.16000000000000003,
+    0.895,
+    0.08
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Teal fingernails",
+   "parent": "Teal fingernails__pivot",
+   "kind": "part",
+   "module": "nails",
+   "componentId": "nails",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "materialRef",
+    "notes",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "nailTeal",
+   "specMaterialRef": "nailTeal",
+   "triangles": 259,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     0.17753000073134903,
+     0.8600000002235174,
+     0.07273999961465598
+    ],
+    [
+     0.17753000073134903,
+     0.8799999997764826,
+     0.09926000038534404
+    ]
+   ],
+   "centre": [
+    0.17753000073134903,
+    0.87,
+    0.08600000000000001
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Arm band (upper)",
+   "parent": "Arm band (upper)__pivot",
+   "kind": "part",
+   "module": "arm-band-upper",
+   "componentId": "arm-band-upper",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "materialRef",
+    "notes",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "cloth",
+   "specMaterialRef": "cloth",
+   "triangles": 232,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     0.07050999927520753,
+     1.2380000003352762,
+     0.014509999275207519
+    ],
+    [
+     0.16549000072479247,
+     1.267999999664724,
+     0.10949000072479248
+    ]
+   ],
+   "centre": [
+    0.118,
+    1.2530000000000001,
+    0.062
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Arm band (lower)",
+   "parent": "Arm band (lower)__pivot",
+   "kind": "part",
+   "module": "arm-band-lower",
+   "componentId": "arm-band-lower",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "materialRef",
+    "notes",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "cloth",
+   "specMaterialRef": "cloth",
+   "triangles": 232,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     0.0796999985575676,
+     1.1660000003352762,
+     0.0216999985575676
+    ],
+    [
+     0.1723000014424324,
+     1.195999999664724,
+     0.11430000144243241
+    ]
+   ],
+   "centre": [
+    0.126,
+    1.181,
+    0.068
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Glove (her right)",
+   "parent": "Glove (her right)__pivot",
+   "kind": "part",
+   "module": "glove-r",
+   "componentId": "glove-r",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "materialRef",
+    "notes",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "cloth",
+   "specMaterialRef": "cloth",
+   "triangles": 832,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": true,
+   "bounds": [
+    [
+     -0.2015499992668629,
+     0.7799999979138375,
+     0.03845000073313713
+    ],
+    [
+     -0.11845000073313716,
+     1.0100000020861626,
+     0.12154999926686287
+    ]
+   ],
+   "centre": [
+    -0.16000000000000003,
+    0.895,
+    0.08
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Halter crop top",
+   "parent": "Halter crop top__pivot",
+   "kind": "part",
+   "module": "top",
+   "componentId": "top",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "materialRef",
+    "notes",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "cloth",
+   "specMaterialRef": "cloth",
+   "triangles": 4992,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": true,
+   "bounds": [
+    [
+     -0.1207749992609024,
+     1.2249999970197678,
+     -0.03482000362873077
+    ],
+    [
+     0.1207749992609024,
+     1.3750000029802323,
+     0.15082000362873077
+    ]
+   ],
+   "centre": [
+    0,
+    1.3,
+    0.057999999999999996
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Halter neck strap",
+   "parent": "Halter neck strap__pivot",
+   "kind": "part",
+   "module": "top-strap",
+   "componentId": "top-strap",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "materialRef",
+    "notes",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "cloth",
+   "specMaterialRef": "cloth",
+   "triangles": 232,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     -0.05341999977827072,
+     1.3399999998509886,
+     0.0025800002217292797
+    ],
+    [
+     0.05341999977827072,
+     1.4100000001490118,
+     0.10941999977827072
+    ]
+   ],
+   "centre": [
+    0,
+    1.3750000000000002,
+    0.055999999999999994
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Under-bust band",
+   "parent": "Under-bust band__pivot",
+   "kind": "part",
+   "module": "top-band",
+   "componentId": "top-band",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "materialRef",
+    "notes",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "cloth",
+   "specMaterialRef": "cloth",
+   "triangles": 4992,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": true,
+   "bounds": [
+    [
+     -0.11796999722719193,
+     1.2299999997317792,
+     0.01649499809741975
+    ],
+    [
+     0.11796999722719193,
+     1.256000000268221,
+     0.19550500190258027
+    ]
+   ],
+   "centre": [
+    0,
+    1.243,
+    0.10600000000000001
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Brass X lacing",
+   "parent": "Brass X lacing__pivot",
+   "kind": "part",
+   "module": "x-lacing",
+   "componentId": "x-lacing",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "materialRef",
+    "notes",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 1,
+   "specMaterial": "brass",
+   "specMaterialRef": "brass",
+   "triangles": 483,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     -0.04493999853730202,
+     1.2780000008940697,
+     0.132064999692142
+    ],
+    [
+     0.04493999853730202,
+     1.3579999991059304,
+     0.15593500030785798
+    ]
+   ],
+   "centre": [
+    0,
+    1.318,
+    0.144
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Cloud tattoos",
+   "parent": "Cloud tattoos__pivot",
+   "kind": "part",
+   "module": "tattoo-region",
+   "componentId": "tattoo-region",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "materialRef",
+    "notes",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "tattoo",
+   "specMaterialRef": "tattoo",
+   "triangles": 4992,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": true,
+   "bounds": [
+    [
+     -0.10111500322818756,
+     1.0899999940395355,
+     -0.11967000126838684
+    ],
+    [
+     0.10111500322818756,
+     1.3900000059604645,
+     -0.0003299987316131639
+    ]
+   ],
+   "centre": [
+    0,
+    1.24,
+    -0.06
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Boot (her left)",
+   "parent": "Boot (her left)__pivot",
+   "kind": "part",
+   "module": "boot-l",
+   "componentId": "boot-l",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "materialRef",
+    "notes",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "leather",
+   "specMaterialRef": "leather",
+   "triangles": 832,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": true,
+   "bounds": [
+    [
+     -0.0198600018620491,
+     0.04699999642372135,
+     -0.0488600018620491
+    ],
+    [
+     0.1178600018620491,
+     0.3520000035762787,
+     0.0888600018620491
+    ]
+   ],
+   "centre": [
+    0.049,
+    0.1995,
+    0.020000000000000004
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Sole slab",
+   "parent": "Sole slab__pivot",
+   "kind": "part",
+   "module": "boot-sole",
+   "componentId": "boot-sole",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "materialRef",
+    "notes",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "leather",
+   "specMaterialRef": "leather",
+   "triangles": 832,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": true,
+   "bounds": [
+    [
+     -0.012730001121759413,
+     0.2490000007748604,
+     -0.04173000112175941
+    ],
+    [
+     0.11073000112175942,
+     0.28499999922513963,
+     0.08173000112175942
+    ]
+   ],
+   "centre": [
+    0.049,
+    0.267,
+    0.020000000000000004
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Folded cuff",
+   "parent": "Folded cuff__pivot",
+   "kind": "part",
+   "module": "boot-cuff",
+   "componentId": "boot-cuff",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "materialRef",
+    "notes",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "leather",
+   "specMaterialRef": "leather",
+   "triangles": 416,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     -0.024610000312328337,
+     0.5390000005066394,
+     -0.06361000031232834
+    ],
+    [
+     0.12261000031232834,
+     0.6009999994933605,
+     0.08361000031232833
+    ]
+   ],
+   "centre": [
+    0.049,
+    0.57,
+    0.009999999999999995
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Brass toe cap",
+   "parent": "Brass toe cap__pivot",
+   "kind": "part",
+   "module": "boot-toecap",
+   "componentId": "boot-toecap",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "materialRef",
+    "notes",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 1,
+   "specMaterial": "brass",
+   "specMaterialRef": "brass",
+   "triangles": 1397,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     0.004060001462697985,
+     0.22449999910593038,
+     0.08071626991033555
+    ],
+    [
+     0.09359409043192864,
+     0.2695000008940697,
+     0.15928373008966445
+    ]
+   ],
+   "centre": [
+    0.04882704594731331,
+    0.24700000000000005,
+    0.12
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Cross lacing",
+   "parent": "Cross lacing__pivot",
+   "kind": "part",
+   "module": "boot-lace",
+   "componentId": "boot-lace",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "materialRef",
+    "notes",
+    "repetitionRef",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "laceMagenta",
+   "specMaterialRef": "laceMagenta",
+   "triangles": 416,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     0.03474999999254942,
+     0.33899999850988394,
+     0.06074999999254942
+    ],
+    [
+     0.06325000000745058,
+     0.5390000014901162,
+     0.08925000000745058
+    ]
+   ],
+   "centre": [
+    0.049,
+    0.43900000000000006,
+    0.075
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Taped shin patch",
+   "parent": "Taped shin patch__pivot",
+   "kind": "part",
+   "module": "shin-patch",
+   "componentId": "shin-patch",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "materialRef",
+    "notes",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "canvas",
+   "specMaterialRef": "canvas",
+   "triangles": 483,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     0.023530000731348998,
+     0.37250000014901163,
+     0.0457200001180172
+    ],
+    [
+     0.06846999926865102,
+     0.4274999998509884,
+     0.0642799998819828
+    ]
+   ],
+   "centre": [
+    0.04600000000000001,
+    0.4,
+    0.05499999999999999
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Thigh strap",
+   "parent": "Thigh strap__pivot",
+   "kind": "part",
+   "module": "thigh-strap",
+   "componentId": "thigh-strap",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "materialRef",
+    "notes",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "leather",
+   "specMaterialRef": "leather",
+   "triangles": 416,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     -0.01904000371694564,
+     0.8250000003352761,
+     -0.06904000371694564
+    ],
+    [
+     0.15904000371694565,
+     0.8549999996647238,
+     0.10904000371694565
+    ]
+   ],
+   "centre": [
+    0.07,
+    0.84,
+    0.020000000000000004
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Zapper pistol",
+   "parent": "Zapper pistol__pivot",
+   "kind": "part",
+   "module": "zapper",
+   "componentId": "zapper",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "materialRef",
+    "notes",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 1,
+   "specMaterial": "steel",
+   "specMaterialRef": "steel",
+   "triangles": 832,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": true,
+   "bounds": [
+    [
+     0.06458000022172927,
+     0.5849999940395355,
+     0.0015800002217292788
+    ],
+    [
+     0.17141999977827072,
+     0.8850000059604645,
+     0.10841999977827071
+    ]
+   ],
+   "centre": [
+    0.118,
+    0.735,
+    0.05499999999999999
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Glass tank",
+   "parent": "Glass tank__pivot",
+   "kind": "part",
+   "module": "zapper-tank",
+   "componentId": "zapper-tank",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "materialRef",
+    "notes",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "glassTank",
+   "specMaterialRef": "glassTank",
+   "triangles": 2495,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     0.08879000063240527,
+     0.7950000002980232,
+     0.020743888169527054
+    ],
+    [
+     0.14702453951537608,
+     0.9049999997019768,
+     0.08925611183047294
+    ]
+   ],
+   "centre": [
+    0.11790727007389068,
+    0.85,
+    0.05499999999999999
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Barrel",
+   "parent": "Barrel__pivot",
+   "kind": "part",
+   "module": "zapper-barrel",
+   "componentId": "zapper-barrel",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "materialRef",
+    "notes",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 1,
+   "specMaterial": "steel",
+   "specMaterialRef": "steel",
+   "triangles": 416,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     0.0954399995803833,
+     0.6099999970197678,
+     0.0394399995803833
+    ],
+    [
+     0.1405600004196167,
+     0.7600000029802323,
+     0.0845600004196167
+    ]
+   ],
+   "centre": [
+    0.118,
+    0.685,
+    0.062
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Grip",
+   "parent": "Grip__pivot",
+   "kind": "part",
+   "module": "zapper-grip",
+   "componentId": "zapper-grip",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "materialRef",
+    "notes",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "leather",
+   "specMaterialRef": "leather",
+   "triangles": 232,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     0.09188000041246414,
+     0.8819999991953372,
+     0.013880000412464143
+    ],
+    [
+     0.14411999958753585,
+     0.9600000008046626,
+     0.06611999958753587
+    ]
+   ],
+   "centre": [
+    0.118,
+    0.9209999999999999,
+    0.04000000000000001
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Trouser leg (her left)",
+   "parent": "Trouser leg (her left)__pivot",
+   "kind": "part",
+   "module": "pants-l",
+   "componentId": "pants-l",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "materialRef",
+    "notes",
+    "repetitionRef",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "pants",
+   "specMaterialRef": "pants",
+   "triangles": 832,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": true,
+   "bounds": [
+    [
+     -0.05195000133514404,
+     0.47000000977516176,
+     -0.09335000133514404
+    ],
+    [
+     0.14275000133514404,
+     1.0779999902248383,
+     0.10135000133514405
+    ]
+   ],
+   "centre": [
+    0.045399999999999996,
+    0.774,
+    0.0040000000000000036
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Tattered hem (her left)",
+   "parent": "Tattered hem (her left)__pivot",
+   "kind": "part",
+   "module": "pants-hem-l",
+   "componentId": "pants-hem-l",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "materialRef",
+    "notes",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "pants",
+   "specMaterialRef": "pants",
+   "triangles": 416,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     -0.025830001747608182,
+     1.0380000006705523,
+     -0.06723000174760818
+    ],
+    [
+     0.11663000174760818,
+     1.0979999993294478,
+     0.07523000174760819
+    ]
+   ],
+   "centre": [
+    0.045399999999999996,
+    1.068,
+    0.0040000000000000036
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Boot (her right)",
+   "parent": "Boot (her right)__pivot",
+   "kind": "part",
+   "module": "boot-r",
+   "componentId": "boot-r",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "materialRef",
+    "notes",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "leather",
+   "specMaterialRef": "leather",
+   "triangles": 832,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": true,
+   "bounds": [
+    [
+     -0.1238600018620491,
+     -3.576278578831804e-9,
+     -0.0768600018620491
+    ],
+    [
+     0.013860001862049103,
+     0.30500000357627877,
+     0.0608600018620491
+    ]
+   ],
+   "centre": [
+    -0.05499999999999999,
+    0.15250000000000008,
+    -0.007999999999999997
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Trouser leg (her right)",
+   "parent": "Trouser leg (her right)__pivot",
+   "kind": "part",
+   "module": "pants-r",
+   "componentId": "pants-r",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "materialRef",
+    "notes",
+    "repetitionRef",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "pants",
+   "specMaterialRef": "pants",
+   "triangles": 832,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": true,
+   "bounds": [
+    [
+     -0.17475000133514404,
+     0.47000000977516176,
+     -0.09335000133514404
+    ],
+    [
+     0.019950001335144046,
+     1.0779999902248383,
+     0.10135000133514405
+    ]
+   ],
+   "centre": [
+    -0.0774,
+    0.774,
+    0.0040000000000000036
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Tattered hem (her right)",
+   "parent": "Tattered hem (her right)__pivot",
+   "kind": "part",
+   "module": "pants-hem-r",
+   "componentId": "pants-hem-r",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "materialRef",
+    "notes",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "pants",
+   "specMaterialRef": "pants",
+   "triangles": 416,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     -0.14863000174760818,
+     1.0380000006705523,
+     -0.06723000174760818
+    ],
+    [
+     -0.006169998252391812,
+     1.0979999993294478,
+     0.07523000174760819
+    ]
+   ],
+   "centre": [
+    -0.0774,
+    1.068,
+    0.0040000000000000036
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Hip sash",
+   "parent": "Hip sash__pivot",
+   "kind": "part",
+   "module": "sash",
+   "componentId": "sash",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "materialRef",
+    "notes",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "pants",
+   "specMaterialRef": "pants",
+   "triangles": 4992,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": true,
+   "bounds": [
+    [
+     -0.17852499544620515,
+     0.8150000041723251,
+     -0.15574999690055846
+    ],
+    [
+     0.15852499544620513,
+     1.1049999958276748,
+     0.17574999690055848
+    ]
+   ],
+   "centre": [
+    -0.010000000000000009,
+    0.96,
+    0.010000000000000009
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Canvas panel",
+   "parent": "Canvas panel__pivot",
+   "kind": "part",
+   "module": "canvas-panel",
+   "componentId": "canvas-panel",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "materialRef",
+    "notes",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "canvas",
+   "specMaterialRef": "canvas",
+   "triangles": 864,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     -0.07426500111818314,
+     0.9949999982118607,
+     0.06022000163793563
+    ],
+    [
+     0.09426500111818313,
+     1.0850000017881394,
+     0.13977999836206434
+    ]
+   ],
+   "centre": [
+    0.009999999999999995,
+    1.04,
+    0.09999999999999998
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Hip pouch",
+   "parent": "Hip pouch__pivot",
+   "kind": "part",
+   "module": "pouch",
+   "componentId": "pouch",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "materialRef",
+    "notes",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "leather",
+   "specMaterialRef": "leather",
+   "triangles": 483,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     0.0651699997484684,
+     0.9209999991953373,
+     0.027460000663995746
+    ],
+    [
+     0.1348300002515316,
+     0.9990000008046627,
+     0.07253999933600426
+    ]
+   ],
+   "centre": [
+    0.1,
+    0.96,
+    0.05
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Hip belt",
+   "parent": "Hip belt__pivot",
+   "kind": "part",
+   "module": "hip-belt",
+   "componentId": "hip-belt",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "materialRef",
+    "notes",
+    "repetitionRef",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "leather",
+   "specMaterialRef": "leather",
+   "triangles": 832,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": true,
+   "bounds": [
+    [
+     -0.1780800074338913,
+     1.0359999997317793,
+     -0.1680800074338913
+    ],
+    [
+     0.1780800074338913,
+     1.062000000268221,
+     0.1880800074338913
+    ]
+   ],
+   "centre": [
+    0,
+    1.0490000000000002,
+    0.010000000000000009
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "belt-hardware",
+   "parent": "Hip belt__pivot",
+   "kind": "part",
+   "module": null,
+   "componentId": null,
+   "sculptComponentRaw": null,
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 1,
+   "specMaterial": null,
+   "specMaterialRef": null,
+   "triangles": 1728,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": true,
+   "bounds": [
+    [
+     -0.15223193576093763,
+     1.0539999996200204,
+     -0.14852429921505972
+    ],
+    [
+     0.16000000573694706,
+     1.0700000003799797,
+     0.16852429921505974
+    ]
+   ],
+   "centre": [
+    0.0038840349880047143,
+    1.062,
+    0.010000000000000009
+   ],
+   "userDataKeys": []
+  },
+  {
+   "name": "Diagonal hip strap",
+   "parent": "Diagonal hip strap__pivot",
+   "kind": "part",
+   "module": "diagonal-strap",
+   "componentId": "diagonal-strap",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "materialRef",
+    "notes",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "leather",
+   "specMaterialRef": "leather",
+   "triangles": 832,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": true,
+   "bounds": [
+    [
+     -0.14620999574661256,
+     0.8900000013411045,
+     -0.13620999574661255
+    ],
+    [
+     0.18620999574661254,
+     1.0099999986588954,
+     0.19620999574661255
+    ]
+   ],
+   "centre": [
+    0.01999999999999999,
+    0.95,
+    0.03
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Pelvis",
+   "parent": "Jinx (Arcane)",
+   "kind": "part",
+   "module": "pelvis",
+   "componentId": "pelvis",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "pants",
+   "specMaterialRef": null,
+   "triangles": 4992,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": true,
+   "bounds": [
+    [
+     -0.13257500529289246,
+     0.9459999799728394,
+     -0.1458600014448166
+    ],
+    [
+     0.13257500529289246,
+     1.0859999656677246,
+     0.1458600014448166
+    ]
+   ],
+   "centre": [
+    0,
+    1.015999972820282,
+    0
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Abdomen",
+   "parent": "Jinx (Arcane)",
+   "kind": "part",
+   "module": "abdomen",
+   "componentId": "abdomen",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 4992,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": true,
+   "bounds": [
+    [
+     -0.09549500048160553,
+     1.1139999628067017,
+     -0.10306999832391739
+    ],
+    [
+     0.09549500048160553,
+     1.3040000200271606,
+     0.11307000368833542
+    ]
+   ],
+   "centre": [
+    0,
+    1.2089999914169312,
+    0.005000002682209015
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Chest",
+   "parent": "Jinx (Arcane)",
+   "kind": "part",
+   "module": "chest",
+   "componentId": "chest",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 4992,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": true,
+   "bounds": [
+    [
+     -0.11684499680995941,
+     1.2619999647140503,
+     -0.13850998878479004
+    ],
+    [
+     0.11684499680995941,
+     1.4220000505447388,
+     0.1585099995136261
+    ]
+   ],
+   "centre": [
+    0,
+    1.3420000076293945,
+    0.01000000536441803
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Clavicle L",
+   "parent": "Jinx (Arcane)",
+   "kind": "part",
+   "module": "clavicle-l",
+   "componentId": "clavicle-l",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 232,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     0.032889656722545624,
+     1.3467799425125122,
+     -0.008122260682284832
+    ],
+    [
+     0.12462029606103897,
+     1.4362000226974487,
+     0.09203043580055237
+    ]
+   ],
+   "centre": [
+    0.0787549763917923,
+    1.3914899826049805,
+    0.04195408755913377
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Clavicle R",
+   "parent": "Jinx (Arcane)",
+   "kind": "part",
+   "module": "clavicle-r",
+   "componentId": "clavicle-r",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 232,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     -0.12398911267518997,
+     1.352860450744629,
+     -0.008145792409777641
+    ],
+    [
+     -0.03353945538401604,
+     1.4365289211273193,
+     0.09205329418182373
+    ]
+   ],
+   "centre": [
+    -0.078764284029603,
+    1.3946946859359741,
+    0.041953750886023045
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Thigh L",
+   "parent": "Jinx (Arcane)",
+   "kind": "part",
+   "module": "thigh-l",
+   "componentId": "thigh-l",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 832,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": true,
+   "bounds": [
+    [
+     -0.037683360278606415,
+     0.5941842794418335,
+     -0.0830126702785492
+    ],
+    [
+     0.1284833550453186,
+     0.9804467558860779,
+     0.0830126702785492
+    ]
+   ],
+   "centre": [
+    0.045399997383356094,
+    0.7873155176639557,
+    0
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Shin L",
+   "parent": "Jinx (Arcane)",
+   "kind": "part",
+   "module": "shin-l",
+   "componentId": "shin-l",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 832,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": true,
+   "bounds": [
+    [
+     -0.02165771648287773,
+     0.15474185347557068,
+     -0.049861617386341095
+    ],
+    [
+     0.10965771228075027,
+     0.5971164703369141,
+     0.08146161586046219
+    ]
+   ],
+   "centre": [
+    0.04399999789893627,
+    0.37592916190624237,
+    0.015799999237060547
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Foot L",
+   "parent": "Jinx (Arcane)",
+   "kind": "part",
+   "module": "foot-l",
+   "componentId": "foot-l",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 416,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     -0.025815073400735855,
+     0.03388456255197525,
+     -0.018168624490499496
+    ],
+    [
+     0.14511507749557495,
+     0.22411544620990753,
+     0.16196861863136292
+    ]
+   ],
+   "centre": [
+    0.05965000204741955,
+    0.1290000043809414,
+    0.07189999707043171
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Thigh R",
+   "parent": "Jinx (Arcane)",
+   "kind": "part",
+   "module": "thigh-r",
+   "componentId": "thigh-r",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 832,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": true,
+   "bounds": [
+    [
+     -0.16018208861351013,
+     0.576910674571991,
+     -0.08285835385322571
+    ],
+    [
+     0.005637923255562782,
+     0.9752962589263916,
+     0.08285835385322571
+    ]
+   ],
+   "centre": [
+    -0.07727208267897367,
+    0.7761034667491913,
+    0
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Shin R",
+   "parent": "Jinx (Arcane)",
+   "kind": "part",
+   "module": "shin-r",
+   "componentId": "shin-r",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource",
+    "notes"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 832,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": true,
+   "bounds": [
+    [
+     -0.12573416531085968,
+     0.10706567764282227,
+     -0.05969153717160225
+    ],
+    [
+     0.005734158214181662,
+     0.5825932025909424,
+     0.07169153541326523
+    ]
+   ],
+   "centre": [
+    -0.06000000354833901,
+    0.3448294401168823,
+    0.0059999991208314896
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Foot R",
+   "parent": "Jinx (Arcane)",
+   "kind": "part",
+   "module": "foot-r",
+   "componentId": "foot-r",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 416,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     -0.14590135216712952,
+     -0.01287998165935278,
+     -0.04508877918124199
+    ],
+    [
+     0.02020135521888733,
+     0.17687998712062836,
+     0.1328887790441513
+    ]
+   ],
+   "centre": [
+    -0.0628499984741211,
+    0.08200000273063779,
+    0.04389999993145466
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Upper arm L",
+   "parent": "Jinx (Arcane)",
+   "kind": "part",
+   "module": "upper-arm-l",
+   "componentId": "upper-arm-l",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 832,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": true,
+   "bounds": [
+    [
+     0.06793876737356186,
+     1.1580816507339478,
+     0.014843510463833809
+    ],
+    [
+     0.1690751314163208,
+     1.3930343389511108,
+     0.11175639182329178
+    ]
+   ],
+   "centre": [
+    0.11850694939494133,
+    1.2755579948425293,
+    0.0632999511435628
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Forearm L",
+   "parent": "Jinx (Arcane)",
+   "kind": "part",
+   "module": "forearm-l",
+   "componentId": "forearm-l",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 832,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": true,
+   "bounds": [
+    [
+     0.10112440586090088,
+     0.9508339166641235,
+     0.04307737946510315
+    ],
+    [
+     0.2015235424041748,
+     1.1700778007507324,
+     0.11192262172698975
+    ]
+   ],
+   "centre": [
+    0.15132397413253784,
+    1.060455858707428,
+    0.07750000059604645
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Upper arm R",
+   "parent": "Jinx (Arcane)",
+   "kind": "part",
+   "module": "upper-arm-r",
+   "componentId": "upper-arm-r",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 832,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": true,
+   "bounds": [
+    [
+     -0.1690749078989029,
+     1.1645792722702026,
+     0.014843683689832687
+    ],
+    [
+     -0.06793902814388275,
+     1.3994370698928833,
+     0.11175624281167984
+    ]
+   ],
+   "centre": [
+    -0.11850696802139282,
+    1.282008171081543,
+    0.06329996325075626
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Forearm R",
+   "parent": "Jinx (Arcane)",
+   "kind": "part",
+   "module": "forearm-r",
+   "componentId": "forearm-r",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 832,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": true,
+   "bounds": [
+    [
+     -0.20152353639830523,
+     0.9573339223861694,
+     0.04307737946510315
+    ],
+    [
+     -0.10112440586090088,
+     1.1765778064727783,
+     0.11192262172698975
+    ]
+   ],
+   "centre": [
+    -0.15132397112960305,
+    1.0669558644294739,
+    0.07750000059604645
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Hand L",
+   "parent": "Jinx (Arcane)",
+   "kind": "part",
+   "module": "hand-l",
+   "componentId": "hand-l",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 232,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     0.1517864614725113,
+     0.8731669913704243,
+     0.055627912282943726
+    ],
+    [
+     0.21727023533127665,
+     0.9658889770507812,
+     0.10777208632909985
+    ]
+   ],
+   "centre": [
+    0.18452834840189397,
+    0.9195279842106028,
+    0.08169999930602179
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Hand R",
+   "parent": "Jinx (Arcane)",
+   "kind": "part",
+   "module": "hand-r",
+   "componentId": "hand-r",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 232,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     -0.21727185275065675,
+     0.8795708286826187,
+     0.05562787130475044
+    ],
+    [
+     -0.15178203582763672,
+     0.9723781943321228,
+     0.10777212679386139
+    ]
+   ],
+   "centre": [
+    -0.18452694428914673,
+    0.9259745115073708,
+    0.08169999904930592
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Neck",
+   "parent": "Jinx (Arcane)",
+   "kind": "part",
+   "module": "neck",
+   "componentId": "neck",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 232,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     -0.046890001744031906,
+     1.427831768989563,
+     -0.04287544637918472
+    ],
+    [
+     0.046890001744031906,
+     1.5906682014465332,
+     0.054875448346138
+    ]
+   ],
+   "centre": [
+    0,
+    1.509249985218048,
+    0.006000000983476639
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Head",
+   "parent": "Jinx (Arcane)",
+   "kind": "part",
+   "module": "head",
+   "componentId": "head",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 4992,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": true,
+   "bounds": [
+    [
+     -0.07639999687671661,
+     1.5049999952316284,
+     -0.08086499571800232
+    ],
+    [
+     0.07639999687671661,
+     1.6740000247955322,
+     0.0888649970293045
+    ]
+   ],
+   "centre": [
+    0,
+    1.5895000100135803,
+    0.0040000006556510925
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Index L phalanx 1",
+   "parent": "Jinx (Arcane)",
+   "kind": "part",
+   "module": "index-l-1",
+   "componentId": "index-l-1",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 124,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     0.21054855302793607,
+     0.8491659760475159,
+     0.07633505818497432
+    ],
+    [
+     0.236951451943048,
+     0.8802340079857074,
+     0.09906493577167574
+    ]
+   ],
+   "centre": [
+    0.22375000248549204,
+    0.8646999920166116,
+    0.08769999697832503
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Index L phalanx 2",
+   "parent": "Jinx (Arcane)",
+   "kind": "part",
+   "module": "index-l-2",
+   "componentId": "index-l-2",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 124,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     0.21902810037136078,
+     0.8249077200889587,
+     0.08034107953818259
+    ],
+    [
+     0.2453719003609387,
+     0.8559922448397836,
+     0.10305892676115036
+    ]
+   ],
+   "centre": [
+    0.23220000036614974,
+    0.8404499824643712,
+    0.09170000314966648
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Index L phalanx 3",
+   "parent": "Jinx (Arcane)",
+   "kind": "part",
+   "module": "index-l-3",
+   "componentId": "index-l-3",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 124,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     0.22689999639987946,
+     0.8105149148327868,
+     0.08448364837418931
+    ],
+    [
+     0.24590001243054882,
+     0.8306040887624633,
+     0.10484024726092445
+    ]
+   ],
+   "centre": [
+    0.23640000441521414,
+    0.820559501797625,
+    0.09466194781755688
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Index R phalanx 1",
+   "parent": "Jinx (Arcane)",
+   "kind": "part",
+   "module": "index-r-1",
+   "componentId": "index-r-1",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 124,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     -0.23695145900475167,
+     0.855565977924555,
+     0.07633505647875283
+    ],
+    [
+     -0.2105485498905182,
+     0.8866340377621549,
+     0.09906493724785836
+    ]
+   ],
+   "centre": [
+    -0.22375000444763493,
+    0.871100007843355,
+    0.0876999968633056
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Index R phalanx 2",
+   "parent": "Jinx (Arcane)",
+   "kind": "part",
+   "module": "index-r-2",
+   "componentId": "index-r-2",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 124,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     -0.24536825716495514,
+     0.8313955068588257,
+     0.0803417500904463
+    ],
+    [
+     -0.21903173625469208,
+     0.862404465675354,
+     0.10305824875831604
+    ]
+   ],
+   "centre": [
+    -0.2321999967098236,
+    0.8468999862670898,
+    0.09169999942438117
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Index R phalanx 3",
+   "parent": "Jinx (Arcane)",
+   "kind": "part",
+   "module": "index-r-3",
+   "componentId": "index-r-3",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 124,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     -0.2459000051021576,
+     0.8170149326324463,
+     0.08448364585638046
+    ],
+    [
+     -0.22689999978095288,
+     0.8371040945813668,
+     0.1048402488231659
+    ]
+   ],
+   "centre": [
+    -0.23640000244155523,
+    0.8270595136069065,
+    0.09466194733977318
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Little L phalanx 1",
+   "parent": "Jinx (Arcane)",
+   "kind": "part",
+   "module": "little-l-1",
+   "componentId": "little-l-1",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 124,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     0.17753625496845762,
+     0.8528859488236016,
+     0.0763596433943563
+    ],
+    [
+     0.20256374776363373,
+     0.8803140652226515,
+     0.09904035180807114
+    ]
+   ],
+   "centre": [
+    0.19005000136604566,
+    0.8666000070231266,
+    0.08769999760121372
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Little L phalanx 2",
+   "parent": "Jinx (Arcane)",
+   "kind": "part",
+   "module": "little-l-2",
+   "componentId": "little-l-2",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 124,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     0.18464089379784765,
+     0.8325710954708687,
+     0.08036098003925352
+    ],
+    [
+     0.20965909645469338,
+     0.8599289655685425,
+     0.10303902472497484
+    ]
+   ],
+   "centre": [
+    0.19714999512627052,
+    0.8462500305197056,
+    0.09170000238211418
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Little L phalanx 3",
+   "parent": "Jinx (Arcane)",
+   "kind": "part",
+   "module": "little-l-3",
+   "componentId": "little-l-3",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 124,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     0.191200004452467,
+     0.8183149099349976,
+     0.08448364585638046
+    ],
+    [
+     0.21019999996125693,
+     0.8384040594100952,
+     0.10484024726092445
+    ]
+   ],
+   "centre": [
+    0.20070000220686196,
+    0.8283594846725464,
+    0.09466194655865245
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Little R phalanx 1",
+   "parent": "Jinx (Arcane)",
+   "kind": "part",
+   "module": "little-r-1",
+   "componentId": "little-r-1",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 124,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     -0.2025591046380728,
+     0.8593710404821913,
+     0.07636097647932966
+    ],
+    [
+     -0.1775409139902459,
+     0.8867289423942566,
+     0.09903902855631785
+    ]
+   ],
+   "centre": [
+    -0.19005000931415936,
+    0.8730499914382239,
+    0.08770000251782376
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Little R phalanx 2",
+   "parent": "Jinx (Arcane)",
+   "kind": "part",
+   "module": "little-r-2",
+   "componentId": "little-r-2",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 124,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     -0.20965909333052934,
+     0.839071054139831,
+     0.08036097884178162
+    ],
+    [
+     -0.18464089792489335,
+     0.8664289245967405,
+     0.10303902779577712
+    ]
+   ],
+   "centre": [
+    -0.19714999562771135,
+    0.8527499893682857,
+    0.09170000331877937
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Little R phalanx 3",
+   "parent": "Jinx (Arcane)",
+   "kind": "part",
+   "module": "little-r-3",
+   "componentId": "little-r-3",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 124,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     -0.21019999996125693,
+     0.8248149033663434,
+     0.08448364585638046
+    ],
+    [
+     -0.1912000001788139,
+     0.8449040525420894,
+     0.10484024726092445
+    ]
+   ],
+   "centre": [
+    -0.2007000000700354,
+    0.8348594779542164,
+    0.09466194655865245
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Middle L phalanx 1",
+   "parent": "Jinx (Arcane)",
+   "kind": "part",
+   "module": "middle-l-1",
+   "componentId": "middle-l-1",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 124,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     0.19954892992973328,
+     0.8477015368982919,
+     0.0763040941402926
+    ],
+    [
+     0.2264510691165924,
+     0.8801984125360964,
+     0.0990959033370018
+    ]
+   ],
+   "centre": [
+    0.21299999952316284,
+    0.8639499747171941,
+    0.0876999987386472
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Middle L phalanx 2",
+   "parent": "Jinx (Arcane)",
+   "kind": "part",
+   "module": "middle-l-2",
+   "componentId": "middle-l-2",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 124,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     0.20854419469833374,
+     0.8220294713973999,
+     0.08030678331851959
+    ],
+    [
+     0.23535580933094025,
+     0.8544705510139465,
+     0.10309321586926601
+    ]
+   ],
+   "centre": [
+    0.221950002014637,
+    0.8382500112056732,
+    0.0916999995938928
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Middle L phalanx 3",
+   "parent": "Jinx (Arcane)",
+   "kind": "part",
+   "module": "middle-l-3",
+   "componentId": "middle-l-3",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 124,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     0.21690000270456067,
+     0.8076149104890984,
+     0.08448364459747604
+    ],
+    [
+     0.23589999270737172,
+     0.8277040719985962,
+     0.10484025038540734
+    ]
+   ],
+   "centre": [
+    0.2263999977059662,
+    0.8176594912438473,
+    0.09466194749144169
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Middle R phalanx 1",
+   "parent": "Jinx (Arcane)",
+   "kind": "part",
+   "module": "middle-r-1",
+   "componentId": "middle-r-1",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 124,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     -0.22644729097030414,
+     0.8541900046794115,
+     0.07630474120378494
+    ],
+    [
+     -0.1995527148246765,
+     0.8866100179164107,
+     0.09909525661312424
+    ]
+   ],
+   "centre": [
+    -0.21300000289749033,
+    0.8704000112979111,
+    0.08769999890845459
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Middle R phalanx 2",
+   "parent": "Jinx (Arcane)",
+   "kind": "part",
+   "module": "middle-r-2",
+   "componentId": "middle-r-2",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 124,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     -0.23535581634508995,
+     0.8285294771194458,
+     0.08030678212185527
+    ],
+    [
+     -0.20854420091343506,
+     0.8609705567359924,
+     0.10309321586926601
+    ]
+   ],
+   "centre": [
+    -0.2219500086292625,
+    0.8447500169277191,
+    0.09169999899556064
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Middle R phalanx 3",
+   "parent": "Jinx (Arcane)",
+   "kind": "part",
+   "module": "middle-r-3",
+   "componentId": "middle-r-3",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 124,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     -0.23589999973773956,
+     0.8141149282455444,
+     0.08448364585638046
+    ],
+    [
+     -0.21690000593662262,
+     0.8342040901512515,
+     0.10484024726092445
+    ]
+   ],
+   "centre": [
+    -0.2264000028371811,
+    0.824159509198398,
+    0.09466194655865245
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Ring L phalanx 1",
+   "parent": "Jinx (Arcane)",
+   "kind": "part",
+   "module": "ring-l-1",
+   "componentId": "ring-l-1",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 124,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     0.18853036131055223,
+     0.8495758175849915,
+     0.07635213434696198
+    ],
+    [
+     0.21476964332506587,
+     0.8802242147889103,
+     0.09904786199331284
+    ]
+   ],
+   "centre": [
+    0.20165000231780905,
+    0.8649000161869509,
+    0.0876999981701374
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Ring L phalanx 2",
+   "parent": "Jinx (Arcane)",
+   "kind": "part",
+   "module": "ring-l-2",
+   "componentId": "ring-l-2",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 124,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     0.19683414697647095,
+     0.825863242149353,
+     0.08035283296248807
+    ],
+    [
+     0.22306584647101602,
+     0.8564368017976998,
+     0.10304716229438782
+    ]
+   ],
+   "centre": [
+    0.20994999672374348,
+    0.8411500219735264,
+    0.09169999762843795
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Ring L phalanx 3",
+   "parent": "Jinx (Arcane)",
+   "kind": "part",
+   "module": "ring-l-3",
+   "componentId": "ring-l-3",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 124,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     0.20460000329315653,
+     0.8115149140357971,
+     0.08448364837418931
+    ],
+    [
+     0.22360000014305115,
+     0.8316040635108948,
+     0.1048402488231659
+    ]
+   ],
+   "centre": [
+    0.21410000171810384,
+    0.821559488773346,
+    0.0946619485986776
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Ring R phalanx 1",
+   "parent": "Jinx (Arcane)",
+   "kind": "part",
+   "module": "ring-r-1",
+   "componentId": "ring-r-1",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 124,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     -0.21476586163043976,
+     0.8560632467269897,
+     0.07635283356379219
+    ],
+    [
+     -0.1885341377774754,
+     0.8866367936134338,
+     0.099047160162819
+    ]
+   ],
+   "centre": [
+    -0.20164999970395758,
+    0.8713500201702118,
+    0.0876999968633056
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Ring R phalanx 2",
+   "parent": "Jinx (Arcane)",
+   "kind": "part",
+   "module": "ring-r-2",
+   "componentId": "ring-r-2",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 124,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     -0.22306585311889648,
+     0.8323632602745779,
+     0.08035283535718918
+    ],
+    [
+     -0.19683414697647095,
+     0.862936794757843,
+     0.10304716229438782
+    ]
+   ],
+   "centre": [
+    -0.20995000004768372,
+    0.8476500275162104,
+    0.0916999988257885
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Ring R phalanx 3",
+   "parent": "Jinx (Arcane)",
+   "kind": "part",
+   "module": "ring-r-3",
+   "componentId": "ring-r-3",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 124,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     -0.22360000014305115,
+     0.8180149075684708,
+     0.08448364711528489
+    ],
+    [
+     -0.2046000063419342,
+     0.8381040817216645,
+     0.1048402488231659
+    ]
+   ],
+   "centre": [
+    -0.21410000324249268,
+    0.8280594946450677,
+    0.09466194796922539
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Thumb L phalanx 1",
+   "parent": "Jinx (Arcane)",
+   "kind": "part",
+   "module": "thumb-l-1",
+   "componentId": "thumb-l-1",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 124,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     0.14291937862216497,
+     0.8999502524740954,
+     0.09755013883113861
+    ],
+    [
+     0.16688062250614166,
+     0.9248497486114502,
+     0.12084986089393701
+    ]
+   ],
+   "centre": [
+    0.15490000056415332,
+    0.9124000005427728,
+    0.10919999986253781
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Thumb L phalanx 2",
+   "parent": "Jinx (Arcane)",
+   "kind": "part",
+   "module": "thumb-l-2",
+   "componentId": "thumb-l-2",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 124,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     0.1369193663734103,
+     0.8829502594910599,
+     0.10255013998523144
+    ],
+    [
+     0.16088063004257158,
+     0.9078497425891419,
+     0.12584985417575068
+    ]
+   ],
+   "centre": [
+    0.14889999820799094,
+    0.8954000010401009,
+    0.11419999708049106
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Thumb L phalanx 3",
+   "parent": "Jinx (Arcane)",
+   "kind": "part",
+   "module": "thumb-l-3",
+   "componentId": "thumb-l-3",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 124,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     0.13640000230967997,
+     0.8691149094964583,
+     0.1074836477637291
+    ],
+    [
+     0.1553999953776597,
+     0.8892040981233729,
+     0.12784025073051453
+    ]
+   ],
+   "centre": [
+    0.14589999884366983,
+    0.8791595038099156,
+    0.11766194924712181
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Thumb R phalanx 1",
+   "parent": "Jinx (Arcane)",
+   "kind": "part",
+   "module": "thumb-r-1",
+   "componentId": "thumb-r-1",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 124,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     -0.1668806200194266,
+     0.9064502851136069,
+     0.0975501417383593
+    ],
+    [
+     -0.14291938075182964,
+     0.9313497543334961,
+     0.12084986089393701
+    ]
+   ],
+   "centre": [
+    -0.15490000038562812,
+    0.9189000197235515,
+    0.10920000131614815
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Thumb R phalanx 2",
+   "parent": "Jinx (Arcane)",
+   "kind": "part",
+   "module": "thumb-r-2",
+   "componentId": "thumb-r-2",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 124,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     -0.1608806228506472,
+     0.8894502255484387,
+     0.10255013998523144
+    ],
+    [
+     -0.13691936229289525,
+     0.9143497484080454,
+     0.1258498579263687
+    ]
+   ],
+   "centre": [
+    -0.14889999257177122,
+    0.901899986978242,
+    0.11419999895580007
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  },
+  {
+   "name": "Thumb R phalanx 3",
+   "parent": "Jinx (Arcane)",
+   "kind": "part",
+   "module": "thumb-r-3",
+   "componentId": "thumb-r-3",
+   "sculptComponentRaw": [
+    "id",
+    "name",
+    "level",
+    "role",
+    "importance",
+    "confidence",
+    "primitive",
+    "topologyClass",
+    "topologyRationale",
+    "geometryDescriptor",
+    "parent",
+    "attachment",
+    "dimensions",
+    "transform",
+    "actionProfile",
+    "material",
+    "materialLayers",
+    "deformations",
+    "joints",
+    "seams",
+    "localFeatures",
+    "surfaceDetail",
+    "evidenceRefs",
+    "details",
+    "fidelityTier",
+    "colorMaterialRecipe",
+    "measurementSource"
+   ],
+   "materialId": "",
+   "matColor": "#ffffff",
+   "matMap": true,
+   "matMapSrc": null,
+   "matName": null,
+   "matRough": 1,
+   "matMetal": 0,
+   "specMaterial": "skin",
+   "specMaterialRef": null,
+   "triangles": 124,
+   "hasIndex": true,
+   "hasNormal": true,
+   "hasUV": false,
+   "bounds": [
+    [
+     -0.15539999306201935,
+     0.8756149411201477,
+     0.10748364936536026
+    ],
+    [
+     -0.13639999824464322,
+     0.8957040772482143,
+     0.1278402545404509
+    ]
+   ],
+   "centre": [
+    -0.14589999565333128,
+    0.885659509184181,
+    0.11766195195290557
+   ],
+   "userDataKeys": [
+    "sculptComponent"
+   ]
+  }
+ ],
+ "unnamedMeshes": 0,
+ "integralMeshes": 104,
+ "totalTriangles": 115009,
+ "bbox": {
+  "min": [
+   -0.2459000051021576,
+   -0.01287998165935278,
+   -0.1680800074338913
+  ],
+  "max": [
+   0.24590001243054882,
+   1.7900000059604646,
+   0.19620999574661255
+  ]
+ }
+}

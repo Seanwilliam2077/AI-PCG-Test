@@ -1,0 +1,18 @@
+{
+ "passIds": [
+  "beauty",
+  "alpha-silhouette",
+  "semantic-id",
+  "depth",
+  "normal",
+  "roughness-material-id"
+ ],
+ "errors": [
+  "lighting-pass pass is not recorded: beauty",
+  "lighting-pass pass is not recorded: alpha-silhouette",
+  "lighting-pass pass is not recorded: semantic-id",
+  "lighting-pass pass is not recorded: depth",
+  "lighting-pass pass is not recorded: normal",
+  "lighting-pass pass is not recorded: roughness-material-id"
+ ]
+}

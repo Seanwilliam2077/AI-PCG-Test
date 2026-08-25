@@ -1,0 +1,220 @@
+{
+  "axis": "v",
+  "requestedStops": 5,
+  "stops": [
+    {
+      "t": 0.1,
+      "rgb": [
+        43,
+        67,
+        87
+      ],
+      "hsv": [
+        207.3,
+        0.506,
+        0.341
+      ],
+      "hueName": "blue",
+      "hueRisk": "blue-collapse",
+      "suggestedRgb": [
+        87,
+        67,
+        43
+      ]
+    },
+    {
+      "t": 0.3,
+      "rgb": [
+        43,
+        67,
+        87
+      ],
+      "hsv": [
+        207.3,
+        0.506,
+        0.341
+      ],
+      "hueName": "blue",
+      "hueRisk": "blue-collapse",
+      "suggestedRgb": [
+        87,
+        67,
+        43
+      ]
+    },
+    {
+      "t": 0.5,
+      "rgb": [
+        20,
+        51,
+        76
+      ],
+      "hsv": [
+        206.8,
+        0.737,
+        0.298
+      ],
+      "hueName": "blue",
+      "hueRisk": "blue-collapse",
+      "suggestedRgb": [
+        76,
+        51,
+        20
+      ]
+    },
+    {
+      "t": 0.7,
+      "rgb": [
+        43,
+        67,
+        87
+      ],
+      "hsv": [
+        207.3,
+        0.506,
+        0.341
+      ],
+      "hueName": "blue",
+      "hueRisk": "blue-collapse",
+      "suggestedRgb": [
+        87,
+        67,
+        43
+      ]
+    },
+    {
+      "t": 0.9,
+      "rgb": [
+        43,
+        67,
+        87
+      ],
+      "hsv": [
+        207.3,
+        0.506,
+        0.341
+      ],
+      "hueName": "blue",
+      "hueRisk": "blue-collapse",
+      "suggestedRgb": [
+        87,
+        67,
+        43
+      ]
+    }
+  ],
+  "hueZones": [
+    {
+      "hueName": "blue",
+      "tStart": 0.1,
+      "tEnd": 0.9
+    }
+  ],
+  "riskFlags": [
+    {
+      "t": 0.1,
+      "rgb": [
+        43,
+        67,
+        87
+      ],
+      "hsv": [
+        207.3,
+        0.506,
+        0.341
+      ],
+      "hueName": "blue",
+      "hueRisk": "blue-collapse",
+      "suggestedRgb": [
+        87,
+        67,
+        43
+      ]
+    },
+    {
+      "t": 0.3,
+      "rgb": [
+        43,
+        67,
+        87
+      ],
+      "hsv": [
+        207.3,
+        0.506,
+        0.341
+      ],
+      "hueName": "blue",
+      "hueRisk": "blue-collapse",
+      "suggestedRgb": [
+        87,
+        67,
+        43
+      ]
+    },
+    {
+      "t": 0.5,
+      "rgb": [
+        20,
+        51,
+        76
+      ],
+      "hsv": [
+        206.8,
+        0.737,
+        0.298
+      ],
+      "hueName": "blue",
+      "hueRisk": "blue-collapse",
+      "suggestedRgb": [
+        76,
+        51,
+        20
+      ]
+    },
+    {
+      "t": 0.7,
+      "rgb": [
+        43,
+        67,
+        87
+      ],
+      "hsv": [
+        207.3,
+        0.506,
+        0.341
+      ],
+      "hueName": "blue",
+      "hueRisk": "blue-collapse",
+      "suggestedRgb": [
+        87,
+        67,
+        43
+      ]
+    },
+    {
+      "t": 0.9,
+      "rgb": [
+        43,
+        67,
+        87
+      ],
+      "hsv": [
+        207.3,
+        0.506,
+        0.341
+      ],
+      "hueName": "blue",
+      "hueRisk": "blue-collapse",
+      "suggestedRgb": [
+        87,
+        67,
+        43
+      ]
+    }
+  ],
+  "warnings": [
+    "image is not clearly isolated from background; using most pixels as material evidence"
+  ],
+  "reference": "C:\\AI Pipeline Test\\jinx-i2t\\pbr\\crops\\hairDark.png",
+  "note": "band-median stops grounded in the reference; feed to the texture painter instead of hand-guessed STOPS. hueRisk=blue-collapse stops need a magenta-lean correction."
+}

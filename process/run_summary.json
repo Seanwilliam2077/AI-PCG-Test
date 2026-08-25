@@ -1,0 +1,131 @@
+{
+ "subject": "Arcane's Jinx, and her pistol",
+ "reference": {
+  "source": "six-panel character turnaround, head close-ups, five-pose sheet",
+  "credit": "Riot Games; modelled and textured by Thibaut Granet",
+  "carriesDimensions": false,
+  "redistributed": false,
+  "note": "measurement target only; nothing derived pixel-wise from it is published"
+ },
+ "routes": [
+  {
+   "id": "jinx3js",
+   "name": "SDF + naive Surface Nets, hand-authored in TypeScript",
+   "subject": "character",
+   "scoreboard": {
+    "score": 41.21,
+    "terms": {
+     "shape": 0.7051,
+     "edge": 0.3833,
+     "chamfer": 0.4021,
+     "width": 0.2393,
+     "landmark": 0.2393,
+     "colour": 0.1913
+    },
+    "weights": {
+     "shape": 0.3,
+     "edge": 0.15,
+     "chamfer": 0.1,
+     "width": 0.2,
+     "landmark": 0.15,
+     "colour": 0.1
+    },
+    "iou": 0.7114,
+    "widthRmsPct": 3.13,
+    "landmarkRmsPct": 2.44
+   },
+   "triangles": {
+    "high": 501068,
+    "medium": 280092,
+    "low": 88628
+   },
+   "shells": 15,
+   "rig": null,
+   "materials": "procedural, in code"
+  },
+  {
+   "id": "jinx-i2t",
+   "name": "one validated spec through the img2threejs eight-pass ladder",
+   "subject": "character",
+   "scoreboardFirstBuild": {
+    "score": 35.35,
+    "terms": {
+     "shape": 0.7061,
+     "edge": 0.3421,
+     "chamfer": 0.3787,
+     "width": 0.139,
+     "landmark": 0.0655,
+     "colour": 0.1488
+    },
+    "weights": {
+     "shape": 0.3,
+     "edge": 0.15,
+     "chamfer": 0.1,
+     "width": 0.2,
+     "landmark": 0.15,
+     "colour": 0.1
+    },
+    "iou": 0.7086,
+    "widthRmsPct": 4.08,
+    "landmarkRmsPct": 4.76
+   },
+   "scoreboardAfterTwoRounds": {
+    "score": 38.68,
+    "terms": {
+     "shape": 0.7208,
+     "edge": 0.4157,
+     "chamfer": 0.4248,
+     "width": 0.1814,
+     "landmark": 0.0587,
+     "colour": 0.2065
+    },
+    "weights": {
+     "shape": 0.3,
+     "edge": 0.15,
+     "chamfer": 0.1,
+     "width": 0.2,
+     "landmark": 0.15,
+     "colour": 0.1
+    },
+    "iou": 0.7249,
+    "widthRmsPct": 3.58,
+    "landmarkRmsPct": 4.53
+   },
+   "components": 85,
+   "materials": 20,
+   "bones": 19,
+   "passes": 8,
+   "triangleBudget": 250000,
+   "lodPlan": [
+    {
+     "tier": "near",
+     "triangleCount": 128833
+    },
+    {
+     "tier": "mid",
+     "triangleCount": 66713
+    },
+    {
+     "tier": "far",
+     "triangleCount": 37308
+    }
+   ],
+   "trianglesAtOptimizationPass": 128833,
+   "trianglesNow": 206550
+  },
+  {
+   "id": "zapper-i2t",
+   "name": "hard-surface, constraints frozen before the model existed",
+   "subject": "pistol",
+   "basis": "Nova3D, arXiv 2607.22738",
+   "status": "contract frozen"
+  }
+ ],
+ "gate": {
+  "attempts": 36,
+  "accepted": 12,
+  "rejected": 20,
+  "failedToRun": 3,
+  "revertedOnVisualReview": 1
+ }
+}

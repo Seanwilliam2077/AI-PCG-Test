@@ -1,0 +1,38 @@
+{
+  "referenceAreaFraction": 0.25344666666666665,
+  "angles": [
+    {
+      "path": "out\\lighting-pass\\render_yaw45.png",
+      "areaFraction": 0.2355377777777778,
+      "ratio": 0.9293386292097396,
+      "degenerate": false
+    },
+    {
+      "path": "out\\lighting-pass\\render_yaw90.png",
+      "areaFraction": 0.20542666666666667,
+      "ratio": 0.8105321303627325,
+      "degenerate": false
+    },
+    {
+      "path": "out\\lighting-pass\\render_yaw180.png",
+      "areaFraction": 0.25342888888888887,
+      "ratio": 0.9999298559416401,
+      "degenerate": false
+    },
+    {
+      "path": "out\\lighting-pass\\render_yaw270.png",
+      "areaFraction": 0.20547333333333334,
+      "ratio": 0.8107162585159272,
+      "degenerate": false
+    },
+    {
+      "path": "out\\lighting-pass\\render_yaw315.png",
+      "areaFraction": 0.25358444444444445,
+      "ratio": 1.000543616452289,
+      "degenerate": false
+    }
+  ],
+  "degenerate": false,
+  "collapseRatio": 0.15,
+  "note": "deterministic; zero token; a flat-plane-faking-a-volume collapses in silhouette area when orbited"
+}

@@ -1,0 +1,152 @@
+{
+  "axis": "u",
+  "requestedStops": 5,
+  "stops": [
+    {
+      "t": 0.1,
+      "rgb": [
+        36,
+        72,
+        102
+      ],
+      "hsv": [
+        207.3,
+        0.647,
+        0.4
+      ],
+      "hueName": "blue",
+      "hueRisk": "blue-collapse",
+      "suggestedRgb": [
+        102,
+        72,
+        36
+      ]
+    },
+    {
+      "t": 0.3,
+      "rgb": [
+        69,
+        89,
+        121
+      ],
+      "hsv": [
+        216.9,
+        0.43,
+        0.475
+      ],
+      "hueName": "blue",
+      "hueRisk": "blue-collapse",
+      "suggestedRgb": [
+        121,
+        89,
+        69
+      ]
+    },
+    {
+      "t": 0.5,
+      "rgb": [
+        206,
+        188,
+        182
+      ],
+      "hsv": [
+        15.0,
+        0.117,
+        0.808
+      ],
+      "hueName": "orange"
+    },
+    {
+      "t": 0.7,
+      "rgb": [
+        207,
+        189,
+        183
+      ],
+      "hsv": [
+        15.0,
+        0.116,
+        0.812
+      ],
+      "hueName": "orange"
+    },
+    {
+      "t": 0.9,
+      "rgb": [
+        208,
+        196,
+        193
+      ],
+      "hsv": [
+        12.0,
+        0.072,
+        0.816
+      ],
+      "hueName": "red"
+    }
+  ],
+  "hueZones": [
+    {
+      "hueName": "blue",
+      "tStart": 0.1,
+      "tEnd": 0.3
+    },
+    {
+      "hueName": "orange",
+      "tStart": 0.5,
+      "tEnd": 0.7
+    },
+    {
+      "hueName": "red",
+      "tStart": 0.9,
+      "tEnd": 0.9
+    }
+  ],
+  "riskFlags": [
+    {
+      "t": 0.1,
+      "rgb": [
+        36,
+        72,
+        102
+      ],
+      "hsv": [
+        207.3,
+        0.647,
+        0.4
+      ],
+      "hueName": "blue",
+      "hueRisk": "blue-collapse",
+      "suggestedRgb": [
+        102,
+        72,
+        36
+      ]
+    },
+    {
+      "t": 0.3,
+      "rgb": [
+        69,
+        89,
+        121
+      ],
+      "hsv": [
+        216.9,
+        0.43,
+        0.475
+      ],
+      "hueName": "blue",
+      "hueRisk": "blue-collapse",
+      "suggestedRgb": [
+        121,
+        89,
+        69
+      ]
+    }
+  ],
+  "warnings": [
+    "image is not clearly isolated from background; using most pixels as material evidence"
+  ],
+  "reference": "C:\\AI Pipeline Test\\jinx-i2t\\pbr\\crops\\hair.png",
+  "note": "band-median stops grounded in the reference; feed to the texture painter instead of hand-guessed STOPS. hueRisk=blue-collapse stops need a magenta-lean correction."
+}

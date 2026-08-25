@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "kind": "img2threejs.material-gate",
+  "passed": false,
+  "failures": [
+    "spec is not wired to materialPipeline",
+    "no material regions are available for gating"
+  ],
+  "warnings": [
+    "materials not referenced by componentTree: ['brass', 'brow', 'canvas', 'cloth', 'glassTank', 'hairDark', 'laceMagenta', 'leather', 'nailTeal', 'pantsDark', 'pupil', 'sclera', 'skinShade', 'steel']"
+  ],
+  "comparisonCount": 3,
+  "compatibility": {
+    "schemaVersion": 1,
+    "passed": true,
+    "failures": [],
+    "warnings": [
+      "materials not referenced by componentTree: ['brass', 'brow', 'canvas', 'cloth', 'glassTank', 'hairDark', 'laceMagenta', 'leather', 'nailTeal', 'pantsDark', 'pupil', 'sclera', 'skinShade', 'steel']"
+    ],
+    "checked": {
+      "materialCount": 20,
+      "componentCount": 103,
+      "referencedMaterialCount": 6,
+      "riggedComponentCount": 49,
+      "lodPresent": true,
+      "collisionPresent": false
+    },
+    "invariant": "material IDs and UV/map contracts survive geometry, skinning, collision and LOD changes"
+  },
+  "requiredEvidence": [
+    "materialPipeline.status=proceed",
+    "all material regions status=proceed",
+    "per-region crop comparison passed",
+    "multi-angle controlled view plan and screenshot readback",
+    "geometry/UV/skinning/collision/LOD material ID compatibility passed"
+  ]
+}

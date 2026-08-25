@@ -1,0 +1,1463 @@
+{
+ "passed": false,
+ "source": "grimoire/build/geometry_patterns.md",
+ "minimumSeamOverlap": 0.02,
+ "maximumDocumentedSeamOverlap": 0.05,
+ "triangleBudget": 250000,
+ "triangleCount": 198912,
+ "lodPlanPresent": true,
+ "lodPlanValid": false,
+ "seams": [],
+ "failures": [
+  "Eye cavity L: inconsistent face/vertex normals",
+  "Eye cavity L: nonManifoldEdges=12",
+  "Eye cavity L: selfIntersecting, 158 of 862 sampled vertices lie inside their own surface",
+  "Eye cavity R: inconsistent face/vertex normals",
+  "Eye cavity R: nonManifoldEdges=12",
+  "Eye cavity R: selfIntersecting, 158 of 862 sampled vertices lie inside their own surface"
+ ],
+ "issues": [
+  {
+   "severity": "error",
+   "code": "normal-consistency",
+   "mesh": "Eye cavity L",
+   "message": "Eye cavity L: inconsistent face/vertex normals"
+  },
+  {
+   "severity": "error",
+   "code": "non-manifold",
+   "mesh": "Eye cavity L",
+   "message": "Eye cavity L: nonManifoldEdges=12"
+  },
+  {
+   "severity": "error",
+   "code": "self-intersection",
+   "mesh": "Eye cavity L",
+   "message": "Eye cavity L: selfIntersecting, 158 of 862 sampled vertices lie inside their own surface"
+  },
+  {
+   "severity": "error",
+   "code": "normal-consistency",
+   "mesh": "Eye cavity R",
+   "message": "Eye cavity R: inconsistent face/vertex normals"
+  },
+  {
+   "severity": "error",
+   "code": "non-manifold",
+   "mesh": "Eye cavity R",
+   "message": "Eye cavity R: nonManifoldEdges=12"
+  },
+  {
+   "severity": "error",
+   "code": "self-intersection",
+   "mesh": "Eye cavity R",
+   "message": "Eye cavity R: selfIntersecting, 158 of 862 sampled vertices lie inside their own surface"
+  }
+ ],
+ "meshSummary": [
+  {
+   "id": "Character (root)",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 1728,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 1728,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Hair",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 4992,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 4992,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Scalp cap",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 4992,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 4992,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Upswept crest",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 4992,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 4992,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Centre-parted fringe",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 4992,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 4992,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Side lock (her left)",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Side lock (her right)",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Braid (her left)",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "braid-plait",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 4992,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 4992,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Braid (her right)",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Braid ties",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Frayed tips",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 4992,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 4992,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Eyebrow L",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 1728,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 1728,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Eyebrow R",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 1728,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 1728,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Ear L",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 4992,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 4992,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Ear R",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 4992,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 4992,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Nose",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 4992,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 4992,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Mouth",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 4992,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 4992,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Eye L",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 4992,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 4992,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Eye cavity L",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 12,
+   "triangleCount": 1744,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": false,
+    "checkedTriangles": 1744,
+    "flippedTriangles": 5,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Eye R",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 4992,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 4992,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Eye cavity R",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 12,
+   "triangleCount": 1744,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": false,
+    "checkedTriangles": 1744,
+    "flippedTriangles": 5,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Choker",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 4992,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 4992,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Choker wraps",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 1728,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 1728,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Glove (her left)",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Teal fingernails",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 1728,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 1728,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Arm band (upper)",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Arm band (lower)",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Glove (her right)",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Halter crop top",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 4992,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 4992,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Halter neck strap",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Under-bust band",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 4992,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 4992,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Brass X lacing",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 1728,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 1728,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Cloud tattoos",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 4992,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 4992,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Boot (her left)",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Sole slab",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Folded cuff",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Brass toe cap",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 4992,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 4992,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Cross lacing",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "boot-lacing",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 1632,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 1632,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Taped shin patch",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 1728,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 1728,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Thigh strap",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Zapper pistol",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Glass tank",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 4992,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 4992,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Barrel",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Grip",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Trouser leg (her left)",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Tattered hem (her left)",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "trouser-pinstripe",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 1728,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 1728,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Boot (her right)",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Trouser leg (her right)",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Tattered hem (her right)",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "trouser-pinstripe-r",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 1728,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 1728,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Hip sash",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 4992,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 4992,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Canvas panel",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 1728,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 1728,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Hip pouch",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 1728,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 1728,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Hip belt",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "belt-hardware",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 1728,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 1728,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Diagonal hip strap",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Pelvis",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 4992,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 4992,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Abdomen",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 4992,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 4992,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Chest",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 4992,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 4992,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Clavicle L",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Clavicle R",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Thigh L",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Shin L",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Foot L",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Thigh R",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Shin R",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Foot R",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Upper arm L",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Forearm L",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Upper arm R",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Forearm R",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Hand L",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Hand R",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Neck",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Head",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 4992,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 4992,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Index L phalanx 1",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Index L phalanx 2",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Index L phalanx 3",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Index R phalanx 1",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Index R phalanx 2",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Index R phalanx 3",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Little L phalanx 1",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Little L phalanx 2",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Little L phalanx 3",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Little R phalanx 1",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Little R phalanx 2",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Little R phalanx 3",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Middle L phalanx 1",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Middle L phalanx 2",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Middle L phalanx 3",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Middle R phalanx 1",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Middle R phalanx 2",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Middle R phalanx 3",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Ring L phalanx 1",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Ring L phalanx 2",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Ring L phalanx 3",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Ring R phalanx 1",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Ring R phalanx 2",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Ring R phalanx 3",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Thumb L phalanx 1",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Thumb L phalanx 2",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Thumb L phalanx 3",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Thumb R phalanx 1",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Thumb R phalanx 2",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  },
+  {
+   "id": "Thumb R phalanx 3",
+   "boundaryEdges": 0,
+   "nonManifoldEdges": 0,
+   "triangleCount": 832,
+   "normalConsistency": {
+    "checked": true,
+    "consistent": true,
+    "checkedTriangles": 832,
+    "flippedTriangles": 0,
+    "invalidNormalTriangles": 0
+   }
+  }
+ ]
+}

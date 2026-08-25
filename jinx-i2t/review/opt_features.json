@@ -1,0 +1,32 @@
+[
+{
+"id": "triangle-budget",
+"score": 0.92,
+"note": "128,833 geometry triangles against a 250,000 budget (51.5%); was 202,656 before per-component decimation"
+},
+{
+"id": "draw-call-budget",
+"score": 0.86,
+"note": "104 draw calls against 160 (65.0%); one per mesh, plus the belt-hardware InstancedMesh as a single call for 9 instances"
+},
+{
+"id": "lod-plan",
+"score": 0.88,
+"note": "three tiers built and measured, not estimated: near 128,833 / mid 66,713 / far 37,308 triangles at 0, 12 and 30 m"
+},
+{
+"id": "decimation-safety",
+"score": 0.94,
+"note": "silhouette IoU between the pre- and post-decimation front render is 0.9864, so the 36% triangle cut did not move the shape"
+},
+{
+"id": "measurement-honesty",
+"score": 0.9,
+"note": "renderer.info.render.triangles was reporting 400,320 against an actual 202,656 -- it is a per-frame RENDERED count that accumulates across draw calls"
+},
+{
+"id": "texture-budget",
+"score": 0.6,
+"note": "20 materials x 5 maps at 1024 px; within the 2048 ceiling per map but never totalled against a memory budget"
+}
+]

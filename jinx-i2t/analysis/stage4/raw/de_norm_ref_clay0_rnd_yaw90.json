@@ -1,0 +1,52 @@
+{
+  "verdict": "reject",
+  "action": "refine-code",
+  "fidelity": 0.5999,
+  "fidelityTarget": 0.85,
+  "hardGateFailures": [
+    "silhouette IoU 0.680 < 0.85",
+    "scale delta 0.220 > 0.08"
+  ],
+  "maskWarnings": [],
+  "disagreementSpread": 1.0,
+  "signals": {
+    "silhouetteIoU": 0.6803,
+    "scaleDelta": 0.2198,
+    "aspectRatioDelta": 0.2198,
+    "symmetryParity": 0.7983,
+    "phashSimilarity": 0.5938,
+    "ssim": 0.4018,
+    "edgeOverlap": 0.604,
+    "blowoutParity": 1.0,
+    "flatRegionScore": 0.8169,
+    "tonalParity": 0.8286,
+    "objectness": 0.6513,
+    "hueZoneParity": 0.0
+  },
+  "specularWash": {
+    "satRatio": 12.665,
+    "hueDriftDeg": -83.6,
+    "towardCyan": false,
+    "flagged": false,
+    "advice": null
+  },
+  "reportOnlySignals": [
+    "hueZoneParity",
+    "specularWash"
+  ],
+  "reconstructionModeSuspected": false,
+  "weights": {
+    "proportion": 1.0,
+    "symmetry": 0.5,
+    "phash": 1.0,
+    "ssim": 1.5,
+    "edgeOverlap": 1.0,
+    "blowoutParity": 0.8,
+    "flatRegion": 0.8,
+    "tonalParity": 1.0,
+    "objectness": 1.5
+  },
+  "reference": "C:\\AI Pipeline Test\\jinx-i2t\\analysis\\stage4\\norm\\ref_clay0.png",
+  "render": "C:\\AI Pipeline Test\\jinx-i2t\\analysis\\stage4\\norm\\rnd_yaw90.png",
+  "note": "deterministic ensemble; zero VLM/token. hueZoneParity is REPORT-ONLY (colour-aware, CIEDE2000) — not yet in the weighted fidelity; promote after corpus calibration. VLM layer (§3.4) runs only if this passes."
+}

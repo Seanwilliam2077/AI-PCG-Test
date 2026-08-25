@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>三条线 — AI PCG Test</title><style>
+*{box-sizing:border-box}
+:root{
+  --bg:#0f1216; --panel:#161a20; --sunken:#12161b; --ink:#e7ebf2; --muted:#98a1b2;
+  --faint:#6d7686; --line:#252b35; --accent:#6fb0e4; --good:#63b98a; --bad:#d1746e;
+  --warn:#d6a95f;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",
+         "Hiragino Sans GB",sans-serif;
+}
+@media (prefers-color-scheme:light){:root{
+  --bg:#f6f7f9; --panel:#fff; --sunken:#eef1f5; --ink:#151a20; --muted:#5a6474;
+  --faint:#8a94a4; --line:#dde2e9; --accent:#2b6ca3; --good:#2c7a52; --bad:#a8433c;
+  --warn:#8a6414;
+}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+     font-size:15px;line-height:1.65;padding:0 20px 80px}
+.wrap{max-width:1080px;margin:0 auto}
+header{padding:44px 0 8px;border-bottom:1px solid var(--line);margin-bottom:32px}
+h1{font-size:clamp(24px,3.4vw,34px);margin:0 0 10px;letter-spacing:-.02em;line-height:1.2}
+h2{font-size:19px;margin:44px 0 6px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+h3{font-size:15px;margin:26px 0 4px;color:var(--accent)}
+.lede{color:var(--muted);max-width:62em;margin:0}
+.src{font-family:var(--mono);font-size:11.5px;color:var(--faint);margin-top:14px}
+.scroll{overflow-x:auto;border:1px solid var(--line);border-radius:4px;
+        background:var(--panel);margin-top:14px}
+table{border-collapse:collapse;width:100%;font-size:13px;min-width:640px;
+      font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:8px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+thead th{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--faint);
+         border-bottom:1px solid var(--ink);white-space:nowrap;position:sticky;top:0;
+         background:var(--panel)}
+tbody tr:last-child td{border-bottom:none}
+td.n,th.n{text-align:right;font-family:var(--mono)}
+td.id{font-family:var(--mono);font-size:12px;white-space:nowrap}
+.ok{color:var(--good);font-weight:600}
+.no{color:var(--bad)}
+.hm{color:var(--warn)}
+.note{color:var(--muted);font-size:12.5px;max-width:46em}
+.chart{background:var(--panel);border:1px solid var(--line);border-radius:4px;
+       padding:18px;margin-top:14px}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+      margin-top:16px}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:14px 16px}
+.kpi .v{font-family:var(--mono);font-size:26px;font-weight:600;letter-spacing:-.02em}
+.kpi .k{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--faint)}
+.kpi .s{font-size:12.5px;color:var(--muted);margin-top:2px}
+a{color:var(--accent)}
+footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);
+       color:var(--muted);font-size:12.5px}
+</style></head>
+<body><div class="wrap">
+<header><h1>三条线放在一起看</h1>
+<p class="lede">同一个角色，两条完全不同的路线，同一套记分板、同一批参考面板、同一个度量取景。
+第三条线换了对象——一把枪——用来试 Nova3D 那个「约束先于资产」的主张。</p></header>
+
+<h2>逐项拆分</h2>
+<p class="note">线 1 是手写 SDF + Surface Nets；线 2 是一份 spec 走 img2threejs 的八道 pass。
+「本次增益」是线 2 两轮迭代拿到的分，「剩余差距」是负数就表示线 2 已经领先。</p>
+<div class="scroll"><table><thead><tr>
+<th>分项</th><th class="n">权重</th><th class="n">线 1</th><th class="n">线 2 初始</th>
+<th class="n">线 2 现在</th><th class="n">本次增益</th><th class="n">剩余差距</th>
+</tr></thead><tbody><tr><td class="id">shape</td><td class="n">0.30</td><td class="n">0.7051</td><td class="n">0.7061</td><td class="n"><b>0.7208</b></td><td class="n ok">+0.44</td><td class="n">-0.47 <span class="ok">← 线 2 领先</span></td></tr><tr><td class="id">edge</td><td class="n">0.15</td><td class="n">0.3833</td><td class="n">0.3421</td><td class="n"><b>0.4157</b></td><td class="n ok">+1.10</td><td class="n">-0.49 <span class="ok">← 线 2 领先</span></td></tr><tr><td class="id">chamfer</td><td class="n">0.10</td><td class="n">0.4021</td><td class="n">0.3787</td><td class="n"><b>0.4248</b></td><td class="n ok">+0.46</td><td class="n">-0.23 <span class="ok">← 线 2 领先</span></td></tr><tr><td class="id">width</td><td class="n">0.20</td><td class="n">0.2393</td><td class="n">0.1390</td><td class="n"><b>0.1814</b></td><td class="n ok">+0.85</td><td class="n">+1.16</td></tr><tr><td class="id">landmark</td><td class="n">0.15</td><td class="n">0.2393</td><td class="n">0.0655</td><td class="n"><b>0.0587</b></td><td class="n no">-0.10</td><td class="n">+2.71</td></tr><tr><td class="id">colour</td><td class="n">0.10</td><td class="n">0.1913</td><td class="n">0.1488</td><td class="n"><b>0.2065</b></td><td class="n ok">+0.58</td><td class="n">-0.15 <span class="ok">← 线 2 领先</span></td></tr><tr><td class="id"><b>合计</b></td><td class="n"></td><td class="n"><b>41.21</b></td><td class="n">35.35</td><td class="n"><b>38.68</b></td><td class="n ok">+3.33</td><td class="n">+2.53</td></tr></tbody></table></div>
+
+<h2>原始指标</h2>
+<div class="grid">
+<div class="kpi"><div class="k">原始轮廓 IoU</div><div class="v">0.7249</div>
+<div class="s">线 1 是 0.7114 — 线 2 已反超</div></div>
+<div class="kpi"><div class="k">宽度剖面 RMS</div><div class="v">3.58%</div>
+<div class="s">线 1 是 3.13%</div></div>
+<div class="kpi"><div class="k">地标高度 RMS</div><div class="v">4.53%</div>
+<div class="s">线 1 是 2.44% — 剩余差距全在这里</div></div>
+<div class="kpi"><div class="k">三角面 / 预算</div>
+<div class="v">206k</div>
+<div class="s">预算 250k，用了
+83%</div></div></div>
+
+<h2>线 2 带着线 1 没有的东西</h2>
+<div class="scroll"><table><thead><tr><th>项</th><th>线 1</th><th>线 2</th></tr></thead><tbody>
+<tr><td>命名部件 + 装配树</td><td class="no">无</td><td class="ok">85 个组件</td></tr>
+<tr><td>骨骼与关节</td><td class="no">无</td>
+<td class="ok">19 根骨，枢轴在关节而非几何中心，插槽误差 0.05 mm</td></tr>
+<tr><td>材质</td><td>代码里的程序化项</td>
+<td class="ok">20 个，每个带参考派生的 PBR 与自己的提取置信度</td></tr>
+<tr><td>三角面预算</td><td>501k / 280k / 88k，未声明预算</td>
+<td class="ok">206k，声明预算 250k，三档 LOD 逐档实测</td></tr>
+<tr><td>重建整个模型</td><td>手调常数散在代码里</td><td class="ok">一条命令</td></tr>
+</tbody></table></div>
+
+<h2>差距分析</h2>
+<p class="note">线 1 在相似度上仍然赢，41.21 对 38.68，剥掉贴图的对比更不接近。
+但线 2 在六项里领先四项，原始轮廓 IoU 也反超了。<b>剩下 +2.53 分几乎全部是地标高度一项</b>——
+东西长在哪，不是外形是什么。那一项失败过三次：第一次补丁把 delta 写死，在别的补丁合并掉一个组件之后崩了；
+第二次自己写了个地标检测器，它要求膝盖下移 60 mm 而小腿肚上移 60 mm，可小腿肚在膝盖下面；
+第三次才改用裁判自己的地标表，按每个地标被几个视角看到来加权阻尼。</p>
+<p class="note">诚实的读法是：这两条线本来就不在比同一件事。一条是一个相似度，
+另一条是一个能产出相似度、并且可以被检查、度量、编辑和驱动的程序。</p>
+
+<footer>本页每一个数字都由 <code>tools/build_report.py</code> 从 <code>process/run_summary.json</code> 生成，没有一处是写死在 HTML 里的。
+页面和记录不一致，就是这个脚本的 bug，而不是谁忘了改标题。</footer>
+</div></body></html>

@@ -1,0 +1,32 @@
+{
+  "finishClass": "plastic",
+  "recipe": {
+    "metalness": 0.05,
+    "roughness": 0.6,
+    "clearcoat": 0.2,
+    "clearcoatRoughness": 0.3,
+    "transmission": 0.0,
+    "ior": 1.5,
+    "envMapIntensity": 0.7,
+    "anisotropy": 0.0,
+    "procedural": "flat-clearcoat"
+  },
+  "palette": [
+    "#AAA4A2",
+    "#BBB0AB",
+    "#D0B3A7",
+    "#D4BDB5",
+    "#CEB2A7"
+  ],
+  "paletteHueRisk": [],
+  "gradientAxis": "horizontal",
+  "stats": {
+    "meanLum": 188.0,
+    "meanSaturation": 0.154,
+    "gradientStrength": 0.124,
+    "mottle": 0.014,
+    "streakRatio": 1.38,
+    "hueSpread": 0.637,
+    "specularFraction": 0.0
+  }
+}

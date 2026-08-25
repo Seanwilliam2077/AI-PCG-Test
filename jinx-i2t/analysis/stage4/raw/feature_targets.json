@@ -1,0 +1,74 @@
+[
+ {
+  "id": "braid-contact",
+  "feature": "braids REST ON the back, not floating",
+  "acceptance": "side-view silhouette is ONE run from hips to crown; braid_area_frac within 0.01 of the reference's 0.044/0.034",
+  "whyRisky": "built floating in an earlier reconstruction; read as '3x too thick' when it was actually 7-58 mm of standoff",
+  "name": "braids REST ON the back, not floating",
+  "tier": "critical"
+ },
+ {
+  "id": "handedness",
+  "feature": "tattoos on her RIGHT (-X), pistol and arm bands on her LEFT (+X)",
+  "acceptance": "the panel showing the pistol is yaw 90; the panel showing the tattoos is yaw 270",
+  "whyRisky": "both were mirrored in an earlier reconstruction, and no silhouette test can catch it",
+  "name": "tattoos on her RIGHT (-X), pistol and arm bands on her LEFT ",
+  "tier": "critical"
+ },
+ {
+  "id": "crest-shape",
+  "feature": "one breaking wave off the crown, not a fan of spikes",
+  "acceptance": "crown width 0.161 m at yaw 45 against 0.067 m at yaw 315 -- a 2.4x directional fin",
+  "whyRisky": "reads as a helmet when built as a symmetric mass",
+  "name": "one breaking wave off the crown, not a fan of spikes",
+  "tier": "critical"
+ },
+ {
+  "id": "contrapposto",
+  "feature": "her left foot 47 mm above her right",
+  "acceptance": "ground-contact stagger within 0.3 %H of the reference's -2.74 %H",
+  "whyRisky": "a pose set on the skeleton did not reach the boot shells in an earlier build",
+  "name": "her left foot 47 mm above her right",
+  "tier": "critical"
+ },
+ {
+  "id": "x-lacing",
+  "feature": "brass X lacing through four ring eyelets on the top",
+  "acceptance": "visible as two crossed straps with ring ends in the front view",
+  "whyRisky": "degrades to four dots at coarse LOD",
+  "name": "brass X lacing through four ring eyelets on the top",
+  "tier": "important"
+ },
+ {
+  "id": "anatomy-proportion",
+  "feature": "8.19 head-units, long-legged",
+  "acceptance": "crotch at 0.543 of height, knee at 0.337, measured on the render as on the sheet",
+  "whyRisky": "a stock 7.5-head figure reads as the wrong character immediately",
+  "name": "8.19 head-units, long-legged",
+  "tier": "critical"
+ },
+ {
+  "id": "face-landmark-placement",
+  "feature": "eye line 0.533, nose base 0.757, mouth 0.864 of the SKULL box",
+  "acceptance": "landmark heights within 0.02 of the reference on head_1.png",
+  "whyRisky": "normalising against the hair-inclusive box instead of the skull moves every landmark by ~0.09",
+  "name": "eye line 0.533, nose base 0.757, mouth 0.864 of the SKULL bo",
+  "tier": "critical"
+ },
+ {
+  "id": "pose-silhouette",
+  "feature": "contrapposto, her left foot 47 mm raised",
+  "acceptance": "ground-contact stagger within 0.3 %H of the reference's -2.74 %H",
+  "whyRisky": "a pose set on the skeleton did not reach the boot shells in an earlier build",
+  "name": "contrapposto, her left foot 47 mm raised",
+  "tier": "critical"
+ },
+ {
+  "id": "outfit-and-palette",
+  "feature": "measured palette; black cloth is L 18.7, not dead black; tattoo is not cyan",
+  "acceptance": "per-region dL_rel within +/-5 L of the reference",
+  "whyRisky": "colours sampled off a render and used as albedo get lit twice",
+  "name": "measured palette; black cloth is L 18.7, not dead black; tat",
+  "tier": "important"
+ }
+]

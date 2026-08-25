@@ -1,0 +1,92 @@
+{
+  "axis": "u",
+  "requestedStops": 5,
+  "stops": [
+    {
+      "t": 0.1,
+      "rgb": [
+        163,
+        172,
+        167
+      ],
+      "hsv": [
+        146.7,
+        0.052,
+        0.675
+      ],
+      "hueName": "green"
+    },
+    {
+      "t": 0.3,
+      "rgb": [
+        210,
+        186,
+        175
+      ],
+      "hsv": [
+        18.9,
+        0.167,
+        0.824
+      ],
+      "hueName": "orange"
+    },
+    {
+      "t": 0.5,
+      "rgb": [
+        212,
+        185,
+        174
+      ],
+      "hsv": [
+        17.4,
+        0.179,
+        0.831
+      ],
+      "hueName": "orange"
+    },
+    {
+      "t": 0.7,
+      "rgb": [
+        212,
+        188,
+        177
+      ],
+      "hsv": [
+        18.9,
+        0.165,
+        0.831
+      ],
+      "hueName": "orange"
+    },
+    {
+      "t": 0.9,
+      "rgb": [
+        208,
+        181,
+        170
+      ],
+      "hsv": [
+        17.4,
+        0.183,
+        0.816
+      ],
+      "hueName": "orange"
+    }
+  ],
+  "hueZones": [
+    {
+      "hueName": "green",
+      "tStart": 0.1,
+      "tEnd": 0.1
+    },
+    {
+      "hueName": "orange",
+      "tStart": 0.3,
+      "tEnd": 0.9
+    }
+  ],
+  "riskFlags": [],
+  "warnings": [],
+  "reference": "C:\\AI Pipeline Test\\jinx-i2t\\pbr\\crops\\skin.png",
+  "note": "band-median stops grounded in the reference; feed to the texture painter instead of hand-guessed STOPS. hueRisk=blue-collapse stops need a magenta-lean correction."
+}

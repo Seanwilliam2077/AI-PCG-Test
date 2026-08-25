@@ -1,0 +1,16 @@
+{
+  "componentId": "hip-belt",
+  "dominantAlbedo": "rgba(39, 34, 30, 1.0)",
+  "secondaryAlbedo": "rgba(88, 90, 91, 1.0)",
+  "materialClass": "stone",
+  "materialClassConfidence": 0.45,
+  "roughnessEstimate": 0.129,
+  "metalnessEstimate": 0.0,
+  "highlightEvidence": "sharp, tight specular hotspot ¡ª supports low roughness/high specularity",
+  "sourceCropPath": "C:\\AI Pipeline Test\\jinx-i2t\\pbr\\crops\\leather.png",
+  "labClusterMeta": {
+    "clusterCount": 3,
+    "dominantClusterSharePct": 0.654
+  },
+  "cacheHit": false
+}

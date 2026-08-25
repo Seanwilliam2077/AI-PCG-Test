@@ -1,0 +1,39 @@
+[
+ {
+  "fidelity": 0.72,
+  "defectTags": [
+   "every surface is a tapered solid so form is absent by construction",
+   "crest is an ellipsoid blob",
+   "no face at this pass"
+  ],
+  "reverted": false
+ },
+ {
+  "fidelity": 0.78,
+  "defectTags": [
+   "18 macro/meso components deliberately carry no attachment -- head, ribcage, pelvis, eyes, crest, top, sash and the other blob shapes are placed by transform under a parent, because an attachment would emit them as tapered cylinders",
+   "recorded in docs/GENERATOR_CONTRACT.md rather than papered over"
+  ],
+  "reverted": false
+ },
+ {
+  "fidelity": 0.8,
+  "defectTags": [
+   "the independent scoreboard reported 'render stands DEAD LEVEL' on ground contact, which is a measurement artefact rather than a model error: its test resolves the connected piece each silhouette run belongs to, and in this build the two legs are one connected component. Measuring the render's two halves directly gives 44 mm. Recorded rather than accepted."
+  ],
+  "reverted": false
+ },
+ {
+  "fidelity": 0.78,
+  "defectTags": [
+   "the render did not change: 173,600 triangles and silhouette IoU 0.457, identical to the previous pass. The generator emits geometry from primitive + dimensions + attachment only",
+   "localFeatures are metadata it records but does not sculpt. Form beyond the blockout has to be declared as more components in the spec -- the pass does not add it."
+  ],
+  "reverted": false
+ },
+ {
+  "fidelity": 0.73,
+  "defectTags": [],
+  "reverted": false
+ }
+]

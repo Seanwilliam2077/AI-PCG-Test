@@ -1,0 +1,16 @@
+{
+  "componentId": "chest",
+  "dominantAlbedo": "rgba(212, 186, 175, 1.0)",
+  "secondaryAlbedo": "rgba(205, 177, 166, 1.0)",
+  "materialClass": "unknown",
+  "materialClassConfidence": 0.3,
+  "roughnessEstimate": 0.545,
+  "metalnessEstimate": 0.0,
+  "highlightEvidence": "moderate hotspot spread ¡ª mid-range roughness",
+  "sourceCropPath": "C:\\AI Pipeline Test\\jinx-i2t\\pbr\\crops\\skin.png",
+  "labClusterMeta": {
+    "clusterCount": 3,
+    "dominantClusterSharePct": 0.447
+  },
+  "cacheHit": false
+}

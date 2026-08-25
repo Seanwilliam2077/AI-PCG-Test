@@ -1,0 +1,16 @@
+{
+  "componentId": "tattoo-region",
+  "dominantAlbedo": "rgba(198, 170, 155, 1.0)",
+  "secondaryAlbedo": "rgba(100, 114, 123, 1.0)",
+  "materialClass": "unknown",
+  "materialClassConfidence": 0.3,
+  "roughnessEstimate": 0.291,
+  "metalnessEstimate": 0.0,
+  "highlightEvidence": "sharp, tight specular hotspot ¡ª supports low roughness/high specularity",
+  "sourceCropPath": "C:\\AI Pipeline Test\\jinx-i2t\\pbr\\crops\\tattoo.png",
+  "labClusterMeta": {
+    "clusterCount": 3,
+    "dominantClusterSharePct": 0.641
+  },
+  "cacheHit": false
+}

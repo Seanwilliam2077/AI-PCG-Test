@@ -1,0 +1,16 @@
+{
+ "volumetricIou": 0.6507,
+ "outsideReferenceFraction": 0.2389,
+ "referenceUnfilledFraction": 0.1823,
+ "referenceVoxels": 2458,
+ "renderVoxels": 2641,
+ "resolution": 32,
+ "voxelMetres": 0.0563,
+ "unconstrainedAxes": [
+  "y"
+ ],
+ "limitations": [
+  "a visual hull is the intersection of silhouette cones: it is an upper bound on the true shape and can never contain a concavity that no supplied view sees as background",
+  "only 2 views supplied, so the hull extrudes along y and is loose in that direction"
+ ]
+}

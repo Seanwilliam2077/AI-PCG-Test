@@ -1,0 +1,74 @@
+{
+ "fleets": [
+  {
+   "workflow": "jinx-i2t quality round 1",
+   "agents": 21,
+   "dimensions": 7,
+   "stages": [
+    "recon",
+    "patch",
+    "adversarial verify"
+   ],
+   "subagentTokens": 5481722,
+   "toolUses": 1709,
+   "durationMs": 7024159,
+   "errors": 0
+  },
+  {
+   "workflow": "jinx-i2t quality round 2",
+   "agents": 18,
+   "dimensions": 6,
+   "stages": [
+    "recon",
+    "patch",
+    "adversarial verify"
+   ],
+   "subagentTokens": 4716508,
+   "toolUses": 1372,
+   "durationMs": 6617639,
+   "errors": 0
+  },
+  {
+   "workflow": "jinx-i2t stage1 tool sweep",
+   "agents": 1,
+   "dimensions": 1,
+   "stages": [
+    "sweep"
+   ],
+   "subagentTokens": 148439,
+   "toolUses": 59,
+   "durationMs": 893861,
+   "errors": 0
+  },
+  {
+   "workflow": "jinx-i2t stage4 tool sweep",
+   "agents": 1,
+   "dimensions": 1,
+   "stages": [
+    "sweep"
+   ],
+   "subagentTokens": 212294,
+   "toolUses": 100,
+   "durationMs": 1452740,
+   "errors": 0
+  },
+  {
+   "workflow": "zapper intake and contract",
+   "agents": 8,
+   "dimensions": 6,
+   "stages": [
+    "recon",
+    "freeze contract",
+    "attack contract"
+   ],
+   "subagentTokens": null,
+   "toolUses": null,
+   "durationMs": null,
+   "errors": 0,
+   "note": "interrupted and resumed; cached agents replayed"
+  }
+ ],
+ "totalAgents": 49,
+ "totalSubagentTokens": 10558963,
+ "note": "Every patch was written by one agent and then attacked by a different one whose only instruction was to refute it. Two premises stated in a briefing were disproved that way before they reached a build."
+}

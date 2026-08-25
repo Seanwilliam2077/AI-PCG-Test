@@ -1,0 +1,121 @@
+{
+  "axis": "u",
+  "requestedStops": 5,
+  "stops": [
+    {
+      "t": 0.1,
+      "rgb": [
+        67,
+        38,
+        58
+      ],
+      "hsv": [
+        318.6,
+        0.433,
+        0.263
+      ],
+      "hueName": "magenta"
+    },
+    {
+      "t": 0.3,
+      "rgb": [
+        65,
+        36,
+        56
+      ],
+      "hsv": [
+        318.6,
+        0.446,
+        0.255
+      ],
+      "hueName": "magenta"
+    },
+    {
+      "t": 0.5,
+      "rgb": [
+        87,
+        51,
+        77
+      ],
+      "hsv": [
+        316.7,
+        0.414,
+        0.341
+      ],
+      "hueName": "magenta"
+    },
+    {
+      "t": 0.7,
+      "rgb": [
+        62,
+        41,
+        57
+      ],
+      "hsv": [
+        314.3,
+        0.339,
+        0.243
+      ],
+      "hueName": "magenta"
+    },
+    {
+      "t": 0.9,
+      "rgb": [
+        52,
+        44,
+        64
+      ],
+      "hsv": [
+        264.0,
+        0.312,
+        0.251
+      ],
+      "hueName": "violet",
+      "hueRisk": "blue-collapse",
+      "suggestedRgb": [
+        64,
+        44,
+        52
+      ]
+    }
+  ],
+  "hueZones": [
+    {
+      "hueName": "magenta",
+      "tStart": 0.1,
+      "tEnd": 0.7
+    },
+    {
+      "hueName": "violet",
+      "tStart": 0.9,
+      "tEnd": 0.9
+    }
+  ],
+  "riskFlags": [
+    {
+      "t": 0.9,
+      "rgb": [
+        52,
+        44,
+        64
+      ],
+      "hsv": [
+        264.0,
+        0.312,
+        0.251
+      ],
+      "hueName": "violet",
+      "hueRisk": "blue-collapse",
+      "suggestedRgb": [
+        64,
+        44,
+        52
+      ]
+    }
+  ],
+  "warnings": [
+    "image is not clearly isolated from background; using most pixels as material evidence"
+  ],
+  "reference": "C:\\AI Pipeline Test\\jinx-i2t\\pbr\\crops\\pants.png",
+  "note": "band-median stops grounded in the reference; feed to the texture painter instead of hand-guessed STOPS. hueRisk=blue-collapse stops need a magenta-lean correction."
+}

@@ -1,0 +1,32 @@
+[
+{
+"id": "palette-match",
+"score": 0.86,
+"note": "render L mean 38.7 p10 12.2 p90 83.9 against reference body_2 36.7 / 12.5 / 74.9; mean BGR ordering R>B>G matches. Highlights still ~9 L hot."
+},
+{
+"id": "material-assignment",
+"score": 0.8,
+"note": "20 measured materials resolve; every mesh carries a referencePbr albedo instead of the 0x888888 fallback"
+},
+{
+"id": "uv-projection",
+"score": 0.34,
+"note": "box projection per mesh: visible seams at every component boundary and a hair-coloured band across the face where the head crop lands on the eyes"
+},
+{
+"id": "metalness-roughness",
+"score": 0.72,
+"note": "skin metalness 0.0 roughness 0.687 as extracted; brass and goggle glass read distinct from cloth"
+},
+{
+"id": "tone-mapping",
+"score": 0.9,
+"note": "Khronos PBR Neutral at exposure 0.60, the value the spec calibrated; the harness had been discarding it"
+},
+{
+"id": "tattoo-readability",
+"score": 0.2,
+"note": "tattoo-region carries a material but no distinct mark; not readable at frame size"
+}
+]

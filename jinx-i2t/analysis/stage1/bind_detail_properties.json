@@ -1,0 +1,325 @@
+[
+ {
+  "id": "zone-r0c0",
+  "mapsTo": {
+   "type": "material",
+   "ref": "tattoo"
+  },
+  "description": "Her RIGHT shoulder, upper arm and ribs carry pale grey-blue cloud tattoos over bare skin. ",
+  "bound": {
+   "matchedRules": [],
+   "materialProperties": {},
+   "primitiveHint": null,
+   "notes": [],
+   "bound": false
+  }
+ },
+ {
+  "id": "zone-r0c1",
+  "mapsTo": {
+   "type": "component",
+   "ref": "top"
+  },
+  "description": "Face, choker with three wrapped straps, black halter crop top, brass X lacing of two cross",
+  "bound": {
+   "matchedRules": [
+    "metal",
+    "fastener"
+   ],
+   "materialProperties": {
+    "metalness": 1.0,
+    "roughness": 0.3,
+    "requiresEnvMap": true
+   },
+   "primitiveHint": "instanced-cluster",
+   "notes": [
+    "metal → metalness 1 + low roughness + env map",
+    "repeated fasteners → instancing (InstancedMesh), not N meshes"
+   ],
+   "bound": true
+  }
+ },
+ {
+  "id": "zone-r0c2",
+  "mapsTo": {
+   "type": "component",
+   "ref": "belts.armBands"
+  },
+  "description": "Her LEFT arm: bare deltoid, then TWO black bands on the upper arm, then a long black finge",
+  "bound": {
+   "matchedRules": [],
+   "materialProperties": {},
+   "primitiveHint": null,
+   "notes": [],
+   "bound": false
+  }
+ },
+ {
+  "id": "zone-r1c0",
+  "mapsTo": {
+   "type": "component",
+   "ref": "sash"
+  },
+  "description": "Her RIGHT hip: purple pinstripe trousers, sash wrap with a diagonal lower edge, leather st",
+  "bound": {
+   "matchedRules": [
+    "fastener"
+   ],
+   "materialProperties": {},
+   "primitiveHint": "instanced-cluster",
+   "notes": [
+    "repeated fasteners → instancing (InstancedMesh), not N meshes"
+   ],
+   "bound": true
+  }
+ },
+ {
+  "id": "zone-r1c1",
+  "mapsTo": {
+   "type": "component",
+   "ref": "belts"
+  },
+  "description": "Front waist: navel, khaki canvas panel tucked under a leather hip belt with a centre buckl",
+  "bound": {
+   "matchedRules": [],
+   "materialProperties": {},
+   "primitiveHint": null,
+   "notes": [],
+   "bound": false
+  }
+ },
+ {
+  "id": "zone-r1c2",
+  "mapsTo": {
+   "type": "component",
+   "ref": "zapper"
+  },
+  "description": "Her LEFT thigh: the Zapper pistol in a holster, brass and steel banding, with a GLASS TUBE",
+  "bound": {
+   "matchedRules": [
+    "gemstone/glass",
+    "metal"
+   ],
+   "materialProperties": {
+    "transmission": 0.6,
+    "ior": 1.6,
+    "thickness": 0.5,
+    "roughness": 0.1,
+    "requiresEnvMap": true,
+    "metalness": 1.0
+   },
+   "primitiveHint": null,
+   "notes": [
+    "translucent → transmission+ior+thickness; needs an environment map to read correctly",
+    "metal → metalness 1 + low roughness + env map"
+   ],
+   "bound": true
+  }
+ },
+ {
+  "id": "zone-r2c0",
+  "mapsTo": {
+   "type": "component",
+   "ref": "boots"
+  },
+  "description": "Her RIGHT lower leg: ragged trouser hem, bare calf, boot with a brass toe cap and magenta ",
+  "bound": {
+   "matchedRules": [
+    "metal"
+   ],
+   "materialProperties": {
+    "metalness": 1.0,
+    "roughness": 0.3,
+    "requiresEnvMap": true
+   },
+   "primitiveHint": null,
+   "notes": [
+    "metal → metalness 1 + low roughness + env map"
+   ],
+   "bound": true
+  }
+ },
+ {
+  "id": "zone-r2c1",
+  "mapsTo": {
+   "type": "component",
+   "ref": "boots"
+  },
+  "description": "Both boots seen together: deep folded cuffs flaring outward, magenta cross-lacing, brass t",
+  "bound": {
+   "matchedRules": [
+    "metal"
+   ],
+   "materialProperties": {
+    "metalness": 1.0,
+    "roughness": 0.3,
+    "requiresEnvMap": true
+   },
+   "primitiveHint": null,
+   "notes": [
+    "metal → metalness 1 + low roughness + env map"
+   ],
+   "bound": true
+  }
+ },
+ {
+  "id": "zone-r2c2",
+  "mapsTo": {
+   "type": "component",
+   "ref": "boots.cuff"
+  },
+  "description": "Her LEFT boot in near-profile: the cuff flare reads as a deep floppy roll, not a cone.",
+  "bound": {
+   "matchedRules": [],
+   "materialProperties": {},
+   "primitiveHint": null,
+   "notes": [],
+   "bound": false
+  }
+ },
+ {
+  "id": "teal-nails",
+  "mapsTo": {
+   "type": "material",
+   "ref": "nailTeal"
+  },
+  "description": "Fingernails on both gloves are painted teal; they are the only saturated cool accent below",
+  "bound": {
+   "matchedRules": [
+    "fastener"
+   ],
+   "materialProperties": {},
+   "primitiveHint": "instanced-cluster",
+   "notes": [
+    "repeated fasteners → instancing (InstancedMesh), not N meshes"
+   ],
+   "bound": true
+  }
+ },
+ {
+  "id": "zapper-tank",
+  "mapsTo": {
+   "type": "component",
+   "ref": "zapper.tank"
+  },
+  "description": "The pistol's tank is a transparent glass cylinder with visible teal and pink contents and ",
+  "bound": {
+   "matchedRules": [
+    "gemstone/glass",
+    "metal"
+   ],
+   "materialProperties": {
+    "transmission": 0.6,
+    "ior": 1.6,
+    "thickness": 0.5,
+    "roughness": 0.1,
+    "requiresEnvMap": true,
+    "metalness": 1.0
+   },
+   "primitiveHint": null,
+   "notes": [
+    "translucent → transmission+ior+thickness; needs an environment map to read correctly",
+    "metal → metalness 1 + low roughness + env map"
+   ],
+   "bound": true
+  }
+ },
+ {
+  "id": "shin-patch",
+  "mapsTo": {
+   "type": "component",
+   "ref": "body.shinPatch"
+  },
+  "description": "A taped rectangular patch/plaster on her LEFT shin, above the boot cuff.",
+  "bound": {
+   "matchedRules": [],
+   "materialProperties": {},
+   "primitiveHint": null,
+   "notes": [],
+   "bound": false
+  }
+ },
+ {
+  "id": "braid-ties",
+  "mapsTo": {
+   "type": "component",
+   "ref": "hair.braidTies"
+  },
+  "description": "Three metal/leather ties spaced along each braid, plus a frayed tassel at each tip.",
+  "bound": {
+   "matchedRules": [
+    "metal"
+   ],
+   "materialProperties": {
+    "metalness": 1.0,
+    "roughness": 0.3,
+    "requiresEnvMap": true
+   },
+   "primitiveHint": null,
+   "notes": [
+    "metal → metalness 1 + low roughness + env map"
+   ],
+   "bound": true
+  }
+ },
+ {
+  "id": "crest",
+  "mapsTo": {
+   "type": "component",
+   "ref": "hair.crest"
+  },
+  "description": "One upswept breaking wave off the crown reaching the figure's highest point, overhanging t",
+  "bound": {
+   "matchedRules": [],
+   "materialProperties": {},
+   "primitiveHint": null,
+   "notes": [],
+   "bound": false
+  }
+ },
+ {
+  "id": "pinstripe",
+  "mapsTo": {
+   "type": "material",
+   "ref": "pantsDark"
+  },
+  "description": "Vertical pinstripes on the trousers, ~21.5 mm pitch, duty ~0.44, darker than the ground.",
+  "bound": {
+   "matchedRules": [],
+   "materialProperties": {},
+   "primitiveHint": null,
+   "notes": [],
+   "bound": false
+  }
+ },
+ {
+  "id": "boot-lacing",
+  "mapsTo": {
+   "type": "component",
+   "ref": "boots.lace"
+  },
+  "description": "Six rows of magenta cross-lacing up each boot throat.",
+  "bound": {
+   "matchedRules": [],
+   "materialProperties": {},
+   "primitiveHint": null,
+   "notes": [],
+   "bound": false
+  }
+ },
+ {
+  "id": "tattered-hem",
+  "mapsTo": {
+   "type": "component",
+   "ref": "pants.hem"
+  },
+  "description": "Ragged saw-tooth trouser hem, roughly 8 teeth per leg, teeth vary in width and lean as wel",
+  "bound": {
+   "matchedRules": [],
+   "materialProperties": {},
+   "primitiveHint": null,
+   "notes": [],
+   "bound": false
+  }
+ }
+]

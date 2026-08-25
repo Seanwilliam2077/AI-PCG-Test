@@ -1,0 +1,16 @@
+{
+ "renderProfile": {
+  "path": null
+ },
+ "captures": [
+  {
+   "id": "hero",
+   "passes": {
+    "beauty": {
+     "path": "../../out/lighting-pass/render_yaw0.png",
+     "status": "recorded"
+    }
+   }
+  }
+ ]
+}

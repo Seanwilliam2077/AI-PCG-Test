@@ -1,0 +1,16 @@
+{
+  "componentId": "nails",
+  "dominantAlbedo": "rgba(126, 110, 97, 1.0)",
+  "secondaryAlbedo": "rgba(199, 165, 139, 1.0)",
+  "materialClass": "unknown",
+  "materialClassConfidence": 0.3,
+  "roughnessEstimate": 0.126,
+  "metalnessEstimate": 0.0,
+  "highlightEvidence": "sharp, tight specular hotspot ¡ª supports low roughness/high specularity",
+  "sourceCropPath": "C:\\AI Pipeline Test\\jinx-i2t\\pbr\\crops\\nailTeal.png",
+  "labClusterMeta": {
+    "clusterCount": 3,
+    "dominantClusterSharePct": 0.775
+  },
+  "cacheHit": false
+}

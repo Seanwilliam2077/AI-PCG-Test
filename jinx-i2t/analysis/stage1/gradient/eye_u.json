@@ -1,0 +1,87 @@
+{
+  "axis": "u",
+  "requestedStops": 5,
+  "stops": [
+    {
+      "t": 0.1,
+      "rgb": [
+        86,
+        57,
+        54
+      ],
+      "hsv": [
+        5.6,
+        0.372,
+        0.337
+      ],
+      "hueName": "red"
+    },
+    {
+      "t": 0.3,
+      "rgb": [
+        131,
+        96,
+        88
+      ],
+      "hsv": [
+        11.2,
+        0.328,
+        0.514
+      ],
+      "hueName": "red"
+    },
+    {
+      "t": 0.5,
+      "rgb": [
+        193,
+        166,
+        159
+      ],
+      "hsv": [
+        12.4,
+        0.176,
+        0.757
+      ],
+      "hueName": "red"
+    },
+    {
+      "t": 0.7,
+      "rgb": [
+        141,
+        104,
+        93
+      ],
+      "hsv": [
+        13.7,
+        0.34,
+        0.553
+      ],
+      "hueName": "red"
+    },
+    {
+      "t": 0.9,
+      "rgb": [
+        106,
+        75,
+        72
+      ],
+      "hsv": [
+        5.3,
+        0.321,
+        0.416
+      ],
+      "hueName": "red"
+    }
+  ],
+  "hueZones": [
+    {
+      "hueName": "red",
+      "tStart": 0.1,
+      "tEnd": 0.9
+    }
+  ],
+  "riskFlags": [],
+  "warnings": [],
+  "reference": "C:\\AI Pipeline Test\\jinx-i2t\\pbr\\crops\\eye.png",
+  "note": "band-median stops grounded in the reference; feed to the texture painter instead of hand-guessed STOPS. hueRisk=blue-collapse stops need a magenta-lean correction."
+}

@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "kind": "img2threejs.material-comparison",
+  "materialId": "head",
+  "reference": {
+    "path": "C:\\AI Pipeline Test\\jinx-i2t\\analysis\\stage4\\crops\\ref_head.png",
+    "meanRgb": [
+      110,
+      119,
+      130
+    ],
+    "features": {
+      "meanLuma": 0.4617444717735957,
+      "lumaVariance": 0.04793117489536601,
+      "horizontalGradient": 0.046119003615630746,
+      "verticalGradient": 0.022976925323320845,
+      "anisotropyProxy": 2.0071877749814258
+    },
+    "width": 500,
+    "height": 135,
+    "foregroundCoverage": 0.1723,
+    "warnings": [],
+    "readback": true,
+    "diagnostics": {
+      "backgroundColor": "#FFFFFF",
+      "backgroundNoise": 0.0,
+      "transparentPixelFraction": 0.8297,
+      "foregroundCoverage": 0.1755
+    }
+  },
+  "render": {
+    "path": "C:\\AI Pipeline Test\\jinx-i2t\\analysis\\stage4\\crops\\rnd_head.png",
+    "meanRgb": [
+      106,
+      124,
+      139
+    ],
+    "features": {
+      "meanLuma": 0.4748687859824785,
+      "lumaVariance": 0.0360216483388452,
+      "horizontalGradient": 0.027727591433736633,
+      "verticalGradient": 0.010492753789459047,
+      "anisotropyProxy": 2.642546655539711
+    },
+    "width": 500,
+    "height": 135,
+    "foregroundCoverage": 0.1428,
+    "warnings": [],
+    "readback": true,
+    "diagnostics": {
+      "backgroundColor": "#FFFFFF",
+      "backgroundNoise": 0.0,
+      "transparentPixelFraction": 0.8614,
+      "foregroundCoverage": 0.1445
+    }
+  },
+  "metrics": {
+    "deltaE00": 3.618,
+    "scores": {
+      "baseColor": 0.9276430096091162,
+      "meanLuma": 0.9708348573135938,
+      "microstructure": 0.9007539453623266,
+      "directionalResponse": 0.6823205597208575,
+      "overall": 0.8928
+    }
+  },
+  "mismatches": [],
+  "passed": true,
+  "nextAction": "continue",
+  "limitation": "Deterministic crop metrics are evidence; material identity still requires vision review for ambiguous cases."
+}

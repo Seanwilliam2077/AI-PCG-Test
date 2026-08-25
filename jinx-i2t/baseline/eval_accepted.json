@@ -1,0 +1,138 @@
+{
+ "renders": "out\\patch_rig_prune",
+ "silhouetteIou": {
+  "0": 0.8364,
+  "45": 0.6325,
+  "90": 0.667,
+  "180": 0.8086,
+  "270": 0.5787,
+  "315": 0.6826
+ },
+ "silhouetteIouMean": 0.701,
+ "widthRatio": {
+  "0": {
+   "max": 0.9549,
+   "bandMean": 0.9997,
+   "bandRms": 0.01511
+  },
+  "45": {
+   "max": 0.9076,
+   "bandMean": 0.8835,
+   "bandRms": 0.03402
+  },
+  "90": {
+   "max": 0.9488,
+   "bandMean": 0.9738,
+   "bandRms": 0.02027
+  },
+  "180": {
+   "max": 0.9222,
+   "bandMean": 0.9573,
+   "bandRms": 0.01976
+  },
+  "270": {
+   "max": 0.7192,
+   "bandMean": 0.7809,
+   "bandRms": 0.05665
+  },
+  "315": {
+   "max": 0.9107,
+   "bandMean": 1.282,
+   "bandRms": 0.04028
+  }
+ },
+ "widthBandMeanAll": 0.9795,
+ "widthBandRmsAll": 0.03102,
+ "landmarkDelta": {
+  "0": {
+   "crown": 0.0,
+   "chin": 0.5,
+   "hip": 0.5,
+   "crotch": -1.0,
+   "midthigh": -1.0,
+   "knee": -1.5,
+   "ankle": 0.0,
+   "sole": 0.0
+  },
+  "45": {
+   "crown": 0.0,
+   "chin": 0.0,
+   "shoulder": 3.0,
+   "bust": 1.5,
+   "navel": 1.5,
+   "crotch": 4.0,
+   "midthigh": -1.5,
+   "knee": 2.5,
+   "hem": 0.5,
+   "ankle": -6.5,
+   "sole": 0.0
+  },
+  "90": {
+   "crown": 0.0,
+   "chin": 2.5,
+   "shoulder": 1.5,
+   "navel": 4.0,
+   "hip": -3.0,
+   "crotch": 1.5,
+   "midthigh": -4.5,
+   "hem": 6.5,
+   "sole": 0.0
+  },
+  "180": {
+   "crown": 0.0,
+   "chin": 0.5,
+   "shoulder": 2.5,
+   "crotch": -1.5,
+   "midthigh": -1.5,
+   "knee": -1.5,
+   "hem": 4.5,
+   "ankle": 9.0,
+   "sole": 0.0
+  },
+  "270": {
+   "crown": 0.0,
+   "chin": 0.0,
+   "shoulder": 7.5,
+   "bust": -3.0,
+   "underbust": 3.0,
+   "waist": 3.0,
+   "navel": 3.5,
+   "hip": -6.5,
+   "crotch": 4.0,
+   "sole": 0.0
+  },
+  "315": {
+   "crown": 0.0,
+   "chin": 0.0,
+   "shoulder": 2.5,
+   "navel": -5.0,
+   "crotch": -0.5,
+   "midthigh": -0.5,
+   "sole": 0.0
+  }
+ },
+ "landmarkRmsPct": 2.992,
+ "landmarksScored": 54,
+ "lightness": {
+  "mean": 37.121,
+  "p10": 13.268,
+  "p90": 73.137,
+  "spread": 5.719
+ },
+ "hull": {
+  "iou": 0.6259,
+  "outsideReference": 0.2484,
+  "referenceUnfilled": 0.211,
+  "volumeRatio": 1.0497
+ },
+ "tag": "patch_rig_prune",
+ "stats": {
+  "triangles": 206550,
+  "drawCalls": 86,
+  "bboxY": [
+   -0.002,
+   1.719
+  ]
+ },
+ "scoreboard": 38.7
+}

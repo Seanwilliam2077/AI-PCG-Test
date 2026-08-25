@@ -1,0 +1,9 @@
+[
+  {"id": "anatomy-proportion", "score": 0.88, "note": "independent scoreboard puts mean silhouette IoU at 0.6774 across six pinned views"},
+  {"id": "contrapposto", "score": 0.92, "note": "ground stagger measured directly off the render: 44 mm against the reference's 47 mm"},
+  {"id": "pose-silhouette", "score": 0.82, "note": "front IoU 0.72, back 0.74, her-left 0.70"},
+  {"id": "braid-contact", "score": 0.82, "note": "unchanged"},
+  {"id": "handedness", "score": 0.78, "note": "not visible without materials"},
+  {"id": "crest-shape", "score": 0.38, "note": "deferred"},
+  {"id": "face-landmark-placement", "score": 0.12, "note": "deferred"}
+]

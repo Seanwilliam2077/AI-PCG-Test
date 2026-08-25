@@ -1,0 +1,12 @@
+passed False triangles 198912 budget 250000 lodValid False
+failures 6
+  ! Eye cavity L: inconsistent face/vertex normals
+  ! Eye cavity L: nonManifoldEdges=12
+  ! Eye cavity L: selfIntersecting, 158 of 862 sampled vertices lie inside their own surface
+  ! Eye cavity R: inconsistent face/vertex normals
+  ! Eye cavity R: nonManifoldEdges=12
+  ! Eye cavity R: selfIntersecting, 158 of 862 sampled vertices lie inside their own surface
+issue codes Counter({'normal-consistency': 2, 'non-manifold': 2, 'self-intersection': 2})
+meshes with open/non-manifold edges: 2
+    ('Eye cavity L', 0, 12)
+    ('Eye cavity R', 0, 12)

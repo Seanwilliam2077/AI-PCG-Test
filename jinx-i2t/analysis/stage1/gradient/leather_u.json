@@ -1,0 +1,124 @@
+{
+  "axis": "u",
+  "requestedStops": 5,
+  "stops": [
+    {
+      "t": 0.1,
+      "rgb": [
+        78,
+        86,
+        97
+      ],
+      "hsv": [
+        214.7,
+        0.196,
+        0.38
+      ],
+      "hueName": "blue",
+      "hueRisk": "blue-collapse",
+      "suggestedRgb": [
+        97,
+        86,
+        78
+      ]
+    },
+    {
+      "t": 0.3,
+      "rgb": [
+        42,
+        38,
+        33
+      ],
+      "hsv": [
+        33.3,
+        0.214,
+        0.165
+      ],
+      "hueName": "orange"
+    },
+    {
+      "t": 0.5,
+      "rgb": [
+        40,
+        31,
+        31
+      ],
+      "hsv": [
+        0.0,
+        0.225,
+        0.157
+      ],
+      "hueName": "red"
+    },
+    {
+      "t": 0.7,
+      "rgb": [
+        47,
+        38,
+        36
+      ],
+      "hsv": [
+        10.9,
+        0.234,
+        0.184
+      ],
+      "hueName": "red"
+    },
+    {
+      "t": 0.9,
+      "rgb": [
+        61,
+        44,
+        47
+      ],
+      "hsv": [
+        349.4,
+        0.279,
+        0.239
+      ],
+      "hueName": "red"
+    }
+  ],
+  "hueZones": [
+    {
+      "hueName": "blue",
+      "tStart": 0.1,
+      "tEnd": 0.1
+    },
+    {
+      "hueName": "orange",
+      "tStart": 0.3,
+      "tEnd": 0.3
+    },
+    {
+      "hueName": "red",
+      "tStart": 0.5,
+      "tEnd": 0.9
+    }
+  ],
+  "riskFlags": [
+    {
+      "t": 0.1,
+      "rgb": [
+        78,
+        86,
+        97
+      ],
+      "hsv": [
+        214.7,
+        0.196,
+        0.38
+      ],
+      "hueName": "blue",
+      "hueRisk": "blue-collapse",
+      "suggestedRgb": [
+        97,
+        86,
+        78
+      ]
+    }
+  ],
+  "warnings": [],
+  "reference": "C:\\AI Pipeline Test\\jinx-i2t\\pbr\\crops\\leather.png",
+  "note": "band-median stops grounded in the reference; feed to the texture painter instead of hand-guessed STOPS. hueRisk=blue-collapse stops need a magenta-lean correction."
+}

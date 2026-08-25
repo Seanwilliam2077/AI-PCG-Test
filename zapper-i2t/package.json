@@ -1,0 +1,19 @@
+{
+  "name": "zapper-i2t",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "three": "^0.185.1"
+  },
+  "devDependencies": {
+    "@types/three": "^0.185.0",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.10",
+    "playwright": "^1.48.0"
+  }
+}

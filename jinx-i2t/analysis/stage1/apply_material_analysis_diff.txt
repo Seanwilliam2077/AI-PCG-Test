@@ -1,0 +1,62 @@
+TOTAL DIFFS: 799
+by top-level key: {'materialPipeline': 1, 'materials': 1, 'materials[0]': 39, 'materials[1]': 35, 'materials[2]': 37, 'materials[3]': 39, 'materials[4]': 40, 'materials[5]': 38, 'materials[6]': 34, 'materials[7]': 38, 'materials[8]': 37, 'materials[9]': 34, 'materials[10]': 38, 'materials[11]': 38, 'materials[12]': 38, 'materials[13]': 40, 'materials[14]': 36, 'materials[15]': 36, 'materials[16]': 36, 'materials[17]': 38, 'materials[18]': 38, 'materials[19]': 36, 'materialAnalysisHistory': 1, 'componentTree[2]': 3, 'componentTree[3]': 2, 'componentTree[7]': 3, 'componentTree[12]': 2, 'componentTree[13]': 3, 'componentTree[62]': 3, 'componentTree[66]': 3, 'componentTree[70]': 3, 'componentTree[71]': 3, 'componentTree[73]': 3, 'componentTree[77]': 3, 'componentTree[86]': 3, 'componentTree[87]': 3, 'componentTree[92]': 3, 'componentTree[94]': 3, 'componentTree[95]': 3, 'componentTree[97]': 2, 'componentTree[99]': 3}
+ADDED /materialPipeline | None -> {"schemaVersion": 1, "status": "proceed", "registry": "C:\\Users\\lvhaochen\\.claude\\skills\\img2threejs\\docs\\materials\\material-reference.json", 
+LEN /materials | 20 -> 21
+ADDED /materials[0]/materialFinish | None -> "natural"
+ADDED /materials[0]/clearcoat | None -> {"base": 0.12, "variation": 0.0}
+ADDED /materials[0]/materialSubtype | None -> "human"
+ADDED /materials[0]/referenceMaterialId | None -> "skin.human"
+TYPE /materials[0]/metalness | float -> dict
+ADDED /materials[0]/materialFamily | None -> "skin"
+ADDED /materials[0]/ior | None -> {"base": 1.4, "variation": 0.0}
+ADDED /materials[0]/textureAnalysis | None -> {"finishClass": "plastic", "recipe": {"metalness": 0.05, "roughness": 0.6, "clearcoat": 0.2, "clearcoatRoughness": 0.3, "transmission": 0.0, "ior": 1.
+ADDED /materials[0]/clearcoatRoughness | None -> {"base": 0.35, "variation": 0.0}
+ADDED /materials[0]/materialEvidence | None -> {"componentId": "chest", "regionId": "skin", "crop": {"path": "C:\\AI Pipeline Test\\jinx-i2t\\analysis\\stage1\\material_regions\\00-skin.png", "bbox
+CHANGED /materials[0]/referencePbr/sourceImage | C:\AI Pipeline Test\jinx-i2t\pbr\crops\skin.png -> C:\AI Pipeline Test\jinx-i2t\analysis\stage1\material_regions\00-skin.png
+CHANGED /materials[0]/referencePbr/diagnostics/sourceHeight | 96 -> 58
+CHANGED /materials[0]/referencePbr/diagnostics/mapStats/blurRadius | 21 -> 10
+CHANGED /materials[0]/referencePbr/diagnostics/mapStats/normalStrength | 0.191 -> 0.229
+CHANGED /materials[0]/referencePbr/diagnostics/mapStats/heightP90Gradient | 0.02991 -> 0.06179
+CHANGED /materials[0]/referencePbr/diagnostics/mapStats/valueRange | 0.2109 -> 0.2148
+CHANGED /materials[0]/referencePbr/diagnostics/mapStats/roughnessVariation | 0.054 -> 0.103
+CHANGED /materials[0]/referencePbr/diagnostics/mapStats/roughnessBase | 0.687 -> 0.695
+CHANGED /materials[0]/referencePbr/diagnostics/palette[0] | #D1B6AB -> #D4BAAF
+CHANGED /materials[0]/referencePbr/diagnostics/palette[1] | #D5BCB1 -> #CEB2A7
+CHANGED /materials[0]/referencePbr/diagnostics/palette[2] | #9DA4A4 -> #A1AAA8
+CHANGED /materials[0]/referencePbr/diagnostics/palette[3] | #CBAEA3 -> #7F8A91
+CHANGED /materials[0]/referencePbr/diagnostics/palette[4] | #74838C -> #D8C1B9
+CHANGED /materials[0]/referencePbr/diagnostics/mask/foregroundCoverage | 0.4958 -> 0.5136
+CHANGED /materials[0]/referencePbr/diagnostics/mask/backgroundNoise | 9.695 -> 7.0
+CHANGED /materials[0]/referencePbr/diagnostics/mask/backgroundColor | #CEB3AA -> #CCB3A9
+CHANGED /materials[0]/referencePbr/diagnostics/mapSize | 1024 -> 512
+CHANGED /materials[0]/referencePbr/diagnostics/cropBBoxPixels/height | 96 -> 58
+CHANGED /materials[0]/referencePbr/diagnostics/cropBBoxPixels/width | 123 -> 75
+CHANGED /materials[0]/referencePbr/diagnostics/sourceWidth | 123 -> 75
+CHANGED /materials[0]/referencePbr/maps/ao/path | C:\AI Pipeline Test\jinx-i2t\pbr\skin\skin_ao.png -> C:\AI Pipeline Test\jinx-i2t\analysis\stage1\material_regions\pbr-00-skin\skin_ao.png
+CHANGED /materials[0]/referencePbr/maps/height/path | C:\AI Pipeline Test\jinx-i2t\pbr\skin\skin_height.png -> C:\AI Pipeline Test\jinx-i2t\analysis\stage1\material_regions\pbr-00-skin\skin_height.png
+CHANGED /materials[0]/referencePbr/maps/roughness/path | C:\AI Pipeline Test\jinx-i2t\pbr\skin\skin_roughness.png -> C:\AI Pipeline Test\jinx-i2t\analysis\stage1\material_regions\pbr-00-skin\skin_roughness.png
+CHANGED /materials[0]/referencePbr/maps/albedo/path | C:\AI Pipeline Test\jinx-i2t\pbr\skin\skin_albedo.png -> C:\AI Pipeline Test\jinx-i2t\analysis\stage1\material_regions\pbr-00-skin\skin_albedo.png
+CHANGED /materials[0]/referencePbr/maps/normal/path | C:\AI Pipeline Test\jinx-i2t\pbr\skin\skin_normal.png -> C:\AI Pipeline Test\jinx-i2t\analysis\stage1\material_regions\pbr-00-skin\skin_normal.png
+CHANGED /materials[0]/referencePbr/estimatedFidelity | 0.842 -> 0.843
+CHANGED /materials[0]/referencePbr/confidence | 0.842 -> 0.843
+ADDED /materials[0]/materialReference | None -> {"registry": "C:\\Users\\lvhaochen\\.claude\\skills\\img2threejs\\docs\\materials\\material-reference.json", "profileId": "skin.human", "method": "fam
+CHANGED /materials[0]/roughness/base | 0.687 -> 0.52
+ADDED /materials[1]/materialFinish | None -> "natural"
+ADDED /materials[1]/clearcoat | None -> {"base": 0.12, "variation": 0.0}
+ADDED /materials[1]/materialSubtype | None -> "human"
+ADDED /materials[1]/referenceMaterialId | None -> "skin.human"
+TYPE /materials[1]/metalness | float -> dict
+ADDED /materials[1]/materialFamily | None -> "skin"
+ADDED /materials[1]/ior | None -> {"base": 1.4, "variation": 0.0}
+ADDED /materials[1]/textureAnalysis | None -> {"finishClass": "brushed-steel", "recipe": {"metalness": 1.0, "roughness": 0.35, "clearcoat": 0.0, "clearcoatRoughness": 0.0, "transmission": 0.0, "io
+ADDED /materials[1]/clearcoatRoughness | None -> {"base": 0.35, "variation": 0.0}
+ADDED /materials[1]/materialEvidence | None -> {"componentId": "abdomen", "regionId": "skinShade", "crop": {"path": "C:\\AI Pipeline Test\\jinx-i2t\\analysis\\stage1\\material_regions\\01-skinShade
+CHANGED /materials[1]/referencePbr/sourceImage | C:\AI Pipeline Test\jinx-i2t\pbr\crops\skinShade.png -> C:\AI Pipeline Test\jinx-i2t\analysis\stage1\material_regions\01-skinShade.png
+CHANGED /materials[1]/referencePbr/diagnostics/sourceHeight | 153 -> 58
+CHANGED /materials[1]/referencePbr/diagnostics/mapStats/blurRadius | 21 -> 10
+CHANGED /materials[1]/referencePbr/diagnostics/mapStats/normalStrength | 0.202 -> 0.268
+CHANGED /materials[1]/referencePbr/diagnostics/mapStats/heightP90Gradient | 0.03914 -> 0.09537
+CHANGED /materials[1]/referencePbr/diagnostics/mapStats/valueRange | 0.457 -> 0.4229
+CHANGED /materials[1]/referencePbr/diagnostics/mapStats/roughnessVariation | 0.069 -> 0.15
+CHANGED /materials[1]/referencePbr/diagnostics/mapStats/roughnessBase | 0.69 -> 0.706
+CHANGED /materials[1]/referencePbr/diagnostics/palette[2] | #73858D -> #6F838D

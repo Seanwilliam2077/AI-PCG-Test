@@ -1,0 +1,50 @@
+{
+  "errors": [
+    "ANCHOR_DECLARED: attachment 'zapper' is worn/held/hung but declares no attachment.anchor",
+    "ANCHOR_DECLARED: attachment 'zapper-tank' is worn/held/hung but declares no attachment.anchor",
+    "ANCHOR_DECLARED: attachment 'zapper-barrel' is worn/held/hung but declares no attachment.anchor",
+    "ANCHOR_DECLARED: attachment 'zapper-grip' is worn/held/hung but declares no attachment.anchor"
+  ],
+  "warnings": [],
+  "attachments": [
+    {
+      "component": "zapper",
+      "anchor": null,
+      "anchorKind": null,
+      "distance": null,
+      "maxOffset": null,
+      "offsetRule": null,
+      "withinLimit": null
+    },
+    {
+      "component": "zapper-tank",
+      "anchor": null,
+      "anchorKind": null,
+      "distance": null,
+      "maxOffset": null,
+      "offsetRule": null,
+      "withinLimit": null
+    },
+    {
+      "component": "zapper-barrel",
+      "anchor": null,
+      "anchorKind": null,
+      "distance": null,
+      "maxOffset": null,
+      "offsetRule": null,
+      "withinLimit": null
+    },
+    {
+      "component": "zapper-grip",
+      "anchor": null,
+      "anchorKind": null,
+      "distance": null,
+      "maxOffset": null,
+      "offsetRule": null,
+      "withinLimit": null
+    }
+  ],
+  "unmeasuredAttachments": [],
+  "attachmentCount": 4,
+  "passed": false
+}

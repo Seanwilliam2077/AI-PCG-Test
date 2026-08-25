@@ -1,0 +1,229 @@
+{
+ "skeleton": {
+  "root": [
+   0,
+   0,
+   0
+  ],
+  "hips": [
+   0,
+   1.016,
+   0
+  ],
+  "waist": [
+   0,
+   1.209,
+   0.005
+  ],
+  "chest": [
+   0,
+   1.342,
+   0.01
+  ],
+  "neck": [
+   0,
+   1.429,
+   0.008
+  ],
+  "head": [
+   0,
+   1.5895,
+   0.004
+  ],
+  "headTop": [
+   0,
+   1.674,
+   0.004
+  ],
+  "shoulderL": [
+   0.108,
+   1.38676,
+   0.055
+  ],
+  "elbowL": [
+   0.13493524664000686,
+   1.16337805693288,
+   0.0775
+  ],
+  "wristL": [
+   0.1759168687845591,
+   0.9558864748231443,
+   0.08173
+  ],
+  "handL": [
+   0.2035168687845591,
+   0.8767664748231443,
+   0.08173
+  ],
+  "shoulderR": [
+   -0.108,
+   1.3932399999999998,
+   0.055
+  ],
+  "elbowR": [
+   -0.13493524664000686,
+   1.1698580569328798,
+   0.0775
+  ],
+  "wristR": [
+   -0.1759168687845591,
+   0.9623664748231443,
+   0.08173
+  ],
+  "handR": [
+   -0.2035168687845591,
+   0.8832464748231443,
+   0.08173
+  ],
+  "hipL": [
+   0.04536,
+   0.9769612,
+   0
+  ],
+  "kneeL": [
+   0.044,
+   0.5964499999999999,
+   0.0158
+  ],
+  "ankleL": [
+   0.048799999999999996,
+   0.155,
+   0.016
+  ],
+  "toeL": [
+   0.07049503100294738,
+   0.10300000000000001,
+   0.12784
+  ],
+  "hipR": [
+   -0.07736,
+   0.9714387999999999,
+   0
+  ],
+  "kneeR": [
+   -0.06,
+   0.58,
+   0.006
+  ],
+  "ankleR": [
+   -0.0552,
+   0.108,
+   -0.012
+  ],
+  "toeR": [
+   -0.07049503100294738,
+   0.056,
+   0.09984000000000001
+  ]
+ },
+ "landmarks": {
+  "hairTop": 1.715,
+  "crown": 1.674,
+  "brow": 1.6,
+  "eye": 1.584,
+  "noseBase": 1.546,
+  "mouth": 1.528,
+  "chin": 1.505,
+  "jaw": 1.492,
+  "neckBase": 1.429,
+  "shoulder": 1.402,
+  "bust": 1.342,
+  "underBust": 1.237,
+  "waist": 1.209,
+  "navel": 1.183,
+  "iliac": 1.078,
+  "hip": 1.016,
+  "crotch": 0.94,
+  "knee": 0.58,
+  "pantHem": 0.492,
+  "calf": 0.402,
+  "bootCuff": 0.291,
+  "ankle": 0.158,
+  "ankleJoint": 0.108,
+  "footBed": 0.042,
+  "sole": 0
+ },
+ "widths": {
+  "$comment": "Half-widths (x) and half-depths (z) at the named height.",
+  "headHalfW": 0.058,
+  "headHalfD": 0.064,
+  "skullHalfW": 0.068,
+  "jawHalfW": 0.042,
+  "neckR": 0.036,
+  "shoulderHalfW": 0.108,
+  "chestHalfW": 0.102,
+  "chestHalfD": 0.102,
+  "bustHalfW": 0.104,
+  "bustHalfD": 0.112,
+  "waistHalfW": 0.085,
+  "waistHalfD": 0.0814,
+  "iliacHalfW": 0.1,
+  "hipHalfW": 0.118,
+  "hipHalfD": 0.11,
+  "thighR": 0.066,
+  "kneeR": 0.049,
+  "calfR": 0.047,
+  "ankleR": 0.031,
+  "upperArmR": 0.034,
+  "elbowR": 0.029,
+  "forearmR": 0.028,
+  "wristR": 0.021,
+  "handLength": 0.092,
+  "footLength": 0.128,
+  "deltoidR": 0.04
+ },
+ "torsoProfile": {
+  "0.940": {
+   "x": 0.10147999999999999,
+   "z": 0.099
+  },
+  "1.020": {
+   "x": 0.11778490148031284,
+   "z": 0.10976339162834413
+  },
+  "1.080": {
+   "x": 0.09998961785799597,
+   "z": 0.09019390914335762
+  },
+  "1.140": {
+   "x": 0.09310057288606204,
+   "z": 0.08615233609315638
+  },
+  "1.210": {
+   "x": 0.0850406413994169,
+   "z": 0.0814540889212828
+  },
+  "1.280": {
+   "x": 0.09885002787603929,
+   "z": 0.10177616371450166
+  },
+  "1.340": {
+   "x": 0.1039912741345427,
+   "z": 0.11198267722276212
+  },
+  "1.400": {
+   "x": 0.10200651851851851,
+   "z": 0.09389918814814814
+  },
+  "1.429": {
+   "x": 0.06839999999999999,
+   "z": 0.06839999999999999
+  }
+ },
+ "pose": {
+  "$comment": "Measured off clay_2: her LEFT foot's lowest pixel sits 0.047 m above her RIGHT foot's, so she stands with the weight on her right leg and the left one raised and a little forward. stanceHalfW 0.052 was chosen by A/B on the composite score (41.6 against 40.9 at 0.058), NOT by the earlier claim that the reference's legs touch down to y = 0.22 -- that claim was wrong. The front silhouette reads as one run there because a BRAID bridges the gap, not because the calves meet; zoom clay_2 between y 0.62 and 0.22 and the backdrop is visible between them.",
+  "armAbduct": 0.12,
+  "armForward": 0.055,
+  "elbowBend": 0.075,
+  "stanceHalfW": 0.052,
+  "footToeOut": 0.145,
+  "shoulderDrop": 0.012,
+  "headTilt": 0,
+  "spineLean": 0.01,
+  "footLift": 0.047,
+  "footForward": 0.028,
+  "hipShift": -0.016,
+  "pelvisTilt": 0.045,
+  "shoulderTilt": -0.03
+ }
+}

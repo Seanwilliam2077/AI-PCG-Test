@@ -1,0 +1,99 @@
+{
+  "axis": "u",
+  "requestedStops": 5,
+  "stops": [
+    {
+      "t": 0.1,
+      "rgb": [
+        59,
+        41,
+        52
+      ],
+      "hsv": [
+        323.3,
+        0.305,
+        0.231
+      ],
+      "hueName": "magenta"
+    },
+    {
+      "t": 0.3,
+      "rgb": [
+        83,
+        58,
+        54
+      ],
+      "hsv": [
+        8.3,
+        0.349,
+        0.325
+      ],
+      "hueName": "red"
+    },
+    {
+      "t": 0.5,
+      "rgb": [
+        83,
+        58,
+        72
+      ],
+      "hsv": [
+        326.4,
+        0.301,
+        0.325
+      ],
+      "hueName": "magenta"
+    },
+    {
+      "t": 0.7,
+      "rgb": [
+        76,
+        51,
+        61
+      ],
+      "hsv": [
+        336.0,
+        0.329,
+        0.298
+      ],
+      "hueName": "magenta"
+    },
+    {
+      "t": 0.9,
+      "rgb": [
+        69,
+        47,
+        64
+      ],
+      "hsv": [
+        313.6,
+        0.319,
+        0.271
+      ],
+      "hueName": "magenta"
+    }
+  ],
+  "hueZones": [
+    {
+      "hueName": "magenta",
+      "tStart": 0.1,
+      "tEnd": 0.1
+    },
+    {
+      "hueName": "red",
+      "tStart": 0.3,
+      "tEnd": 0.3
+    },
+    {
+      "hueName": "magenta",
+      "tStart": 0.5,
+      "tEnd": 0.9
+    }
+  ],
+  "riskFlags": [],
+  "warnings": [
+    "image is not clearly isolated from background; using most pixels as material evidence"
+  ],
+  "reference": "C:\\AI Pipeline Test\\jinx-i2t\\pbr\\crops\\steel.png",
+  "note": "band-median stops grounded in the reference; feed to the texture painter instead of hand-guessed STOPS. hueRisk=blue-collapse stops need a magenta-lean correction."
+}

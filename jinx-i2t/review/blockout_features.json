@@ -1,0 +1,9 @@
+[
+  {"id": "contrapposto", "score": 0.95, "note": "boot soles at 0.000 and 0.047 -- the reference's 47 mm stagger reproduced exactly"},
+  {"id": "anatomy-proportion", "score": 0.85, "note": "head spans 1.505-1.674 m, the measured chin-to-crown"},
+  {"id": "pose-silhouette", "score": 0.80, "note": "stance and limb angles read correctly at all six yaws"},
+  {"id": "braid-contact", "score": 0.75, "note": "braids run from the nape down the back to y 0.081 rather than hanging free"},
+  {"id": "handedness", "score": 0.78, "note": "zapper on +X and tattoo region on -X in the spec; not yet visible without materials"},
+  {"id": "crest-shape", "score": 0.35, "note": "an ellipsoid blob at this pass; the directional fin is deferred to feature-placement"},
+  {"id": "face-landmark-placement", "score": 0.10, "note": "no face at blockout by design; deferred to feature-placement"}
+]

@@ -1,0 +1,15 @@
+{
+ "contrapposto": 0.92,
+ "anatomy-proportion": 0.88,
+ "pose-silhouette": 0.82,
+ "braid-contact": 0.82,
+ "handedness": 0.78,
+ "crest-shape": 0.38,
+ "face-landmark-placement": 0.12,
+ "palette-match": 0.86,
+ "material-assignment": 0.8,
+ "uv-projection": 0.34,
+ "metalness-roughness": 0.72,
+ "tone-mapping": 0.9,
+ "tattoo-readability": 0.2
+}

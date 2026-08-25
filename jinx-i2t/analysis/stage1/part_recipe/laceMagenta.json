@@ -1,0 +1,16 @@
+{
+  "componentId": "x-lacing",
+  "dominantAlbedo": "rgba(41, 35, 32, 1.0)",
+  "secondaryAlbedo": "rgba(86, 43, 62, 1.0)",
+  "materialClass": "stone",
+  "materialClassConfidence": 0.45,
+  "roughnessEstimate": 0.135,
+  "metalnessEstimate": 0.0,
+  "highlightEvidence": "sharp, tight specular hotspot ¡ª supports low roughness/high specularity",
+  "sourceCropPath": "C:\\AI Pipeline Test\\jinx-i2t\\pbr\\crops\\laceMagenta.png",
+  "labClusterMeta": {
+    "clusterCount": 3,
+    "dominantClusterSharePct": 0.706
+  },
+  "cacheHit": false
+}

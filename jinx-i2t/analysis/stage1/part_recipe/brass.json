@@ -1,0 +1,16 @@
+{
+  "componentId": "zapper-barrel",
+  "dominantAlbedo": "rgba(38, 34, 31, 1.0)",
+  "secondaryAlbedo": "rgba(209, 180, 168, 1.0)",
+  "materialClass": "stone",
+  "materialClassConfidence": 0.45,
+  "roughnessEstimate": 0.128,
+  "metalnessEstimate": 0.0,
+  "highlightEvidence": "sharp, tight specular hotspot ¡ª supports low roughness/high specularity",
+  "sourceCropPath": "C:\\AI Pipeline Test\\jinx-i2t\\pbr\\crops\\brass.png",
+  "labClusterMeta": {
+    "clusterCount": 3,
+    "dominantClusterSharePct": 0.761
+  },
+  "cacheHit": false
+}

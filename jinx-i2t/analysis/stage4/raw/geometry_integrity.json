@@ -1,0 +1,839 @@
+{
+ "passed": true,
+ "source": "grimoire/build/geometry_patterns.md",
+ "minimumSeamOverlap": 0.02,
+ "maximumDocumentedSeamOverlap": 0.05,
+ "triangleBudget": 250000,
+ "triangleCount": 0,
+ "lodPlanPresent": true,
+ "lodPlanValid": false,
+ "meshes": [
+  {
+   "id": "root",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "pelvis",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "abdomen",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "chest",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "neck",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "head",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "hair",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "brow-l",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "brow-r",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "ear-l",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "ear-r",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "nose",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "mouth",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "eye-l",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "eye-cavity-l",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "eye-r",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "eye-cavity-r",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "clavicle-l",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "upper-arm-l",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "forearm-l",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "hand-l",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "thumb-l-1",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "thumb-l-2",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "thumb-l-3",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "index-l-1",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "index-l-2",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "index-l-3",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "middle-l-1",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "middle-l-2",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "middle-l-3",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "ring-l-1",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "ring-l-2",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "ring-l-3",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "little-l-1",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "little-l-2",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "little-l-3",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "clavicle-r",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "upper-arm-r",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "forearm-r",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "hand-r",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "thumb-r-1",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "thumb-r-2",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "thumb-r-3",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "index-r-1",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "index-r-2",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "index-r-3",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "middle-r-1",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "middle-r-2",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "middle-r-3",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "ring-r-1",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "ring-r-2",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "ring-r-3",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "little-r-1",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "little-r-2",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "little-r-3",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "thigh-l",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "shin-l",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "foot-l",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "thigh-r",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "shin-r",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "foot-r",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "hair-cap",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "hair-crest",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "hair-fringe",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "hair-sidelock-l",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "hair-sidelock-r",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "braid-l",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "braid-r",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "braid-ties",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "braid-tassel",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "top",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "top-strap",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "top-band",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "x-lacing",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "choker",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "choker-straps",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "sash",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "canvas-panel",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "pouch",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "hip-belt",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "diagonal-strap",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "thigh-strap",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "arm-band-upper",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "arm-band-lower",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "glove-l",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "glove-r",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "nails",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "boot-l",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "boot-r",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "boot-sole",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "boot-cuff",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "boot-toecap",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "boot-lace",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "zapper",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "zapper-tank",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "zapper-barrel",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "zapper-grip",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "tattoo-region",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "shin-patch",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "pants-l",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "pants-hem-l",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "pants-r",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  },
+  {
+   "id": "pants-hem-r",
+   "realization": "separate-geometry",
+   "boundaryEdges": null,
+   "nonManifoldEdges": null,
+   "note": "mesh topology not supplied",
+   "triangleCount": null
+  }
+ ],
+ "seams": [],
+ "failures": [],
+ "issues": []
+}

@@ -1,0 +1,42 @@
+[
+{
+"id": "six-view-evenness",
+"score": 0.94,
+"note": "per-view L spread 2.375 against the reference sheet's 2.61; was 18.18 before the environment was made camera-relative"
+},
+{
+"id": "exposure-envelope",
+"score": 0.86,
+"note": "L mean 38.04 (target 36-38), p10 13.73 (target 12-16), p90 71.05 (target 72-78, 0.95 under)"
+},
+{
+"id": "side-depth",
+"score": 0.88,
+"note": "side max width/height ratio 0.973 and band-mean 1.018, from 0.790/0.917"
+},
+{
+"id": "front-width",
+"score": 0.72,
+"note": "front band-mean 0.909; the max sticks at 0.906 because the reference's widest point is the sash knot and the zapper hanging clear of the hip, which this build does not have as shape"
+},
+{
+"id": "material-coverage",
+"score": 0.84,
+"note": "18 of 20 measured materials now reach a component; was 6"
+},
+{
+"id": "shadow-behaviour",
+"score": 0.9,
+"note": "no ground or contact shadow, matching the reference sheet, which paints its contact darkening onto the backdrop"
+},
+{
+"id": "face-landmark-placement",
+"score": 0.15,
+"note": "unchanged and still the worst feature: the face reads as a blank ellipsoid with the hair crop smeared across the eyes"
+},
+{
+"id": "uv-projection",
+"score": 0.36,
+"note": "box projection still leaves a seam at every component boundary"
+}
+]

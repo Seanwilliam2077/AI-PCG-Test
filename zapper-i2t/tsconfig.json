@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "target": "ES2022", "module": "ESNext", "moduleResolution": "bundler",
+    "strict": false, "noEmit": true, "skipLibCheck": true, "resolveJsonModule": true,
+    "lib": ["ES2023", "DOM", "DOM.Iterable"], "types": ["node"]
+  },
+  "include": ["src/**/*.ts", "tools/**/*.ts"]
+}

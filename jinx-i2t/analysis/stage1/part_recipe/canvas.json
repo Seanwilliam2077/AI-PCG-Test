@@ -1,0 +1,16 @@
+{
+  "componentId": "canvas-panel",
+  "dominantAlbedo": "rgba(117, 110, 91, 1.0)",
+  "secondaryAlbedo": "rgba(88, 55, 80, 1.0)",
+  "materialClass": "unknown",
+  "materialClassConfidence": 0.3,
+  "roughnessEstimate": 0.144,
+  "metalnessEstimate": 0.0,
+  "highlightEvidence": "sharp, tight specular hotspot ¡ª supports low roughness/high specularity",
+  "sourceCropPath": "C:\\AI Pipeline Test\\jinx-i2t\\pbr\\crops\\canvas.png",
+  "labClusterMeta": {
+    "clusterCount": 3,
+    "dominantClusterSharePct": 0.41
+  },
+  "cacheHit": false
+}

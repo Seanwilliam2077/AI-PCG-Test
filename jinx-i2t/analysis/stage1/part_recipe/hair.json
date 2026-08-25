@@ -1,0 +1,16 @@
+{
+  "componentId": "hair",
+  "dominantAlbedo": "rgba(211, 197, 192, 1.0)",
+  "secondaryAlbedo": "rgba(46, 93, 128, 1.0)",
+  "materialClass": "metal",
+  "materialClassConfidence": 0.606,
+  "roughnessEstimate": 0.23,
+  "metalnessEstimate": 1.0,
+  "highlightEvidence": "sharp, tight specular hotspot ¡ª supports low roughness/high specularity",
+  "sourceCropPath": "C:\\AI Pipeline Test\\jinx-i2t\\pbr\\crops\\hair.png",
+  "labClusterMeta": {
+    "clusterCount": 3,
+    "dominantClusterSharePct": 0.449
+  },
+  "cacheHit": false
+}

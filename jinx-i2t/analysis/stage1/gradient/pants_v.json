@@ -1,0 +1,89 @@
+{
+  "axis": "v",
+  "requestedStops": 5,
+  "stops": [
+    {
+      "t": 0.1,
+      "rgb": [
+        72,
+        36,
+        57
+      ],
+      "hsv": [
+        325.0,
+        0.5,
+        0.282
+      ],
+      "hueName": "magenta"
+    },
+    {
+      "t": 0.3,
+      "rgb": [
+        78,
+        47,
+        63
+      ],
+      "hsv": [
+        329.0,
+        0.397,
+        0.306
+      ],
+      "hueName": "magenta"
+    },
+    {
+      "t": 0.5,
+      "rgb": [
+        79,
+        46,
+        68
+      ],
+      "hsv": [
+        320.0,
+        0.418,
+        0.31
+      ],
+      "hueName": "magenta"
+    },
+    {
+      "t": 0.7,
+      "rgb": [
+        72,
+        49,
+        70
+      ],
+      "hsv": [
+        305.2,
+        0.319,
+        0.282
+      ],
+      "hueName": "magenta"
+    },
+    {
+      "t": 0.9,
+      "rgb": [
+        71,
+        47,
+        68
+      ],
+      "hsv": [
+        307.5,
+        0.338,
+        0.278
+      ],
+      "hueName": "magenta"
+    }
+  ],
+  "hueZones": [
+    {
+      "hueName": "magenta",
+      "tStart": 0.1,
+      "tEnd": 0.9
+    }
+  ],
+  "riskFlags": [],
+  "warnings": [
+    "image is not clearly isolated from background; using most pixels as material evidence"
+  ],
+  "reference": "C:\\AI Pipeline Test\\jinx-i2t\\pbr\\crops\\pants.png",
+  "note": "band-median stops grounded in the reference; feed to the texture painter instead of hand-guessed STOPS. hueRisk=blue-collapse stops need a magenta-lean correction."
+}

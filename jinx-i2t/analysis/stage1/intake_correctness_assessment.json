@@ -1,0 +1,18 @@
+{
+  "action": "proceed",
+  "confirmed": false,
+  "assumptionsExposed": {
+    "primaryType": "full-body humanoid game character (stylised realism)",
+    "primaryDomain": "character",
+    "materialFamilies": [
+      "skin",
+      "hair",
+      "woven-cloth",
+      "leather",
+      "canvas",
+      "brass",
+      "steel"
+    ]
+  },
+  "reason": "no objectness source available yet ¡ª confirmation DEFERRED to Phase 3 (OSIM). Proceeding on exposed assumptions; they remain falsifiable at Divine-Eye review."
+}

@@ -1,0 +1,9 @@
+[
+  {"id": "braid-contact", "score": 0.82, "note": "braid attachment runs from the nape to y 0.081 with z staying behind the body -- attached along the back, not to a point at the crown"},
+  {"id": "contrapposto", "score": 0.95, "note": "unchanged from blockout; boot soles at 0.000 and 0.047"},
+  {"id": "anatomy-proportion", "score": 0.85, "note": "unchanged"},
+  {"id": "pose-silhouette", "score": 0.80, "note": "unchanged"},
+  {"id": "handedness", "score": 0.78, "note": "sides correct in the spec; still not visible without materials"},
+  {"id": "crest-shape", "score": 0.35, "note": "deferred to feature-placement"},
+  {"id": "face-landmark-placement", "score": 0.10, "note": "deferred to feature-placement"}
+]

@@ -1,0 +1,18 @@
+passed: False
+action: refine-code
+features:
+  - braid-contact (critical): 0.82 / 0.8 -> ok [gating]
+  - handedness (critical): 0.78 / 0.8 -> below [gating]
+  - crest-shape (critical): 0.38 / 0.8 -> below [gating]
+  - contrapposto (critical): 0.92 / 0.8 -> ok [gating]
+  - x-lacing (important): missing / 0.65 -> missing
+  - anatomy-proportion (critical): 0.88 / 0.8 -> ok [gating]
+  - face-landmark-placement (critical): 0.12 / 0.8 -> below [gating]
+  - pose-silhouette (critical): 0.82 / 0.8 -> ok [gating]
+  - outfit-and-palette (important): missing / 0.65 -> missing
+defects:
+  - below-threshold:handedness(0.78<0.8)
+  - below-threshold:crest-shape(0.38<0.8)
+  - missing-feature:x-lacing
+  - below-threshold:face-landmark-placement(0.12<0.8)
+  - missing-feature:outfit-and-palette

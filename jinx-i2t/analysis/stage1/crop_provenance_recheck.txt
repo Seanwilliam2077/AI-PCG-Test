@@ -1,0 +1,22 @@
+mat         panel   opaqueFrac medianRGB  specBase  rgbDist  verdict
+skin        body_2  1.000      #D3BCB2    #D4BDB4   2.4      OK
+skinShade   body_2  1.000      #9BA09D    #BCA298   33.4     MISMATCH
+hair        body_2  1.000      #4D6E86    #274E69   57.5     MISMATCH
+hairDark    body_5  0.603      #15344D    #1D3A50   10.4     OK + region partly OUTSIDE silhouette
+cloth       body_2  0.997      #3D3C57    #343749   17.4     OK
+clothWorn   body_2  0.989      #D1B9AE    None      None     NO SPEC MATERIAL
+pants       body_2  0.967      #4C2E44    #54324B   11.4     OK
+pantsDark   body_2  1.000      #55324B    #402439   31.0     MISMATCH
+leather     body_2  0.906      #302827    #312928   1.7      OK
+canvas      body_2  1.000      #57374D    #7A7353   69.7     MISMATCH
+brass       body_2  1.000      #2E2A26    #B48B49   169.1    MISMATCH
+steel       body_0  1.000      #48343D    #797D82   111.8    MISMATCH
+tattoo      body_2  0.507      #C4AA9F    #BEC7CB   53.0     MISMATCH + region partly OUTSIDE silhouette
+laceMagenta body_2  0.933      #302827    #8E3A5C   109.4    MISMATCH
+nailTeal    body_2  0.304      #706562    #3FB8B0   124.0    MISMATCH + region partly OUTSIDE silhouette
+glassTank   body_2  1.000      #573F49    #9FB6BE   181.8    MISMATCH
+eye         head_1  1.000      #AD8C84    #5A8296   85.5     MISMATCH
+sclera      head_1  1.000      #AD8C84    #ECE8E4   147.1    MISMATCH
+pupil       head_1  1.000      #CDB8B2    #1B1A20   279.2    MISMATCH
+lip         head_1  1.000      #CFC0BC    #A96766   129.5    MISMATCH
+brow        head_1  1.000      #D5C7C3    #3A2C28   268.5    MISMATCH
