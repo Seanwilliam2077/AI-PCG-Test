@@ -1,0 +1,30 @@
+{
+ "contract": "zapper-i2t/docs/CONTRACT.md",
+ "frozenBeforeModel": true,
+ "constraintsAsFrozen": 123,
+ "constraintsParsedIntoJson": 119,
+ "parseGap": 4,
+ "parseGapNote": "four rows use a table variant the extractor does not match; recorded rather than silently rounded away",
+ "reMeasuredIndependently": 18,
+ "reproduced": 13,
+ "defectsFound": 25,
+ "falsifiable": 100,
+ "notFalsifiable": 19,
+ "auditorsFalsifiableCountOnFullDocument": 104,
+ "auditorsMeaningfullyTightCount": 94,
+ "inflationIfScoredAsFrozen": "~15%",
+ "byKind": {
+  "dimension": 10,
+  "relation": 27,
+  "ratio": 53,
+  "count": 18,
+  "angle": 11
+ },
+ "refutedClaims": [
+  "mat.grip.notWood \u2014 388 measured pixels show a warm grip face; the original evidence was a butt-cap reading generalised to the whole grip"
+ ],
+ "onlyFabrication": "D-19 \u2014 joint limits reported as geometrically verified against a model the same document says does not exist",
+ "verdict": "SOUND WITH CAVEATS",
+ "auditorEditedContract": false,
+ "resolution": "audit appended as section 11; no frozen row rewritten"
+}

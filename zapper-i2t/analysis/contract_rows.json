@@ -6,7 +6,9 @@
   "value": "1.400 \u00b1 0.10 mm/px",
   "check": "not a model property; the conversion any absolute below must use. Falsifiable by re-measuring any body landmark in a 3000\u00d71462 render",
   "evidence": "7 readings, 4 methods, 1.34\u20131.44 (\u00a71). **DECLARED root.** Supersedes 0.838",
-  "conf": "0.55"
+  "conf": "0.55",
+  "falsifiable": false,
+  "notFalsifiableBecause": "the contract itself says \"not a model property\""
  },
  {
   "id": "scale.stature.px",
@@ -15,7 +17,9 @@
   "value": "1225 \u00b1 45 px",
   "check": "re-measure hair-crest to sole in the sheet",
   "evidence": "1278/1220/1197/1217, four reports",
-  "conf": "0.70"
+  "conf": "0.70",
+  "falsifiable": false,
+  "notFalsifiableBecause": "a property of the reference sheet, and of a character"
  },
  {
   "id": "scale.handBreadth.px",
@@ -24,7 +28,9 @@
   "value": "43 \u00b1 4 px (pose3 frame)",
   "check": "measure the four curled fingers in a clean grip pose",
   "evidence": "pose3 readings 40/43/45. **Falsifies the brief's 52.5 px as a pose3 measurement**",
-  "conf": "0.65"
+  "conf": "0.65",
+  "falsifiable": false,
+  "notFalsifiableBecause": "a property of a character; the gun has no fingers"
  },
  {
   "id": "scale.brief.superseded",
@@ -33,7 +39,9 @@
   "value": "every absolute length = 1.67 \u00d7 the brief's chain",
   "check": "recompute any mm value both ways; the contract's must be the larger",
   "evidence": "\u00a71 link 3, four independent derivations",
-  "conf": "0.75"
+  "conf": "0.75",
+  "falsifiable": false,
+  "notFalsifiableBecause": "arithmetic between two documents"
  },
  {
   "id": "gun.length.overTubeOd",
@@ -42,7 +50,8 @@
   "value": "5.35 \u00b1 0.55",
   "check": "union of all gun meshes projected on axis, \u00f7 D",
   "evidence": "198/37, corrected per D4 (scale-silhouette's 6.54 superseded)",
-  "conf": "0.60"
+  "conf": "0.60",
+  "falsifiable": true
  },
  {
   "id": "gun.height.overTubeOd",
@@ -51,7 +60,8 @@
   "value": "3.11 \u00b1 0.35",
   "check": "whole-gun AABB extent in the grip plane \u00f7 D",
   "evidence": "port top y236 \u2192 grip heel y351 = 115 px",
-  "conf": "0.55"
+  "conf": "0.55",
+  "falsifiable": true
  },
  {
   "id": "gun.height.overLength",
@@ -60,7 +70,8 @@
   "value": "0.58 \u00b1 0.06",
   "check": "as above \u00f7 axial extent",
   "evidence": "115/198 (was 0.48 on the old length)",
-  "conf": "0.55"
+  "conf": "0.55",
+  "falsifiable": true
  },
  {
   "id": "gun.barrel.axialFraction",
@@ -69,7 +80,8 @@
   "value": "0.808 \u00b1 0.030",
   "check": "(axial extent from frontmost vertex to `lattice-collar` rear face) \u00f7 A",
   "evidence": "160/198; frame-action's 0.840 is the same to the receiver rear",
-  "conf": "0.70"
+  "conf": "0.70",
+  "falsifiable": true
  },
  {
   "id": "gun.frame.axialFraction",
@@ -78,7 +90,8 @@
   "value": "0.192 \u00b1 0.030",
   "check": "1 \u2212 above",
   "evidence": "derived",
-  "conf": "0.70"
+  "conf": "0.70",
+  "falsifiable": true
  },
  {
   "id": "gun.length.overCharacterHeight",
@@ -87,7 +100,9 @@
   "value": "0.162 \u00b1 0.015",
   "check": "if placed in the character scene: gun axial extent \u00f7 character height",
   "evidence": "198/1220, one panel, no scale chain",
-  "conf": "0.60"
+  "conf": "0.60",
+  "falsifiable": false,
+  "notFalsifiableBecause": "needs a character mesh that is not in the tree"
  },
  {
   "id": "gun.length.overHandBreadth",
@@ -96,7 +111,9 @@
   "value": "3.3 \u00b1 0.8",
   "check": "gun axial extent \u00f7 hand-mesh four-finger breadth",
   "evidence": "pose3 3.72, pose1 3.13, clay 2.61. **Downgraded** \u2014 barrel offered 3.05 \u00b1 0.25 at conf 0.75, but it mixed poses, and the finger stack is not a repeatable landmark (D2)",
-  "conf": "0.40"
+  "conf": "0.40",
+  "falsifiable": false,
+  "notFalsifiableBecause": "needs a hand mesh that is not in the tree"
  },
  {
   "id": "gun.maxWidth.isLatticeCollar",
@@ -105,7 +122,8 @@
   "value": "no mesh's perpendicular extent exceeds `lattice-collar`'s",
   "check": "compare max perpendicular extents",
   "evidence": "no top view and no orthographic muzzle-on view exists; the sight hook and frame cheeks could break this",
-  "conf": "0.40"
+  "conf": "0.40",
+  "falsifiable": true
  },
  {
   "id": "gun.length.mm",
@@ -114,7 +132,8 @@
   "value": "290 \u00b1 45 mm",
   "check": "axial extent",
   "evidence": "198 px \u00d7 1.400 \u00d7 1/cos \u03c6, \u03c6 \u2208 [16\u00b0,32\u00b0]. **DECLARED chain**",
-  "conf": "0.35"
+  "conf": "0.35",
+  "falsifiable": true
  },
  {
   "id": "barrel.tube.od.mm",
@@ -123,7 +142,8 @@
   "value": "52 \u00b1 7 mm",
   "check": "D",
   "evidence": "37 px \u00d7 1.400; perpendicular, so no \u03c6 term",
-  "conf": "0.45"
+  "conf": "0.45",
+  "falsifiable": true
  },
  {
   "id": "barrel.tube.od.px",
@@ -132,7 +152,9 @@
   "value": "37 \u00b1 3 px (pose3 frame)",
   "check": "re-render from the pose3 camera; measure the tube silhouette minus the rail",
   "evidence": "D3 arbitration",
-  "conf": "0.65"
+  "conf": "0.65",
+  "falsifiable": false,
+  "notFalsifiableBecause": "needs \"the pose3 camera\", which S10.3 says was never recovered"
  },
  {
   "id": "barrel.tube.constantOd",
@@ -141,7 +163,8 @@
   "value": "max radius varies < 3 % over u 0.10\u20130.66",
   "check": "[SIL] sample r(x) at 200 stations",
   "evidence": "bottom silhouette straight to 0.36 px rms; the +2.8 % is perspective",
-  "conf": "0.80"
+  "conf": "0.80",
+  "falsifiable": true
  },
  {
   "id": "barrel.tube.circular",
@@ -150,7 +173,8 @@
   "value": "tube AABB Y-extent = Z-extent within 4 %",
   "check": "compare AABB extents",
   "evidence": "pose2 bore ellipse 0.887 vs liner 0.894 \u2014 equal within noise, i.e. concentric circles seen obliquely",
-  "conf": "0.75"
+  "conf": "0.75",
+  "falsifiable": true
  },
  {
   "id": "barrel.tube.step.noneAtPaintLine",
@@ -159,7 +183,8 @@
   "value": "0 steps in u 0.45\u20130.66",
   "check": "require max abs(r(x) \u2212 r_tube) < 0.03 r_tube there",
   "evidence": "copper section's bottom edge sits \u22120.25 px mean off the steel tube's fitted line; extrapolation error \u00b10.23 px",
-  "conf": "0.85"
+  "conf": "0.85",
+  "falsifiable": true
  },
  {
   "id": "barrel.step.count",
@@ -168,7 +193,8 @@
   "value": "5 exterior diameter steps",
   "check": "[SIL] sample r(x) at 200 stations; count dr/dx sign changes exceeding 2 % of R",
   "evidence": "lattice\u2193tube, band\u2191, \u2193tube, collar\u2191, \u2193liner",
-  "conf": "0.70"
+  "conf": "0.70",
+  "falsifiable": true
  },
  {
   "id": "barrel.brassRing.count",
@@ -177,7 +203,8 @@
   "value": "3 encircling brass assemblies",
   "check": "count meshes forming a full ring with OD > 1.05 D; assert axial order collar < mid-band < lattice",
   "evidence": "three poses agree",
-  "conf": "0.85"
+  "conf": "0.85",
+  "falsifiable": true
  },
  {
   "id": "barrel.lattice.coaxial",
@@ -186,7 +213,8 @@
   "value": "lattice axis within 0.03 R of the tube axis",
   "check": "compare AABB centre lines",
   "evidence": "silhouette midpoint 55.0 vs axis 54.7 on an 18-px radius. **This is also the arbitration in D3**",
-  "conf": "0.80"
+  "conf": "0.80",
+  "falsifiable": true
  },
  {
   "id": "barrel.rail.tangent",
@@ -195,7 +223,8 @@
   "value": "rail's min radius \u2264 1.02 R",
   "check": "[RAY] min radial distance from axis to the rail mesh",
   "evidence": "no background pixel between rail underside and tube in any of four views; a standoff would show one",
-  "conf": "0.65"
+  "conf": "0.65",
+  "falsifiable": true
  },
  {
   "id": "barrel.rail.proud.overTubeOd",
@@ -204,7 +233,8 @@
   "value": "0.12 \u00b1 0.04",
   "check": "(axis\u2192rail top \u2212 R) \u00f7 D",
   "evidence": "pose3 x2554: rail top +26.0, tube top +21.6",
-  "conf": "0.50"
+  "conf": "0.50",
+  "falsifiable": true
  },
  {
   "id": "barrel.rail.axialSpan",
@@ -213,7 +243,8 @@
   "value": "\u2265 0.55 of L",
   "check": "rail AABB axial extent \u00f7 L",
   "evidence": "rail spans 2479\u20132592 of the 2444\u20132604 barrel",
-  "conf": "0.60"
+  "conf": "0.60",
+  "falsifiable": true
  },
  {
   "id": "barrel.rail.studs.count",
@@ -222,7 +253,9 @@
   "value": "3, accept 3\u20134",
   "check": "count `rail.stud.*` children; exactly 2 must share the mount block's axial position to within 0.5 stud diameters",
   "evidence": "**two reports within 3 px on all three positions** (\u00a75.5)",
-  "conf": "0.80"
+  "conf": "0.80",
+  "falsifiable": false,
+  "notFalsifiableBecause": "the check demands 0.5 stud diameters; its own evidence is 8 px apart, about 2.3 stud diameters"
  },
  {
   "id": "barrel.underLug.count",
@@ -231,7 +264,8 @@
   "value": "1",
   "check": "meshes whose AABB centre is below the axis, in u 0.38\u20130.48",
   "evidence": "pose3, pose1",
-  "conf": "0.70"
+  "conf": "0.70",
+  "falsifiable": true
  },
  {
   "id": "barrel.axis.imageSlope",
@@ -240,7 +274,9 @@
   "value": "3.0\u00b0 \u00b1 0.4\u00b0 nose-down in a pose3-matched render",
   "check": "[SIL] fit the tube's bottom silhouette",
   "evidence": "three reports: 0.0477, 0.052, 0.055",
-  "conf": "0.75"
+  "conf": "0.75",
+  "falsifiable": false,
+  "notFalsifiableBecause": "needs the pose3 camera; and D-7, the tolerance is 3.5x tighter than the 1 px quantisation floor"
  },
  {
   "id": "barrel.muzzleCollar.step.u",
@@ -249,7 +285,8 @@
   "value": "0.187 \u00b1 0.020 of A (= 0.232 L)",
   "check": "[SIL] largest positive dr/dx in the forward half of r(x)",
   "evidence": "**barrel and joints 0.012 apart** (\u00a75.3); sharpest edge on the object",
-  "conf": "0.85"
+  "conf": "0.85",
+  "falsifiable": true
  },
  {
   "id": "barrel.midBand.centre.u",
@@ -258,7 +295,8 @@
   "value": "0.449 \u00b1 0.030 of A",
   "check": "mid-band AABB axial centre",
   "evidence": "barrel 2512.2, joints 2515",
-  "conf": "0.70"
+  "conf": "0.70",
+  "falsifiable": true
  },
  {
   "id": "barrel.lattice.front.u",
@@ -267,7 +305,8 @@
   "value": "0.662 \u00b1 0.025 of A",
   "check": "lattice AABB forward face",
   "evidence": "**barrel 2473.0, scale-silhouette 2472.9** (\u00a75.6)",
-  "conf": "0.75"
+  "conf": "0.75",
+  "falsifiable": true
  },
  {
   "id": "barrel.lattice.rear.u",
@@ -276,7 +315,8 @@
   "value": "0.808 \u00b1 0.025 of A",
   "check": "lattice AABB rear face; also the barrel/frame junction",
   "evidence": "four reports, D15",
-  "conf": "0.75"
+  "conf": "0.75",
+  "falsifiable": true
  },
  {
   "id": "barrel.lug.centre.u",
@@ -285,7 +325,8 @@
   "value": "0.407 \u00b1 0.030 of A",
   "check": "lug AABB axial centre",
   "evidence": "pose3 2518\u20132529",
-  "conf": "0.55"
+  "conf": "0.55",
+  "falsifiable": true
  },
  {
   "id": "barrel.railFwdStud.u",
@@ -294,7 +335,8 @@
   "value": "0.101 \u00b1 0.020 of A",
   "check": "forward stud AABB centre",
   "evidence": "two reports within 1 px",
-  "conf": "0.60"
+  "conf": "0.60",
+  "falsifiable": true
  },
  {
   "id": "barrel.lattice.length",
@@ -303,7 +345,8 @@
   "value": "0.181 \u00b1 0.025 L",
   "check": "lattice AABB axial extent \u00f7 L",
   "evidence": "29 \u00b1 4 px, D18",
-  "conf": "0.70"
+  "conf": "0.70",
+  "falsifiable": true
  },
  {
   "id": "barrel.midBand.length",
@@ -312,7 +355,8 @@
   "value": "0.050 \u00b1 0.013 L",
   "check": "as above",
   "evidence": "8 \u00b1 2 px, D20",
-  "conf": "0.55"
+  "conf": "0.55",
+  "falsifiable": true
  },
  {
   "id": "barrel.muzzleCollar.length",
@@ -321,7 +365,8 @@
   "value": "0.140 \u00b1 0.025 L",
   "check": "as above",
   "evidence": "pose3 22.5 px; pose0 0.119",
-  "conf": "0.60"
+  "conf": "0.60",
+  "falsifiable": true
  },
  {
   "id": "barrel.copperOverSteel.length",
@@ -330,7 +375,8 @@
   "value": "0.71 \u00b1 0.08",
   "check": "warm-material section axial extent \u00f7 pale section's",
   "evidence": "**pose3 0.712, pose0 0.689**",
-  "conf": "0.80"
+  "conf": "0.80",
+  "falsifiable": true
  },
  {
   "id": "barrel.zone.order",
@@ -339,7 +385,8 @@
   "value": "muzzle\u2192breech: brass collar, blue paint, brass ring, warm brown, brass lattice",
   "check": "sort meshes by axial centroid, compare material ids",
   "evidence": "identical in pose3 and pose1 seam scans",
-  "conf": "0.85"
+  "conf": "0.85",
+  "falsifiable": true
  },
  {
   "id": "barrel.zone.blueOverWarm",
@@ -348,7 +395,8 @@
   "value": "1.62 \u00b1 0.15",
   "check": "axial extents",
   "evidence": "52/31 pose3, 37.5/24 pose1",
-  "conf": "0.75"
+  "conf": "0.75",
+  "falsifiable": true
  },
  {
   "id": "barrel.zone.warmOverMidBand",
@@ -357,7 +405,8 @@
   "value": "3.95 \u00b1 0.60",
   "check": "axial extents",
   "evidence": "31/8 pose3, 24/6 pose1",
-  "conf": "0.65"
+  "conf": "0.65",
+  "falsifiable": true
  },
  {
   "id": "barrel.midBand.isPaintBoundary",
@@ -366,7 +415,8 @@
   "value": "the warm/pale material boundary lies inside the mid-band's axial extent",
   "check": "compare the material boundary with the band's AABB",
   "evidence": "warm fraction falls 0.90\u21920.08 across exactly the band's span",
-  "conf": "0.75"
+  "conf": "0.75",
+  "falsifiable": true
  },
  {
   "id": "barrel.lattice.od",
@@ -375,7 +425,8 @@
   "value": "1.45 \u00b1 0.12",
   "check": "lattice AABB max perpendicular extent \u00f7 D",
   "evidence": "53.5 \u00b1 2.5 px, D7 (readings 51/54/56)",
-  "conf": "0.65"
+  "conf": "0.65",
+  "falsifiable": true
  },
  {
   "id": "barrel.midBand.od",
@@ -384,7 +435,8 @@
   "value": "1.18 \u00b1 0.07",
   "check": "as above",
   "evidence": "bottom-edge step +3.3 \u00b1 0.7 px on R 18.15",
-  "conf": "0.70"
+  "conf": "0.70",
+  "falsifiable": true
  },
  {
   "id": "barrel.muzzleCollar.od",
@@ -393,7 +445,8 @@
   "value": "1.14 \u00b1 0.08",
   "check": "as above",
   "evidence": "**two reports at 1.13**; third brackets [1.08, 1.37]. D9",
-  "conf": "0.65"
+  "conf": "0.65",
+  "falsifiable": true
  },
  {
   "id": "barrel.liner.od",
@@ -402,7 +455,8 @@
   "value": "0.69 \u00b1 0.09",
   "check": "as above",
   "evidence": "barrel 0.63, joints 0.76 \u2014 a threshold difference, D6",
-  "conf": "0.55"
+  "conf": "0.55",
+  "falsifiable": true
  },
  {
   "id": "barrel.bore.d",
@@ -411,7 +465,8 @@
   "value": "0.52 \u00b1 0.09",
   "check": "[RAY] axial ray-fan at the muzzle face",
   "evidence": "0.47/0.57/0.62; derived cross-check 0.74\u00d70.69 = 0.51 \u2713",
-  "conf": "0.55"
+  "conf": "0.55",
+  "falsifiable": true
  },
  {
   "id": "barrel.bore.dOverLinerOd",
@@ -420,7 +475,8 @@
   "value": "0.74 \u00b1 0.04",
   "check": "[RAY] fan \u00f7 liner AABB",
   "evidence": "**barrel 0.73 over three views, joints 0.75.** The most stable number in the muzzle group",
-  "conf": "0.85"
+  "conf": "0.85",
+  "falsifiable": true
  },
  {
   "id": "barrel.lattice.axialLenOverOd",
@@ -429,7 +485,8 @@
   "value": "0.55 \u00b1 0.10",
   "check": "lattice axial extent \u00f7 its own OD",
   "evidence": "29/53.5; scale-silhouette 0.65, barrel 0.50",
-  "conf": "0.55"
+  "conf": "0.55",
+  "falsifiable": true
  },
  {
   "id": "barrel.lug.radialReach",
@@ -438,7 +495,8 @@
   "value": "1.2\u20131.8 R",
   "check": "lug AABB max radial extent \u00f7 R",
   "evidence": "pose3 1.27, pose1 ~1.45, pose0 ~1.75 \u2014 **the poses disagree**; 8\u00d75 px in the best view",
-  "conf": "0.25"
+  "conf": "0.25",
+  "falsifiable": true
  },
  {
   "id": "lattice.opening.count",
@@ -447,7 +505,8 @@
   "value": "**16, accept 12\u201320**",
   "check": "[RAY] cast 720 rays outward from the axis in the collar's axial midplane; count contiguous miss-arcs",
   "evidence": "D8. Barrel's N-vs-R fit re-run against the reconciled OD (R = 26.75) gives 16\u201317; direct pitch gives 16.5. Acceptance band admits the halving readings",
-  "conf": "0.35"
+  "conf": "0.35",
+  "falsifiable": true
  },
  {
   "id": "lattice.opening.pitch",
@@ -456,7 +515,8 @@
   "value": "22 \u00b1 3\u00b0",
   "check": "angle between adjacent cutout centroids about the axis",
   "evidence": "10.2 px projected pitch nearest the axis on R 26.75 = 21.8\u00b0; barrel measured 20.0\u201320.9\u00b0 on R 28",
-  "conf": "0.50"
+  "conf": "0.50",
+  "falsifiable": true
  },
  {
   "id": "lattice.opening.axialLen",
@@ -465,7 +525,8 @@
   "value": "0.069 \u00b1 0.012 L",
   "check": "mean axial extent of the cutout volumes \u00f7 L",
   "evidence": "components measure 10\u201312 px",
-  "conf": "0.55"
+  "conf": "0.55",
+  "falsifiable": true
  },
  {
   "id": "lattice.openFraction",
@@ -474,7 +535,8 @@
   "value": "0.55\u20130.70",
   "check": "[RAY] fraction of 360 rays at the axial mid-station that miss geometry",
   "evidence": "hole height 7 px against a 10.2-px pitch at the axis",
-  "conf": "0.40"
+  "conf": "0.40",
+  "falsifiable": true
  },
  {
   "id": "lattice.rows",
@@ -483,7 +545,8 @@
   "value": "1 \u2014 **DECLARED**",
   "check": "count distinct axial bands of cutouts",
   "evidence": "at y 40/50/60 the openings merge into 10\u201312 px blobs; at y 32/69/76 they resolve as pairs. Two staggered rows fit equally well and are **not excluded**",
-  "conf": "0.40"
+  "conf": "0.40",
+  "falsifiable": true
  },
  {
   "id": "lattice.abutsFrame",
@@ -492,7 +555,8 @@
   "value": "lattice rear face coincident with the frame's forward face within 0.05 D",
   "check": "compare AABB faces",
   "evidence": "pose3 x2444 is simultaneously the lattice rear and the frame front; pose0 likewise",
-  "conf": "0.70"
+  "conf": "0.70",
+  "falsifiable": true
  },
  {
   "id": "muzzle.ring.count",
@@ -501,7 +565,8 @@
   "value": "3, accept 2\u20134",
   "check": "[SIL] count local maxima of r(x) over the collar's axial span",
   "evidence": "**two disjoint pose pairs** (\u00a75.7); 3 raised rings, 2 grooves",
-  "conf": "0.70"
+  "conf": "0.70",
+  "falsifiable": true
  },
  {
   "id": "muzzle.liner.protrudes",
@@ -510,7 +575,8 @@
   "value": "liner AABB axial max exceeds the collar's by 0.05 \u00b1 0.03 L",
   "check": "compare AABBs",
   "evidence": "pose1 and pose0 both show a 6-px step to a 24-px section ahead of a 44-px collar. **scale-silhouette reads this the opposite way \u2014 D11**",
-  "conf": "0.45"
+  "conf": "0.45",
+  "falsifiable": true
  },
  {
   "id": "muzzle.bore.concentric",
@@ -519,7 +585,8 @@
   "value": "bore axis within 0.10 R of the tube axis",
   "check": "fit the bore cylinder's axis; compare to the tube's centre line",
   "evidence": "**DECLARED.** Three methods give 6 %, 10 %, 14.6 % \u2014 all inside their own noise. A deliberately offset bore would be invention; a perfectly concentric one is a legitimate choice that must be marked",
-  "conf": "0.50"
+  "conf": "0.50",
+  "falsifiable": true
  },
  {
   "id": "muzzle.collar.rings.equalOd",
@@ -528,7 +595,8 @@
   "value": "the 3 rings' ODs differ by < 0.03 D \u2014 **DECLARED**",
   "check": "compare ring AABBs",
   "evidence": "grooves resolve; ring-to-ring radius differences are under 1 px",
-  "conf": "0.35"
+  "conf": "0.35",
+  "falsifiable": true
  },
  {
   "id": "frame.protrusionsAbove.count",
@@ -537,7 +605,8 @@
   "value": "2",
   "check": "count meshes whose AABB min-up exceeds receiver max-up \u2212 0.10 D, restricted to u > 0.81",
   "evidence": "one brass cylinder + one brass slab in each of three poses. **Downgraded from 0.75 \u2014 D12**",
-  "conf": "0.65"
+  "conf": "0.65",
+  "falsifiable": true
  },
  {
   "id": "frame.portForwardOfSpur",
@@ -546,7 +615,8 @@
   "value": "u(port centre) < u(spur centre)",
   "check": "AABB centres",
   "evidence": "pose0 and pose3 agree, and they view **opposite ends**",
-  "conf": "0.70"
+  "conf": "0.70",
+  "falsifiable": true
  },
  {
   "id": "frame.port.centre.u",
@@ -555,7 +625,8 @@
   "value": "0.884 \u00b1 0.030 of A",
   "check": "port AABB centre projected on axis",
   "evidence": "two reports within 7 px; the 0.90-vs-0.77 gap was a normaliser artefact \u2014 D14",
-  "conf": "0.65"
+  "conf": "0.65",
+  "falsifiable": true
  },
  {
   "id": "frame.port.od",
@@ -564,7 +635,8 @@
   "value": "0.41 \u00b1 0.07 of D",
   "check": "port lateral extent \u00f7 D",
   "evidence": "15 px pose3, 12 px pose0. **Rescaled from 0.34 per D3**",
-  "conf": "0.55"
+  "conf": "0.55",
+  "falsifiable": true
  },
  {
   "id": "frame.port.heightOverOd",
@@ -573,7 +645,8 @@
   "value": "1.3 \u00b1 0.4",
   "check": "(port max-up \u2212 receiver max-up) \u00f7 port OD",
   "evidence": "pose3 1.0; pose0 1.5, or 1.7 after correcting for the 29\u00b0 camera elevation implied by the rim ellipse (minor/major 0.50)",
-  "conf": "0.50"
+  "conf": "0.50",
+  "falsifiable": true
  },
  {
   "id": "frame.port.axisPerpendicular",
@@ -582,7 +655,8 @@
   "value": "within 15\u00b0 of `up`; lateral component < 0.26",
   "check": "dot the port's principal axis against `up` and the lateral vector",
   "evidence": "port sides vertical to \u00b11 px over 10 rows in **two** poses",
-  "conf": "0.60"
+  "conf": "0.60",
+  "falsifiable": true
  },
  {
   "id": "frame.spur.aspect",
@@ -591,7 +665,8 @@
   "value": "2.8 \u00b1 0.7",
   "check": "spur AABB longest \u00f7 second-longest extent",
   "evidence": "PCA over 238 brass px: 32.7 \u00d7 11.8; also clay 2.15, pose0 1.71, pose2 2.5",
-  "conf": "0.55"
+  "conf": "0.55",
+  "falsifiable": true
  },
  {
   "id": "frame.spur.lengthOverTubeOd",
@@ -600,7 +675,8 @@
   "value": "0.82 \u00b1 0.20",
   "check": "spur longest extent \u00f7 D",
   "evidence": "32.7 px against pose1's tube. **Rescaled from 0.73 per D3**",
-  "conf": "0.45"
+  "conf": "0.45",
+  "falsifiable": true
  },
  {
   "id": "frame.spur.attitude",
@@ -609,7 +685,8 @@
   "value": "32 \u00b1 8\u00b0 above the bore axis, pointing rearward",
   "check": "angle of the spur's principal axis to `axis` in the sagittal plane",
   "evidence": "PCA 34.3\u00b0 (pose1); clay 23\u00b0, pose1 38\u00b0",
-  "conf": "0.55"
+  "conf": "0.55",
+  "falsifiable": true
  },
  {
   "id": "frame.spur.clearance",
@@ -618,7 +695,8 @@
   "value": "separated from the frame in a side silhouette except at a neck \u2264 0.45 \u00d7 its own diameter",
   "check": "[SIL] the spur's rendered region must be \u22651 px of background from the frame's",
   "evidence": "pose1 background sky visible at (175\u2013190, 55\u201375) between the piece and the frame",
-  "conf": "0.70"
+  "conf": "0.70",
+  "falsifiable": true
  },
  {
   "id": "frame.hammer.ribs.count",
@@ -627,7 +705,8 @@
   "value": "6 \u00b1 2",
   "check": "sample surface radius along the spur's own axis; count local maxima",
   "evidence": "clay 5\u20136 at 4 px pitch; pose1 5. What pose3 seemed to show is JPEG chroma noise, not ribs",
-  "conf": "0.45"
+  "conf": "0.45",
+  "falsifiable": true
  },
  {
   "id": "frame.top.aboveAxis",
@@ -636,7 +715,9 @@
   "value": "0.32 \u00b1 0.10 of D",
   "check": "receiver AABB max-up \u00f7 D, axis at up = 0",
   "evidence": "12 \u00b1 3 px. Chosen because it avoids the occluded underside. **Rescaled from 0.29 per D3**",
-  "conf": "0.55"
+  "conf": "0.55",
+  "falsifiable": false,
+  "notFalsifiableBecause": "the value is a local reading at the receiver rear; the check is an AABB maximum, which is 0.47-0.67 D"
  },
  {
   "id": "frame.heightOverTubeOd",
@@ -645,7 +726,8 @@
   "value": "\u2265 1.05 (**lower bound, not a target**)",
   "check": "receiver up-extent \u00f7 D",
   "evidence": "visible height 41 \u00b1 5 px; the lower edge is where the hand starts, so the true frame can only be taller. **Rescaled from \u22650.95 per D3**",
-  "conf": "0.45"
+  "conf": "0.45",
+  "falsifiable": true
  },
  {
   "id": "frame.rearFace.angle",
@@ -654,7 +736,8 @@
   "value": "within 15\u00b0 of the axis normal over its lower 60 %",
   "check": "[SIL] fit a line to the rearmost receiver boundary between 20 % and 80 % of its height",
   "evidence": "pose3 holds x 2414\u20132416 from y 266 to 290 \u2014 2 px over 25 px = 4.6\u00b0",
-  "conf": "0.50"
+  "conf": "0.50",
+  "falsifiable": true
  },
  {
   "id": "frame.receiverRear.u",
@@ -663,7 +746,8 @@
   "value": "0.955 \u00b1 0.020 of A",
   "check": "rearmost receiver vertex",
   "evidence": "pose3 x 2415, direct",
-  "conf": "0.60"
+  "conf": "0.60",
+  "falsifiable": true
  },
  {
   "id": "frame.surfaceFeatures.count",
@@ -672,7 +756,8 @@
   "value": "0 \u2014 **DECLARED**",
   "check": "count receiver children with AABB diagonal > 0.02 L, excluding port and spur",
   "evidence": "nothing on the receiver exceeds 3 px in any pose; the orange marks there classify in the graffiti hue band, i.e. paint. **The reference cannot distinguish \"smooth\" from \"detailed below 3 px\"; this constraint chooses smooth.** 0.5 as a choice, 0.0 as a measurement",
-  "conf": "0.50"
+  "conf": "0.50",
+  "falsifiable": true
  },
  {
   "id": "action.nothingBelowBarrelForward",
@@ -681,7 +766,8 @@
   "value": "no mesh extends below the tube's lower surface at u < 0.66",
   "check": "for every mesh with u(centre) < 0.66, AABB min-up > tube min-up \u2212 0.05 D",
   "evidence": "the region below the barrel forward of pose3 x 2470 is clean background. **The only hard statement available about the guard's forward reach**",
-  "conf": "0.70"
+  "conf": "0.70",
+  "falsifiable": true
  },
  {
   "id": "frame.trigger.insideGuard",
@@ -690,7 +776,8 @@
   "value": "the trigger mesh's AABB lies wholly inside the guard's",
   "check": "AABB containment",
   "evidence": "clay c1 (692\u2013700, 256\u2013272) inside the bow; also clay c3, c4",
-  "conf": "0.85"
+  "conf": "0.85",
+  "falsifiable": true
  },
  {
   "id": "grip.rakeFromBore",
@@ -699,7 +786,8 @@
   "value": "107 \u00b1 10\u00b0",
   "check": "angle between the bore's forward direction and the grip's downward axis (grip AABB top-face centre \u2212 bottom-face centre)",
   "evidence": "pose3 104.2\u00b0, clay B 105.4\u00b0, clay E 110.0\u00b0, joints pose3 \u2248106\u00b0; joints clay c1 130\u00b0 is the outlier. **All projected readings are lower bounds** \u2014 D13",
-  "conf": "0.60"
+  "conf": "0.60",
+  "falsifiable": true
  },
  {
   "id": "grip.length.overTubeOd",
@@ -708,7 +796,8 @@
   "value": "1.55 \u00b1 0.20",
   "check": "grip AABB extent along the grip axis \u00f7 D",
   "evidence": "pose3 62.9 px (= 1.70 at D 37); clay A 1.38 in its own frame. **Rescaled per D3**",
-  "conf": "0.55"
+  "conf": "0.55",
+  "falsifiable": true
  },
  {
   "id": "grip.depth.overTubeOd",
@@ -717,7 +806,8 @@
   "value": "0.84 \u00b1 0.18",
   "check": "grip cross-section at 50 % height, extent along the bore \u00f7 D",
   "evidence": "pose3 fist 55 px \u2212 10 finger \u2212 14 palm = 31 px. **Rescaled per D3**",
-  "conf": "0.40"
+  "conf": "0.40",
+  "falsifiable": true
  },
  {
   "id": "grip.width.overTubeOd",
@@ -726,7 +816,8 @@
   "value": "0.47 \u00b1 0.15 \u2014 **DECLARED**",
   "check": "same section, extent perpendicular to bore and grip axis \u00f7 D",
   "evidence": "**zero unoccluded pixels in nine views.** Floor 0.32 from the clay butt's short axis; the rest is a 1.6:1 depth:width assumption",
-  "conf": "0.25"
+  "conf": "0.25",
+  "falsifiable": true
  },
  {
   "id": "grip.circumference.overTubeOd",
@@ -735,7 +826,8 @@
   "value": "\u2264 2.75 (**upper bound only**)",
   "check": "convex-hull perimeter of the mid-height section \u00f7 D",
   "evidence": "2 \u00d7 the pose3 knuckle-to-tip finger wrap. The hand must close on it. **Rescaled per D3.** Under the brief's 0.838 mm/px the grip is 77 mm around \u2014 a hand pinches that, it does not grip it",
-  "conf": "0.60"
+  "conf": "0.60",
+  "falsifiable": true
  },
  {
   "id": "grip.butt.majorAxis.overTubeOd",
@@ -744,7 +836,8 @@
   "value": "1.15 +0.25 / \u22120.10",
   "check": "longest chord of the grip's bottom face \u00f7 D",
   "evidence": "clay A 39/34, its own frame \u2014 no rescale. Exceeds the depth, so the butt is flared or spurred",
-  "conf": "0.50"
+  "conf": "0.50",
+  "falsifiable": true
  },
  {
   "id": "grip.heelDrop.overTubeOd",
@@ -753,7 +846,8 @@
   "value": "2.19 \u00b1 0.20",
   "check": "perpendicular distance from the axis to the grip AABB's lowest point \u00f7 D",
   "evidence": "axis y 269.3 at x2440, butt bottom y 350 \u2192 80.6 px",
-  "conf": "0.60"
+  "conf": "0.60",
+  "falsifiable": true
  },
  {
   "id": "grip.root.flushWithFrame",
@@ -762,7 +856,9 @@
   "value": "gap \u2264 0.03 D, and the grip's axial footprint lies inside the frame's",
   "check": "abs(grip max-up \u2212 frame min-up) \u2264 0.03 D",
   "evidence": "pose3's frame underside is one unbroken dark line at y 288\u2013293 with no gap or step",
-  "conf": "0.80"
+  "conf": "0.80",
+  "falsifiable": false,
+  "notFalsifiableBecause": "the check implements only the gap clause, so its contradiction with grip.butt.behindFrameHeel is invisible"
  },
  {
   "id": "grip.butt.behindFrameHeel",
@@ -771,7 +867,8 @@
   "value": "butt rearmost is 0.05\u20130.35 D rearward of the frame's rearmost",
   "check": "project both AABBs on axis",
   "evidence": "pose3 frame heel 2415, butt rear 2406 \u2192 0.22 D",
-  "conf": "0.50"
+  "conf": "0.50",
+  "falsifiable": true
  },
  {
   "id": "grip.length.overHandBreadth",
@@ -780,7 +877,9 @@
   "value": "1.47 \u00b1 0.20",
   "check": "grip on-axis length \u00f7 hand-mesh four-finger breadth. **Scale-chain-free**",
   "evidence": "pose3 63 px / 43 px",
-  "conf": "0.55"
+  "conf": "0.55",
+  "falsifiable": false,
+  "notFalsifiableBecause": "needs a hand mesh that is not in the tree"
  },
  {
   "id": "grip.fingerCourse.count",
@@ -789,7 +888,9 @@
   "value": "4, exact",
   "check": "on-axis length \u00d7 0.65 \u2265 4 \u00d7 (D/4), and no transverse feature interrupts the front strap between 12 % and 77 % of grip height",
   "evidence": "pose3 stack occupies 8 %\u201375 % of the grip's run, unbroken",
-  "conf": "0.70"
+  "conf": "0.70",
+  "falsifiable": false,
+  "notFalsifiableBecause": "value is \"4, exact\"; the check never counts four courses"
  },
  {
   "id": "grip.butt.toeStud.count",
@@ -798,7 +899,9 @@
   "value": "1 \u00b1 1 (0, 1, 2 all pass)",
   "check": "count differently-materialled sub-meshes with centroid within 0.15 D of the butt's forward-lower corner",
   "evidence": "one 2\u00d73 px warm cluster at pose0 (168\u2013169, 293\u2013295) \u2014 the only warm pixels on the whole grip assembly. At 3\u20134 mm a pin, a screw and a chamfer highlight are the same thing",
-  "conf": "0.30"
+  "conf": "0.30",
+  "falsifiable": false,
+  "notFalsifiableBecause": "0, 1 and 2 all pass; nothing specified could produce 3"
  },
  {
   "id": "mat.paint.tube.ab",
@@ -807,7 +910,8 @@
   "value": "a\\* = \u22121.5, b\\* = \u22127.0, each \u00b1 1.5",
   "check": "[MAT] on the tube paint",
   "evidence": "CI a\\*[\u22122,\u22121] b\\*[\u22127,\u22127] in **three** poses, n = 559/570/405. The most reproducible number in the document",
-  "conf": "0.90"
+  "conf": "0.90",
+  "falsifiable": true
  },
  {
   "id": "mat.brass.twoTones",
@@ -816,7 +920,8 @@
   "value": "h(yellow) \u2212 h(aged) \u2265 8\u00b0",
   "check": "[MAT] difference",
   "evidence": "\u039416.5\u00b0 pose3, \u039412.7\u00b0 pose1; bootstrap CIs disjoint in both",
-  "conf": "0.85"
+  "conf": "0.85",
+  "falsifiable": true
  },
  {
   "id": "mat.brass.aged.hue",
@@ -825,7 +930,8 @@
   "value": "66.5 \u00b1 5\u00b0",
   "check": "[MAT] on collar / lattice / mid-band",
   "evidence": "68.2 / 64.6 (pose3), 68.6 / 65.0 (pose1)",
-  "conf": "0.80"
+  "conf": "0.80",
+  "falsifiable": true
  },
  {
   "id": "mat.brass.yellow.hue",
@@ -834,7 +940,8 @@
   "value": "79 \u00b1 6\u00b0",
   "check": "[MAT] on rail + rear hook",
   "evidence": "81.1 [79.0, 82.7] pose3 n=84; 77.7 [76.0, 79.1] pose1 n=204",
-  "conf": "0.75"
+  "conf": "0.75",
+  "falsifiable": true
  },
  {
   "id": "mat.brass.count",
@@ -843,7 +950,8 @@
   "value": "2",
   "check": "[MAT] count materials with h \u2208 [55\u00b0, 95\u00b0], C\\* > 15",
   "evidence": "as above",
-  "conf": "0.70"
+  "conf": "0.70",
+  "falsifiable": true
  },
  {
   "id": "mat.warmTube.notBrass",
@@ -852,7 +960,8 @@
   "value": "C\\*(warm tube) \u2264 C\\*(aged brass) \u2212 2.0",
   "check": "[MAT]",
   "evidence": "16.8 vs 20.2 (pose3), 16.8 vs 18.8 (pose1) \u2014 same hue family, lower chroma in both",
-  "conf": "0.75"
+  "conf": "0.75",
+  "falsifiable": true
  },
  {
   "id": "mat.warmTube.chromaRatio",
@@ -861,7 +970,8 @@
   "value": "1.31 \u00b1 0.15",
   "check": "[MAT] C\\*(yellow brass) \u00f7 C\\*(warm tube)",
   "evidence": "1.27 pose3, 1.36 pose1",
-  "conf": "0.70"
+  "conf": "0.70",
+  "falsifiable": true
  },
  {
   "id": "mat.warmTube.notWood",
@@ -870,7 +980,8 @@
   "value": "no grain texture; residual sd after removing cross-axis shading < that of the plain painted tube",
   "check": "[MAT]/[SIL]",
   "evidence": "warm 7.18 vs blue 9.19 \u2014 the warm zone is **smoother**, not grainier",
-  "conf": "0.65"
+  "conf": "0.65",
+  "falsifiable": true
  },
  {
   "id": "mat.paint.frame.greener",
@@ -879,7 +990,8 @@
   "value": "a\\*(frame) \u2264 a\\*(tube) \u2212 1.5",
   "check": "[MAT] difference",
   "evidence": "pose0 \u22124.0 [\u22124,\u22123] vs \u22121.0 [\u22122,\u22121], **same image, same light**",
-  "conf": "0.70"
+  "conf": "0.70",
+  "falsifiable": true
  },
  {
   "id": "mat.bore.interior.L",
@@ -888,7 +1000,8 @@
   "value": "L\\* 21.5 \u00b1 3",
   "check": "[MAT] innermost bore mesh",
   "evidence": "22.0 pose3 n=98, 21.6 pose1 n=165",
-  "conf": "0.80"
+  "conf": "0.80",
+  "falsifiable": true
  },
  {
   "id": "mat.bore.darkest",
@@ -897,7 +1010,8 @@
   "value": "L\\*(bore) \u2264 min(exterior L\\*) \u2212 8",
   "check": "[MAT] over all materials",
   "evidence": "exterior min 34.1 (rail); gap 12.5",
-  "conf": "0.80"
+  "conf": "0.80",
+  "falsifiable": true
  },
  {
   "id": "mat.noBareSteel",
@@ -906,7 +1020,8 @@
   "value": "no material with C\\* < 3 covers > 2 % of visible area",
   "check": "[SIL] + [MAT]",
   "evidence": "3.0 % / 3.3 %, unclustered across every part, median L\\* \u2248 the gun's median \u2014 the low-chroma tail of the blue paint, not a zone",
-  "conf": "0.70"
+  "conf": "0.70",
+  "falsifiable": true
  },
  {
   "id": "mat.mount.red.hue",
@@ -915,7 +1030,8 @@
   "value": "37 \u00b1 7\u00b0",
   "check": "[MAT] on the rail mount block",
   "evidence": "34.3 / 39.3 / 38.9 across three poses",
-  "conf": "0.70"
+  "conf": "0.70",
+  "falsifiable": true
  },
  {
   "id": "mat.accent.hues",
@@ -924,7 +1040,8 @@
   "value": "teal 185 \u00b1 6\u00b0, magenta 351 \u00b1 6\u00b0",
   "check": "[MAT] on the accent materials",
   "evidence": "184.3 / 184.9 / 186.2 and 349.2 / 353.0 / 351.3 \u2014 \u00b12\u00b0 cross-pose. **Fails the L-span rule irreducibly** (marks are 2\u20137 px); trust rests on cross-pose agreement, not span",
-  "conf": "0.80"
+  "conf": "0.80",
+  "falsifiable": true
  },
  {
   "id": "mat.accent.L_gap",
@@ -933,7 +1050,8 @@
   "value": "L\\*(teal) \u2212 L\\*(magenta) = +24 \u00b1 6",
   "check": "[MAT]",
   "evidence": "27.1 / 22.0 / 24.7",
-  "conf": "0.75"
+  "conf": "0.75",
+  "falsifiable": true
  },
  {
   "id": "mat.accent.outchroma",
@@ -942,7 +1060,8 @@
   "value": "C\\* of each accent \u2265 1.7 \u00d7 C\\* of every structural material",
   "check": "[MAT]",
   "evidence": "max structural 21.6; accents 1.76\u00d7 and 2.45\u00d7",
-  "conf": "0.75"
+  "conf": "0.75",
+  "falsifiable": true
  },
  {
   "id": "mat.grip.notWood",
@@ -951,7 +1070,8 @@
   "value": "grip material id == frame material id",
   "check": "compare ids",
   "evidence": "butt HSV matches the frame in two poses; not brass, not wood. **Contradicts the brief \u2014 D17**",
-  "conf": "0.55"
+  "conf": "0.55",
+  "falsifiable": true
  },
  {
   "id": "mat.count.total",
@@ -960,7 +1080,8 @@
   "value": "7 structural + 2 accent = 9 \u2014 **DECLARED**",
   "check": "count material slots",
   "evidence": "the material/variant boundary is a choice; the measured clusters are listed above",
-  "conf": "0.50"
+  "conf": "0.50",
+  "falsifiable": true
  },
  {
   "id": "area.warmToCool",
@@ -969,7 +1090,8 @@
   "value": "2.20 \u00b1 0.25 in a barrel-only view",
   "check": "[SIL] hue-family predicates on a rendered view",
   "evidence": "2.19 pose3, 2.22 pose1 (drops to 1.5 when the cool-painted frame is in view \u2014 which is itself the check that the frame is cool)",
-  "conf": "0.75"
+  "conf": "0.75",
+  "falsifiable": true
  },
  {
   "id": "area.brassShare",
@@ -978,7 +1100,9 @@
   "value": "0.48 \u00b1 0.05 of assigned visible area, pose3 camera",
   "check": "[SIL]",
   "evidence": "3839 / 8020 px",
-  "conf": "0.65"
+  "conf": "0.65",
+  "falsifiable": false,
+  "notFalsifiableBecause": "needs the pose3 camera"
  },
  {
   "id": "shading.ramp",
@@ -987,7 +1111,9 @@
   "value": "p5\u2192p95 L\\* of any single-material cylinder \u2265 30",
   "check": "[SIL] per-part percentiles under the reference key light",
   "evidence": "34.8 (blue) \u2026 51.8 (lattice). **Partly DECLARED** \u2014 conditional on reproducing that lighting",
-  "conf": "0.45"
+  "conf": "0.45",
+  "falsifiable": false,
+  "notFalsifiableBecause": "measures the light rig, not the object"
  },
  {
   "id": "graffiti.onMetal",
@@ -996,7 +1122,9 @@
   "value": "\u2265 25 % of graffiti area sits on brass parts",
   "check": "per-island host-mesh lookup",
   "evidence": "32 % (41 % including the knob); marks confirmed wholly on brass at (24.3, 35.6), (169.8, 42.8), (157.5, 66.5)",
-  "conf": "0.80"
+  "conf": "0.80",
+  "falsifiable": false,
+  "notFalsifiableBecause": "needs a per-island host-mesh lookup the tree does not encode"
  },
  {
   "id": "graffiti.coverage",
@@ -1005,7 +1133,8 @@
   "value": "0.019 \u00b1 0.008 of silhouette area",
   "check": "[SIL] accent mask \u00f7 silhouette",
   "evidence": "0.0249 / 0.0164 / 0.0171 / 0.0153 across four poses",
-  "conf": "0.75"
+  "conf": "0.75",
+  "falsifiable": true
  },
  {
   "id": "graffiti.count.perView",
@@ -1014,7 +1143,9 @@
   "value": "13 \u00b1 5 marks \u2265 3 px at 236\u00d7118",
   "check": "[SIL] connected components",
   "evidence": "16 / 10 / 12",
-  "conf": "0.70"
+  "conf": "0.70",
+  "falsifiable": false,
+  "notFalsifiableBecause": "needs the pose3 camera"
  },
  {
   "id": "graffiti.crossesSeam",
@@ -1023,7 +1154,9 @@
   "value": "\u2265 1 island spanning 2 meshes",
   "check": "per-island host-mesh count",
   "evidence": "2 found: magenta at (153.7, 67.9) spans tube paint + muzzle collar; teal at (53.6, 63.4) spans lattice + warm tube",
-  "conf": "0.70"
+  "conf": "0.70",
+  "falsifiable": false,
+  "notFalsifiableBecause": "needs a per-island host-mesh lookup the tree does not encode"
  },
  {
   "id": "graffiti.tealMagentaArea",
@@ -1032,7 +1165,8 @@
   "value": "1.8 \u00b1 0.5",
   "check": "[SIL] area ratio",
   "evidence": "1.94 / 1.81 / 1.54",
-  "conf": "0.65"
+  "conf": "0.65",
+  "falsifiable": true
  },
  {
   "id": "graffiti.orientationRandom",
@@ -1041,7 +1175,8 @@
   "value": "mean abs(mark axis \u2212 barrel axis) \u2208 [35\u00b0, 55\u00b0]",
   "check": "[SIL] PCA per island",
   "evidence": "46.0\u00b0 over 16 marks (uniform would be 45\u00b0) \u2014 **the marks ignore the form**",
-  "conf": "0.60"
+  "conf": "0.60",
+  "falsifiable": true
  },
  {
   "id": "graffiti.densityBias",
@@ -1050,7 +1185,8 @@
   "value": "2.5 \u00b1 1.0 (paint \u00f7 brass density)",
   "check": "[SIL] marked px per substrate px",
   "evidence": "4.34 % vs 1.74 % \u2014 biased toward paint, but a third of all graffiti sits on brass",
-  "conf": "0.55"
+  "conf": "0.55",
+  "falsifiable": true
  },
  {
   "id": "graffiti.sizeMaxOverMedian",
@@ -1059,7 +1195,8 @@
   "value": "1.9 \u00b1 0.6",
   "check": "[SIL] sqrt(4A/\u03c0) per island",
   "evidence": "2.33 / 1.64 / 1.72",
-  "conf": "0.50"
+  "conf": "0.50",
+  "falsifiable": true
  },
  {
   "id": "knob.magenta.count",
@@ -1068,6 +1205,7 @@
   "value": "1 \u00b1 1",
   "check": "count magenta regions \u2265 15 px that carry an interior specular highlight",
   "evidence": "pose3 (37,81)\u2013(42,85), 21 px, with its own specular rim; recurs in pose2 at (78,93). **A painted knob, not a splatter** \u2014 excluded from the counts above",
-  "conf": "0.50"
+  "conf": "0.50",
+  "falsifiable": true
  }
 ]
