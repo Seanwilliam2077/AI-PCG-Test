@@ -8,6 +8,9 @@
 
 ## 📖 在线阅读（推荐）
 
+在线版：<https://seanwilliam2077.github.io/AI-PCG-Test/docs/gate.html> ·
+<https://seanwilliam2077.github.io/AI-PCG-Test/docs/routes.html>
+
 | 页面 | 内容 |
 |---|---|
 | [`docs/gate.html`](docs/gate.html) | **闸门记录** — 36 次尝试逐条展开，分数走势图，八道 pass，49 个 agent 的编队 |
