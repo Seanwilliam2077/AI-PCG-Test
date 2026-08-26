@@ -12,6 +12,9 @@ their materials have different origins.
 | `jinx-i2t_yaw*.png` | the spec-driven character, **geometry only** | its textured renders bake albedo extracted from the reference, so only the material-stripped pass is published |
 | `characters-side-by-side.png` | the two builds at a common figure height | same rule, applied per column |
 | `face-painted-vs-sculpted.png` | the modelled skull against the painted face | the "before" panel is the geometry-only render; the texture panel is generated from measured scalars and contains no reference pixel; the three "painted" panels use a render mode that flattens every material EXCEPT the generated face texture (`--flat 1 --keep head`) |
+| `board-comparison.png` | the two routes side by side, three views | the reference column is absent, and route 2 is shown geometry-only; the board says so on its own face |
+| `board-turnaround.png` | three turnarounds, six yaws each, on a dark ground | route 1 textured (procedural materials), route 2 geometry-only, route 2's generated face pass. The artist's two turnarounds are in the local version only |
+| `board-painted-face.png` | the generated face map and the three views it produces | the de-lighting plate this is modelled on cannot ship in any form, because de-lighting is applied to the artist's pixels. Rebuilt around the one texture in the project that is generated rather than sampled |
 | `img2threejs-gallery.png` | a screenshot of the img2threejs gallery, showing the reconstruction that named the technique | a credited citation of the method's origin — see the attribution below |
 
 ## Not published, anywhere in this repository
@@ -23,7 +26,19 @@ their materials have different origins.
   ambient occlusion, twenty materials each — and the served copies of them.
 - Any render that displays those maps.
 
-That last row is where this rule nearly slipped. The first version of that figure used
+Each board exists in two versions. The `_full` ones under `out/boards/` carry the
+reference columns and the extracted textures and are **not** in this repository; the
+`_pub` ones published here are built by the same scripts (`tools/boards/build_*.py`)
+with those panels removed or replaced, and each states on its own face what is missing
+and why.
+
+Verified by pixels rather than by filename: every reference panel, every de-lit albedo
+and every route 2 textured render was template-matched into all three published boards
+across six scales. Peak normalised correlations were 0.51, 0.73 and 0.74 -- the residual
+is coincidental structure between renders of the same character at the same framing, not
+a source present in the image.
+
+That earlier row is where this rule nearly slipped. The first version of that figure used
 the ordinary textured renders, which carry the extracted hair and skin maps, and a
 reference head crop as its left column. Both were caught on review and the figure was
 rebuilt; the render harness gained a `--keep` flag so a single generated texture can be
