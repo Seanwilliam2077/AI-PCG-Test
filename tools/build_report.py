@@ -77,6 +77,25 @@ def esc(x) -> str:
     return html.escape(str(x if x is not None else ''))
 
 
+_CN = ('零', '一', '二', '三', '四', '五', '六', '七', '八', '九')
+
+
+def cn(n: int) -> str:
+    """A small integer in Chinese numerals, so prose counts can be derived too.
+
+    The headline said "thirty-six attempts, twelve accepted" as literal text while the
+    page claimed every figure came out of the artefacts. It went stale the moment the
+    thirty-seventh attempt landed, which is exactly the failure the claim was about.
+    """
+    if n < 10:
+        return _CN[n]
+    if n < 20:
+        return '十' + (_CN[n % 10] if n % 10 else '')
+    if n < 100:
+        return _CN[n // 10] + '十' + (_CN[n % 10] if n % 10 else '')
+    return str(n)
+
+
 def page(title: str, body: str, sources: list[str]) -> str:
     src = ' · '.join(f'<code>{esc(s)}</code>' for s in sources)
     return f"""<!doctype html>
@@ -91,6 +110,8 @@ def page(title: str, body: str, sources: list[str]) -> str:
 
 def timeline_svg(rows: list[dict]) -> str:
     """Score against attempt number. Accepted attempts move the line; the rest do not."""
+    n_rej = sum(1 for r in rows if r['result'].startswith('reject'))
+    n_rev = sum(1 for r in rows if 'visual' in r['result'])
     pts, score = [], None
     for r in rows:
         if r.get('scoreAfter') is not None and r['result'] == 'accepted':
@@ -130,7 +151,8 @@ def timeline_svg(rows: list[dict]) -> str:
             f'第 1 次尝试</text><text x="{W - PR}" y="{H - 8}" font-size="11" '
             f'fill="var(--faint)" text-anchor="end">第 {len(pts)} 次</text></svg>'
             f'<p class="note">实心绿点是被接受的改动，线随它移动；空心红圈是被否决的，'
-            f'标注里是它「本来会得到」的分数。二十次否决里有一次是数字通过、看图之后手动回退的。</p></div>')
+            f'标注里是它「本来会得到」的分数。{cn(n_rej)}次否决里有 {n_rev} 次是数字通过、'
+            f'看图之后手动回退的。</p></div>')
 
 
 def build_gate() -> None:
@@ -188,10 +210,10 @@ def build_gate() -> None:
         for f in fleets['fleets'])
 
     body = f"""
-<header><h1>闸门记录 · 三十六次尝试，接受十二次</h1>
+<header><h1>闸门记录 · {cn(len(rows))}次尝试，接受{cn(len(acc))}次</h1>
 <p class="lede">每一次对 spec 的改动都要过同一道闸门：应用 → 严格校验 → 重新生成 → 渲六个视角 →
 本地指标 → 一个不属于它自己的独立记分板 → 通过才留下。判据在看到任何结果之前就写死了。
-被否决的二十次比被接受的十二次更有信息量。</p>
+被否决的{cn(len(rej))}次比被接受的{cn(len(acc))}次更有信息量。</p>
 <div class="grid">{kpi_html}</div></header>
 
 <h2>分数怎么走的</h2>
