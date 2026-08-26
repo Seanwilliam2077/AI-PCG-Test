@@ -70,14 +70,14 @@
     "landmarkRmsPct": 4.76
    },
    "scoreboardAfterTwoRounds": {
-    "score": 38.68,
+    "score": 38.53,
     "terms": {
-     "shape": 0.7208,
-     "edge": 0.4157,
-     "chamfer": 0.4248,
-     "width": 0.1814,
-     "landmark": 0.0587,
-     "colour": 0.2065
+     "shape": 0.7197,
+     "edge": 0.4139,
+     "chamfer": 0.4234,
+     "width": 0.1801,
+     "landmark": 0.0556,
+     "colour": 0.206
     },
     "weights": {
      "shape": 0.3,
@@ -87,11 +87,11 @@
      "landmark": 0.15,
      "colour": 0.1
     },
-    "iou": 0.7249,
-    "widthRmsPct": 3.58,
-    "landmarkRmsPct": 4.53
+    "iou": 0.7238,
+    "widthRmsPct": 3.59,
+    "landmarkRmsPct": 4.62
    },
-   "components": 85,
+   "components": 79,
    "materials": 20,
    "bones": 19,
    "passes": 8,
@@ -111,7 +111,7 @@
     }
    ],
    "trianglesAtOptimizationPass": 128833,
-   "trianglesNow": 206550
+   "trianglesNow": 161170
   },
   {
    "id": "zapper-i2t",
@@ -122,9 +122,9 @@
   }
  ],
  "gate": {
-  "attempts": 36,
-  "accepted": 12,
-  "rejected": 20,
+  "attempts": 41,
+  "accepted": 13,
+  "rejected": 24,
   "failedToRun": 3,
   "revertedOnVisualReview": 1
  }

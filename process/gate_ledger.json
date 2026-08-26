@@ -760,5 +760,115 @@
   "before": null,
   "after": null,
   "note": null
+ },
+ {
+  "seq": 37,
+  "patch": "patch_painted_face",
+  "result": "rejected",
+  "scoreBefore": 38.7,
+  "scoreAfter": 38.6,
+  "delta": -0.1,
+  "triangles": 161917,
+  "before": {
+   "silhouetteIouMean": 0.701,
+   "widthBandRmsAll": 0.03102,
+   "landmarkRmsPct": 2.992,
+   "hullIou": 0.6259
+  },
+  "after": {
+   "silhouetteIouMean": 0.7005,
+   "widthBandRmsAll": 0.03106,
+   "landmarkRmsPct": 2.992,
+   "hullIou": 0.6259
+  },
+  "note": null
+ },
+ {
+  "seq": 38,
+  "patch": "patch_painted_face",
+  "result": "rejected",
+  "scoreBefore": 38.7,
+  "scoreAfter": 38.6,
+  "delta": -0.1,
+  "triangles": 161917,
+  "before": {
+   "silhouetteIouMean": 0.701,
+   "widthBandRmsAll": 0.03102,
+   "landmarkRmsPct": 2.992,
+   "hullIou": 0.6259
+  },
+  "after": {
+   "silhouetteIouMean": 0.7005,
+   "widthBandRmsAll": 0.03106,
+   "landmarkRmsPct": 2.992,
+   "hullIou": 0.6259
+  },
+  "note": null
+ },
+ {
+  "seq": 39,
+  "patch": "patch_painted_face",
+  "result": "rejected",
+  "scoreBefore": 38.7,
+  "scoreAfter": 38.5,
+  "delta": -0.2,
+  "triangles": 161917,
+  "before": {
+   "silhouetteIouMean": 0.701,
+   "widthBandRmsAll": 0.03102,
+   "landmarkRmsPct": 2.992,
+   "hullIou": 0.6259
+  },
+  "after": {
+   "silhouetteIouMean": 0.7001,
+   "widthBandRmsAll": 0.03109,
+   "landmarkRmsPct": 2.992,
+   "hullIou": 0.6259
+  },
+  "note": null
+ },
+ {
+  "seq": 40,
+  "patch": "patch_painted_face",
+  "result": "rejected",
+  "scoreBefore": 38.7,
+  "scoreAfter": 38.5,
+  "delta": -0.2,
+  "triangles": 161170,
+  "before": {
+   "silhouetteIouMean": 0.701,
+   "widthBandRmsAll": 0.03102,
+   "landmarkRmsPct": 2.992,
+   "hullIou": 0.6259
+  },
+  "after": {
+   "silhouetteIouMean": 0.7,
+   "widthBandRmsAll": 0.0311,
+   "landmarkRmsPct": 2.992,
+   "hullIou": 0.6259
+  },
+  "note": null
+ },
+ {
+  "seq": 41,
+  "patch": "patch_painted_face",
+  "result": "accepted",
+  "scoreBefore": 38.7,
+  "scoreAfter": 38.5,
+  "delta": -0.2,
+  "triangles": 161170,
+  "before": {
+   "silhouetteIouMean": 0.701,
+   "widthBandRmsAll": 0.03102,
+   "landmarkRmsPct": 2.992,
+   "hullIou": 0.6259
+  },
+  "after": {
+   "silhouetteIouMean": 0.7,
+   "widthBandRmsAll": 0.0311,
+   "landmarkRmsPct": 2.992,
+   "hullIou": 0.6259
+  },
+  "note": "Accepted with --keep against a -0.20 scoreboard, on the same reasoning as the albedo patch and with the same kind of evidence the scoreboard cannot carry. The technique is img2threejs's own: the showcase character's face is not geometry, it is a canvas texture of soft-edged ellipse blobs, and this build had modelled it -- 36 mm eye spheres, 50 mm brow boxes, a 45 mm mouth ellipsoid -- which at 50 px of head is three pixels an eye. face-landmark-placement scored 0.15 against a 0.80 critical threshold in all eight passes and a full round of geometry work moved it by nothing. Of the scoreboard's weight, 0.90 sits on silhouette-derived terms that cannot see a face at all; the 0.10 colour term penalises the head region for losing the SDF skull's noise. The geometry terms came back within noise, which is what the patch predicted, and triangles fell 206,550 -> 161,170. Two intermediate attempts are on the record inside the patch: v was placed as a height fraction when sphere UVs are polar-angle linear, so every feature landed 0.05-0.07 too high; and the nose was shrunk rather than painted, which looked like a fix but still covered the mouth completely."
  }
 ]

@@ -1,14 +1,14 @@
 {
- "renders": "out\\patch_rig_prune",
+ "renders": "out\\patch_painted_face",
  "silhouetteIou": {
   "0": 0.8364,
   "45": 0.6325,
-  "90": 0.667,
+  "90": 0.6639,
   "180": 0.8086,
-  "270": 0.5787,
+  "270": 0.5761,
   "315": 0.6826
  },
- "silhouetteIouMean": 0.701,
+ "silhouetteIouMean": 0.7,
  "widthRatio": {
   "0": {
    "max": 0.9549,
@@ -22,8 +22,8 @@
   },
   "90": {
    "max": 0.9488,
-   "bandMean": 0.9738,
-   "bandRms": 0.02027
+   "bandMean": 0.9692,
+   "bandRms": 0.02047
   },
   "180": {
    "max": 0.9222,
@@ -32,8 +32,8 @@
   },
   "270": {
    "max": 0.7192,
-   "bandMean": 0.7809,
-   "bandRms": 0.05665
+   "bandMean": 0.7772,
+   "bandRms": 0.05699
   },
   "315": {
    "max": 0.9107,
@@ -41,8 +41,8 @@
    "bandRms": 0.04028
   }
  },
- "widthBandMeanAll": 0.9795,
- "widthBandRmsAll": 0.03102,
+ "widthBandMeanAll": 0.9781,
+ "widthBandRmsAll": 0.0311,
  "landmarkDelta": {
   "0": {
    "crown": 0.0,
@@ -114,10 +114,10 @@
  "landmarkRmsPct": 2.992,
  "landmarksScored": 54,
  "lightness": {
-  "mean": 37.121,
+  "mean": 37.122,
   "p10": 13.268,
-  "p90": 73.137,
-  "spread": 5.719
+  "p90": 73.268,
+  "spread": 5.916
  },
  "hull": {
   "iou": 0.6259,
@@ -125,14 +125,14 @@
   "referenceUnfilled": 0.211,
   "volumeRatio": 1.0497
  },
- "tag": "patch_rig_prune",
+ "tag": "patch_painted_face",
  "stats": {
-  "triangles": 206550,
-  "drawCalls": 86,
+  "triangles": 161170,
+  "drawCalls": 80,
   "bboxY": [
    -0.002,
    1.719
   ]
  },
- "scoreboard": 38.7
+ "scoreboard": 38.5
 }

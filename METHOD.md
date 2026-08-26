@@ -236,3 +236,40 @@ The honest reading is that these are not competing at the same thing. One is a l
 The other is a program that produces a likeness, and can be inspected, measured, edited
 and animated — which is the argument Nova3D makes, and the reason the pistol was built
 the same way.
+
+## 11. Read what the tool's own reference implementation does
+
+The hardest defect in the character build resisted eight passes and a full round of
+geometry work: `face-landmark-placement` scored 0.15 against a 0.80 critical threshold
+and would not move. Eyes, brows and mouth were each modelled as their own mesh, placed
+by measurement, and none of it read.
+
+The answer was in the pipeline's own showcase. `createGirlCharacterModel.ts` builds its
+head as a contoured implicit surface and its **face as a canvas texture** — soft-edged
+ellipse blobs for the oval, brows, eyes with sclera/iris/pupil/lid layers, a lit nose
+bridge with nostrils, split upper and lower lips. No facial geometry at all.
+
+The reason is scale, and it is arithmetic rather than taste. In a 500 x 900 render of a
+1.72 m figure the whole head is about 50 px. An eye is three pixels. No amount of
+correctly placing a three-pixel sphere makes an eye legible; a painted one is.
+
+The same file contradicts two other things this project had been doing. Its body is
+**lofted from cross-sections** — rings of points chained by centroid proximity and
+subdivided with centripetal Catmull-Rom to a 2 mm target edge — where this build stacks
+tapered cylinders between joints, which is most of why it reads as a mannequin. And its
+header states a rule this project had been breaking for two full iterations:
+
+> DIMENSIONS ARE FROZEN. Proportions were accepted; nothing may be resized or moved.
+> Detail work adds geometry on top of existing forms.
+
+Two rounds of width and landmark patches had been doing exactly the opposite: resizing
+and moving parts to chase metric terms, for a combined gain smaller than the single
+change of painting the face.
+
+**A reference implementation is evidence about the tool, not decoration.** It is the one
+place where the pipeline's authors show what the fields are *for*, and reading it is
+cheaper than nine rounds of inferring it from a schema.
+
+---
+
+## What this buys, and what it does not

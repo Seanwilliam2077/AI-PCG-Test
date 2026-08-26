@@ -841,5 +841,131 @@
   "patch": "patch_hand_scale",
   "result": "patch-error",
   "detail": "Traceback (most recent call last):\n  File \"C:\\AI Pipeline Test\\jinx-i2t\\analysis\\patch_hand_scale.py\", line 89, in <module>\n    raise SystemExit(main())\n  File \"C:\\AI Pipeline Test\\jinx-i2t\\analysis\\patch_hand_scale.py\", line 53, in main\n    dim = c['dimensions']\nKeyError: 'dimensions'"
+ },
+ {
+  "patch": "patch_painted_face",
+  "result": "rejected",
+  "before": {
+   "silhouetteIouMean": 0.701,
+   "widthBandRmsAll": 0.03102,
+   "landmarkRmsPct": 2.992,
+   "hullIou": 0.6259
+  },
+  "after": {
+   "silhouetteIouMean": 0.7005,
+   "widthBandRmsAll": 0.03106,
+   "landmarkRmsPct": 2.992,
+   "hullIou": 0.6259
+  },
+  "scoreboard": [
+   38.7,
+   38.6
+  ],
+  "triangles": 161917,
+  "bboxY": [
+   -0.002,
+   1.719
+  ]
+ },
+ {
+  "patch": "patch_painted_face",
+  "result": "rejected",
+  "before": {
+   "silhouetteIouMean": 0.701,
+   "widthBandRmsAll": 0.03102,
+   "landmarkRmsPct": 2.992,
+   "hullIou": 0.6259
+  },
+  "after": {
+   "silhouetteIouMean": 0.7005,
+   "widthBandRmsAll": 0.03106,
+   "landmarkRmsPct": 2.992,
+   "hullIou": 0.6259
+  },
+  "scoreboard": [
+   38.7,
+   38.6
+  ],
+  "triangles": 161917,
+  "bboxY": [
+   -0.002,
+   1.719
+  ]
+ },
+ {
+  "patch": "patch_painted_face",
+  "result": "rejected",
+  "before": {
+   "silhouetteIouMean": 0.701,
+   "widthBandRmsAll": 0.03102,
+   "landmarkRmsPct": 2.992,
+   "hullIou": 0.6259
+  },
+  "after": {
+   "silhouetteIouMean": 0.7001,
+   "widthBandRmsAll": 0.03109,
+   "landmarkRmsPct": 2.992,
+   "hullIou": 0.6259
+  },
+  "scoreboard": [
+   38.7,
+   38.5
+  ],
+  "triangles": 161917,
+  "bboxY": [
+   -0.002,
+   1.719
+  ]
+ },
+ {
+  "patch": "patch_painted_face",
+  "result": "rejected",
+  "before": {
+   "silhouetteIouMean": 0.701,
+   "widthBandRmsAll": 0.03102,
+   "landmarkRmsPct": 2.992,
+   "hullIou": 0.6259
+  },
+  "after": {
+   "silhouetteIouMean": 0.7,
+   "widthBandRmsAll": 0.0311,
+   "landmarkRmsPct": 2.992,
+   "hullIou": 0.6259
+  },
+  "scoreboard": [
+   38.7,
+   38.5
+  ],
+  "triangles": 161170,
+  "bboxY": [
+   -0.002,
+   1.719
+  ]
+ },
+ {
+  "patch": "patch_painted_face",
+  "result": "accepted",
+  "before": {
+   "silhouetteIouMean": 0.701,
+   "widthBandRmsAll": 0.03102,
+   "landmarkRmsPct": 2.992,
+   "hullIou": 0.6259
+  },
+  "after": {
+   "silhouetteIouMean": 0.7,
+   "widthBandRmsAll": 0.0311,
+   "landmarkRmsPct": 2.992,
+   "hullIou": 0.6259
+  },
+  "scoreboard": [
+   38.7,
+   38.5
+  ],
+  "triangles": 161170,
+  "bboxY": [
+   -0.002,
+   1.719
+  ],
+  "note": "Accepted with --keep against a -0.20 scoreboard, on the same reasoning as the albedo patch and with the same kind of evidence the scoreboard cannot carry. The technique is img2threejs's own: the showcase character's face is not geometry, it is a canvas texture of soft-edged ellipse blobs, and this build had modelled it -- 36 mm eye spheres, 50 mm brow boxes, a 45 mm mouth ellipsoid -- which at 50 px of head is three pixels an eye. face-landmark-placement scored 0.15 against a 0.80 critical threshold in all eight passes and a full round of geometry work moved it by nothing. Of the scoreboard's weight, 0.90 sits on silhouette-derived terms that cannot see a face at all; the 0.10 colour term penalises the head region for losing the SDF skull's noise. The geometry terms came back within noise, which is what the patch predicted, and triangles fell 206,550 -> 161,170. Two intermediate attempts are on the record inside the patch: v was placed as a height fraction when sphere UVs are polar-angle linear, so every feature landed 0.05-0.07 too high; and the nose was shrunk rather than painted, which looked like a fix but still covered the mouth completely."
  }
 ]

@@ -49,7 +49,7 @@ const browser = await chromium.launch({
 const page = await browser.newPage({ viewport: { width: W + 40, height: H + 40 } });
 page.on('pageerror', (e) => console.error('[page]', String(e).slice(0, 300)));
 
-const extraQuery = ['exp', 'key', 'amb', 'env', 'flat']
+const extraQuery = ['exp', 'key', 'amb', 'env', 'flat', 'keep']
   .filter((k) => process.argv.includes(`--${k}`))
   .map((k) => `&${k}=${process.argv[process.argv.indexOf(`--${k}`) + 1]}`).join('');
 const url = `http://127.0.0.1:${port}/?w=${W}&h=${H}&frame=${frame}&wire=${wire}&bg=${bg}&yaw=${yaws[0]}${extraQuery}`;

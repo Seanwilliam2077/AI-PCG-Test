@@ -5362,7 +5362,7 @@
    "importance": 1.0,
    "confidence": 0.8,
    "primitive": "ellipsoid",
-   "topologyClass": "implicit",
+   "topologyClass": "assembled-solid",
    "topologyRationale": "The head is a continuous sculpted form, not an assembled primitive: the reference's face front is a near-vertical plane from brow to chin (inside a -20..+7 mm band around the glabella) with a mandible, chin and submental plane, none of which an ellipsoid can express. Emitted through polygonizeSdf.",
    "geometryDescriptor": {
     "topologyIntent": "sculpted skull: cranium, brow, cheekbones, jaw, chin, throat",
@@ -5372,372 +5372,8 @@
      "segments": 1
     },
     "deformationStack": [],
-    "uvStrategy": "none; implicit surface emits position and index only",
-    "normalStrategy": "smooth vertex normals averaged over welded voxel corners",
-    "sdf": {
-     "primitives": [
-      {
-       "id": "cranium",
-       "type": "ellipsoid",
-       "center": [
-        0.0,
-        0.113811,
-        0.07013
-       ],
-       "radii": [
-        0.431818,
-        0.318414,
-        0.471429
-       ]
-      },
-      {
-       "id": "occiput",
-       "type": "ellipsoid",
-       "center": [
-        0.0,
-        -0.092072,
-        -0.064935
-       ],
-       "radii": [
-        0.373377,
-        0.204604,
-        0.292208
-       ]
-      },
-      {
-       "id": "temporal-l",
-       "type": "ellipsoid",
-       "center": [
-        0.214286,
-        -0.040921,
-        0.019481
-       ],
-       "radii": [
-        0.217532,
-        0.199488,
-        0.337662
-       ]
-      },
-      {
-       "id": "temporal-r",
-       "type": "ellipsoid",
-       "center": [
-        -0.214286,
-        -0.040921,
-        0.019481
-       ],
-       "radii": [
-        0.217532,
-        0.199488,
-        0.337662
-       ]
-      },
-      {
-       "id": "browridge",
-       "type": "ellipsoid",
-       "center": [
-        0.0,
-        0.071611,
-        0.214286
-       ],
-       "radii": [
-        0.386364,
-        0.063939,
-        0.324675
-       ]
-      },
-      {
-       "id": "zygo-l",
-       "type": "ellipsoid",
-       "center": [
-        0.211039,
-        -0.066496,
-        0.155844
-       ],
-       "radii": [
-        0.217532,
-        0.132992,
-        0.357143
-       ]
-      },
-      {
-       "id": "zygo-r",
-       "type": "ellipsoid",
-       "center": [
-        -0.211039,
-        -0.066496,
-        0.155844
-       ],
-       "radii": [
-        0.217532,
-        0.132992,
-        0.357143
-       ]
-      },
-      {
-       "id": "maxilla",
-       "type": "ellipsoid",
-       "center": [
-        0.0,
-        -0.255754,
-        0.149351
-       ],
-       "radii": [
-        0.327922,
-        0.122762,
-        0.340909
-       ]
-      },
-      {
-       "id": "nasalroot",
-       "type": "ellipsoid",
-       "center": [
-        0.0,
-        -0.102302,
-        0.331169
-       ],
-       "radii": [
-        0.068182,
-        0.132992,
-        0.204545
-       ]
-      },
-      {
-       "id": "mandible",
-       "type": "ellipsoid",
-       "center": [
-        0.0,
-        -0.373402,
-        0.123377
-       ],
-       "radii": [
-        0.292208,
-        0.107417,
-        0.344156
-       ]
-      },
-      {
-       "id": "chin",
-       "type": "ellipsoid",
-       "center": [
-        0.0,
-        -0.414322,
-        0.230519
-       ],
-       "radii": [
-        0.162338,
-        0.084399,
-        0.25974
-       ]
-      },
-      {
-       "id": "ramus-l",
-       "type": "ellipsoid",
-       "center": [
-        0.305195,
-        -0.245524,
-        -0.038961
-       ],
-       "radii": [
-        0.107143,
-        0.168798,
-        0.185065
-       ]
-      },
-      {
-       "id": "ramus-r",
-       "type": "ellipsoid",
-       "center": [
-        -0.305195,
-        -0.245524,
-        -0.038961
-       ],
-       "radii": [
-        0.107143,
-        0.168798,
-        0.185065
-       ]
-      },
-      {
-       "id": "socket-l",
-       "type": "ellipsoid",
-       "center": [
-        0.219481,
-        -0.048082,
-        0.628571
-       ],
-       "radii": [
-        0.136364,
-        0.071611,
-        0.183117
-       ]
-      },
-      {
-       "id": "socket-r",
-       "type": "ellipsoid",
-       "center": [
-        -0.219481,
-        -0.048082,
-        0.628571
-       ],
-       "radii": [
-        0.136364,
-        0.071611,
-        0.183117
-       ]
-      },
-      {
-       "id": "mentum",
-       "type": "box",
-       "center": [
-        0.0,
-        -0.476726,
-        0.275974
-       ],
-       "size": [
-        0.272727,
-        0.057289,
-        0.292208
-       ]
-      },
-      {
-       "id": "throat",
-       "type": "capsule",
-       "center": [
-        0.0,
-        -0.358056,
-        0.0
-       ],
-       "radius": 0.304545,
-       "height": 0.388747
-      }
-     ],
-     "operations": [
-      {
-       "id": "k1",
-       "type": "smooth-union",
-       "left": "cranium",
-       "right": "occiput",
-       "radius": 0.038961
-      },
-      {
-       "id": "k2",
-       "type": "smooth-union",
-       "left": "k1",
-       "right": "temporal-l",
-       "radius": 0.032468
-      },
-      {
-       "id": "k3",
-       "type": "smooth-union",
-       "left": "k2",
-       "right": "temporal-r",
-       "radius": 0.032468
-      },
-      {
-       "id": "k4",
-       "type": "smooth-union",
-       "left": "k3",
-       "right": "browridge",
-       "radius": 0.025974
-      },
-      {
-       "id": "k5",
-       "type": "smooth-union",
-       "left": "k4",
-       "right": "zygo-l",
-       "radius": 0.025974
-      },
-      {
-       "id": "k6",
-       "type": "smooth-union",
-       "left": "k5",
-       "right": "zygo-r",
-       "radius": 0.025974
-      },
-      {
-       "id": "k7",
-       "type": "smooth-union",
-       "left": "k6",
-       "right": "maxilla",
-       "radius": 0.025974
-      },
-      {
-       "id": "k8",
-       "type": "smooth-union",
-       "left": "k7",
-       "right": "nasalroot",
-       "radius": 0.019481
-      },
-      {
-       "id": "k9",
-       "type": "smooth-union",
-       "left": "k8",
-       "right": "mandible",
-       "radius": 0.025974
-      },
-      {
-       "id": "k10",
-       "type": "smooth-union",
-       "left": "k9",
-       "right": "chin",
-       "radius": 0.019481
-      },
-      {
-       "id": "k11",
-       "type": "smooth-union",
-       "left": "k10",
-       "right": "mentum",
-       "radius": 0.019481
-      },
-      {
-       "id": "k12",
-       "type": "smooth-union",
-       "left": "k11",
-       "right": "ramus-l",
-       "radius": 0.025974
-      },
-      {
-       "id": "k13",
-       "type": "smooth-union",
-       "left": "k12",
-       "right": "ramus-r",
-       "radius": 0.025974
-      },
-      {
-       "id": "k14",
-       "type": "smooth-union",
-       "left": "k13",
-       "right": "throat",
-       "radius": 0.038961
-      },
-      {
-       "id": "orbit-l",
-       "type": "subtract",
-       "left": "k14",
-       "right": "socket-l"
-      },
-      {
-       "id": "skull",
-       "type": "subtract",
-       "left": "orbit-l",
-       "right": "socket-r"
-      }
-     ],
-     "bounds": {
-      "min": [
-       -0.5,
-       -0.549872,
-       -0.428571
-      ],
-      "max": [
-       0.5,
-       0.450128,
-       0.571429
-      ]
-     },
-     "resolution": 64
-    }
+    "uvStrategy": "spherical, from the ellipsoid primitive",
+    "normalStrategy": "smooth vertex normals averaged over welded voxel corners"
    },
    "parent": "neck",
    "attachment": null,
@@ -5846,9 +5482,9 @@
      }
     ]
    },
-   "material": "skin",
+   "material": "face",
    "materialLayers": [
-    "skin"
+    "face"
    ],
    "deformations": [],
    "joints": [],
@@ -5890,7 +5526,8 @@
     "materialClassConfidence": 0.85,
     "evidenceRef": "analysis/image-analysis.md Layer 5; medians sampled off body_2.png then de-lit"
    },
-   "measurementSource": "analysis/_hf recon (head_1 front + head_2 profile, anchored to body_2)"
+   "measurementSource": "analysis/_hf recon (head_1 front + head_2 profile, anchored to body_2)",
+   "notes": "Primitive rather than implicit, because polygonizeSdf emits no UVs and the face is painted into the albedo."
   },
   {
    "id": "hair",
@@ -6231,266 +5868,6 @@
    "notes": "SDF field in hair-local metres, resolution 64 over 0.234 x 0.304 x 0.232 m = 3.7/4.8/3.6 mm voxels. Fitted to the measured envelope: front-view residual RMS 4.1 mm over 9 heights, profile 3.4 mm over the hair-driven z targets, top 1.721 against the measured 1.719. SDF output carries no UVs, so the hair material samples texel (0,0) of pbr/crops/hair.png = rgb(48,90,132), which is within 10 of the crop mean and of baseColor #274E69 -- checked, not assumed."
   },
   {
-   "id": "brow-l",
-   "name": "Eyebrow L",
-   "level": "micro",
-   "role": "detail",
-   "importance": 0.4,
-   "confidence": 0.8,
-   "primitive": "box",
-   "topologyClass": "assembled-solid",
-   "topologyRationale": "Eyebrow L is a discrete primitive body part assembled onto the humanoid rig, not a continuous sculpt or shell.",
-   "geometryDescriptor": {
-    "topologyIntent": "stylized character part",
-    "edgeTreatment": {
-     "type": "none",
-     "bevelRadius": 0.0,
-     "segments": 1
-    },
-    "deformationStack": [],
-    "uvStrategy": "generated procedural coordinates",
-    "normalStrategy": "smooth vertex normals",
-    "decimate": {
-     "targetRatio": 0.28,
-     "reason": "largest dimension 52 mm; density tracks screen area"
-    }
-   },
-   "parent": "head",
-   "attachment": null,
-   "dimensions": {
-    "width": 0.05,
-    "height": 0.0079,
-    "depth": 0.006,
-    "units": "metres",
-    "confidence": 0.85
-   },
-   "transform": {
-    "position": [
-     0.03335,
-     0.01693,
-     0.07
-    ],
-    "rotation": [
-     0.0,
-     0.64,
-     0.0
-    ]
-   },
-   "actionProfile": {
-    "animationRole": "static",
-    "pivot": {
-     "mode": "center",
-     "localPosition": [
-      0,
-      0,
-      0
-     ],
-     "axis": [
-      0,
-      1,
-      0
-     ],
-     "confidence": 0.7
-    },
-    "transformChannels": {
-     "translate": true,
-     "rotate": true,
-     "scale": true,
-     "bend": false,
-     "twist": false,
-     "detach": false,
-     "visibility": true,
-     "materialState": false
-    },
-    "collider": {
-     "type": "box",
-     "offset": [
-      0,
-      0,
-      0
-     ],
-     "scale": [
-      1,
-      1,
-      1
-     ],
-     "isTrigger": false,
-     "notes": "box proxy"
-    },
-    "constraints": [],
-    "destruction": {
-     "breakable": false,
-     "fractureGroup": "brow-l",
-     "seamRefs": [],
-     "detachableFragments": [],
-     "breakImpulse": 0.0,
-     "debrisMaterial": "hair"
-    }
-   },
-   "material": "brow",
-   "materialLayers": [
-    "brow"
-   ],
-   "deformations": [],
-   "joints": [],
-   "seams": [],
-   "localFeatures": [],
-   "surfaceDetail": {
-    "macroRoughness": 0.0,
-    "microRoughness": 0.0,
-    "bumpAmplitude": 0.0,
-    "normalPattern": "",
-    "displacementPattern": "",
-    "occlusionPattern": "",
-    "edgeWearPattern": "",
-    "notes": ""
-   },
-   "evidenceRefs": [
-    "body_2",
-    "clay_2"
-   ],
-   "details": [],
-   "fidelityTier": "blockout",
-   "colorMaterialRecipe": {
-    "dominantAlbedo": "rgba(212, 189, 180, 1.0)",
-    "secondaryAlbedo": "rgba(165, 147, 140, 1.0)",
-    "materialClass": "skin",
-    "materialClassConfidence": 0.85,
-    "evidenceRef": "analysis/image-analysis.md Layer 5; medians sampled off body_2.png then de-lit"
-   },
-   "measurementSource": "analysis/_hf recon (head_1 front + head_2 profile, anchored to body_2)"
-  },
-  {
-   "id": "brow-r",
-   "name": "Eyebrow R",
-   "level": "micro",
-   "role": "detail",
-   "importance": 0.4,
-   "confidence": 0.8,
-   "primitive": "box",
-   "topologyClass": "assembled-solid",
-   "topologyRationale": "Eyebrow R is a discrete primitive body part assembled onto the humanoid rig, not a continuous sculpt or shell.",
-   "geometryDescriptor": {
-    "topologyIntent": "stylized character part",
-    "edgeTreatment": {
-     "type": "none",
-     "bevelRadius": 0.0,
-     "segments": 1
-    },
-    "deformationStack": [],
-    "uvStrategy": "generated procedural coordinates",
-    "normalStrategy": "smooth vertex normals",
-    "decimate": {
-     "targetRatio": 0.28,
-     "reason": "largest dimension 52 mm; density tracks screen area"
-    }
-   },
-   "parent": "head",
-   "attachment": null,
-   "dimensions": {
-    "width": 0.05,
-    "height": 0.0079,
-    "depth": 0.006,
-    "units": "metres",
-    "confidence": 0.85
-   },
-   "transform": {
-    "position": [
-     -0.03335,
-     0.01693,
-     0.07
-    ],
-    "rotation": [
-     0.0,
-     -0.64,
-     0.0
-    ]
-   },
-   "actionProfile": {
-    "animationRole": "static",
-    "pivot": {
-     "mode": "center",
-     "localPosition": [
-      0,
-      0,
-      0
-     ],
-     "axis": [
-      0,
-      1,
-      0
-     ],
-     "confidence": 0.7
-    },
-    "transformChannels": {
-     "translate": true,
-     "rotate": true,
-     "scale": true,
-     "bend": false,
-     "twist": false,
-     "detach": false,
-     "visibility": true,
-     "materialState": false
-    },
-    "collider": {
-     "type": "box",
-     "offset": [
-      0,
-      0,
-      0
-     ],
-     "scale": [
-      1,
-      1,
-      1
-     ],
-     "isTrigger": false,
-     "notes": "box proxy"
-    },
-    "constraints": [],
-    "destruction": {
-     "breakable": false,
-     "fractureGroup": "brow-r",
-     "seamRefs": [],
-     "detachableFragments": [],
-     "breakImpulse": 0.0,
-     "debrisMaterial": "hair"
-    }
-   },
-   "material": "brow",
-   "materialLayers": [
-    "brow"
-   ],
-   "deformations": [],
-   "joints": [],
-   "seams": [],
-   "localFeatures": [],
-   "surfaceDetail": {
-    "macroRoughness": 0.0,
-    "microRoughness": 0.0,
-    "bumpAmplitude": 0.0,
-    "normalPattern": "",
-    "displacementPattern": "",
-    "occlusionPattern": "",
-    "edgeWearPattern": "",
-    "notes": ""
-   },
-   "evidenceRefs": [
-    "body_2",
-    "clay_2"
-   ],
-   "details": [],
-   "fidelityTier": "blockout",
-   "colorMaterialRecipe": {
-    "dominantAlbedo": "rgba(212, 189, 180, 1.0)",
-    "secondaryAlbedo": "rgba(165, 147, 140, 1.0)",
-    "materialClass": "skin",
-    "materialClassConfidence": 0.85,
-    "evidenceRef": "analysis/image-analysis.md Layer 5; medians sampled off body_2.png then de-lit"
-   },
-   "measurementSource": "analysis/_hf recon (head_1 front + head_2 profile, anchored to body_2)"
-  },
-  {
    "id": "ear-l",
    "name": "Ear L",
    "level": "micro",
@@ -6729,518 +6106,6 @@
    "localFeatures": [
     "outer helix reads as a flattened shell against the skull, not a disc"
    ],
-   "surfaceDetail": {
-    "macroRoughness": 0.0,
-    "microRoughness": 0.0,
-    "bumpAmplitude": 0.0,
-    "normalPattern": "",
-    "displacementPattern": "",
-    "occlusionPattern": "",
-    "edgeWearPattern": "",
-    "notes": ""
-   },
-   "evidenceRefs": [
-    "body_2",
-    "clay_2"
-   ],
-   "details": [],
-   "fidelityTier": "blockout",
-   "colorMaterialRecipe": {
-    "dominantAlbedo": "rgba(212, 189, 180, 1.0)",
-    "secondaryAlbedo": "rgba(165, 147, 140, 1.0)",
-    "materialClass": "skin",
-    "materialClassConfidence": 0.85,
-    "evidenceRef": "analysis/image-analysis.md Layer 5; medians sampled off body_2.png then de-lit"
-   },
-   "measurementSource": "analysis/_hf recon (head_1 front + head_2 profile, anchored to body_2)"
-  },
-  {
-   "id": "nose",
-   "name": "Nose",
-   "level": "micro",
-   "role": "detail",
-   "importance": 0.4,
-   "confidence": 0.8,
-   "primitive": "ellipsoid",
-   "topologyClass": "assembled-solid",
-   "topologyRationale": "Nose is a discrete primitive body part assembled onto the humanoid rig, not a continuous sculpt or shell.",
-   "geometryDescriptor": {
-    "topologyIntent": "stylized character part",
-    "edgeTreatment": {
-     "type": "none",
-     "bevelRadius": 0.0,
-     "segments": 1
-    },
-    "deformationStack": [],
-    "uvStrategy": "generated procedural coordinates",
-    "normalStrategy": "smooth vertex normals",
-    "decimate": {
-     "targetRatio": 0.15,
-     "reason": "largest dimension 46 mm; density tracks screen area"
-    }
-   },
-   "parent": "head",
-   "attachment": null,
-   "dimensions": {
-    "width": 0.0317,
-    "height": 0.0528,
-    "depth": 0.033,
-    "units": "metres",
-    "confidence": 0.85
-   },
-   "transform": {
-    "position": [
-     0.0,
-     -0.03449,
-     0.07853
-    ],
-    "rotation": [
-     -0.6691,
-     0.0,
-     0.0
-    ]
-   },
-   "actionProfile": {
-    "animationRole": "static",
-    "pivot": {
-     "mode": "center",
-     "localPosition": [
-      0,
-      0,
-      0
-     ],
-     "axis": [
-      0,
-      1,
-      0
-     ],
-     "confidence": 0.7
-    },
-    "transformChannels": {
-     "translate": true,
-     "rotate": true,
-     "scale": true,
-     "bend": false,
-     "twist": false,
-     "detach": false,
-     "visibility": true,
-     "materialState": false
-    },
-    "collider": {
-     "type": "box",
-     "offset": [
-      0,
-      0,
-      0
-     ],
-     "scale": [
-      1,
-      1,
-      1
-     ],
-     "isTrigger": false,
-     "notes": "box proxy"
-    },
-    "constraints": [],
-    "destruction": {
-     "breakable": false,
-     "fractureGroup": "nose",
-     "seamRefs": [],
-     "detachableFragments": [],
-     "breakImpulse": 0.0,
-     "debrisMaterial": "skin"
-    }
-   },
-   "material": "skin",
-   "materialLayers": [
-    "skin"
-   ],
-   "deformations": [],
-   "joints": [],
-   "seams": [],
-   "localFeatures": [],
-   "surfaceDetail": {
-    "macroRoughness": 0.0,
-    "microRoughness": 0.0,
-    "bumpAmplitude": 0.0,
-    "normalPattern": "",
-    "displacementPattern": "",
-    "occlusionPattern": "",
-    "edgeWearPattern": "",
-    "notes": ""
-   },
-   "evidenceRefs": [
-    "body_2",
-    "clay_2"
-   ],
-   "details": [],
-   "fidelityTier": "blockout",
-   "colorMaterialRecipe": {
-    "dominantAlbedo": "rgba(212, 189, 180, 1.0)",
-    "secondaryAlbedo": "rgba(165, 147, 140, 1.0)",
-    "materialClass": "skin",
-    "materialClassConfidence": 0.85,
-    "evidenceRef": "analysis/image-analysis.md Layer 5; medians sampled off body_2.png then de-lit"
-   },
-   "measurementSource": "analysis/_hf recon (head_1 front + head_2 profile, anchored to body_2)"
-  },
-  {
-   "id": "mouth",
-   "name": "Mouth",
-   "level": "micro",
-   "role": "detail",
-   "importance": 0.4,
-   "confidence": 0.8,
-   "primitive": "ellipsoid",
-   "topologyClass": "assembled-solid",
-   "topologyRationale": "Mouth is a discrete primitive body part assembled onto the humanoid rig, not a continuous sculpt or shell.",
-   "geometryDescriptor": {
-    "topologyIntent": "stylized character part",
-    "edgeTreatment": {
-     "type": "none",
-     "bevelRadius": 0.0,
-     "segments": 1
-    },
-    "deformationStack": [],
-    "uvStrategy": "generated procedural coordinates",
-    "normalStrategy": "smooth vertex normals",
-    "decimate": {
-     "targetRatio": 0.15,
-     "reason": "largest dimension 43 mm; density tracks screen area"
-    }
-   },
-   "parent": "head",
-   "attachment": null,
-   "dimensions": {
-    "width": 0.0453,
-    "height": 0.0153,
-    "depth": 0.048,
-    "units": "metres",
-    "confidence": 0.85
-   },
-   "transform": {
-    "position": [
-     0.0,
-     -0.07379,
-     0.0662
-    ],
-    "rotation": [
-     0.0,
-     0.0,
-     0.0
-    ]
-   },
-   "actionProfile": {
-    "animationRole": "static",
-    "pivot": {
-     "mode": "center",
-     "localPosition": [
-      0,
-      0,
-      0
-     ],
-     "axis": [
-      0,
-      1,
-      0
-     ],
-     "confidence": 0.7
-    },
-    "transformChannels": {
-     "translate": true,
-     "rotate": true,
-     "scale": true,
-     "bend": false,
-     "twist": false,
-     "detach": false,
-     "visibility": true,
-     "materialState": false
-    },
-    "collider": {
-     "type": "box",
-     "offset": [
-      0,
-      0,
-      0
-     ],
-     "scale": [
-      1,
-      1,
-      1
-     ],
-     "isTrigger": false,
-     "notes": "box proxy"
-    },
-    "constraints": [],
-    "destruction": {
-     "breakable": false,
-     "fractureGroup": "mouth",
-     "seamRefs": [],
-     "detachableFragments": [],
-     "breakImpulse": 0.0,
-     "debrisMaterial": "lips"
-    }
-   },
-   "material": "lip",
-   "materialLayers": [
-    "lip"
-   ],
-   "deformations": [],
-   "joints": [],
-   "seams": [],
-   "localFeatures": [],
-   "surfaceDetail": {
-    "macroRoughness": 0.0,
-    "microRoughness": 0.0,
-    "bumpAmplitude": 0.0,
-    "normalPattern": "",
-    "displacementPattern": "",
-    "occlusionPattern": "",
-    "edgeWearPattern": "",
-    "notes": ""
-   },
-   "evidenceRefs": [
-    "body_2",
-    "clay_2"
-   ],
-   "details": [],
-   "fidelityTier": "blockout",
-   "colorMaterialRecipe": {
-    "dominantAlbedo": "rgba(212, 189, 180, 1.0)",
-    "secondaryAlbedo": "rgba(165, 147, 140, 1.0)",
-    "materialClass": "skin",
-    "materialClassConfidence": 0.85,
-    "evidenceRef": "analysis/image-analysis.md Layer 5; medians sampled off body_2.png then de-lit"
-   },
-   "measurementSource": "analysis/_hf recon (head_1 front + head_2 profile, anchored to body_2)"
-  },
-  {
-   "id": "eye-l",
-   "name": "Eye L",
-   "level": "micro",
-   "role": "detail",
-   "importance": 0.5,
-   "confidence": 0.8,
-   "primitive": "sphere",
-   "topologyClass": "assembled-solid",
-   "topologyRationale": "Eye L is a discrete primitive body part assembled onto the humanoid rig, not a continuous sculpt or shell.",
-   "geometryDescriptor": {
-    "topologyIntent": "stylized character part",
-    "edgeTreatment": {
-     "type": "none",
-     "bevelRadius": 0.0,
-     "segments": 1
-    },
-    "deformationStack": [],
-    "uvStrategy": "generated procedural coordinates",
-    "normalStrategy": "smooth vertex normals"
-   },
-   "parent": "head",
-   "attachment": null,
-   "dimensions": {
-    "width": 0.0363,
-    "height": 0.0165,
-    "depth": 0.018,
-    "units": "metres",
-    "confidence": 0.85
-   },
-   "transform": {
-    "position": [
-     0.0338,
-     -0.00974,
-     0.0694
-    ],
-    "rotation": [
-     0.0,
-     0.0,
-     0.0
-    ]
-   },
-   "actionProfile": {
-    "animationRole": "static",
-    "pivot": {
-     "mode": "center",
-     "localPosition": [
-      0,
-      0,
-      0
-     ],
-     "axis": [
-      0,
-      1,
-      0
-     ],
-     "confidence": 0.7
-    },
-    "transformChannels": {
-     "translate": true,
-     "rotate": true,
-     "scale": true,
-     "bend": false,
-     "twist": false,
-     "detach": false,
-     "visibility": true,
-     "materialState": false
-    },
-    "collider": {
-     "type": "box",
-     "offset": [
-      0,
-      0,
-      0
-     ],
-     "scale": [
-      1,
-      1,
-      1
-     ],
-     "isTrigger": false,
-     "notes": "box proxy"
-    },
-    "constraints": [],
-    "destruction": {
-     "breakable": false,
-     "fractureGroup": "eye-l",
-     "seamRefs": [],
-     "detachableFragments": [],
-     "breakImpulse": 0.0,
-     "debrisMaterial": "eye"
-    }
-   },
-   "material": "eye",
-   "materialLayers": [
-    "eye"
-   ],
-   "deformations": [],
-   "joints": [],
-   "seams": [],
-   "localFeatures": [],
-   "surfaceDetail": {
-    "macroRoughness": 0.0,
-    "microRoughness": 0.0,
-    "bumpAmplitude": 0.0,
-    "normalPattern": "",
-    "displacementPattern": "",
-    "occlusionPattern": "",
-    "edgeWearPattern": "",
-    "notes": ""
-   },
-   "evidenceRefs": [
-    "body_2",
-    "clay_2"
-   ],
-   "details": [],
-   "fidelityTier": "blockout",
-   "colorMaterialRecipe": {
-    "dominantAlbedo": "rgba(212, 189, 180, 1.0)",
-    "secondaryAlbedo": "rgba(165, 147, 140, 1.0)",
-    "materialClass": "skin",
-    "materialClassConfidence": 0.85,
-    "evidenceRef": "analysis/image-analysis.md Layer 5; medians sampled off body_2.png then de-lit"
-   },
-   "measurementSource": "analysis/_hf recon (head_1 front + head_2 profile, anchored to body_2)"
-  },
-  {
-   "id": "eye-r",
-   "name": "Eye R",
-   "level": "micro",
-   "role": "detail",
-   "importance": 0.5,
-   "confidence": 0.8,
-   "primitive": "sphere",
-   "topologyClass": "assembled-solid",
-   "topologyRationale": "Eye R is a discrete primitive body part assembled onto the humanoid rig, not a continuous sculpt or shell.",
-   "geometryDescriptor": {
-    "topologyIntent": "stylized character part",
-    "edgeTreatment": {
-     "type": "none",
-     "bevelRadius": 0.0,
-     "segments": 1
-    },
-    "deformationStack": [],
-    "uvStrategy": "generated procedural coordinates",
-    "normalStrategy": "smooth vertex normals"
-   },
-   "parent": "head",
-   "attachment": null,
-   "dimensions": {
-    "width": 0.0363,
-    "height": 0.0165,
-    "depth": 0.018,
-    "units": "metres",
-    "confidence": 0.85
-   },
-   "transform": {
-    "position": [
-     -0.0338,
-     -0.00974,
-     0.0694
-    ],
-    "rotation": [
-     0.0,
-     0.0,
-     0.0
-    ]
-   },
-   "actionProfile": {
-    "animationRole": "static",
-    "pivot": {
-     "mode": "center",
-     "localPosition": [
-      0,
-      0,
-      0
-     ],
-     "axis": [
-      0,
-      1,
-      0
-     ],
-     "confidence": 0.7
-    },
-    "transformChannels": {
-     "translate": true,
-     "rotate": true,
-     "scale": true,
-     "bend": false,
-     "twist": false,
-     "detach": false,
-     "visibility": true,
-     "materialState": false
-    },
-    "collider": {
-     "type": "box",
-     "offset": [
-      0,
-      0,
-      0
-     ],
-     "scale": [
-      1,
-      1,
-      1
-     ],
-     "isTrigger": false,
-     "notes": "box proxy"
-    },
-    "constraints": [],
-    "destruction": {
-     "breakable": false,
-     "fractureGroup": "eye-r",
-     "seamRefs": [],
-     "detachableFragments": [],
-     "breakImpulse": 0.0,
-     "debrisMaterial": "eye"
-    }
-   },
-   "material": "eye",
-   "materialLayers": [
-    "eye"
-   ],
-   "deformations": [],
-   "joints": [],
-   "seams": [],
-   "localFeatures": [],
    "surfaceDetail": {
     "macroRoughness": 0.0,
     "microRoughness": 0.0,
@@ -28529,6 +27394,296 @@
      "low value range weakens height/roughness inference"
     ]
    }
+  },
+  {
+   "id": "face",
+   "name": "Face (painted)",
+   "type": "standard",
+   "shaderModel": "MeshStandardMaterial / PBR approximation",
+   "baseColor": "#D4BDB4",
+   "color": "#D4BDB4",
+   "albedo": {
+    "dominant": "#B89784",
+    "secondary": [
+     "#C0A395",
+     "#BA9B88",
+     "#B5927E"
+    ],
+    "samplingNotes": "Reference-derived from foreground pixels; de-lit to reduce baked shadows/highlights.",
+    "map": {
+     "path": "C:\\AI Pipeline Test\\jinx-i2t\\pbr\\face\\face_albedo.png",
+     "url": "face_albedo.png",
+     "channel": "albedo",
+     "source": "generated-from-measured-materials"
+    }
+   },
+   "colorVariation": {
+    "palette": [
+     "#B89784",
+     "#C0A395",
+     "#BA9B88",
+     "#B5927E",
+     "#BC9E8D"
+    ],
+    "pattern": "reference-derived pixel palette",
+    "amplitude": 0.08,
+    "heightCorrelation": 0.42
+   },
+   "textureResolution": 1024,
+   "textureProjection": {
+    "mode": "uv",
+    "repeat": [
+     1.0,
+     1.0
+    ],
+    "anisotropy": 8,
+    "texelDensityIntent": "Preserve stable world/object-scale detail; do not stretch micro detail with component scale."
+   },
+   "surfaceFrequencyBands": [
+    {
+     "id": "macro",
+     "frequency": 2.0,
+     "amplitude": 0.308,
+     "role": "reference-derived broad albedo and height breakup"
+    },
+    {
+     "id": "meso",
+     "frequency": 14.0,
+     "amplitude": 0.282,
+     "role": "reference-derived cracks, ridges, pores, grain, or leaf clusters"
+    },
+    {
+     "id": "micro",
+     "frequency": 72.0,
+     "amplitude": 0.13,
+     "role": "reference-derived micro highlight breakup under grazing light"
+    }
+   ],
+   "roughness": {
+    "base": 0.714,
+    "variation": 0.062,
+    "map": {
+     "path": "C:\\AI Pipeline Test\\jinx-i2t\\pbr\\skin\\skin_roughness.png",
+     "url": "skin_roughness.png",
+     "channel": "roughness",
+     "source": "reference-pixel-extraction"
+    },
+    "localResponse": "reference-derived roughness estimate; cavities and textured zones trend rougher, bright highlights trend smoother"
+   },
+   "metalness": 0.0,
+   "normal": {
+    "pattern": "reference-derived height-gradient normal map",
+    "strength": 0.193,
+    "map": {
+     "path": "C:\\AI Pipeline Test\\jinx-i2t\\pbr\\skin\\skin_normal.png",
+     "url": "skin_normal.png",
+     "channel": "normal",
+     "source": "reference-pixel-extraction"
+    },
+    "heightSource": {
+     "path": "C:\\AI Pipeline Test\\jinx-i2t\\pbr\\skin\\skin_height.png",
+     "url": "skin_height.png",
+     "channel": "height",
+     "source": "reference-pixel-extraction"
+    },
+    "space": "tangent"
+   },
+   "bump": {
+    "pattern": "reference-derived height field",
+    "amplitude": 0.014,
+    "map": {
+     "path": "C:\\AI Pipeline Test\\jinx-i2t\\pbr\\skin\\skin_height.png",
+     "url": "skin_height.png",
+     "channel": "height",
+     "source": "reference-pixel-extraction"
+    }
+   },
+   "displacement": {
+    "pattern": "none",
+    "amplitude": 0.0,
+    "scale": 1.0,
+    "silhouetteAffects": false
+   },
+   "ambientOcclusion": {
+    "cavityStrength": 0.38,
+    "contactShadowBias": 0.35,
+    "map": {
+     "path": "C:\\AI Pipeline Test\\jinx-i2t\\pbr\\skin\\skin_ao.png",
+     "url": "skin_ao.png",
+     "channel": "ao",
+     "source": "reference-pixel-extraction"
+    },
+    "notes": "Reference-derived cavity estimate from local height minima; verify against grazing-light screenshot."
+   },
+   "wear": {
+    "edgeWear": 0.0,
+    "scratches": [],
+    "chips": []
+   },
+   "dirt": {
+    "amount": 0.0,
+    "cavityBias": 0.0,
+    "color": "#2F2A22"
+   },
+   "localOverrides": [
+    {
+     "id": "reference-pbr-pixel-evidence",
+     "type": "material-map-evidence",
+     "evidenceRefs": [
+      "full-object"
+     ],
+     "channels": [
+      "albedo",
+      "roughness",
+      "height",
+      "normal",
+      "ambient-occlusion"
+     ],
+     "notes": "Use generated maps as material evidence, then refine after browser screenshot comparison."
+    },
+    {
+     "id": "reference-pbr-pixel-evidence",
+     "type": "material-map-evidence",
+     "evidenceRefs": [
+      "full-object"
+     ],
+     "channels": [
+      "albedo",
+      "roughness",
+      "height",
+      "normal",
+      "ambient-occlusion"
+     ],
+     "notes": "Use generated maps as material evidence, then refine after browser screenshot comparison."
+    },
+    {
+     "id": "reference-pbr-pixel-evidence",
+     "type": "material-map-evidence",
+     "evidenceRefs": [
+      "full-object"
+     ],
+     "channels": [
+      "albedo",
+      "roughness",
+      "height",
+      "normal",
+      "ambient-occlusion"
+     ],
+     "notes": "Use generated maps as material evidence, then refine after browser screenshot comparison."
+    },
+    {
+     "id": "reference-pbr-pixel-evidence",
+     "type": "material-map-evidence",
+     "evidenceRefs": [
+      "full-object"
+     ],
+     "channels": [
+      "albedo",
+      "roughness",
+      "height",
+      "normal",
+      "ambient-occlusion"
+     ],
+     "notes": "Use generated maps as material evidence, then refine after browser screenshot comparison."
+    }
+   ],
+   "shaderNotes": [
+    "Prefer MeshPhysicalMaterial when clearcoat, sheen, transmission, or thin-surface response is observed; otherwise use MeshStandardMaterial-compatible PBR channels.",
+    "Generate albedo, roughness, height/normal, and AO independently; never alias albedo into roughness.",
+    "Use normal/bump/displacement only when they map to observed surface relief.",
+    "Use displacement geometry when the observed relief changes the close-up silhouette; texture-only relief is insufficient there.",
+    "Reference-derived maps are estimates from image pixels; verify with neutral, grazing, and reference-matched renders.",
+    "Do not treat baked image shadows as final albedo; rerun extraction with a tighter material crop if highlights/shadows pollute the maps.",
+    "Reference-derived maps are estimates from image pixels; verify with neutral, grazing, and reference-matched renders.",
+    "Do not treat baked image shadows as final albedo; rerun extraction with a tighter material crop if highlights/shadows pollute the maps.",
+    "Reference-derived maps are estimates from image pixels; verify with neutral, grazing, and reference-matched renders.",
+    "Do not treat baked image shadows as final albedo; rerun extraction with a tighter material crop if highlights/shadows pollute the maps.",
+    "Reference-derived maps are estimates from image pixels; verify with neutral, grazing, and reference-matched renders.",
+    "Do not treat baked image shadows as final albedo; rerun extraction with a tighter material crop if highlights/shadows pollute the maps."
+   ],
+   "notes": "Skin, with the facial features painted into the albedo rather than modelled. Colours are read from the measured eye, sclera, pupil, lip, brow and skinShade materials; the texture is generated, so it carries no reference pixels.",
+   "referencePbr": {
+    "version": "1.0",
+    "sourceImage": "C:\\AI Pipeline Test\\jinx-i2t\\pbr\\crops\\skin.png",
+    "extractor": "stage1_intake/extract_pbr_evidence.py",
+    "method": "single-image pixel evidence with de-lighting estimate; not photogrammetry",
+    "usable": true,
+    "verdict": "pass",
+    "confidence": 0.751,
+    "estimatedFidelity": 0.751,
+    "targetThreshold": 0.7,
+    "hardLimit": "A single image cannot uniquely recover true albedo/roughness/normal/AO; maps are reference-derived estimates.",
+    "maps": {
+     "albedo": {
+      "path": "C:\\AI Pipeline Test\\jinx-i2t\\pbr\\face\\face_albedo.png",
+      "url": "face_albedo.png",
+      "channel": "albedo",
+      "source": "generated-from-measured-materials"
+     },
+     "roughness": {
+      "path": "C:\\AI Pipeline Test\\jinx-i2t\\pbr\\skin\\skin_roughness.png",
+      "url": "skin_roughness.png",
+      "channel": "roughness",
+      "source": "reference-pixel-extraction"
+     },
+     "height": {
+      "path": "C:\\AI Pipeline Test\\jinx-i2t\\pbr\\skin\\skin_height.png",
+      "url": "skin_height.png",
+      "channel": "height",
+      "source": "reference-pixel-extraction"
+     },
+     "normal": {
+      "path": "C:\\AI Pipeline Test\\jinx-i2t\\pbr\\skin\\skin_normal.png",
+      "url": "skin_normal.png",
+      "channel": "normal",
+      "source": "reference-pixel-extraction"
+     },
+     "ao": {
+      "path": "C:\\AI Pipeline Test\\jinx-i2t\\pbr\\skin\\skin_ao.png",
+      "url": "skin_ao.png",
+      "channel": "ao",
+      "source": "reference-pixel-extraction"
+     }
+    },
+    "diagnostics": {
+     "sourceWidth": 96,
+     "sourceHeight": 96,
+     "mapSize": 1024,
+     "cropBBoxPixels": {
+      "x": 0,
+      "y": 0,
+      "width": 96,
+      "height": 96
+     },
+     "mask": {
+      "backgroundColor": "#BC9D8C",
+      "backgroundNoise": 1.414,
+      "transparentPixelFraction": 0.0,
+      "foregroundCoverage": 1.0
+     },
+     "mapStats": {
+      "valueRange": 0.08,
+      "heightP90Gradient": 0.03144,
+      "roughnessBase": 0.714,
+      "roughnessVariation": 0.062,
+      "normalStrength": 0.193,
+      "blurRadius": 21
+     },
+     "palette": [
+      "#B89784",
+      "#C0A395",
+      "#BA9B88",
+      "#B5927E",
+      "#BC9E8D"
+     ]
+    },
+    "warnings": [
+     "image is not clearly isolated from background; using most pixels as material evidence",
+     "object/background separation is weak",
+     "single-image inverse rendering cannot prove true physical PBR; confidence is capped",
+     "low value range weakens height/roughness inference"
+    ]
+   }
   }
  ],
  "repetitionSystems": [
@@ -28627,15 +27782,9 @@
     "neck",
     "head",
     "hair",
-    "brow-l",
-    "brow-r",
     "ear-l",
     "ear-r",
-    "nose",
-    "mouth",
-    "eye-l",
     "eye-cavity-l",
-    "eye-r",
     "eye-cavity-r",
     "clavicle-l",
     "upper-arm-l",
@@ -28746,15 +27895,9 @@
     "neck",
     "head",
     "hair",
-    "brow-l",
-    "brow-r",
     "ear-l",
     "ear-r",
-    "nose",
-    "mouth",
-    "eye-l",
     "eye-cavity-l",
-    "eye-r",
     "eye-cavity-r",
     "clavicle-l",
     "upper-arm-l",
@@ -28786,15 +27929,9 @@
     "neck",
     "head",
     "hair",
-    "brow-l",
-    "brow-r",
     "ear-l",
     "ear-r",
-    "nose",
-    "mouth",
-    "eye-l",
     "eye-cavity-l",
-    "eye-r",
     "eye-cavity-r",
     "clavicle-l",
     "upper-arm-l",
@@ -28826,15 +27963,9 @@
     "neck",
     "head",
     "hair",
-    "brow-l",
-    "brow-r",
     "ear-l",
     "ear-r",
-    "nose",
-    "mouth",
-    "eye-l",
     "eye-cavity-l",
-    "eye-r",
     "eye-cavity-r",
     "clavicle-l",
     "upper-arm-l",
@@ -28866,15 +27997,9 @@
     "neck",
     "head",
     "hair",
-    "brow-l",
-    "brow-r",
     "ear-l",
     "ear-r",
-    "nose",
-    "mouth",
-    "eye-l",
     "eye-cavity-l",
-    "eye-r",
     "eye-cavity-r",
     "clavicle-l",
     "upper-arm-l",
@@ -28981,15 +28106,9 @@
     "neck",
     "head",
     "hair",
-    "brow-l",
-    "brow-r",
     "ear-l",
     "ear-r",
-    "nose",
-    "mouth",
-    "eye-l",
     "eye-cavity-l",
-    "eye-r",
     "eye-cavity-r",
     "clavicle-l",
     "upper-arm-l",
@@ -29021,15 +28140,9 @@
     "neck",
     "head",
     "hair",
-    "brow-l",
-    "brow-r",
     "ear-l",
     "ear-r",
-    "nose",
-    "mouth",
-    "eye-l",
     "eye-cavity-l",
-    "eye-r",
     "eye-cavity-r",
     "clavicle-l",
     "upper-arm-l",

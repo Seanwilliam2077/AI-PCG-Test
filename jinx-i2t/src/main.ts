@@ -107,10 +107,18 @@ try {
     // Uniform-albedo probe: with every material replaced by the same white, any
     // remaining front-to-back L difference is the rig, not the textures.
     if (num('flat', 0)) {
+      // `keep` names materials that survive the flatten, by component id. It exists so
+      // a figure can show one generated texture -- the painted face -- without also
+      // publishing the maps extracted from the reference, which is the rule the rest of
+      // this project's imagery follows.
+      const keep = new Set((q.get('keep') || '').split(',').filter(Boolean));
       const flat = new THREE.MeshStandardMaterial({ color: 0xb0b0b0, roughness: 0.7, metalness: 0 });
       model.traverse((o) => {
         const m = o as THREE.Mesh;
-        if (m.isMesh) m.material = flat;
+        if (!m.isMesh) return;
+        const comp = (m.userData as { sculptComponent?: { id?: string } }).sculptComponent;
+        if (comp?.id && keep.has(comp.id)) return;
+        m.material = flat;
       });
     }
   } catch {

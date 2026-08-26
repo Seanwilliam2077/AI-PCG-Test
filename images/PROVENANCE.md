@@ -11,6 +11,7 @@ their materials have different origins.
 | `jinx3js_yaw*.png` | the SDF + Surface Nets character, textured | its materials are procedural terms authored in TypeScript. No reference pixel is in them. |
 | `jinx-i2t_yaw*.png` | the spec-driven character, **geometry only** | its textured renders bake albedo extracted from the reference, so only the material-stripped pass is published |
 | `characters-side-by-side.png` | the two builds at a common figure height | same rule, applied per column |
+| `face-painted-vs-sculpted.png` | the modelled skull against the painted face | the "before" panel is the geometry-only render; the texture panel is generated from measured scalars and contains no reference pixel; the three "painted" panels use a render mode that flattens every material EXCEPT the generated face texture (`--flat 1 --keep head`) |
 | `img2threejs-gallery.png` | a screenshot of the img2threejs gallery, showing the reconstruction that named the technique | a credited citation of the method's origin — see the attribution below |
 
 ## Not published, anywhere in this repository
@@ -21,6 +22,12 @@ their materials have different origins.
 - Every PBR map extracted from those pixels — albedo, roughness, normal, height,
   ambient occlusion, twenty materials each — and the served copies of them.
 - Any render that displays those maps.
+
+That last row is where this rule nearly slipped. The first version of that figure used
+the ordinary textured renders, which carry the extracted hair and skin maps, and a
+reference head crop as its left column. Both were caught on review and the figure was
+rebuilt; the render harness gained a `--keep` flag so a single generated texture can be
+shown without publishing the extracted ones alongside it.
 
 The distinction being drawn: a reference used as a **measurement target** is not
 redistributed at full fidelity, and neither is anything derived pixel-wise from it. What
