@@ -12,7 +12,7 @@ import {
   createZapperModel,
   createZapperLookDevLights,
   createZapperEnvironment,
-  configureJinxArcaneRenderer,
+  configureZapperRenderer,
 } from './createZapperModel.js';
 
 declare global {
@@ -36,15 +36,31 @@ const H = Math.round(num('h', 1100));
 // framed like a 1.72 m figure would occupy a sixth of the image. `frame` is still a
 // metric field height, so pixels-per-metre stays constant across passes and two renders
 // remain directly comparable -- it is just sized to the object.
-const FRAME = Number(params.get('frame')) || 0.42;
+// A pistol 290 mm long and 75 mm tall. At a 2.2:1 canvas a 0.150 m vertical field
+// gives a 0.330 m horizontal one, so the gun fills about 88 percent of the width with
+// a margin at each end. Constant metric field, so two renders stay comparable.
+const FRAME = Number(params.get('frame')) || 0.150;
 const TRANSPARENT = params.get('bg') !== 'dark';
 const WIRE = params.get('wire') === '1';
+
+/**
+ * `edits=name:value,name:value` -- the contract's section 8 handles, one pair each.
+ *
+ * Read from the same query string as every other option so a locality run and an ordinary
+ * render go through an identical construction path. A test that built the model by some
+ * other route would be measuring its own rig.
+ */
+const EDITS: Record<string, number> = {};
+for (const pair of (params.get('edits') ?? '').split(',')) {
+  const [k, v] = pair.split(':');
+  if (k && v !== undefined && Number.isFinite(Number(v))) EDITS[k] = Number(v);
+}
 
 try {
   const renderer = new THREE.WebGLRenderer({
     antialias: true, alpha: true, preserveDrawingBuffer: true,
   });
-  configureJinxArcaneRenderer(renderer);
+  configureZapperRenderer(renderer);
   renderer.setPixelRatio(1);
   renderer.setSize(W, H, false);
   document.body.appendChild(renderer.domElement);
@@ -63,7 +79,7 @@ try {
     /* environment is optional; the directional rig alone still renders */
   }
 
-  const model = createZapperModel({ wireframe: WIRE });
+  const model = createZapperModel({ wireframe: WIRE, edits: EDITS });
   scene.add(model);
 
   // The rig turns with the camera: the reference's six panels sit within 2.6 L
@@ -154,7 +170,14 @@ try {
   window.__SHOT__ = () => renderer.domElement.toDataURL('image/png');
   // Per-mesh extents, so a stray component below the floor can be named rather
   // than hunted for in the spec.
-  const lows: { name: string; minY: number; maxY: number }[] = [];
+  // The probe grew fields as the review loop needed them -- world Z for the contract
+  // checker, per-mesh triangles for the budget, width and depth for the silhouette --
+  // and the annotation was never widened with it.
+  const lows: {
+    name: string; minY: number; maxY: number;
+    w?: number; d?: number; x0?: number; x1?: number; z0?: number; z1?: number;
+    tris?: number;
+  }[] = [];
   model.traverse((o) => {
     const m = o as THREE.Mesh;
     if (!m.isMesh || !m.geometry) return;
@@ -193,6 +216,29 @@ try {
   const talls = [...lows].sort((a, b) => b.maxY - a.maxY);
   window.__INFO__ = {
     materials: mats,
+    // The tree and the joints live in the code, not in a spec file, so the acceptance
+    // tool has nothing to read unless the built scene reports them.
+    assemblyTree: (() => {
+      const comps: { id: string; name: string; parent: string | null }[] = [];
+      model.traverse((o) => {
+        if (!o.name || o === model) return;
+        let p: THREE.Object3D | null = o.parent;
+        while (p && !p.name) p = p.parent;
+        comps.push({ id: o.name, name: o.name, parent: p && p !== model ? p.name : 'zapper' });
+      });
+      // Without a named root this is a forest of 8 top-level groups, not a tree, and the
+      // acceptance check is right to reject it.
+      comps.unshift({ id: 'zapper', name: 'zapper', parent: null });
+      return comps;
+    })(),
+    jointSpecs: (() => {
+      const out: Record<string, unknown> = {};
+      model.traverse((o) => {
+        const j = (o.userData as { joint?: unknown }).joint;
+        if (j) out[o.name] = j;
+      });
+      return out;
+    })(),
     heaviest: [...lows].sort((a, b) => (b.tris ?? 0) - (a.tris ?? 0))
       .map((m) => ({ name: m.name, tris: m.tris })),
     sockets: socketProbe,

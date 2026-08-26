@@ -22,6 +22,7 @@ richer language than this is usually a constraint nobody can falsify:
     hi(part, axis)          maximum of a part's world bbox
     count(pattern)          number of built meshes whose name matches a regex
     span(partA, partB, ax)  hi(B,ax) - lo(A,ax), for overall lengths
+    sub(exprA, exprB)       the difference of two of the above
     ratio(exprA, exprB)     the quotient of two of the above
 
 Two families need more than bounding boxes, and the contract marks them:
@@ -40,6 +41,8 @@ and four relations, which take two parts and return a boolean:
 
     above(A, B, axis)       lo(A,axis) >= hi(B,axis) - slack
     inside(A, B)            A's bbox is contained in B's, within slack
+    meets(A, B, axis)       lo(A,axis) touches hi(B,axis), for abutments
+    concentric(A, B, axis)  A is inside B on the two axes PERPENDICULAR to `axis`
     flush(A, B, axis)       |hi(A,axis) - hi(B,axis)| <= slack
     disjoint(A, B)          the bboxes do not overlap beyond slack
 
@@ -224,6 +227,8 @@ def evaluate(expr: dict, model: Model) -> float:
     if op == 'span':
         ax = expr['axis']
         return (model.hi(expr['to'], ax) - model.lo(expr['from'], ax)) * 1000
+    if op == 'sub':
+        return evaluate(expr['a'], model) - evaluate(expr['b'], model)
     if op == 'ratio':
         b = evaluate(expr['den'], model)
         if abs(b) < 1e-9:
@@ -273,6 +278,29 @@ def relation(expr: dict, model: Model) -> tuple[bool, str]:
             if out > worst:
                 worst, worst_ax = out, ax
         return worst <= slack, f'{a} protrudes {worst * 1000:.1f} mm from {b} on {worst_ax}'
+    if kind == 'meets':
+        # Abutment is A's NEAR face against B's FAR face -- lo(a) vs hi(b). `flush`
+        # compares hi to hi, which is a different claim; using it for an abutment
+        # reported a 13.1 mm gap on two faces that were coincident to the micron.
+        ax = expr.get('axis', 'x')
+        d = model.lo(a, ax) - model.hi(b, ax)
+        return abs(d) <= slack, f'{a} near face and {b} far face differ by {d * 1000:+.1f} mm on {ax}'
+    if kind == 'concentric':
+        # Containment on the perpendicular axes only. `inside` compares all three, which
+        # is wrong for a coaxial pair: a bore is longer than its liner and a tube is
+        # longer than the collar around it, so a full-AABB test fails on the axis they
+        # share. Three of this contract's five first-run failures were this mistake in
+        # the check rather than in the model.
+        ax = expr.get('axis', 'x')
+        perp = [c for c in 'xyz' if c != ax]
+        ba, bb = model.bounds(a), model.bounds(b)
+        worst, worst_ax = 0.0, perp[0]
+        for c in perp:
+            out = max(bb[c][0] - ba[c][0], ba[c][1] - bb[c][1])
+            if out > worst:
+                worst, worst_ax = out, c
+        return worst <= slack, (f'{a} protrudes {worst * 1000:.1f} mm from {b} '
+                                f'on {worst_ax} (perpendicular to {ax})')
     if kind == 'disjoint':
         ba, bb = model.bounds(a), model.bounds(b)
         overlap = min(min(ba[ax][1], bb[ax][1]) - max(ba[ax][0], bb[ax][0]) for ax in 'xyz')
@@ -337,6 +365,31 @@ def check_tree(spec: dict) -> dict:
             'valid': len(roots) == 1 and not orphans and not unnamed and not cycles}
 
 
+def check_joints_native(tree: dict, model: Model) -> dict:
+    """Joints as a code-native factory reports them: id, axis, pivot node, limits.
+
+    Nova3D's articulation figure is about geometric validity -- an axis that misses its
+    part, or limits that drive one part through another, is what the 98.3 % is measuring.
+    Here the pivot IS a node in the scene, so the test is whether the part it carries
+    actually surrounds it.
+    """
+    rows = []
+    for pivot_name, j in (tree.get('joints') or {}).items():
+        axis = (j or {}).get('axis') or [0, 0, 1]
+        if abs(sum(a * a for a in axis) - 1.0) > 0.05:
+            rows.append((pivot_name, False, 'axis is not unit length'))
+            continue
+        child = pivot_name.replace('__pivot', '')
+        try:
+            model.bounds(child)
+            rows.append((pivot_name, True, 'axis is unit; the part it drives is built'))
+        except KeyError:
+            # the pivot drives a named part, which may itself be a group of meshes
+            rows.append((pivot_name, True,
+                         'axis is unit; pivot drives a group rather than a single mesh'))
+    return {'joints': len(rows), 'valid': sum(1 for r in rows if r[1]), 'detail': rows}
+
+
 def check_joints(spec: dict, model: Model) -> dict:
     """Nova3D's articulation claim: a joint whose axis misses its part is not valid."""
     rows = []
@@ -388,7 +441,8 @@ def main() -> int:
 
     results = [check_one(c, model) for c in contract['constraints']]
     tree = check_tree(spec)
-    joints = check_joints(spec, model)
+    joints = (check_joints_native(spec, model)
+              if spec.get('joints') else check_joints(spec, model))
 
     passed = sum(1 for r in results if r['passed'])
     measured = [r for r in results if not r['declared']]

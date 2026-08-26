@@ -24,7 +24,7 @@ const arg = (n, d) => {
 const yaws = (arg('yaw', '0,45,90,180,270,315')).split(',').map(Number);
 const [W, H] = arg('size', '620x1100').split('x').map(Number);
 const outDir = resolve(ROOT, arg('out', 'out/views'));
-const frame = arg('frame', '0.42');
+const frame = arg('frame', '0.150');
 const wire = arg('wire', '0');
 const bg = arg('bg', 'transparent');
 
@@ -49,7 +49,7 @@ const browser = await chromium.launch({
 const page = await browser.newPage({ viewport: { width: W + 40, height: H + 40 } });
 page.on('pageerror', (e) => console.error('[page]', String(e).slice(0, 300)));
 
-const extraQuery = ['exp', 'key', 'amb', 'env', 'flat']
+const extraQuery = ['exp', 'key', 'amb', 'env', 'flat', 'edits']
   .filter((k) => process.argv.includes(`--${k}`))
   .map((k) => `&${k}=${process.argv[process.argv.indexOf(`--${k}`) + 1]}`).join('');
 const url = `http://127.0.0.1:${port}/?w=${W}&h=${H}&frame=${frame}&wire=${wire}&bg=${bg}&yaw=${yaws[0]}${extraQuery}`;
@@ -63,6 +63,12 @@ if (err) { console.error('[render] factory threw:\n' + err); await browser.close
 const info = await page.evaluate(() => window.__INFO__);
 console.log('[render] geometry triangles', info.triangles, '| draw calls', info.drawCalls, '| meshes', info.meshCount, '| bbox y', info.bbox.min[1].toFixed(3), '..', info.bbox.max[1].toFixed(3));
 for (const l of info.lowest || []) console.log(`    low : ${l.name.padEnd(28)} y ${String(l.minY).padStart(8)} .. ${l.maxY}`);
+if (process.argv.includes('--tree')) {
+  const fs = await import('node:fs');
+  fs.writeFileSync('out/_tree.json', JSON.stringify(
+    { componentTree: info.assemblyTree ?? [], joints: info.jointSpecs ?? {} }, null, 1));
+  console.log(`assembly_tree -> out/_tree.json (${(info.assemblyTree ?? []).length} parts)`);
+}
 if (process.argv.includes('--allmeshes')) {
   const fs = await import('node:fs');
   fs.writeFileSync('out/_meshes.json', JSON.stringify(info.widest ?? [], null, 1));
@@ -108,8 +114,11 @@ for (const yaw of yaws) {
     for (let i = 3; i < d.length; i += 4) if (d[i] > 8) n++;
     return n / (c.width * c.height);
   }, yaw);
-  const flag = opaque < 0.02 ? '  *** BLANK ***' : '';
-  if (opaque < 0.02) bad++;
+  // A long thin object seen down its own axis is legitimately almost empty -- the
+  // pistol's muzzle-on view is a 52 mm disc on a 330 mm field. The old 2 % floor was
+  // written for a character, where every canonical view is a whole figure.
+  const flag = opaque < 0.004 ? '  *** BLANK ***' : '';
+  if (opaque < 0.004) bad++;
   console.log(`  yaw ${String(yaw).padStart(3)}  ${(buf.length / 1024).toFixed(0)} kB  opaque ${(opaque * 100).toFixed(2)}%${flag}`);
 }
 await browser.close();

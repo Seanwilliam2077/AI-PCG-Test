@@ -41,6 +41,29 @@ shipped once before being caught. It now says what is actually true: the painted
 is only visible in the forward half, because at 180 and 270 the head has turned away.
 | `board-painted-face.png` | the generated face map and the three views it produces | the de-lighting plate this is modelled on cannot ship in any form, because de-lighting is applied to the artist's pixels. Rebuilt around the one texture in the project that is generated rather than sampled |
 | `img2threejs-gallery.png` | a screenshot of the img2threejs gallery, showing the reconstruction that named the technique | a credited citation of the method's origin — see the attribution below |
+| `board-zapper.png` | the pistol at six yaws, **fully textured**, with its four measured figures | see "why the pistol is different" below |
+| `board-handles.png` | four edit handles swept across three values each, fully textured | same rule |
+| `zapper_yaw*.png` | single textured views of the pistol | same rule |
+
+## Why the pistol is different, and how that is checked
+
+The character's textured renders cannot ship, because their albedo, roughness, normal,
+height and AO maps were **extracted from the artist's pixels**. Only the geometry-only
+pass and the one generated face texture leave this project.
+
+The pistol has the opposite provenance. Every material on it is *generated*: a
+`CanvasTexture` or a `DataTexture` drawn in TypeScript from measured CIE Lab scalars —
+hue 66.5° at C* 20.2 for the aged brass, L* 52 at a*/b* −1.5/−7.0 for the tube paint, and
+so on. The measurements came from the reference; **no pixel did**. So its textured renders
+are publishable as they stand, and the boards above show it in full finish rather than as
+clay.
+
+That is a claim about source code, so it is checked as one. Both board scripts run
+`assert_no_sampled_pixels()` before they compose anything: they walk every `.ts` file
+under `zapper-i2t/src/` and refuse to build if any of them so much as mentions
+`TextureLoader`, `ImageBitmapLoader`, a `.png`/`.jpg` path, or the `ref/`, `pbr/` or
+`delit/` directories. A board that could not be built is better than a board whose caption
+is merely confident.
 
 ## Not published, anywhere in this repository
 
