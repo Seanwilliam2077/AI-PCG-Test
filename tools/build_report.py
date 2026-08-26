@@ -248,9 +248,74 @@ def build_gate() -> None:
           f'{fleets["totalAgents"]} agents')
 
 
+def zapper_block(z: dict | None) -> str:
+    """Route 3's section. Every figure comes out of the record; none is written here.
+
+    Returns an empty string when the record carries no measured result, so a report
+    generated before the pistol was scored says nothing rather than something stale --
+    which is how the old "contract frozen" line survived past the build finishing.
+    """
+    if not z or not z.get('nova3d'):
+        return ''
+    n = z['nova3d']
+    c, t, j, l = n['constraints'], n['assemblyTree'], n['joints'], n['locality']
+    # Numbers come from the record; the prose is written here, in the page's language.
+    # The record stays English because it is the machine-readable artefact and the rest of
+    # process/ is English; the report is Chinese because the rest of the report is.
+    rows = ''.join(
+        f'<tr><td>{lab}</td><td class="ok">{val}</td><td class="note">{cond}</td></tr>'
+        for lab, val, cond in [
+            ('合同约束', f'{c["passed"]} / {c["total"]}',
+             f'这 {c["total"]} 条是 104 条可证伪行里能翻译成检查器 DSL 的部分，'
+             '覆盖率由 <code>analysis/build_contract_json.py</code> 显式报告，不是 104 条全过'),
+            ('装配树', f'VALID，{t["namedParts"]} 个命名部件，单根 <code>{t["roots"][0]}</code>',
+             '—'),
+            ('关节几何有效', f'{j["valid"]} / {j["total"]}',
+             '一把手枪就只有击锤和扳机两个铰接件。'
+             'Nova3D 报的是 59 个关节，量级完全不同'),
+            ('编辑局部性', f'{l["passed"]} / {l["total"]}',
+             f'其中只有 {l["generationParameters"]} 个是<b>生成参数</b>'
+             '——句柄是产出几何的那段代码里的一项；'
+             f'另外 {l["scopedTransforms"]} 个是作用在命名子树上的变换，'
+             '是<b>弱形式</b>，按弱形式记'),
+        ])
+    falsified = (
+        '<li><b>H1</b> 同时要求 <code>mid-band</code> 随枪管加长而平移、又把 '
+        '<code>tube-fore</code> 的后端面钉死——而那个后端面（110.3 mm）就是 mid-band '
+        '自己的前端面。两条在任何模型上都不可能同时成立，一动就在枪管上裂开一道缝。</li>'
+        '<li><b>H4</b> 的 move 列表只写了开口，漏了 struts——而 struts 就是开口之间剩下的'
+        '那些实心弧，改计数不可能不重建它们。</li>')
+    assert len(l['contractRowsFalsified']) == 2, (
+        'the record now carries a different number of falsified rows than this page '
+        'renders; update the prose rather than letting the count drift')
+    return f"""
+<h2>线 3 · 硬表面，约束先于模型</h2>
+<p class="note">已建完并按冻结的合同打过分。{z['meshes']} 个网格，{z['triangles']:,} 三角形。
+材质全部从测得的 CIE Lab 数值<b>生成</b>，源码里没有任何一处加载图片文件，
+所以它的带材质渲染可以公开——这一点和两条角色线相反。</p>
+<div class="scroll"><table><thead><tr><th>项</th><th>结果</th><th>条件</th></tr></thead>
+<tbody>{rows}</tbody></table></div>
+<p class="note"><b>首轮 {c['firstRun']}/{c['total']}，失败的 5 条全部是检查表达式的缺陷，不是模型的。</b>
+<code>inside</code> 比较三个轴，而同轴配对只该比两个；<code>flush</code> 比的是两个 <code>hi</code> 面，
+而贴合要比的是「A 的近端面对 B 的远端面」。补上 <code>concentric</code>、<code>meets</code>、
+<code>sub</code> 三个算子之后才是 {c['passed']}/{c['total']}——
+<b>这些检查是看到失败之后才改的</b>，记在这里，不当成一次过。</p>
+<h3>实现 §8 证伪了合同自己的两行</h3>
+<ul class="note">{falsified}</ul>
+<p class="note">两条都是<b>真去实现</b>才撞上的，不是读出来的；
+同一份文档那次 25 条缺陷的对抗审计一条都没抓到。读一份约束和满足一份约束，会在不同的地方出错。</p>
+"""
+
+
 def build_routes() -> None:
     s = json.loads((PROC / 'run_summary.json').read_text(encoding='utf-8'))
     a, b = s['routes'][0], s['routes'][1]
+    # Route 3 is a different subject with a different accountability, so it gets its own
+    # section rather than a third column. Putting a pistol's constraint count beside a
+    # character's silhouette IoU would invite exactly the comparison neither number
+    # supports.
+    z = next((r for r in s['routes'] if r['id'] == 'zapper-i2t'), None)
+    zap = zapper_block(z)
     ta, t0, t2 = a['scoreboard'], b['scoreboardFirstBuild'], b['scoreboardAfterTwoRounds']
     W = ta['weights']
 
@@ -320,6 +385,7 @@ def build_routes() -> None:
 第三次才改用裁判自己的地标表，按每个地标被几个视角看到来加权阻尼。</p>
 <p class="note">诚实的读法是：这两条线本来就不在比同一件事。一条是一个相似度，
 另一条是一个能产出相似度、并且可以被检查、度量、编辑和驱动的程序。</p>
+{zap}
 """
     DOCS.mkdir(exist_ok=True)
     (DOCS / 'routes.html').write_text(

@@ -99,6 +99,23 @@ footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);
 <p class="note">诚实的读法是：这两条线本来就不在比同一件事。一条是一个相似度，
 另一条是一个能产出相似度、并且可以被检查、度量、编辑和驱动的程序。</p>
 
+<h2>线 3 · 硬表面，约束先于模型</h2>
+<p class="note">已建完并按冻结的合同打过分。60 个网格，21,560 三角形。
+材质全部从测得的 CIE Lab 数值<b>生成</b>，源码里没有任何一处加载图片文件，
+所以它的带材质渲染可以公开——这一点和两条角色线相反。</p>
+<div class="scroll"><table><thead><tr><th>项</th><th>结果</th><th>条件</th></tr></thead>
+<tbody><tr><td>合同约束</td><td class="ok">32 / 32</td><td class="note">这 32 条是 104 条可证伪行里能翻译成检查器 DSL 的部分，覆盖率由 <code>analysis/build_contract_json.py</code> 显式报告，不是 104 条全过</td></tr><tr><td>装配树</td><td class="ok">VALID，72 个命名部件，单根 <code>zapper</code></td><td class="note">—</td></tr><tr><td>关节几何有效</td><td class="ok">2 / 2</td><td class="note">一把手枪就只有击锤和扳机两个铰接件。Nova3D 报的是 59 个关节，量级完全不同</td></tr><tr><td>编辑局部性</td><td class="ok">8 / 8</td><td class="note">其中只有 2 个是<b>生成参数</b>——句柄是产出几何的那段代码里的一项；另外 6 个是作用在命名子树上的变换，是<b>弱形式</b>，按弱形式记</td></tr></tbody></table></div>
+<p class="note"><b>首轮 27/32，失败的 5 条全部是检查表达式的缺陷，不是模型的。</b>
+<code>inside</code> 比较三个轴，而同轴配对只该比两个；<code>flush</code> 比的是两个 <code>hi</code> 面，
+而贴合要比的是「A 的近端面对 B 的远端面」。补上 <code>concentric</code>、<code>meets</code>、
+<code>sub</code> 三个算子之后才是 32/32——
+<b>这些检查是看到失败之后才改的</b>，记在这里，不当成一次过。</p>
+<h3>实现 §8 证伪了合同自己的两行</h3>
+<ul class="note"><li><b>H1</b> 同时要求 <code>mid-band</code> 随枪管加长而平移、又把 <code>tube-fore</code> 的后端面钉死——而那个后端面（110.3 mm）就是 mid-band 自己的前端面。两条在任何模型上都不可能同时成立，一动就在枪管上裂开一道缝。</li><li><b>H4</b> 的 move 列表只写了开口，漏了 struts——而 struts 就是开口之间剩下的那些实心弧，改计数不可能不重建它们。</li></ul>
+<p class="note">两条都是<b>真去实现</b>才撞上的，不是读出来的；
+同一份文档那次 25 条缺陷的对抗审计一条都没抓到。读一份约束和满足一份约束，会在不同的地方出错。</p>
+
+
 <footer>本页每一个数字都由 <code>tools/build_report.py</code> 从 <code>process/run_summary.json</code> 生成，没有一处是写死在 HTML 里的。
 页面和记录不一致，就是这个脚本的 bug，而不是谁忘了改标题。</footer>
 </div></body></html>

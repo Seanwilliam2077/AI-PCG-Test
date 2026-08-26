@@ -118,7 +118,45 @@
    "name": "hard-surface, constraints frozen before the model existed",
    "subject": "pistol",
    "basis": "Nova3D, arXiv 2607.22738",
-   "status": "contract frozen"
+   "status": "built and scored against the frozen contract",
+   "meshes": 60,
+   "triangles": 21560,
+   "materials": "generated from measured CIE Lab scalars; no reference pixel sampled",
+   "nova3d": {
+    "constraints": {
+     "passed": 32,
+     "total": 32,
+     "measuredPassed": 31,
+     "measuredTotal": 31,
+     "note": "the 32 expressed here are the subset of the 104 falsifiable rows that translate into the checker DSL; coverage is reported by analysis/build_contract_json.py rather than implied",
+     "firstRun": 27,
+     "firstRunNote": "five failed, and all five were defects in the checking expressions rather than in the model: `inside` compares three axes where a coaxial pair needs two, and `flush` compares hi-to-hi where an abutment is lo-to-hi. Operators `concentric`, `meets` and `sub` were added afterwards, so this is not a clean first pass and is not reported as one"
+    },
+    "assemblyTree": {
+     "valid": true,
+     "namedParts": 72,
+     "roots": [
+      "zapper"
+     ]
+    },
+    "joints": {
+     "valid": 2,
+     "total": 2,
+     "note": "a pistol has two articulated parts, the hammer and the trigger. Nova3D's figure is 59 joints, a different order of magnitude"
+    },
+    "locality": {
+     "passed": 8,
+     "total": 8,
+     "generationParameters": 2,
+     "scopedTransforms": 6,
+     "note": "only the two count handles are generation parameters, where the handle is a term in the code that produces the geometry. The other six are transforms scoped to named subtrees, which is the weaker form",
+     "contractRowsFalsified": [
+      "H1 fixes tube-fore min.x while also asking mid-band to translate, and that face is the mid-band front face (both 110.3 mm). Not jointly satisfiable by any model",
+      "H4 names only the cutouts as moving, but the struts are the arcs between them and cannot survive a count change"
+     ],
+     "foundBy": "implementing section 8, not by reading it. Neither was caught by the 25-defect adversarial audit of the same document"
+    }
+   }
   }
  ],
  "gate": {
