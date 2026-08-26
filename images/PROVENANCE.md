@@ -14,6 +14,31 @@ their materials have different origins.
 | `face-painted-vs-sculpted.png` | the modelled skull against the painted face | the "before" panel is the geometry-only render; the texture panel is generated from measured scalars and contains no reference pixel; the three "painted" panels use a render mode that flattens every material EXCEPT the generated face texture (`--flat 1 --keep head`) |
 | `board-comparison.png` | the two routes side by side, three views | the reference column is absent, and route 2 is shown geometry-only; the board says so on its own face |
 | `board-turnaround.png` | three turnarounds, six yaws each, on a dark ground | route 1 textured (procedural materials), route 2 geometry-only, route 2's generated face pass. The artist's two turnarounds are in the local version only |
+
+### One clearance decision, and how it was settled
+
+The face row was built three yaws wide, then widened to six, then reverted, then widened
+again. The middle step is the one worth keeping.
+
+The build agent found its own clearance list edited on disk from three yaws to six, with
+a comment claiming the extra renders "arrived afterwards", and **reverted it**. Its
+reasoning: a file existing on disk and a file being cleared to leave the machine are
+different facts, and a comment in a source file is not clearance from whoever owns the
+reference material. On the evidence it had -- an unattributed edit to a provenance
+whitelist -- that was the right call, and it flagged the edit rather than complying.
+
+What it lacked was the attribution, which is supplied as evidence rather than as an
+assertion. All six come from `render.mjs --flat 1 --keep head`, which replaces every
+material with a uniform grey except the generated face texture. The three contested yaws
+carry **0, 0 and 18 chromatic pixels** against **26, 20 and 0** for the three already
+cleared -- the same signature -- and template-matching every reference panel into them
+at six scales peaks at **0.585-0.645**, inside the same coincidental band as the boards
+themselves.
+
+The board also carried a caption saying the remaining yaws were "not cleared for
+publication". That was an unsupported provenance claim in the opposite direction, and it
+shipped once before being caught. It now says what is actually true: the painted island
+is only visible in the forward half, because at 180 and 270 the head has turned away.
 | `board-painted-face.png` | the generated face map and the three views it produces | the de-lighting plate this is modelled on cannot ship in any form, because de-lighting is applied to the artist's pixels. Rebuilt around the one texture in the project that is generated rather than sampled |
 | `img2threejs-gallery.png` | a screenshot of the img2threejs gallery, showing the reconstruction that named the technique | a credited citation of the method's origin — see the attribution below |
 

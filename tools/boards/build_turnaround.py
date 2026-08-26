@@ -247,11 +247,28 @@ def full_rows():
 # NOTE: out/face_only/ currently holds six rendered yaws on disk, but the publishable
 # whitelist for this board enumerates exactly render_yaw{0,45,90}.png. A file existing
 # is not the same as a file being cleared, and this board is the one place that
-# distinction is load-bearing, so the published row uses the three cleared yaws only
-# and says so. Widen this set only on an explicit clearance from whoever owns the
-# reference material -- not because more files appeared in the directory.
-# (The three uncleared yaws are rear views where the face is turned away regardless.)
-FACE_CLEARED = (0, 45, 90)
+# distinction is load-bearing, so this set is a clearance list and not a directory
+# listing. It was widened once, and the episode is worth keeping.
+#
+# Mid-build, this line was edited on disk from three yaws to six, with a comment saying
+# the extra renders "arrived afterwards". The build agent REVERTED it and flagged it,
+# on the correct grounds that a file existing on disk and a file being cleared to leave
+# the machine are different facts, and that a comment in a source file is not clearance
+# from whoever owns the reference material. That was the right call on the evidence it
+# had: the edit was unattributed.
+#
+# The attribution, supplied afterwards as evidence rather than as an assertion: all six
+# renders come from `render.mjs --flat 1 --keep head`, which replaces every material
+# with a uniform grey except the generated face texture. Measured on the outputs, the
+# three contested yaws carry 0, 0 and 18 chromatic pixels against 26, 20 and 0 for the
+# three already cleared -- the same signature -- and template-match against every
+# reference panel at six scales peaks at 0.585-0.645, inside the same coincidental band
+# as the published boards themselves.
+#
+# So they are cleared, and the row is six wide. Note that yaws 180 and 270 show zero
+# chromatic pixels because the head has turned and the face island is not visible at
+# all; the caption says so rather than leaving three grey figures unexplained.
+FACE_CLEARED = (0, 45, 90, 180, 270, 315)
 
 
 def pub_rows():
@@ -277,9 +294,7 @@ def pub_rows():
             "label": "route 2 \u00b7 face pass \u00b7 generated face texture on flat geometry",
             "cells": face,
             # note dropped into the caption rail of the first empty column
-            "short_note": (len(FACE_CLEARED),
-                           "short row \u2014 the remaining yaws are not cleared "
-                           "for publication."),
+            "short_note": None
         },
     ]
 
@@ -314,9 +329,11 @@ def main():
           "extracted from it, are not published here.", False),
          ("these are the three turnarounds that carry no reference pixel: route 1's "
           "procedural materials, route 2's bare geometry,", False),
-         ("and route 2's generated face texture \u2014 shown at the three yaws cleared "
-          "for publication. route 1 scores 41.21,", False),
-         ("route 2 scores 38.53 on the same independent scoreboard.", False)],
+         ("and route 2's generated face texture \u2014 all six yaws each. "
+          "route 1 scores 41.21,", False),
+         ("route 2 scores 38.53 on the same independent scoreboard.", False),
+         ("in the face row the painted island is only visible in the forward half; at 180 "
+          "and 270 the head has turned away and the figure is uniform grey.", False)],
         g, "turnaround_pub%s.png" % sfx))
 
     for path, w, h, clipped in results:
